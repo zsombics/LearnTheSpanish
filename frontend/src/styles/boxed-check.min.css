@@ -1,0 +1,151 @@
+/* BoxedCheck from flyArtist v1.0.7 */
+.boxed-check-group,
+.boxed-check-group .boxed-check {
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.boxed-check-group .boxed-check {
+    display: block;
+}
+
+.boxed-check-group .boxed-check:last-child {
+    margin-bottom: 0;
+}
+
+.boxed-check-group .boxed-check.boxed-check-inline {
+    display: inline-block;
+    margin-bottom: 0;
+}
+
+.boxed-check-group .boxed-check .boxed-check-input {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    display: none;
+}
+
+.boxed-check-group .boxed-check .boxed-check-input:disabled+.boxed-check-label {
+    border: 1px dashed #bec2c6;
+    opacity: .4;
+    cursor: not-allowed;
+}
+
+.boxed-check-group .boxed-check .boxed-check-input:checked+.boxed-check-label,
+.boxed-check-group .boxed-check .boxed-check-input:not(:disabled)+.boxed-check-label:hover {
+    border-color: #198754;
+}
+
+.boxed-check-group .boxed-check .boxed-check-input:checked+.boxed-check-label::before {
+    content: ' ';
+    position: absolute;
+    width: 10px;
+    height: 6px;
+    border-width: 0 0 2px 2px;
+    border-style: solid;
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    right: 4px;
+    top: 6px;
+}
+
+.boxed-check-group .boxed-check .boxed-check-label {
+    display: block;
+    background-color: #fff;
+    border: 1px solid #ced4da;
+    padding: .5rem 1.3rem;
+    margin: 0;
+    border-radius: .25rem;
+    cursor: pointer;
+}
+
+/* Small and Large Boxed-Check Sizes */
+.boxed-check-group.boxed-check-sm .boxed-check .boxed-check-label {
+    padding: .2rem 1.3rem;
+}
+
+.boxed-check-group.boxed-check-lg .boxed-check .boxed-check-label {
+    padding: .8rem 1.3rem;
+}
+
+/* Primary Theme */
+.boxed-check-group.boxed-check-primary .boxed-check .boxed-check-input:checked+.boxed-check-label {
+    color: #fff;
+    background-color: #1cf84c;
+    border-color: #1cf84c;
+}
+
+.boxed-check-group.boxed-check-primary .boxed-check .boxed-check-input:checked+.boxed-check-label::before {
+    border-color: #fff;
+}
+
+/* Outline Primary Theme */
+.boxed-check-group.boxed-check-outline-primary .boxed-check .boxed-check-input:checked+.boxed-check-label {
+    border-color: #1cf84c;
+    background-color: #fff;
+    color: #1cf84c;
+}
+
+.boxed-check-group.boxed-check-outline-primary .boxed-check .boxed-check-input:checked+.boxed-check-label::before {
+    border-color: #1cf84c;
+}
+
+.boxed-check-group {
+    min-height: 30vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Adjust the height and rounded corners */
+.boxed-check-group .boxed-check .boxed-check-label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    border: 1px solid #ced4da;
+    padding: 1rem 1.5rem; /* Increased padding for more height */
+    margin: 0;
+    border-radius: 25px; /* More rounded edges */
+    cursor: pointer;
+    font-size: 1.1rem; /* Slightly larger font */
+    transition: all 0.3s ease;
+}
+
+/* Increase height for small and large versions */
+.boxed-check-group.boxed-check-sm .boxed-check .boxed-check-label {
+    padding: 0.5rem 1.3rem;
+    border-radius: 20px;
+}
+
+.boxed-check-group.boxed-check-lg .boxed-check .boxed-check-label {
+    padding: 1.5rem 1.8rem;
+    border-radius: 30px;
+}
+
+/* Ensure checked state also has the same styling */
+.boxed-check-group .boxed-check .boxed-check-input:checked + .boxed-check-label {
+    background-color: #1cf84c;
+    color: white;
+    border-color: #1cf84c;
+    font-weight: bold;
+}
+
+/* Outline Primary Theme */
+.boxed-check-group.boxed-check-outline-primary .boxed-check .boxed-check-input:checked + .boxed-check-label {
+    border-color: #1cf84c;
+    background-color: #fff;
+    color: #1cf84c;
+}
+
+/* Add a hover effect */
+.boxed-check-group .boxed-check .boxed-check-label:hover {
+    background-color: rgba(28, 248, 76, 0.2);
+    border-color: #1cf84c;
+}
+
+/* Adjust the checkmark size */
+.boxed-check-group .boxed-check .boxed-check-input:checked + .boxed-check-label::before {
+    width: 14px;
+    height: 10px;
+    border-width: 0 0 3px 3px;
+}

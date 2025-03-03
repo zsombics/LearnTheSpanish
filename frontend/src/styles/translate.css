@@ -1,0 +1,61 @@
+/* Translation Container */
+.translation-container {
+    max-width: 600px;
+    margin: 3rem auto;
+    padding: 2.5rem;
+    background: white;
+    border-radius: 18px;
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  /* Translation Input */
+  .translation-input {
+    width: 100%;
+    padding: 14px 18px;
+    border: 2px solid #e0e0e0;
+    border-radius: 10px;
+    font-size: 1.1em;
+    margin-bottom: 1rem;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .translation-input:focus {
+    border-color: #0056b3;
+    box-shadow: 0 0 8px rgba(0, 86, 179, 0.5);
+    outline: none;
+  }
+  
+  /* Translate Button */
+  .translate-btn {
+    padding: 1.2rem 2.5rem;
+    background: #3498db;
+    color: white;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    letter-spacing: 0.5px;
+  }
+  
+  .translate-btn:hover {
+    background: #2980b9;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 18px rgba(41, 128, 185, 0.3);
+  }
+  
+  /* Translation Result */
+  .translation-result {
+    margin-top: 20px;
+    font-size: 1.2em;
+    color: #333;
+  }
+  
+  /* Translation Error */
+  .translation-error {
+    margin-top: 20px;
+    color: #e74c3c;
+    font-size: 1.1em;
+  }  

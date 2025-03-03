@@ -1,0 +1,98 @@
+.carousel-container {
+    position: relative;
+    width: 90%;
+    max-width: 600px;
+    margin: 2rem auto;
+  }
+  
+  .carousel-card {
+    position: relative;
+    background-color: #333; /* fallback szín, ha nincs háttérkép */
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    color: #fff;
+    background-size: cover;
+    background-position: center;
+    min-height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Az overlay segít a szöveg olvashatóságában a háttérkép felett */
+  .card-overlay {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 1.5rem;
+    border-radius: 10px;
+  }
+  
+  .carousel-card h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .carousel-card p {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .cta-button {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    background-color: #ff7043;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .cta-button:hover {
+    background-color: #e64a19;
+  }
+  
+  .carousel-controls {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+  }
+  
+  .carousel-button {
+    background-color: rgba(255, 255, 255, 0.8);
+    border: none;
+    border-radius: 50%;
+    color: #333;
+    font-size: 1.5rem;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .carousel-button:hover {
+    background-color: #fff;
+  }
+  
+  .carousel-indicators {
+    text-align: center;
+    margin-top: 1rem;
+  }
+  
+  .carousel-indicators .indicator {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background-color: #ddd;
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+  }
+  
+  .carousel-indicators .indicator.active {
+    background-color: #ff7043;
+  }
+  

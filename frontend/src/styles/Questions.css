@@ -1,0 +1,140 @@
+/* Hero Section */
+.hero-section {
+    background-image: url("https://images.unsplash.com/photo-1449247709967-d4461a6a6103?ixlib=rb-1.2.1&auto=format&fit=crop&w=1951&q=80");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    min-height: 92vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .hero-container {
+    text-align: center;
+    padding: 1rem;
+  }
+  
+  .hero-title {
+    font-size: 3rem;
+    font-family: serif;
+    margin-bottom: 1rem;
+    color: #333;
+  }
+  
+  .hero-button {
+    padding: 1rem 2rem;
+    background-color: #fff;
+    color: #f69144;  /* Zöld árnyalat */
+    border: none;
+    border-radius: 9999px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: box-shadow 0.3s ease;
+    font-size: 0.875rem;
+  }
+  
+  .hero-button:hover {
+    box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+  }
+  .hero-button2 {
+    padding: 1rem 2rem;
+    background-color: #fff;
+    color: #23b81e;  /* Zöld árnyalat */
+    border: none;
+    border-radius: 9999px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: box-shadow 0.3s ease;
+    font-size: 0.875rem;
+  }
+  
+  .hero-button2:hover {
+    background-color: #2fcb82;
+  }
+
+  .auth-form {
+    flex: 1;
+    min-height: 50vh;
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 30px;
+    border-radius: 10px;
+    color: #333;
+  }
+  /* Questions Section */
+  .questions-container {
+    width: 500px;
+    min-height: 50vh;
+    margin: 2rem auto;
+    background-color: rgba(255, 255, 255, 0.85);
+    padding: 30px;
+    border-radius: 10px;
+    color: #333;
+  }
+  
+  .questions-title {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: #333;
+  }
+  
+  /* Question Card */
+  .question-card {
+    background-color: #fff;
+    padding: 1.5rem;
+    min-height: 40vh;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    margin-bottom: 1.5rem;
+    
+
+}
+
+  
+  .question-text {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    color: #333;
+  }
+  
+  /* Options */
+  .options {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Egyforma térközt biztosít */
+    min-height: 30vh;
+  }
+  
+  .option-label {
+    font-size: 1rem;
+    color: #555;
+    cursor: pointer;
+  }
+  
+  .option-label input {
+    margin-right: 0.5rem;
+  }
+  
+  /* Submit Button */
+  .submit-btn {
+    display: block;
+    margin: 2rem auto 0;
+    padding: 1rem 2rem;
+    background-color: #f27f26;
+    color: #fff;
+    border: none;
+    border-radius: 9999px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .submit-btn:hover {
+    background-color: #fba91b;
+  }
+  

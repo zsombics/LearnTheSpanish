@@ -1,0 +1,1770 @@
+niño,masculine,niños,fiú,boy
+niña,feminine,niñas,lány,girl
+hombre,masculine,hombres,férfi,man
+mujer,feminine,mujeres,nő,woman
+libro,masculine,libros,könyv,book
+casa,feminine,casas,ház,house
+perro,masculine,perros,kutya,dog
+gato,masculine,gatos,macska,cat
+mesa,feminine,mesas,asztal,table
+silla,feminine,sillas,szék,chair
+coche,masculine,coches,autó,car
+ciudad,feminine,ciudades,város,city
+árbol,masculine,árboles,fa,tree
+flor,feminine,flores,virág,flower
+sol,masculine,soles,nap,sun
+luna,feminine,lunas,hold,moon
+agua,feminine,aguas,víz,water
+fuego,masculine,fuegos,tűz,fire
+tierra,feminine,tierras,föld,earth
+aire,masculine,aires,levegő,air
+reloj,masculine,relojes,óra,clock
+ventana,feminine,ventanas,ablak,window
+puerta,feminine,puertas,ajtó,door
+calle,feminine,calles,utca,street
+puente,masculine,puentes,híd,bridge
+montaña,feminine,montañas,hegy,mountain
+río,masculine,ríos,folyó,river
+mar,masculine,mares,tenger,sea
+lago,masculine,lagos,tó,lake
+bosque,masculine,bosques,erdő,forest
+desierto,masculine,desiertos,sivatag,desert
+isla,feminine,islas,sziget,island
+idioma,masculine,idiomas,nyelv,language
+palabra,feminine,palabras,szó,word
+idea,feminine,ideas,ötlet,idea
+mente,feminine,mentes,elme,mind
+corazón,masculine,corazones,szív,heart
+cabeza,feminine,cabezas,fej,head
+mano,feminine,manos,kéz,hand
+pie,masculine,pies,láb,foot
+ojo,masculine,ojos,szem,eye
+nariz,feminine,narices,orr,nose
+boca,feminine,bocas,száj,mouth
+oreja,feminine,orejas,fül,ear
+cabello,masculine,cabellos,haj,hair
+piel,feminine,pieles,bőr,skin
+sangre,feminine,sangres,vér,blood
+cuaderno,masculine,cuadernos,füzet,notebook
+lápiz,masculine,lápices,ceruza,pencil
+papel,masculine,papeles,papír,paper
+pluma,feminine,plumas,toll,pen
+ordenador,masculine,ordenadores,számítógép,computer
+teléfono,masculine,teléfonos,telefon,telephone
+radio,feminine,radios,rádió,radio
+televisor,masculine,televisores,televízió,television
+película,feminine,películas,film,movie
+música,feminine,músicas,zene,music
+canción,feminine,canciones,dal,song
+baile,masculine,bailes,tánc,dance
+fiesta,feminine,fiestas,buli,party
+trabajo,masculine,trabajos,munka,work
+escuela,feminine,escuelas,iskola,school
+universidad,feminine,universidades,egyetem,university
+maestro,masculine,maestros,tanár,teacher
+maestra,feminine,maestras,tanárnő,teacher
+estudiante,masculine,estudiantes,diák,student
+biblioteca,feminine,bibliotecas,könyvtár,library
+hospital,masculine,hospitales,kórház,hospital
+farmacia,feminine,farmacias,gyógyszertár,pharmacy
+restaurante,masculine,restaurantes,étterem,restaurant
+mercado,masculine,mercados,piac,market
+tienda,feminine,tiendas,bolt,shop
+parque,masculine,parques,park,park
+jardín,masculine,jardines,kert,garden
+playa,feminine,playas,strand,beach
+valle,masculine,valles,völgy,valley
+campo,masculine,campos,mező,field
+carretera,feminine,carreteras,autóút,highway
+avión,masculine,aviones,repülő,airplane
+tren,masculine,trenes,vonat,train
+barco,masculine,barcos,hajó,boat
+bicicleta,feminine,bicicletas,kerékpár,bicycle
+camino,masculine,caminos,út,road
+maleta,feminine,maletas,bőrönd,suitcase
+mochila,feminine,mochilas,hátizsák,backpack
+sombrero,masculine,sombreros,kalap,hat
+camisa,feminine,camisas,ing,shirt
+pantalón,masculine,pantalones,nadrág,pants
+zapato,masculine,zapatos,cipő,shoe
+chaqueta,feminine,chaquetas,dzseki,jacket
+abrigo,masculine,abrigos,kabát,coat
+vestido,masculine,vestidos,ruha,dress
+falda,feminine,faldas,szoknya,skirt
+anillo,masculine,anillos,gyűrű,ring
+pulsera,feminine,pulseras,karkötő,bracelet
+collar,masculine,collares,nyaklánc,necklace
+sombrilla,feminine,sombrillas,esernyő,umbrella
+cuchillo,masculine,cuchillos,kés,knife
+tenedor,masculine,tenedores,villa,fork
+cuchara,feminine,cucharas,kanál,spoon
+plato,masculine,platos,tányér,plate
+vaso,masculine,vasos,pohár,glass
+taza,feminine,tazas,csésze,cup
+botella,feminine,botellas,palack,bottle
+cuchillo,masculine,cuchillos,kés,knife
+sartén,feminine,sartenes,serpenyő,frying pan
+olla,feminine,ollas,edény,pot
+horno,masculine,hornos,sütő,oven
+nevera,feminine,neveras,hűtő,fridge
+congelador,masculine,congeladores,fagyasztó,freezer
+microondas,masculine,microondas,mikrohullámú,microwave
+lavadora,feminine,lavadoras,mosógép,washing machine
+secadora,feminine,secadoras,szárítógép,dryer
+plancha,feminine,planchas,vasaló,iron
+espejo,masculine,espejos,tükör,mirror
+sábana,feminine,sábanas,lepedő,sheet
+almohada,feminine,almohadas,párna,pillow
+colchón,masculine,colchones,matrac,mattress
+manta,feminine,mantas,takaró,blanket
+toalla,feminine,toallas,törölköző,towel
+ducha,feminine,duchas,zuhany,shower
+bañera,feminine,bañeras,kád,bath
+jabón,masculine,jabones,szappan,soap
+champú,masculine,champús,sampon,shampoo
+cepillo,masculine,cepillos,kefe,brush
+peine,masculine,peines,fésű,comb
+esmalte,feminine,esmales,körömlakk,nail polish
+maquillaje,masculine,maquillajes,smink,makeup
+perfume,masculine,perfumes,parfüm,perfume
+desodorante,masculine,desodorantes,dezodor,deodorant
+crema,feminine,cremas,krém,cream
+medicina,feminine,medicinas,gyógyszer,medicine
+vitamina,feminine,vitaminas,vitamin,vitamin
+pastilla,feminine,pastillas,tabletta,pill
+inyección,feminine,inyecciones,injekció,injection
+termómetro,masculine,termómetros,hőmérő,thermometer
+hospital,masculine,hospitales,kórház,hospital
+ambulancia,feminine,ambulancias,mentő,ambulance
+doctor,masculine,doctores,orvos,doctor
+enfermera,feminine,enfermeras,ápolónő,nurse
+cirugía,feminine,cirugías,műtét,surgery
+dentista,masculine,dentistas,fogorvos,dentist
+farmacia,feminine,farmacias,gyógyszertár,pharmacy
+receta,feminine,recetas,felírás,prescription
+síntoma,masculine,síntomas,tünet,symptom
+enfermedad,feminine,enfermedades,betegség,illness
+dolor,masculine,dolores,fájdalom,pain
+fiebre,feminine,fiebres,láz,fever
+tos,feminine,toses,köhögés,cough
+resfriado,masculine,resfriados,megfázás,cold
+gripe,feminine,gripes,influenza,flu
+vacuna,feminine,vacunas,oltás,vaccine
+seguro,masculine,seguros,biztosítás,insurance
+accidente,masculine,accidentes,baleset,accident
+emergencia,feminine,emergencias,vészhelyzet,emergency
+ambulancia,feminine,ambulancias,mentő,ambulance
+coche,masculine,coches,autó,car
+camión,masculine,camiones,teherautó,truck
+motocicleta,feminine,motocicletas,motorkerékpár,motorcycle
+bicicleta,feminine,bicicletas,kerékpár,bicycle
+avión,masculine,aviones,repülőgép,airplane
+tren,masculine,trenes,vonat,train
+barco,masculine,barcos,hajó,boat
+submarino,masculine,submarinos,tengeralattjáró,submarine
+helicóptero,masculine,helicópteros,helikopter,helicopter
+globo,masculine,globos,hőlégballon,hot air balloon
+metro,masculine,metros,metró,subway
+taxi,masculine,taxis,taxi,taxi
+autobús,masculine,autobuses,busz,bus
+carretera,feminine,carreteras,út,road
+calle,feminine,calles,utca,street
+puente,masculine,puentes,híd,bridge
+túnel,masculine,túneles,alagút,tunnel
+semáforo,masculine,semáforos,jelzőlámpa,traffic light
+gasolina,feminine,gasolinas,benzin,gasoline
+mecánico,masculine,mecánicos,szerelő,mechanic
+garaje,masculine,garajes,garázs,garage
+conductor,masculine,conductores,sofőr,driver
+pasajero,masculine,pasajeros,utas,passenger
+maleta,feminine,maletas,bőrönd,suitcase
+billete,masculine,billetes,jegy,ticket
+pasaporte,masculine,pasaportes,útlevél,passport
+aduana,feminine,aduanas,vám,customs
+aeropuerto,masculine,aeropuertos,repülőtér,airport
+estación,feminine,estaciones,pályaudvar,station
+horario,masculine,horarios,menetrend,schedule
+mapa,masculine,mapas,térkép,map
+brújula,feminine,brújulas,iránytű,compass
+equipaje,masculine,equipajes,poggyász,luggage
+mochila,feminine,mochilas,hátizsák,backpack
+hoteles,masculine,hoteles,szálloda,hotel
+albergue,masculine,albergues,menedék,shelter
+camping,masculine,campings,kemping,camping
+reserva,feminine,reservas,foglalás,reservation
+llave,feminine,llaves,kulcs,key
+recepción,feminine,recepciones,recepció,reception
+habitación,feminine,habitaciones,szoba,room
+cama,feminine,camas,ágy,bed
+almohada,feminine,almohadas,párna,pillow
+manta,feminine,mantas,takaró,blanket
+sábana,feminine,sábanas,lepedő,sheet
+toalla,feminine,toallas,törölköző,towel
+baño,masculine,baños,fürdő,bathroom
+ducha,feminine,duchas,zuhany,shower
+espejo,masculine,espejos,tükör,mirror
+armario,masculine,armarios,szekrény,closet
+ventana,feminine,ventanas,ablak,window
+puerta,feminine,puertas,ajtó,door
+suelo,masculine,suelos,padló,floor
+techo,masculine,techos,plafon,ceiling
+pared,feminine,paredes,fal,wall
+escalera,feminine,escaleras,lépcső,stair
+ascensor,masculine,ascensores,felvonó,elevator
+pasillo,masculine,pasillos,folyosó,hallway
+entrada,feminine,entradas,bejárat,entrance
+salida,feminine,salidas,kijárat,exit
+jardín,masculine,jardines,kert,garden
+patio,masculine,patios,udvar,courtyard
+sótano,masculine,sótanos,pince,basement
+garaje,masculine,garajes,garázs,garage
+salón,masculine,salones,nappali,living room
+comedor,masculine,comedores,étkező,dining room
+cocina,feminine,cocinas,konyha,kitchen
+dormitorio,masculine,dormitorios,hálószoba,bedroom
+oficina,feminine,oficinas,iroda,office
+escritorio,masculine,escritorios,íróasztal,desk
+silla,feminine,sillas,szék,chair
+ordenador,masculine,ordenadores,számítógép,computer
+teléfono,masculine,teléfonos,telefon,telephone
+impresora,feminine,impresoras,nyomtató,printer
+papel,masculine,papeles,papír,paper
+carpeta,feminine,carpetas,mappa,folder
+archivo,masculine,archivos,archívum,file
+documento,masculine,documentos,dokumentum,document
+correo,feminine,correos,posta,mail
+sello,masculine,sellos,bélyeg,stamp
+sobre,masculine,sobres,boríték,envelope
+paquete,masculine,paquetes,csomag,package
+dirección,feminine,direcciones,cím,address
+firma,feminine,firma,aláírás,signature
+contrato,masculine,contratos,szerződés,contract
+negocio,masculine,negocios,üzlet,business
+empresa,feminine,empresas,vállalat,company
+jefe,masculine,jefes,főnök,boss
+empleado,masculine,empleados,alkalmazott,employee
+salario,masculine,salarios,fizetés,salary
+fábrica,feminine,fábricas,gyár,factory
+mercado,masculine,mercados,piac,market
+cliente,masculine,clientes,ügyfél,client
+producto,masculine,productos,termék,product
+precio,masculine,precios,ár,price
+descuento,masculine,descuentos,kedvezmény,discount
+publicidad,feminine,publicidades,reklám,advertisement
+marca,feminine,marcas,márka,brand
+dinero,masculine,dineros,pénz,money
+moneda,feminine,monedas,érme,coin
+billete,masculine,billetes,bankjegy,bill
+banco,masculine,bancos,bank,bank
+cajero,masculine,cajeros,pénztáros,cashier
+cheque,masculine,cheques,csekk,check
+cuenta,feminine,cuentas,számla,account
+tarjeta,feminine,tarjetas,kártya,card
+préstamo,masculine,préstamos,hitel,loan
+hipoteca,feminine,hipotecas,jelzálog,mortgage
+seguro,masculine,seguros,biztosítás,insurance
+economía,feminine,economías,gazdaság,economy
+impuesto,masculine,impuestos,adó,tax
+gobierno,masculine,gobiernos,kormány,government
+política,feminine,políticas,politika,politics
+ley,feminine,leyes,törvény,law
+justicia,feminine,justicias,igazság,justice
+juicio,masculine,juicios,per,trial
+abogado,masculine,abogados,ügyvéd,lawyer
+acusado,masculine,acusados,vádolt,accused
+juez,masculine,jueces,bíró,judge
+tribunal,masculine,tribunales,bíróság,court
+sentencia,feminine,sentencias,ítélet,sentence
+delito,masculine,delitos,bűncselekmény,crime
+prisión,feminine,prisiones,börtön,prison
+cárcel,feminine,cárceles,börtön,jail
+policía,feminine,policías,rendőrség,police
+detención,feminine,detenciones,letartóztatás,arrest
+castigo,masculine,castigos,büntetés,punishment
+derecho,masculine,derechos,jog,right
+voto,masculine,votos,szavazat,vote
+elección,feminine,elecciones,választás,election
+parlamento,masculine,parlamentos,parlament,parliament
+diputado,masculine,diputados,képviselő,deputy
+presidente,masculine,presidentes,elnök,president
+ministro,masculine,ministros,miniszter,minister
+embajada,feminine,embajadas,nagykövetség,embassy
+consulado,masculine,consulados,konzulátus,consulate
+diplomacia,feminine,diplomacias,diplomácia,diplomacy
+frontera,feminine,fronteras,határ,border
+nación,feminine,naciones,nemzet,nation
+ciudadano,masculine,ciudadanos,állampolgár,citizen
+constitución,feminine,constituciones,alkotmány,constitution
+referéndum,masculine,referéndums,népszavazás,referendum
+protesta,feminine,protestas,tüntetés,protest
+manifestación,feminine,manifestaciones,megnyilvánulás,demonstraion
+huelga,feminine,huelgas,sztrájk,strike
+derechos humanos,masculine,derechos humanos,emberi jogok,human rights
+igualdad,feminine,igualdades,egyenlőség,equality
+libertad,feminine,libertades,szabadság,freedom
+seguridad,feminine,seguridades,biztonság,security
+violencia,feminine,violencias,erőszak,violence
+crimen,masculine,crímenes,bűn,crime
+robo,masculine,robos,lopás,robbery
+asesinato,masculine,asesinatos,gyilkosság,murder
+secuestro,masculine,secuestros,emberrablás,kidnapping
+terrorismo,masculine,terrorismos,terrorizmus,terrorism
+ataque,masculine,ataques,támadás,attack
+guerra,feminine,guerras,háború,war
+batalla,feminine,batallas,csata,battle
+ejército,masculine,ejércitos,hadsereg,army
+soldado,masculine,soldados,katona,soldier
+arma,feminine,armas,fegyver,weapon
+bomba,feminine,bombas,bomba,bomb
+explosión,feminine,explosiones,robbanás,explosion
+refugio,masculine,refugios,menedék,shelter
+paz,feminine,paces,béke,peace
+tratado,masculine,tratados,szerződés,treaty
+acuerdo,masculine,acuerdos,megállapodás,agreement
+diplomático,masculine,diplomáticos,diplomata,diplomat
+negociación,feminine,negociaciones,tárgyalás,negotiation
+conferencia,feminine,conferencias,konferencia,conference
+delegación,feminine,delegaciones,küldöttség,delegation
+cooperación,feminine,cooperaciones,együttműködés,cooperation
+alianza,feminine,alianzas,szövetség,alliance
+organización,feminine,organizaciones,szervezet,organization
+asamblea,feminine,asambleas,közgyűlés,assembly
+resolución,feminine,resoluciones,hatarozat,resolution
+sanción,feminine,sanciones,szankció,sanction
+embargo,masculine,embargos,embargó,embargo
+censura,feminine,censuras,cenzúra,censorship
+medios de comunicación,masculine,medios de comunicación,média,media
+prensa,feminine,prensas,sajtó,press
+periódico,masculine,periódicos,újság,newspaper
+revista,feminine,revistas,magazin,magazine
+noticia,feminine,noticias,hír,news
+artículo,masculine,artículos,cikk,article
+reportaje,masculine,reportajes,riport,report
+televisión,feminine,televisiones,televízió,television
+radio,feminine,radios,rádió,radio
+internet,masculine,internetek,internetes,Internet
+red social,feminine,redes sociales,közösségi háló,social network
+correo electrónico,masculine,correos electrónicos,e-mail,email
+mensaje,masculine,mensajes,üzenet,message
+foro,masculine,foros,fórum,forum
+blog,masculine,blogs,blog,blog
+comentario,masculine,comentarios,hozzászólás,comment
+publicación,feminine,publicaciones,közzététel,publication
+subtítulo,masculine,subtítulos,felirat,subtitle
+traducción,feminine,traducciones,fordítás,translation
+interpretación,feminine,interpretaciones,tolmácsolás,interpretation
+idioma,masculine,idiomas,nyelv,language
+lenguaje,masculine,lenguajes,nyelv,language
+dialecto,masculine,dialectos,dialektus,dialect
+alfabeto,masculine,alfabetos,ábécé,alphabet
+letra,feminine,letras,betű,letter
+palabra,feminine,palabras,szó,word
+frase,feminine,frases,mondat,sentence
+párrafo,masculine,párrafos,paragrafus,paragraph
+texto,masculine,textos,szöveg,text
+gramática,feminine,gramáticas,nyelvtan,grammar
+ortografía,feminine,ortografías,helyesírás,spelling
+significado,masculine,significados,jelentés,meaning
+sinónimo,masculine,sinónimos,szinonima,synonym
+antónimo,masculine,antónimos,antonima,antonym
+traducción,feminine,traducciones,fordítás,translation
+diccionario,masculine,diccionarios,szótár,dictionary
+enciclopedia,feminine,enciclopedias,enciklopédia,encyclopedia
+literatura,feminine,literaturas,irodalom,literature
+novela,feminine,novelas,regény,novel
+cuento,masculine,cuentos,mese,tale
+poema,masculine,poemas,vers,poem
+autor,masculine,autores,szerző,author
+escritor,masculine,escritores,író,writer
+libro,masculine,libros,könyv,book
+biblioteca,feminine,bibliotecas,könyvtár,library
+librería,feminine,librerías,könyvesbolt,bookstore
+capítulo,masculine,capítulos,fejezet,chapter
+página,feminine,páginas,oldal,page
+título,masculine,títulos,cím,title
+prólogo,masculine,prólogos,előszó,prologue
+epílogo,masculine,epílogos,epilógus,epilogue
+verso,masculine,versos,sor,line (of poetry)
+estrofa,feminine,estrofas,versszak,stanza
+rima,feminine,rimas,rím,rhyme
+narrador,masculine,narradores,elbeszélő,narrator
+personaje,masculine,personajes,szereplő,character
+trama,feminine,tramas,cselekmény,plot
+argumento,masculine,argumentos,téma,theme
+género,masculine,géneros,műfaj,genre
+ensayo,masculine,ensayos,esszé,essay
+biografía,feminine,biografías,életrajz,biography
+cuento,feminine,cuentos,mese,short story
+fábula,feminine,fábulas,fabula,fable
+leyenda,feminine,leyendas,legenda,legend
+mito,masculine,mitos,mítosz,myth
+historia,feminine,historias,történet,story
+crítica,feminine,críticas,kritika,critique
+reseña,feminine,reseñas,áttekintés,review
+editorial,feminine,editoriales,kiadó,publishing house
+impresión,feminine,impresiones,nyomtatás,printing
+cubierta,feminine,cubiertas,borító,cover
+ilustración,feminine,ilustraciones,illusztráció,illustration
+manuscrito,masculine,manuscritos,kézirat,manuscript
+tipografía,feminine,tipografías,tipográfia,typography
+edición,feminine,ediciones,kiadás,edition
+reimpresión,feminine,reimpresiones,újranyomás,reprint
+traducción,feminine,traducciones,fordítás,translation
+bibliografía,feminine,bibliografías,bibliográfia,bibliography
+revista,feminine,revistas,folyóirat,journal
+periódico,masculine,periódicos,újság,newspaper
+noticia,feminine,noticias,hír,news
+artículo,masculine,artículos,cikk,article
+editor,masculine,editores,szerkesztő,editor
+reportero,masculine,reporteros,riporter,reporter
+columnista,masculine,columnistas,rovatvezető,columnist
+fotografía,feminine,fotografías,fotó,photograph
+cámara,feminine,cámaras,fényképezőgép,camera
+imagen,feminine,imágenes,kép,image
+vídeo,masculine,vídeos,videó,video
+cine,masculine,cines,mozi,cinema
+película,feminine,películas,film,movie
+documental,masculine,documentales,dokumentumfilm,documentary
+animación,feminine,animaciones,animáció,animation
+guion,masculine,guiones,forgatókönyv,script
+director,masculine,directores,rendező,director
+actor,masculine,actores,színész,actor
+actriz,feminine,actrices,színésznő,actress
+reparto,masculine,repartos,szereposztás,cast
+escena,feminine,escenas,jelenet,scene
+banda sonora,feminine,bandas sonoras,filmzene,soundtrack
+estreno,masculine,estrenos,bemutató,premiere
+taquilla,feminine,taquillas,jegypénztár,ticket booth
+espectador,masculine,espectadores,néző,spectator
+teatro,masculine,teatros,színház,theater
+obra,feminine,obras,színdarab,play
+drama,masculine,dramas,dráma,drama
+comedia,feminine,comedias,vigjáték,comedy
+tragedia,feminine,tragedias,tragédia,tragedy
+escenario,masculine,escenarios,színpad,stage
+vestuario,masculine,vestuarios,jelmez,costume
+decorado,masculine,decorados,díszlet,set
+aplausos,masculine,aplausos,taps,applause
+actor secundario,masculine,actores secundarios,mellékszereplő,supporting actor
+monólogo,masculine,monólogos,monológ,monologue
+soliloquio,masculine,soliloquios,monológ,soliloquy
+ensayo,masculine,ensayos,próba,rehearsal
+representación,feminine,representaciones,előadás,performance
+música,feminine,músicas,zene,music
+canción,feminine,canciones,dal,song
+melodía,feminine,melodías,dallam,melody
+ritmo,masculine,ritmos,ritmus,rhythm
+compás,masculine,compases,ütem,beat
+notas,masculine,notas,hangjegyek,notes
+partitura,feminine,partituras,kottalap,score
+instrumento,masculine,instrumentos,hangszer,instrument
+orquesta,feminine,orquestas,zenekar,orchestra
+director de orquesta,masculine,directores de orquesta,karmester,conductor
+solista,masculine,solistas,szólista,soloist
+banda,masculine,bandas,zenekar,band
+coral,feminine,corales,kórus,choir
+concierto,masculine,conciertos,koncert,concert
+escenario,masculine,escenarios,színpad,stage
+auditorio,masculine,auditorios,auditorium,auditorium
+acústica,feminine,acústicas,akusztika,acoustics
+grabación,feminine,grabaciones,felvétel,recording
+mezcla,feminine,mezclas,keverés,mix
+ecualización,feminine,ecualizaciones,hangkiegyenlítés,EQ
+producción,feminine,producciones,gyártás,production
+estudio,masculine,estudios,stúdió,studio
+ingeniero de sonido,masculine,ingenieros de sonido,hangmérnök,sound engineer
+mezclador,masculine,mezcladores,keverő,mixer
+altavoz,masculine,altavoces,hangszóró,speaker
+micrófono,masculine,microfonos,mikrofon,microphone
+auriculares,masculine,auriculares,fejhallgató,headphones
+guitarra,feminine,guitarras,gitár,guitar
+piano,masculine,pianos,zongora,piano
+violín,masculine,violines,hegedű,violin
+chelo,masculine,chelos,cselló,cello
+bajo,masculine,bajos,basszusgitár,bass guitar
+batería,feminine,baterías,dobok,drums
+saxofón,masculine,saxofones,szaxofon,saxophone
+trompeta,feminine,trompetas,trombita,trumpet
+flauta,feminine,flautas,fuvola,flute
+clarinete,masculine,clarinetes,klarinét,clarinet
+arpa,feminine,arpas,hárfa,harp
+acordeón,masculine,acordeones,harmonika,accordion
+ópera,feminine,óperas,opera,opera
+ballet,masculine,ballets,balett,ballet
+coreografía,feminine,coreografías,koreográfia,choreography
+danza,feminine,danzas,tánc,dance
+bailarín,masculine,bailarines,táncos,dancer
+ensayo,masculine,ensayos,próba,rehearsal
+maquillaje,feminine,maquillajes,smink,makeup
+vestuario,masculine,vestuarios,jelmez,costume
+máscara,feminine,máscaras,maszk,mask
+caricatura,feminine,caricaturas,karikatúra,caricature
+dibujo,masculine,dibujos,rajz,drawing
+pintura,feminine,pinturas,festmény,painting
+escultura,feminine,esculturas,szobor,sculpture
+arquitectura,feminine,arquitecturas,építészet,architecture
+mural,masculine,murales,falfestmény,mural
+graffiti,masculine,graffitis,graffiti,graffiti
+galería,feminine,galerías,galéria,gallery
+exposición,feminine,exposiciones,kiállítás,exhibition
+museo,masculine,museos,múzeum,museum
+cuadro,masculine,cuadros,kép,painting
+retraro,masculine,retratos,portré,portrait
+paisaje,masculine,paisajes,tájkép,landscape
+boceto,masculine,bocetos,vázlat,sketch
+óleo,masculine,óleos,olajfestmény,oil painting
+acuarela,feminine,acuarelas,akvarell,watercolor
+escultura,feminine,esculturas,szobor,sculpture
+talla,feminine,tallas,faragás,carving
+cerámica,feminine,cerámicas,kerámia,ceramics
+arcilla,feminine,arcillas,agyag,clay
+mármol,masculine,mármoles,márvány,marble
+bronce,masculine,bronces,bronz,bronze
+hierro,masculine,hierros,vashulladék,iron
+vidrio,masculine,vidrios,üveg,glass
+joyería,feminine,joyerías,ékszerészet,jewelry
+orfebrería,feminine,orfebrerías,aranyművesség,goldsmithing
+herramienta,feminine,herramientas,szerszám,tool
+martillo,masculine,martillos,kalapács,hammer
+destornillador,masculine,destornilladores,csavarhúzó,screwdriver
+alicate,masculine,alicates,fogó,pliers
+llave inglesa,feminine,llaves inglesas,villáskulcs,wrench
+sierra,feminine,sierras,fűrész,saw
+tornillo,masculine,tornillos,csavar,screw
+tuerca,feminine,tuercas,anya,nut (hardware)
+clavo,masculine,clavos,szög,nail
+madera,feminine,maderas,fa,wood
+metal,masculine,metales,fém,metal
+cemento,masculine,cementos,cement,cement
+ladrillo,masculine,ladrillos,tégla,brick
+teja,feminine,tejas,cserép,tile
+yeso,masculine,yesos,gipsz,plaster
+pintura,feminine,pinturas,festék,paint
+brocha,feminine,brochas,ecset,paintbrush
+rodillo,masculine,rodillos,henger,roller
+esmalte,masculine,esmaltes,zománc,enamel
+barniz,masculine,barnices,lakk,varnish
+mecánico,masculine,mecánicos,gépész,mechanic
+ingeniero,masculine,ingenieros,mérnök,engineer
+arquitecto,masculine,arquitectos,építész,architect
+electricista,masculine,electricistas,villanyszerelő,electrician
+fontanero,masculine,fontaneros,vízvezetékszerelő,plumber
+carpintero,masculine,carpinteros,asztalos,carpenter
+albañil,masculine,albañiles,kőműves,mason
+soldador,masculine,soldadores,hegesztő,welder
+técnico,masculine,técnicos,technikus,technician
+programador,masculine,programadores,programozó,programmer
+diseñador,masculine,diseñadores,tervező,designer
+dibujante,masculine,dibujantes,rajzoló,illustrator
+fotógrafo,masculine,fotógrafos,fényképész,photographer
+cineasta,masculine,cineastas,filmes,filmmaker
+actor,masculine,actores,színész,actor
+actriz,feminine,actrices,színésznő,actress
+músico,masculine,músicos,zenész,musician
+compositor,masculine,compositores,zeneszerző,composer
+cantante,masculine,cantantes,énekes,singer
+director de cine,masculine,directores de cine,film rendező,film director
+bailarín,masculine,bailarines,táncos,dancer
+escultor,masculine,escultores,szobrász,sculptor
+pintor,masculine,pintores,festő,painter
+escritor,masculine,escritores,író,writer
+poeta,masculine,poetas,költő,poet
+novelista,masculine,novelistas,regényíró,novelist
+dramaturgo,masculine,dramaturgos,drámaíró,playwright
+editor,masculine,editores,szerkesztő,editor
+periodista,masculine,periodistas,újságíró,journalist
+crítico,masculine,críticos,kritikus,critic
+locutor,masculine,locutores,bemondó,announcer
+presentador,masculine,presentadores,műsorvezető,host
+reportero,masculine,reporteros,riporter,reporter
+documentalista,masculine,documentalistas,dokumentumfilmes,documentary filmmaker
+guionista,masculine,guionistas,forgatókönyvíró,screenwriter
+dibujante,masculine,dibujantes,rajzoló,cartoonist
+caricaturista,masculine,caricaturistas,karikaturista,caricaturist
+ilustrador,masculine,ilustradores,illusztrátor,illustrator
+animador,masculine,animadores,animátor,animator
+diseñador gráfico,masculine,diseñadores gráficos,grafikus tervező,graphic designer
+artista,masculine,artistas,művész,artist
+escultor,masculine,escultores,szobrász,sculptor
+arquitecto,masculine,arquitectos,építész,architect
+ingeniero,masculine,ingenieros,mérnök,engineer
+técnico,masculine,técnicos,technikus,technician
+electricista,masculine,electricistas,villanyszerelő,electrician
+fontanero,masculine,fontaneros,vizvezetékszerelő,plumber
+carpintero,masculine,carpinteros,asztalos,carpenter
+albañil,masculine,albañiles,kőműves,mason
+soldador,masculine,soldadores,hegesztő,welder
+mecánico,masculine,mecánicos,szerelő,mechanic
+piloto,masculine,pilotos,pilóta,pilot
+conductor,masculine,conductores,sofőr,driver
+taxista,masculine,taxistas,taxisofőr,taxi driver
+maquinista,masculine,maquinistas,mozdonyvezető,train driver
+capitán,masculine,capitanes,kapitány,captain
+marinero,masculine,marineros,tengerész,sailor
+astronauta,masculine,astronautas,űrhajós,astronaut
+científico,masculine,científicos,tudós,scientist
+químico,masculine,químicos,vegyész,chemist
+biólogo,masculine,biólogos,biológus,biologist
+físico,masculine,físicos,fizikus,physicist
+matemático,masculine,matemáticos,matematikus,mathematician
+astrónomo,masculine,astrónomos,csillagász,astronomer
+geólogo,masculine,geólogos,geológus,geologist
+meteorólogo,masculine,meteorólogos,meteorológus,meteorologist
+arqueólogo,masculine,arqueólogos,archeológus,archaeologist
+historiador,masculine,historiadores,történész,historian
+filósofo,masculine,filósofos,filozófus,philosopher
+sociólogo,masculine,sociólogos,szociológus,sociologist
+psicólogo,masculine,psicólogos,pszichológus,psychologist
+economista,masculine,economistas,közgazdász,economist
+politólogo,masculine,politólogos,politológus,political scientist
+antropólogo,masculine,antropólogos,antropológus,anthropologist
+lingüista,masculine,lingüistas,nyelvész,linguist
+traductor,masculine,traductores,fordító,translator
+intérprete,masculine,intérpretes,tolmács,interpreter
+abogado,masculine,abogados,ügyvéd,lawyer
+juez,masculine,jueces,bíró,judge
+fiscal,masculine,fiscales,ügyész,prosecutor
+notario,masculine,notarios,jegyző,notary
+policía,feminine,policías,rendőr,police officer
+detective,masculine,detectives,nyomozó,detective
+guardia,feminine,guardias,őr,guard
+bombero,masculine,bomberos,tűzoltó,firefighter
+paramédico,masculine,paramédicos,mentős,paramedic
+médico,masculine,médicos,orvos,doctor
+cirujano,masculine,cirujanos,sebély,sergeon
+enfermero,masculine,enfermeros,ápoló,nurse
+farmacéutico,masculine,farmacéuticos,gyógyszerész,pharmacist
+veterinario,masculine,veterinarios,állatorvos,veterinarian
+dentista,masculine,dentistas,fogorvos,dentist
+nutricionista,masculine,nutricionistas,táplálkozási szakértő,nutritionist
+terapeuta,masculine,terapeutas,terapeuta,therapist
+psiquiatra,masculine,psiquiatras,pszichiáter,psychiatrist
+masajista,masculine,masajistas,maszőr,massage therapist
+entrenador,masculine,entrenadores,edző,coach
+profesor,masculine,profesores,tanár,teacher
+maestro,masculine,maestros,tanító,school teacher
+educador,masculine,educadores,oktató,educator
+pedagogo,masculine,pedagogos,nevelő,pedagogue
+investigador,masculine,investigadores,kutató,researcher
+bibliotecario,masculine,bibliotecarios,könyvtáros,librarian
+archivista,masculine,archivistas,levéltáros,archivist
+conservador,masculine,conservadores,restaurátor,curator
+arqueólogo,masculine,arqueólogos,archeológus,archaeologist
+curador,masculine,curadores,kurátor,curator
+restaurador,masculine,restauradores,restaurátor,restorer
+guía turístico,masculine,guías turísticos,idegenvezető,tour guide
+fotógrafo,masculine,fotógrafos,fényképész,photographer
+camarógrafo,masculine,camarógrafos,operatőr,cameraman
+editor de vídeo,masculine,editores de vídeo,videószerkesztő,video editor
+productor,masculine,productores,producer,producer
+director de fotografía,masculine,directores de fotografía,operatőr,cinematographer
+iluminador,masculine,iluminadores,világosító,lighting technician
+sonidista,masculine,sonidistas,hangtechnikus,sound technician
+montador,masculine,montadores,vágó,film editor
+escenógrafo,masculine,escenógrafos,díszlettervező,set designer
+maquillador,masculine,maquilladores,sminkes,makeup artist
+vestuarista,masculine,vestuaristas,jelmeztervező,costume designer
+coreógrafo,masculine,coreógrafos,koreográfus,choreographer
+agente,masculine,agentes,ügynök,agent
+representante,masculine,representantes,képviselő,representative
+publicista,masculine,publicistas,pr szakember,publicist
+mercadólogo,masculine,mercadólogos,marketinges,marketer
+consultor,masculine,consultores,tanácsadó,consultant
+asesor,masculine,asesores,tanácsadó,advisor
+analista,masculine,analistas,elemző,analyst
+contador,masculine,contadores,könyvelő,accountant
+auditor,masculine,auditores,ellenőr,auditor
+inversionista,masculine,inversionistas,befektető,investor
+banquero,masculine,banqueros,bankár,banker
+corredor de bolsa,masculine,corredores de bolsa,tőzsdeügynök,stockbroker
+financiero,masculine,financieros,finanszírozó,financier
+comerciante,masculine,comerciantes,kereskedő,trader
+empresario,masculine,empresarios,vállalkozó,entrepreneur
+propietario,masculine,propietarios,tulajdonos,owner
+gerente,masculine,gerentes,ügyvezető,manager
+administrador,masculine,administradores,adminisztrátor,administrator
+director ejecutivo,masculine,directores ejecutivos,vezérigazgató,CEO
+presidente,masculine,presidentes,elnök,president
+vicepresidente,masculine,vicepresidentes,alelnök,vice president
+secretario,masculine,secretarios,titkár,secretary
+recepcionista,masculine,recepcionistas,recepciós,receptionist
+asistente,masculine,asistentes,asszisztens,assistant
+secretaria,feminine,secretarias,titkárnő,secretary
+telefonista,masculine,telefonistas,telefonkezelő,telephone operator
+mensajero,masculine,mensajeros,futár,messenger
+repartidor,masculine,repartidores,kézbesítő,delivery person
+cartero,masculine,carteros,postás,mailman
+vendedor,masculine,vendedores,eladó,salesperson
+cajero,masculine,cajeros,pénztáros,cashier
+dependiente,masculine,dependientes,bolti eladó,shop assistant
+promotor,masculine,promotores,promóter,promoter
+supervisor,masculine,supervisores,felügyelő,supervisor
+coordinador,masculine,coordinadores,koordinátor,coordinator
+organizador,masculine,organizadores,szervező,organizer
+planificador,masculine,planificadores,tervező,planner
+estratega,masculine,estrategas,stratéga,strategist
+negociador,masculine,negociadores,tárgyaló,negotiator
+intermediario,masculine,intermediarios,közvetítő,intermediary
+facilitador,masculine,facilitadores,moderátor,facilitator
+conferencista,masculine,conferencistas,előadó,speaker
+ponente,masculine,ponentes,előadó,presenter
+moderaor,masculine,moderadores,moderátor,moderator
+entrenador,masculine,entrenadores,edző,trainer
+coach,masculine,coaches,coach,coach
+terapeuta,masculine,terapeutas,terapeuta,therapist
+psicoterapeuta,masculine,psicoterapeutas,pszichoterapeuta,psychotherapist
+consejero,masculine,consejeros,tanácsadó,counselor
+orientador,masculine,orientadores,pályaválasztási tanácsadó,career counselor
+mentor,masculine,mentores,mentor,mentor
+tutor,masculine,tutores,magántanár,tutor
+profesor,masculine,profesores,tanár,professor
+maestro,masculine,maestros,tanító,teacher
+pedagogo,masculine,pedagogos,nevelő,pedagogue
+investigador,masculine,investigadores,kutató,researcher
+científico,masculine,científicos,tudós,scientist
+experto,masculine,expertos,szakértő,expert
+especialista,masculine,especialistas,szakértő,specialist
+profesional,masculine,profesionales,szakember,professional
+aficionado,masculine,aficionados,rajongó,enthusiast
+practicante,masculine,practicantes,gyakornok,intern
+aprendiz,masculine,aprendices,tanuló,apprentice
+pasante,masculine,pasantes,gyakornok,trainee
+estudiante,masculine,estudiantes,diák,student
+alumno,masculine,alumnos,diák,student
+escolar,masculine,escolares,iskolás,schoolboy
+universitario,masculine,universitarios,egyetemi hallgató,university student
+licenciado,masculine,licenciados,diplomás,graduate
+doctorado,masculine,doctorados,doktor,d. ph.
+candidato,masculine,candidatos,jelölt,candidate
+aspirante,masculine,aspirantes,pályázó,aspirant
+competidor,masculine,competidores,versenyző,competitor
+rival,masculine,rivales,rivális,rival
+campeón,masculine,campeones,bajnok,champion
+subcampeón,masculine,subcampeones,második helyezett,runner-up
+medallista,masculine,medallistas,érmes,medalist
+atleta,masculine,atletas,atléta,athlete
+deportista,masculine,deportistas,sportoló,sportsman
+futbolista,masculine,futbolistas,labdarúgó,football player
+baloncestista,masculine,baloncestistas,kosárlabdázó,basketball player
+nadador,masculine,nadadores,úszó,swimmer
+ciclista,masculine,ciclistas,kerékpáros,cyclist
+maratonista,masculine,maratonistas,maratoni futó,marathon runner
+boxeador,masculine,boxeadores,boxoló,boxer
+luchador,masculine,luchadores,birkózó,wrestler
+gimnasta,masculine,gimnastas,torna,tornász,gymnast
+judoca,masculine,judocas,cselgáncsozó,judoka
+esgrimista,masculine,esgrimistas,vívó,fencer
+levantador de pesas,masculine,levantadores de pesas,súlyemelő,weightlifter
+saltador,masculine,saltadores,ugró,jumper
+corredor,masculine,corredores,futó,runner
+patinador,masculine,patinadores,korcsolyázó,skater
+esquiador,masculine,esquiadores,síző,skier
+surfista,masculine,surfistas,szörfös,surfer
+remero,masculine,remeros,evezős,rower
+piragüista,masculine,piragüistas,kajakos,canoeist
+automovilista,masculine,automovilistas,autóversenyző,racing driver
+motociclista,masculine,motociclistas,motoros,motorcyclist
+jinete,masculine,jinetes,lovas,equestrian
+arquero,masculine,arqueros,íjász,archer
+tirador,masculine,tiradores,lövész,shooter
+pescador,masculine,pescadores,horgász,fisherman
+cazador,masculine,cazadores,vadász,hunter
+explorador,masculine,exploradores,felfedező,explorer
+aventurero,masculine,aventureros,kalandor,adventurer
+viajero,masculine,viajeros,utazó,traveler
+turista,masculine,turistas,turista,tourist
+campista,masculine,campistas,kempingező,camper
+excursionista,masculine,excursionistas,kiránduló,hiker
+montañista,masculine,montañistas,hegymászó,mountaineer
+espeleólogo,masculine,espeleólogos,barlangász,speleologist
+buzo,masculine,buzos,búvár,diver
+paracaidista,masculine,paracaidistas,ejtőernyős,paratrooper
+piloto de carreras,masculine,pilotos de carreras,versenyző,race car driver
+navegante,masculine,navegantes,hajós,navigator
+astrónomo,masculine,astrónomos,csillagász,astronomer
+inventor,masculine,inventores,feltaláló,inventor
+científico,masculine,científicos,tudós,scientist
+técnico,masculine,técnicos,technikus,technician
+ingeniero,masculine,ingenieros,mérnök,engineer
+programador,masculine,programadores,programozó,programmer
+desarrollador,masculine,desarrolladores,fejlesztő,developer
+analista,masculine,analistas,elemző,analyst
+administrador de sistemas,masculine,administradores de sistemas,rendszergazda,system administrator
+hacker,masculine,hackers,hacker,hacker
+ciberseguridad,masculine,ciberseguridades,kiberbiztonsági szakértő,cybersecurity expert
+redactor,masculine,redactores,szerkesztő,editor
+bloguero,masculine,blogueros,blogger,blogger
+vlogger,masculine,vloggers,vlogger,vlogger
+youtuber,masculine,youtubers,youtuber,youtuber
+influencer,masculine,influencers,közösségi média influenszer,influencer
+streamer,masculine,streamers,streamelő,streamer
+comentarista,masculine,comentaristas,kommentátor,commentator
+locutor,masculine,locutores,bemondó,announcer
+presentador,masculine,presentadores,műsorvezető,host
+productor,masculine,productores,producer,producer
+director de televisión,masculine,directores de televisión,televíziós rendező,TV director
+guionista,masculine,guionistas,forgatókönyvíró,screenwriter
+ilustrador,masculine,ilustradores,illusztrátor,illustrator
+diseñador gráfico,masculine,diseñadores gráficos,grafikus tervező,graphic designer
+artista digital,masculine,artistas digitales,digitális művész,digital artist
+animador 3D,masculine,animadores 3D,3D animátor,3D animator
+modelador 3D,masculine,modeladores 3D,3D modellező,3D modeler
+desarrollador de videojuegos,masculine,desarrolladores de videojuegos,játékfejlesztő,video game developer
+probador de videojuegos,masculine,probadores de videojuegos,játék tesztelő,video game tester
+escritor de videojuegos,masculine,escritores de videojuegos,játékíró,video game writer
+guionista de cómics,masculine,guionistas de cómics,képregényíró,comic book writer
+dibujante de cómics,masculine,dibujantes de cómics,képregényrajzoló,comic book artist
+coleccionista,masculine,coleccionistas,gyűjtő,collector
+arqueólogo,masculine,arqueólogos,archeológus,archaeologist
+historiador,masculine,historiadores,történész,historian
+curador de museo,masculine,curadores de museo,múzeumi kurátor,museum curator
+conservador de arte,masculine,conservadores de arte,műtárgy restaurátor,art conservator
+guía turístico,masculine,guías turísticos,idegenvezető,tour guide
+bibliotecario,masculine,bibliotecarios,könyvtáros,librarian
+archivista,masculine,archivistas,levéltáros,archivist
+investigador,masculine,investigadores,kutató,researcher
+profesor,masculine,profesores,tanár,professor
+educador,masculine,educadores,oktató,educator
+pedagogo,masculine,pedagogos,nevelő,pedagogue
+consejero escolar,masculine,consejeros escolares,iskolai tanácsadó,school counselor
+director de escuela,masculine,directores de escuela,iskolaigazgató,school principal
+coordinador educativo,masculine,coordinadores educativos,oktatási koordinátor,education coordinator
+especialista en educación,masculine,especialistas en educación,oktatási szakértő,education specialist
+asesor académico,masculine,asesores académicos,akadémiai tanácsadó,academic advisor
+orientador vocacional,masculine,orientadores vocacionales,pályaválasztási tanácsadó,career counselor
+mentor,masculine,mentores,mentor,mentor
+tutor,masculine,tutores,magántanár,tutor
+aprendiz,masculine,aprendices,tanuló,apprentice
+pasante,masculine,pasantes,gyakornok,intern
+estudiante,masculine,estudiantes,diák,student
+alumno,masculine,alumnos,diák,student
+escolar,masculine,escolares,iskolás,schoolchild
+universitario,masculine,universitarios,egyetemi hallgató,university student
+licenciado,masculine,licenciados,diplomás,graduate
+doctorado,masculine,doctorados,doktor,PhD
+candidato,masculine,candidatos,jelölt,candidate
+aspirante,masculine,aspirantes,pályázó,aspirant
+competidor,masculine,competidores,versenyző,competitor
+rival,masculine,rivales,rivális,rival
+campeón,masculine,campeones,bajnok,champion
+subcampeón,masculine,subcampeones,második helyezett,runner-up
+medallista,masculine,medallistas,érmes,medalist
+atleta,masculine,atletas,atléta,athlete
+deportista,masculine,deportistas,sportoló,sportsman
+futbolista,masculine,futbolistas,labdarúgó,football player
+baloncestista,masculine,baloncestistas,kosárlabdázó,basketball player
+nadador,masculine,nadadores,úszó,swimmer
+ciclista,masculine,ciclistas,kerékpáros,cyclist
+maratonista,masculine,maratonistas,maratoni futó,marathon runner
+boxeador,masculine,boxeadores,boxoló,boxer
+luchador,masculine,luchadores,birkózó,wrestler
+gimnasta,masculine,gimnastas,torna,tornász,gymnast
+judoca,masculine,judocas,cselgáncsozó,judoka
+esgrimista,masculine,esgrimistas,vívó,fencer
+levantador de pesas,masculine,levantadores de pesas,súlyemelő,weightlifter
+saltador,masculine,saltadores,ugró,jumper
+corredor,masculine,corredores,futó,runner
+patinador,masculine,patinadores,korcsolyázó,skater
+esquiador,masculine,esquiadores,síző,skier
+surfista,masculine,surfistas,szörfös,surfer
+remero,masculine,remeros,evezős,rower
+piragüista,masculine,piragüistas,kajakos,canoeist
+automovilista,masculine,automovilistas,autóversenyző,racing driver
+motociclista,masculine,motociclistas,motoros,motorcyclist
+jinete,masculine,jinetes,lovas,equestrian
+arquero,masculine,arqueros,íjász,archer
+tirador,masculine,tiradores,lövész,shooter
+pescador,masculine,pescadores,horgász,fisherman
+cazador,masculine,cazadores,vadász,hunter
+explorador,masculine,exploradores,felfedező,explorer
+aventurero,masculine,aventureros,kalandor,adventurer
+viajero,masculine,viajeros,utazó,traveler
+turista,masculine,turistas,turista,tourist
+campista,masculine,campistas,kempingező,camper
+excursionista,masculine,excursionistas,kiránduló,hiker
+montañista,masculine,montañistas,hegymászó,mountaineer
+espeleólogo,masculine,espeleólogos,barlangász,speleologist
+buzo,masculine,buzos,búvár,diver
+paracaidista,masculine,paracaidistas,ejtőernyős,paratrooper
+piloto de carreras,masculine,pilotos de carreras,versenyző,race car driver
+navegante,masculine,navegantes,hajós,navigator
+astrónomo,masculine,astrónomos,csillagász,astronomer
+inventor,masculine,inventores,feltaláló,inventor
+científico,masculine,científicos,tudós,scientist
+técnico,masculine,técnicos,technikus,technician
+ingeniero,masculine,ingenieros,mérnök,engineer
+programador,masculine,programadores,programozó,programmer
+desarrollador,masculine,desarrolladores,fejlesztő,developer
+analista,masculine,analistas,elemző,analyst
+administrador de sistemas,masculine,administradores de sistemas,rendszergazda,system administrator
+hacker,masculine,hackers,hacker,hacker
+ciberseguridad,masculine,ciberseguridades,kiberbiztonsági szakértő,cybersecurity expert
+redactor,masculine,redactores,szerkesztő,editor
+bloguero,masculine,blogueros,blogger,blogger
+vlogger,masculine,vloggers,vlogger,vlogger
+youtuber,masculine,youtubers,youtuber,youtuber
+influencer,masculine,influencers,közösségi média influenszer,influencer
+streamer,masculine,streamers,streamelő,streamer
+comentarista,masculine,comentaristas,kommentátor,commentator
+locutor,masculine,locutores,bemondó,announcer
+presentador,masculine,presentadores,műsorvezető,host
+productor,masculine,productores,producer,producer
+director de televisión,masculine,directores de televisión,televíziós rendező,TV director
+guionista,masculine,guionistas,forgatókönyvíró,screenwriter
+ilustrador,masculine,ilustradores,illusztrátor,illustrator
+diseñador gráfico,masculine,diseñadores gráficos,grafikus tervező,graphic designer
+artista digital,masculine,artistas digitales,digitális művész,digital artist
+animador 3D,masculine,animadores 3D,3D animátor,3D animator
+modelador 3D,masculine,modeladores 3D,3D modellező,3D modeler
+desarrollador de videojuegos,masculine,desarrolladores de videojuegos,játékfejlesztő,video game developer
+probador de videojuegos,masculine,probadores de videojuegos,játék tesztelő,video game tester
+escritor de videojuegos,masculine,escritores de videojuegos,játékíró,video game writer
+guionista de cómics,masculine,guionistas de cómics,képregényíró,comic book writer
+dibujante de cómics,masculine,dibujantes de cómics,képregényrajzoló,comic book artist
+coleccionista,masculine,coleccionistas,gyűjtő,collector
+arqueólogo,masculine,arqueólogos,archeológus,archaeologist
+historiador,masculine,historiadores,történész,historian
+curador de museo,masculine,curadores de museo,múzeumi kurátor,museum curator
+conservador de arte,masculine,conservadores de arte,műtárgy restaurátor,art conservator
+guía turístico,masculine,guías turísticos,idegenvezető,tour guide
+bibliotecario,masculine,bibliotecarios,könyvtáros,librarian
+archivista,masculine,archivistas,levéltáros,archivist
+investigador,masculine,investigadores,kutató,researcher
+profesor,masculine,profesores,tanár,professor
+educador,masculine,educadores,oktató,educator
+pedagogo,masculine,pedagogos,nevelő,pedagogue
+consejero escolar,masculine,consejeros escolares,iskolai tanácsadó,school counselor
+director de escuela,masculine,directores de escuela,iskolaigazgató,school principal
+coordinador educativo,masculine,coordinadores educativos,oktatási koordinátor,education coordinator
+especialista en educación,masculine,especialistas en educación,oktatási szakértő,education specialist
+asesor académico,masculine,asesores académicos,akadémiai tanácsadó,academic advisor
+orientador vocacional,masculine,orientadores vocacionales,pályaválasztási tanácsadó,career counselor
+mentor,masculine,mentores,mentor,mentor
+tutor,masculine,tutores,magántanár,tutor
+aprendiz,masculine,aprendices,tanuló,apprentice
+pasante,masculine,pasantes,gyakornok,intern
+estudiante,masculine,estudiantes,diák,student
+alumno,masculine,alumnos,diák,student
+escolar,masculine,escolares,iskolás,schoolchild
+universitario,masculine,universitarios,egyetemi hallgató,university student
+licenciado,masculine,licenciados,diplomás,graduate
+doctorado,masculine,doctorados,doktor,PhD
+candidato,masculine,candidatos,jelölt,candidate
+aspirante,masculine,aspirantes,pályázó,aspirant
+competidor,masculine,competidores,versenyző,competitor
+rival,masculine,rivales,rivális,rival
+campeón,masculine,campeones,bajnok,champion
+subcampeón,masculine,subcampeones,második helyezett,runner-up
+medallista,masculine,medallistas,érmes,medalist
+atleta,masculine,atletas,atléta,athlete
+deportista,masculine,deportistas,sportoló,sportsman
+futbolista,masculine,futbolistas,labdarúgó,football player
+baloncestista,masculine,baloncestistas,kosárlabdázó,basketball player
+nadador,masculine,nadadores,úszó,swimmer
+ciclista,masculine,ciclistas,kerékpáros,cyclist
+maratonista,masculine,maratonistas,maratoni futó,marathon runner
+boxeador,masculine,boxeadores,boxoló,boxer
+luchador,masculine,luchadores,birkózó,wrestler
+gimnasta,masculine,gimnastas,torna,tornász,gymnast
+judoca,masculine,judocas,cselgáncsozó,judoka
+esgrimista,masculine,esgrimistas,vívó,fencer
+levantador de pesas,masculine,levantadores de pesas,súlyemelő,weightlifter
+saltador,masculine,saltadores,ugró,jumper
+corredor,masculine,corredores,futó,runner
+patinador,masculine,patinadores,korcsolyázó,skater
+esquiador,masculine,esquiadores,síző,skier
+surfista,masculine,surfistas,szörfös,surfer
+remero,masculine,remeros,evezős,rower
+piragüista,masculine,piragüistas,kajakos,canoeist
+automovilista,masculine,automovilistas,autóversenyző,racing driver
+motociclista,masculine,motociclistas,motoros,motorcyclist
+jinete,masculine,jinetes,lovas,equestrian
+arquero,masculine,arqueros,íjász,archer
+tirador,masculine,tiradores,lövész,shooter
+pescador,masculine,pescadores,horgász,fisherman
+cazador,masculine,cazadores,vadász,hunter
+explorador,masculine,exploradores,felfedező,explorer
+aventurero,masculine,aventureros,kalandor,adventurer
+viajero,masculine,viajeros,utazó,traveler
+turista,masculine,turistas,turista,tourist
+campista,masculine,campistas,kempingező,camper
+excursionista,masculine,excursionistas,kiránduló,hiker
+montañista,masculine,montañistas,hegymászó,mountaineer
+espeleólogo,masculine,espeleólogos,barlangász,speleologist
+buzo,masculine,buzos,búvár,diver
+paracaidista,masculine,paracaidistas,ejtőernyős,paratrooper
+piloto de carreras,masculine,pilotos de carreras,versenyző,race car driver
+navegante,masculine,navegantes,hajós,navigator
+astrónomo,masculine,astrónomos,csillagász,astronomer
+inventor,masculine,inventores,feltaláló,inventor
+científico,masculine,científicos,tudós,scientist
+técnico,masculine,técnicos,technikus,technician
+ingeniero,masculine,ingenieros,mérnök,engineer
+programador,masculine,programadores,programozó,programmer
+desarrollador,masculine,desarrolladores,fejlesztő,developer
+analista,masculine,analistas,elemző,analyst
+administrador de sistemas,masculine,administradores de sistemas,rendszergazda,system administrator
+hacker,masculine,hackers,hacker,hacker
+ciberseguridad,masculine,ciberseguridades,kiberbiztonsági szakértő,cybersecurity expert
+redactor,masculine,redactores,szerkesztő,editor
+bloguero,masculine,blogueros,blogger,blogger
+vlogger,masculine,vloggers,vlogger,vlogger
+youtuber,masculine,youtubers,youtuber,youtuber
+influencer,masculine,influencers,közösségi média influenszer,influencer
+streamer,masculine,streamers,streamelő,streamer
+comentarista,masculine,comentaristas,kommentátor,commentator
+locutor,masculine,locutores,bemondó,announcer
+presentador,masculine,presentadores,műsorvezető,host
+productor,masculine,productores,producer,producer
+director de televisión,masculine,directores de televisión,televíziós rendező,TV director
+guionista,masculine,guionistas,forgatókönyvíró,screenwriter
+ilustrador,masculine,ilustradores,illusztrátor,illustrator
+diseñador gráfico,masculine,diseñadores gráficos,grafikus tervező,graphic designer
+artista digital,masculine,artistas digitales,digitális művész,digital artist
+animador 3D,masculine,animadores 3D,3D animátor,3D animator
+modelador 3D,masculine,modeladores 3D,3D modellező,3D modeler
+desarrollador de videojuegos,masculine,desarrolladores de videojuegos,játékfejlesztő,video game developer
+probador de videojuegos,masculine,probadores de videojuegos,játék tesztelő,video game tester
+escritor de videojuegos,masculine,escritores de videojuegos,játékíró,video game writer
+guionista de cómics,masculine,guionistas de cómics,képregényíró,comic book writer
+dibujante de cómics,masculine,dibujantes de cómics,képregényrajzoló,comic book artist
+coleccionista,masculine,coleccionistas,gyűjtő,collector
+arqueólogo,masculine,arqueólogos,archeológus,archaeologist
+historiador,masculine,historiadores,történész,historian
+curador de museo,masculine,curadores de museo,múzeumi kurátor,museum curator
+conservador de arte,masculine,conservadores de arte,műtárgy restaurátor,art conservator
+guía turístico,masculine,guías turísticos,idegenvezető,tour guide
+bibliotecario,masculine,bibliotecarios,könyvtáros,librarian
+archivista,masculine,archivistas,levéltáros,archivist
+investigador,masculine,investigadores,kutató,researcher
+profesor,masculine,profesores,tanár,professor
+educador,masculine,educadores,oktató,educator
+pedagogo,masculine,pedagogos,nevelő,pedagogue
+consejero escolar,masculine,consejeros escolares,iskolai tanácsadó,school counselor
+director de escuela,masculine,directores de escuela,iskolaigazgató,school principal
+coordinador educativo,masculine,coordinadores educativos,oktatási koordinátor,education coordinator
+especialista en educación,masculine,especialistas en educación,oktatási szakértő,education specialist
+asesor académico,masculine,asesores académicos,akadémiai tanácsadó,academic advisor
+orientador vocacional,masculine,orientadores vocacionales,pályaválasztási tanácsadó,career counselor
+mentor,masculine,mentores,mentor,mentor
+tutor,masculine,tutores,magántanár,tutor
+aprendiz,masculine,aprendices,tanuló,apprentice
+pasante,masculine,pasantes,gyakornok,intern
+estudiante,masculine,estudiantes,diák,student
+alumno,masculine,alumnos,diák,student
+escolar,masculine,escolares,iskolás,schoolchild
+universitario,masculine,universitarios,egyetemi hallgató,university student
+licenciado,masculine,licenciados,diplomás,graduate
+doctorado,masculine,doctorados,doktor,PhD
+candidato,masculine,candidatos,jelölt,candidate
+aspirante,masculine,aspirantes,pályázó,aspirant
+competidor,masculine,competidores,versenyző,competitor
+rival,masculine,rivales,rivális,rival
+campeón,masculine,campeones,bajnok,champion
+subcampeón,masculine,subcampeones,második helyezett,runner-up
+medallista,masculine,medallistas,érmes,medalist
+atleta,masculine,atletas,atléta,athlete
+deportista,masculine,deportistas,sportoló,sportsman
+futbolista,masculine,futbolistas,labdarúgó,football player
+baloncestista,masculine,baloncestistas,kosárlabdázó,basketball player
+nadador,masculine,nadadores,úszó,swimmer
+ciclista,masculine,ciclistas,kerékpáros,cyclist
+maratonista,masculine,maratonistas,maratoni futó,marathon runner
+boxeador,masculine,boxeadores,boxoló,boxer
+luchador,masculine,luchadores,birkózó,wrestler
+gimnasta,masculine,gimnastas,torna,tornász,gymnast
+judoca,masculine,judocas,cselgáncsozó,judoka
+esgrimista,masculine,esgrimistas,vívó,fencer
+levantador de pesas,masculine,levantadores de pesas,súlyemelő,weightlifter
+saltador,masculine,saltadores,ugró,jumper
+corredor,masculine,corredores,futó,runner
+patinador,masculine,patinadores,korcsolyázó,skater
+esquiador,masculine,esquiadores,síző,skier
+surfista,masculine,surfistas,szörfös,surfer
+remero,masculine,remeros,evezős,rower
+piragüista,masculine,piragüistas,kajakos,canoeist
+automovilista,masculine,automovilistas,autóversenyző,racing driver
+motociclista,masculine,motociclistas,motoros,motorcyclist
+jinete,masculine,jinetes,lovas,equestrian
+arquero,masculine,arqueros,íjász,archer
+tirador,masculine,tiradores,lövész,shooter
+pescador,masculine,pescadores,horgász,fisherman
+cazador,masculine,cazadores,vadász,hunter
+explorador,masculine,exploradores,felfedező,explorer
+aventurero,masculine,aventureros,kalandor,adventurer
+viajero,masculine,viajeros,utazó,traveler
+turista,masculine,turistas,turista,tourist
+campista,masculine,campistas,kempingező,camper
+excursionista,masculine,excursionistas,kiránduló,hiker
+montañista,masculine,montañistas,hegymászó,mountaineer
+espeleólogo,masculine,espeleólogos,barlangász,speleologist
+buzo,masculine,buzos,búvár,diver
+paracaidista,masculine,paracaidistas,ejtőernyős,paratrooper
+piloto de carreras,masculine,pilotos de carreras,versenyző,race car driver
+navegante,masculine,navegantes,hajós,navigator
+astrónomo,masculine,astrónomos,csillagász,astronomer
+inventor,masculine,inventores,feltaláló,inventor
+científico,masculine,científicos,tudós,scientist
+técnico,masculine,técnicos,technikus,technician
+ingeniero,masculine,ingenieros,mérnök,engineer
+programador,masculine,programadores,programozó,programmer
+desarrollador,masculine,desarrolladores,fejlesztő,developer
+analista,masculine,analistas,elemző,analyst
+administrador de sistemas,masculine,administradores de sistemas,rendszergazda,system administrator
+hacker,masculine,hackers,hacker,hacker
+ciberseguridad,masculine,ciberseguridades,kiberbiztonsági szakértő,cybersecurity expert
+redactor,masculine,redactores,szerkesztő,editor
+bloguero,masculine,blogueros,blogger,blogger
+vlogger,masculine,vloggers,vlogger,vlogger
+youtuber,masculine,youtubers,youtuber,youtuber
+influencer,masculine,influencers,közösségi média influenszer,influencer
+streamer,masculine,streamers,streamelő,streamer
+comentarista,masculine,comentaristas,kommentátor,commentator
+locutor,masculine,locutores,bemondó,announcer
+presentador,masculine,presentadores,műsorvezető,host
+productor,masculine,productores,producer,producer
+director de televisión,masculine,directores de televisión,televíziós rendező,TV director
+guionista,masculine,guionistas,forgatókönyvíró,screenwriter
+ilustrador,masculine,ilustradores,illusztrátor,illustrator
+diseñador gráfico,masculine,diseñadores gráficos,grafikus tervező,graphic designer
+artista digital,masculine,artistas digitales,digitális művész,digital artist
+animador 3D,masculine,animadores 3D,3D animátor,3D animator
+modelador 3D,masculine,modeladores 3D,3D modellező,3D modeler
+desarrollador de videojuegos,masculine,desarrolladores de videojuegos,játékfejlesztő,video game developer
+probador de videojuegos,masculine,probadores de videojuegos,játék tesztelő,video game tester
+escritor de videojuegos,masculine,escritores de videojuegos,játékíró,video game writer
+guionista de cómics,masculine,guionistas de cómics,képregényíró,comic book writer
+dibujante de cómics,masculine,dibujantes de cómics,képregényrajzoló,comic book artist
+coleccionista,masculine,coleccionistas,gyűjtő,collector
+arqueólogo,masculine,arqueólogos,archeológus,archaeologist
+historiador,masculine,historiadores,történész,historian
+curador de museo,masculine,curadores de museo,múzeumi kurátor,museum curator
+conservador de arte,masculine,conservadores de arte,műtárgy restaurátor,art conservator
+guía turístico,masculine,guías turísticos,idegenvezető,tour guide
+bibliotecario,masculine,bibliotecarios,könyvtáros,librarian
+archivista,masculine,archivistas,levéltáros,archivist
+investigador,masculine,investigadores,kutató,researcher
+profesor,masculine,profesores,tanár,professor
+educador,masculine,educadores,oktató,educator
+pedagogo,masculine,pedagogos,nevelő,pedagogue
+consejero escolar,masculine,consejeros escolares,iskolai tanácsadó,school counselor
+director de escuela,masculine,directores de escuela,iskolaigazgató,school principal
+coordinador educativo,masculine,coordinadores educativos,oktatási koordinátor,education coordinator
+especialista en educación,masculine,especialistas en educación,oktatási szakértő,education specialist
+asesor académico,masculine,asesores académicos,akadémiai tanácsadó,academic advisor
+orientador vocacional,masculine,orientadores vocacionales,pályaválasztási tanácsadó,career counselor
+mentor,masculine,mentores,mentor,mentor
+tutor,masculine,tutores,magántanár,tutor
+aprendiz,masculine,aprendices,tanuló,apprentice
+pasante,masculine,pasantes,gyakornok,intern
+estudiante,masculine,estudiantes,diák,student
+alumno,masculine,alumnos,diák,student
+escolar,masculine,escolares,iskolás,schoolchild
+universitario,masculine,universitarios,egyetemi hallgató,university student
+licenciado,masculine,licenciados,diplomás,graduate
+doctorado,masculine,doctorados,doktor,PhD
+candidato,masculine,candidatos,jelölt,candidate
+aspirante,masculine,aspirantes,pályázó,aspirant
+competidor,masculine,competidores,versenyző,competitor
+rival,masculine,rivales,rivális,rival
+campeón,masculine,campeones,bajnok,champion
+subcampeón,masculine,subcampeones,második helyezett,runner-up
+medallista,masculine,medallistas,érmes,medalist
+atleta,masculine,atletas,atléta,athlete
+deportista,masculine,deportistas,sportoló,sportsman
+futbolista,masculine,futbolistas,labdarúgó,football player
+baloncestista,masculine,baloncestistas,kosárlabdázó,basketball player
+nadador,masculine,nadadores,úszó,swimmer
+ciclista,masculine,ciclistas,kerékpáros,cyclist
+maratonista,masculine,maratonistas,maratoni futó,marathon runner
+boxeador,masculine,boxeadores,boxoló,boxer
+luchador,masculine,luchadores,birkózó,wrestler
+gimnasta,masculine,gimnastas,torna,tornász,gymnast
+judoca,masculine,judocas,cselgáncsozó,judoka
+esgrimista,masculine,esgrimistas,vívó,fencer
+levantador de pesas,masculine,levantadores de pesas,súlyemelő,weightlifter
+saltador,masculine,saltadores,ugró,jumper
+corredor,masculine,corredores,futó,runner
+patinador,masculine,patinadores,korcsolyázó,skater
+esquiador,masculine,esquiadores,síző,skier
+surfista,masculine,surfistas,szörfös,surfer
+remero,masculine,remeros,evezős,rower
+piragüista,masculine,piragüistas,kajakos,canoeist
+automovilista,masculine,automovilistas,autóversenyző,racing driver
+motociclista,masculine,motociclistas,motoros,motorcyclist
+jinete,masculine,jinetes,lovas,equestrian
+arquero,masculine,arqueros,íjász,archer
+tirador,masculine,tiradores,lövész,shooter
+pescador,masculine,pescadores,horgász,fisherman
+cazador,masculine,cazadores,vadász,hunter
+explorador,masculine,exploradores,felfedező,explorer
+aventurero,masculine,aventureros,kalandor,adventurer
+viajero,masculine,viajeros,utazó,traveler
+turista,masculine,turistas,turista,tourist
+campista,masculine,campistas,kempingező,camper
+excursionista,masculine,excursionistas,kiránduló,hiker
+montañista,masculine,montañistas,hegymászó,mountaineer
+espeleólogo,masculine,espeleólogos,barlangász,speleologist
+buzo,masculine,buzos,búvár,diver
+paracaidista,masculine,paracaidistas,ejtőernyős,paratrooper
+piloto de carreras,masculine,pilotos de carreras,versenyző,race car driver
+navegante,masculine,navegantes,hajós,navigator
+astrónomo,masculine,astrónomos,csillagász,astronomer
+inventor,masculine,inventores,feltaláló,inventor
+científico,masculine,científicos,tudós,scientist
+técnico,masculine,técnicos,technikus,technician
+ingeniero,masculine,ingenieros,mérnök,engineer
+programador,masculine,programadores,programozó,programmer
+desarrollador,masculine,desarrolladores,fejlesztő,developer
+analista,masculine,analistas,elemző,analyst
+administrador de sistemas,masculine,administradores de sistemas,rendszergazda,system administrator
+hacker,masculine,hackers,hacker,hacker
+ciberseguridad,masculine,ciberseguridades,kiberbiztonsági szakértő,cybersecurity expert
+redactor,masculine,redactores,szerkesztő,editor
+bloguero,masculine,blogueros,blogger,blogger
+vlogger,masculine,vloggers,vlogger,vlogger
+youtuber,masculine,youtubers,youtuber,youtuber
+influencer,masculine,influencers,közösségi média influenszer,influencer
+streamer,masculine,streamers,streamelő,streamer
+comentarista,masculine,comentaristas,kommentátor,commentator
+locutor,masculine,locutores,bemondó,announcer
+presentador,masculine,presentadores,műsorvezető,host
+productor,masculine,productores,producer,producer
+director de televisión,masculine,directores de televisión,televíziós rendező,TV director
+guionista,masculine,guionistas,forgatókönyvíró,screenwriter
+ilustrador,masculine,ilustradores,illusztrátor,illustrator
+diseñador gráfico,masculine,diseñadores gráficos,grafikus tervező,graphic designer
+artista digital,masculine,artistas digitales,digitális művész,digital artist
+animador 3D,masculine,animadores 3D,3D animátor,3D animator
+modelador 3D,masculine,modeladores 3D,3D modellező,3D modeler
+desarrollador de videojuegos,masculine,desarrolladores de videojuegos,játékfejlesztő,video game developer
+probador de videojuegos,masculine,probadores de videojuegos,játék tesztelő,video game tester
+escritor de videojuegos,masculine,escritores de videojuegos,játékíró,video game writer
+guionista de cómics,masculine,guionistas de cómics,képregényíró,comic book writer
+dibujante de cómics,masculine,dibujantes de cómics,képregényrajzoló,comic book artist
+coleccionista,masculine,coleccionistas,gyűjtő,collector
+arqueólogo,masculine,arqueólogos,archeológus,archaeologist
+historiador,masculine,historiadores,történész,historian
+curador de museo,masculine,curadores de museo,múzeumi kurátor,museum curator
+conservador de arte,masculine,conservadores de arte,műtárgy restaurátor,art conservator
+guía turístico,masculine,guías turísticos,idegenvezető,tour guide
+bibliotecario,masculine,bibliotecarios,könyvtáros,librarian
+archivista,masculine,archivistas,levéltáros,archivist
+investigador,masculine,investigadores,kutató,researcher
+profesor,masculine,profesores,tanár,professor
+educador,masculine,educadores,oktató,educator
+pedagogo,masculine,pedagogos,nevelő,pedagogue
+consejero escolar,masculine,consejeros escolares,iskolai tanácsadó,school counselor
+director de escuela,masculine,directores de escuela,iskolaigazgató,school principal
+coordinador educativo,masculine,coordinadores educativos,oktatási koordinátor,education coordinator
+especialista en educación,masculine,especialistas en educación,oktatási szakértő,education specialist
+asesor académico,masculine,asesores académicos,akadémiai tanácsadó,academic advisor
+orientador vocacional,masculine,orientadores vocacionales,pályaválasztási tanácsadó,career counselor
+mentor,masculine,mentores,mentor,mentor
+tutor,masculine,tutores,magántanár,tutor
+aprendiz,masculine,aprendices,tanuló,apprentice
+pasante,masculine,pasantes,gyakornok,intern
+estudiante,masculine,estudiantes,diák,student
+alumno,masculine,alumnos,diák,student
+escolar,masculine,escolares,iskolás,schoolchild
+universitario,masculine,universitarios,egyetemi hallgató,university student
+licenciado,masculine,licenciados,diplomás,graduate
+doctorado,masculine,doctorados,doktor,PhD
+candidato,masculine,candidatos,jelölt,candidate
+aspirante,masculine,aspirantes,pályázó,aspirant
+competidor,masculine,competidores,versenyző,competitor
+rival,masculine,rivales,rivális,rival
+campeón,masculine,campeones,bajnok,champion
+subcampeón,masculine,subcampeones,második helyezett,runner-up
+medallista,masculine,medallistas,érmes,medalist
+atleta,masculine,atletas,atléta,athlete
+deportista,masculine,deportistas,sportoló,sportsman
+futbolista,masculine,futbolistas,labdarúgó,football player
+baloncestista,masculine,baloncestistas,kosárlabdázó,basketball player
+nadador,masculine,nadadores,úszó,swimmer
+ciclista,masculine,ciclistas,kerékpáros,cyclist
+maratonista,masculine,maratonistas,maratoni futó,marathon runner
+boxeador,masculine,boxeadores,boxoló,boxer
+luchador,masculine,luchadores,birkózó,wrestler
+gimnasta,masculine,gimnastas,torna,tornász,gymnast
+judoca,masculine,judocas,cselgáncsozó,judoka
+esgrimista,masculine,esgrimistas,vívó,fencer
+levantador de pesas,masculine,levantadores de pesas,súlyemelő,weightlifter
+saltador,masculine,saltadores,ugró,jumper
+corredor,masculine,corredores,futó,runner
+patinador,masculine,patinadores,korcsolyázó,skater
+esquiador,masculine,esquiadores,síző,skier
+surfista,masculine,surfistas,szörfös,surfer
+remero,masculine,remeros,evezős,rower
+piragüista,masculine,piragüistas,kajakos,canoeist
+automovilista,masculine,automovilistas,autóversenyző,racing driver
+motociclista,masculine,motociclistas,motoros,motorcyclist
+jinete,masculine,jinetes,lovas,equestrian
+arquero,masculine,arqueros,íjász,archer
+tirador,masculine,tiradores,lövész,shooter
+pescador,masculine,pescadores,horgász,fisherman
+cazador,masculine,cazadores,vadász,hunter
+explorador,masculine,exploradores,felfedező,explorer
+aventurero,masculine,aventureros,kalandor,adventurer
+viajero,masculine,viajeros,utazó,traveler
+turista,masculine,turistas,turista,tourist
+campista,masculine,campistas,kempingező,camper
+excursionista,masculine,excursionistas,kiránduló,hiker
+montañista,masculine,montañistas,hegymászó,mountaineer
+espeleólogo,masculine,espeleólogos,barlangász,speleologist
+buzo,masculine,buzos,búvár,diver
+paracaidista,masculine,paracaidistas,ejtőernyős,paratrooper
+piloto de carreras,masculine,pilotos de carreras,versenyző,race car driver
+navegante,masculine,navegantes,hajós,navigator
+astrónomo,masculine,astrónomos,csillagász,astronomer
+inventor,masculine,inventores,feltaláló,inventor
+científico,masculine,científicos,tudós,scientist
+técnico,masculine,técnicos,technikus,technician
+ingeniero,masculine,ingenieros,mérnök,engineer
+programador,masculine,programadores,programozó,programmer
+desarrollador,masculine,desarrolladores,fejlesztő,developer
+analista,masculine,analistas,elemző,analyst
+administrador de sistemas,masculine,administradores de sistemas,rendszergazda,system administrator
+hacker,masculine,hackers,hacker,hacker
+ciberseguridad,masculine,ciberseguridades,kiberbiztonsági szakértő,cybersecurity expert
+redactor,masculine,redactores,szerkesztő,editor
+bloguero,masculine,blogueros,blogger,blogger
+vlogger,masculine,vloggers,vlogger,vlogger
+youtuber,masculine,youtubers,youtuber,youtuber
+influencer,masculine,influencers,közösségi média influenszer,influencer
+streamer,masculine,streamers,streamelő,streamer
+comentarista,masculine,comentaristas,kommentátor,commentator
+locutor,masculine,locutores,bemondó,announcer
+presentador,masculine,presentadores,műsorvezető,host
+productor,masculine,productores,producer,producer
+director de televisión,masculine,directores de televisión,televíziós rendező,TV director
+guionista,masculine,guionistas,forgatókönyvíró,screenwriter
+ilustrador,masculine,ilustradores,illusztrátor,illustrator
+diseñador gráfico,masculine,diseñadores gráficos,grafikus tervező,graphic designer
+artista digital,masculine,artistas digitales,digitális művész,digital artist
+animador 3D,masculine,animadores 3D,3D animátor,3D animator
+modelador 3D,masculine,modeladores 3D,3D modellező,3D modeler
+desarrollador de videojuegos,masculine,desarrolladores de videojuegos,játékfejlesztő,video game developer
+probador de videojuegos,masculine,probadores de videojuegos,játék tesztelő,video game tester
+escritor de videojuegos,masculine,escritores de videojuegos,játékíró,video game writer
+guionista de cómics,masculine,guionistas de cómics,képregényíró,comic book writer
+dibujante de cómics,masculine,dibujantes de cómics,képregényrajzoló,comic book artist
+coleccionista,masculine,coleccionistas,gyűjtő,collector
+arqueólogo,masculine,arqueólogos,archeológus,archaeologist
+historiador,masculine,historiadores,történész,historian
+curador de museo,masculine,curadores de museo,múzeumi kurátor,museum curator
+conservador de arte,masculine,conservadores de arte,műtárgy restaurátor,art conservator
+guía turístico,masculine,guías turísticos,idegenvezető,tour guide
+bibliotecario,masculine,bibliotecarios,könyvtáros,librarian
+archivista,masculine,archivistas,levéltáros,archivist
+investigador,masculine,investigadores,kutató,researcher
+profesor,masculine,profesores,tanár,professor
+educador,masculine,educadores,oktató,educator
+pedagogo,masculine,pedagogos,nevelő,pedagogue
+consejero escolar,masculine,consejeros escolares,iskolai tanácsadó,school counselor
+director de escuela,masculine,directores de escuela,iskolaigazgató,school principal
+coordinador educativo,masculine,coordinadores educativos,oktatási koordinátor,education coordinator
+especialista en educación,masculine,especialistas en educación,oktatási szakértő,education specialist
+asesor académico,masculine,asesores académicos,akadémiai tanácsadó,academic advisor
+orientador vocacional,masculine,orientadores vocacionales,pályaválasztási tanácsadó,career counselor
+mentor,masculine,mentores,mentor,mentor
+tutor,masculine,tutores,magántanár,tutor
+aprendiz,masculine,aprendices,tanuló,apprentice
+pasante,masculine,pasantes,gyakornok,intern
+estudiante,masculine,estudiantes,diák,student
+alumno,masculine,alumnos,diák,student
+escolar,masculine,escolares,iskolás,schoolchild
+universitario,masculine,universitarios,egyetemi hallgató,university student
+licenciado,masculine,licenciados,diplomás,graduate
+doctorado,masculine,doctorados,doktor,PhD
+candidato,masculine,candidatos,jelölt,candidate
+aspirante,masculine,aspirantes,pályázó,aspirant
+competidor,masculine,competidores,versenyző,competitor
+rival,masculine,rivales,rivális,rival
+campeón,masculine,campeones,bajnok,champion
+subcampeón,masculine,subcampeones,második helyezett,runner-up
+medallista,masculine,medallistas,érmes,medalist
+atleta,masculine,atletas,atléta,athlete
+deportista,masculine,deportistas,sportoló,sportsman
+futbolista,masculine,futbolistas,labdarúgó,football player
+baloncestista,masculine,baloncestistas,kosárlabdázó,basketball player
+nadador,masculine,nadadores,úszó,swimmer
+ciclista,masculine,ciclistas,kerékpáros,cyclist
+maratonista,masculine,maratonistas,maratoni futó,marathon runner
+boxeador,masculine,boxeadores,boxoló,boxer
+luchador,masculine,luchadores,birkózó,wrestler
+gimnasta,masculine,gimnastas,torna,tornász,gymnast
+judoca,masculine,judocas,cselgáncsozó,judoka
+esgrimista,masculine,esgrimistas,vívó,fencer
+levantador de pesas,masculine,levantadores de pesas,súlyemelő,weightlifter
+saltador,masculine,saltadores,ugró,jumper
+corredor,masculine,corredores,futó,runner
+patinador,masculine,patinadores,korcsolyázó,skater
+esquiador,masculine,esquiadores,síző,skier
+surfista,masculine,surfistas,szörfös,surfer
+remero,masculine,remeros,evezős,rower
+piragüista,masculine,piragüistas,kajakos,canoeist
+automovilista,masculine,automovilistas,autóversenyző,racing driver
+motociclista,masculine,motociclistas,motoros,motorcyclist
+jinete,masculine,jinetes,lovas,equestrian
+arquero,masculine,arqueros,íjász,archer
+tirador,masculine,tiradores,lövész,shooter
+pescador,masculine,pescadores,horgász,fisherman
+cazador,masculine,cazadores,vadász,hunter
+explorador,masculine,exploradores,felfedező,explorer
+aventurero,masculine,aventureros,kalandor,adventurer
+viajero,masculine,viajeros,utazó,traveler
+turista,masculine,turistas,turista,tourist
+campista,masculine,campistas,kempingező,camper
+excursionista,masculine,excursionistas,kiránduló,hiker
+montañista,masculine,montañistas,hegymászó,mountaineer
+espeleólogo,masculine,espeleólogos,barlangász,speleologist
+buzo,masculine,buzos,búvár,diver
+paracaidista,masculine,paracaidistas,ejtőernyős,paratrooper
+piloto de carreras,masculine,pilotos de carreras,versenyző,race car driver
+navegante,masculine,navegantes,hajós,navigator
+astrónomo,masculine,astrónomos,csillagász,astronomer
+inventor,masculine,inventores,feltaláló,inventor
+científico,masculine,científicos,tudós,scientist
+técnico,masculine,técnicos,technikus,technician
+ingeniero,masculine,ingenieros,mérnök,engineer
+programador,masculine,programadores,programozó,programmer
+desarrollador,masculine,desarrolladores,fejlesztő,developer
+analista,masculine,analistas,elemző,analyst
+administrador de sistemas,masculine,administradores de sistemas,rendszergazda,system administrator
+hacker,masculine,hackers,hacker,hacker
+ciberseguridad,masculine,ciberseguridades,kiberbiztonsági szakértő,cybersecurity expert
+redactor,masculine,redactores,szerkesztő,editor
+bloguero,masculine,blogueros,blogger,blogger
+vlogger,masculine,vloggers,vlogger,vlogger
+youtuber,masculine,youtubers,youtuber,youtuber
+influencer,masculine,influencers,közösségi média influenszer,influencer
+streamer,masculine,streamers,streamelő,streamer
+comentarista,masculine,comentaristas,kommentátor,commentator
+locutor,masculine,locutores,bemondó,announcer
+presentador,masculine,presentadores,műsorvezető,host
+productor,masculine,productores,producer,producer
+director de televisión,masculine,directores de televisión,televíziós rendező,TV director
+guionista,masculine,guionistas,forgatókönyvíró,screenwriter
+ilustrador,masculine,ilustradores,illusztrátor,illustrator
+diseñador gráfico,masculine,diseñadores gráficos,grafikus tervező,graphic designer
+artista digital,masculine,artistas digitales,digitális művész,digital artist
+animador 3D,masculine,animadores 3D,3D animátor,3D animator
+modelador 3D,masculine,modeladores 3D,3D modellező,3D modeler
+desarrollador de videojuegos,masculine,desarrolladores de videojuegos,játékfejlesztő,video game developer
+probador de videojuegos,masculine,probadores de videojuegos,játék tesztelő,video game tester
+escritor de videojuegos,masculine,escritores de videojuegos,játékíró,video game writer
+guionista de cómics,masculine,guionistas de cómics,képregényíró,comic book writer
+dibujante de cómics,masculine,dibujantes de cómics,képregényrajzoló,comic book artist
+coleccionista,masculine,coleccionistas,gyűjtő,collector
+arqueólogo,masculine,arqueólogos,archeológus,archaeologist
+historiador,masculine,historiadores,történész,historian
+curador de museo,masculine,curadores de museo,múzeumi kurátor,museum curator
+conservador de arte,masculine,conservadores de arte,műtárgy restaurátor,art conservator
+guía turístico,masculine,guías turísticos,idegenvezető,tour guide
+bibliotecario,masculine,bibliotecarios,könyvtáros,librarian
+archivista,masculine,archivistas,levéltáros,archivist
+investigador,masculine,investigadores,kutató,researcher
+profesor,masculine,profesores,tanár,professor
+educador,masculine,educadores,oktató,educator
+pedagogo,masculine,pedagogos,nevelő,pedagogue
+consejero escolar,masculine,consejeros escolares,iskolai tanácsadó,school counselor
+director de escuela,masculine,directores de escuela,iskolaigazgató,school principal
+coordinador educativo,masculine,coordinadores educativos,oktatási koordinátor,education coordinator
+especialista en educación,masculine,especialistas en educación,oktatási szakértő,education specialist
+asesor académico,masculine,asesores académicos,akadémiai tanácsadó,academic advisor
+orientador vocacional,masculine,orientadores vocacionales,pályaválasztási tanácsadó,career counselor
+mentor,masculine,mentores,mentor,mentor
+tutor,masculine,tutores,magántanár,tutor
+aprendiz,masculine,aprendices,tanuló,apprentice
+pasante,masculine,pasantes,gyakornok,intern
+estudiante,masculine,estudiantes,diák,student
+alumno,masculine,alumnos,diák,student
+escolar,masculine,escolares,iskolás,schoolchild
+universitario,masculine,universitarios,egyetemi hallgató,university student
+licenciado,masculine,licenciados,diplomás,graduate
+doctorado,masculine,doctorados,doktor,PhD
+candidato,masculine,candidatos,jelölt,candidate
+aspirante,masculine,aspirantes,pályázó,aspirant
+competidor,masculine,competidores,versenyző,competitor
+rival,masculine,rivales,rivális,rival
+campeón,masculine,campeones,bajnok,champion
+subcampeón,masculine,subcampeones,második helyezett,runner-up
+medallista,masculine,medallistas,érmes,medalist
+atleta,masculine,atletas,atléta,athlete
+deportista,masculine,deportistas,sportoló,sportsman
+futbolista,masculine,futbolistas,labdarúgó,football player
+baloncestista,masculine,baloncestistas,kosárlabdázó,basketball player
+nadador,masculine,nadadores,úszó,swimmer
+ciclista,masculine,ciclistas,kerékpáros,cyclist
+maratonista,masculine,maratonistas,maratoni futó,marathon runner
+boxeador,masculine,boxeadores,boxoló,boxer
+luchador,masculine,luchadores,birkózó,wrestler
+gimnasta,masculine,gimnastas,torna,tornász,gymnast
+judoca,masculine,judocas,cselgáncsozó,judoka
+esgrimista,masculine,esgrimistas,vívó,fencer
+levantador de pesas,masculine,levantadores de pesas,súlyemelő,weightlifter
+saltador,masculine,saltadores,ugró,jumper
+corredor,masculine,corredores,futó,runner
+patinador,masculine,patinadores,korcsolyázó,skater
+esquiador,masculine,esquiadores,síző,skier
+surfista,masculine,surfistas,szörfös,surfer
+remero,masculine,remeros,evezős,rower
+piragüista,masculine,piragüistas,kajakos,canoeist
+automovilista,masculine,automovilistas,autóversenyző,racing driver
+motociclista,masculine,motociclistas,motoros,motorcyclist
+jinete,masculine,jinetes,lovas,equestrian
+arquero,masculine,arqueros,íjász,archer
+tirador,masculine,tiradores,lövész,shooter
+pescador,masculine,pescadores,horgász,fisherman
+cazador,masculine,cazadores,vadász,hunter
+explorador,masculine,exploradores,felfedező,explorer
+aventurero,masculine,aventureros,kalandor,adventurer
+viajero,masculine,viajeros,utazó,traveler
+turista,masculine,turistas,turista,tourist
+campista,masculine,campistas,kempingező,camper
+excursionista,masculine,excursionistas,kiránduló,hiker
+montañista,masculine,montañistas,hegymászó,mountaineer
+espeleólogo,masculine,espeleólogos,barlangász,speleologist
+buzo,masculine,buzos,búvár,diver
+paracaidista,masculine,paracaidistas,ejtőernyős,paratrooper
+piloto de carreras,masculine,pilotos de carreras,versenyző,race car driver
+navegante,masculine,navegantes,hajós,navigator
+astrónomo,masculine,astrónomos,csillagász,astronomer
+inventor,masculine,inventores,feltaláló,inventor
+científico,masculine,científicos,tudós,scientist
+técnico,masculine,técnicos,technikus,technician
+ingeniero,masculine,ingenieros,mérnök,engineer
+programador,masculine,programadores,programozó,programmer
+desarrollador,masculine,desarrolladores,fejlesztő,developer
+analista,masculine,analistas,elemző,analyst
+administrador de sistemas,masculine,administradores de sistemas,rendszergazda,system administrator
+hacker,masculine,hackers,hacker,hacker
+ciberseguridad,masculine,ciberseguridades,kiberbiztonsági szakértő,cybersecurity expert
+redactor,masculine,redactores,szerkesztő,editor
+bloguero,masculine,blogueros,blogger,blogger
+vlogger,masculine,vloggers,vlogger,vlogger
+youtuber,masculine,youtubers,youtuber,youtuber
+influencer,masculine,influencers,közösségi média influenszer,influencer
+streamer,masculine,streamers,streamelő,streamer
+comentarista,masculine,comentaristas,kommentátor,commentator
+locutor,masculine,locutores,bemondó,announcer
+presentador,masculine,presentadores,műsorvezető,host
+productor,masculine,productores,producer,producer
+director de televisión,masculine,directores de televisión,televíziós rendező,TV director
+guionista,masculine,guionistas,forgatókönyvíró,screenwriter
+ilustrador,masculine,ilustradores,illusztrátor,illustrator
+diseñador gráfico,masculine,diseñadores gráficos,grafikus tervező,graphic designer
+artista digital,masculine,artistas digitales,digitális művész,digital artist
+animador 3D,masculine,animadores 3D,3D animátor,3D animator
+modelador 3D,masculine,modeladores 3D,3D modellező,3D modeler
+desarrollador de videojuegos,masculine,desarrolladores de videojuegos,játékfejlesztő,video game developer
+probador de videojuegos,masculine,probadores de videojuegos,játék tesztelő,video game tester
+escritor de videojuegos,masculine,escritores de videojuegos,játékíró,video game writer
+guionista de cómics,masculine,guionistas de cómics,képregényíró,comic book writer
+dibujante de cómics,masculine,dibujantes de cómics,képregényrajzoló,comic book artist
+coleccionista,masculine,coleccionistas,gyűjtő,collector
+arqueólogo,masculine,arqueólogos,archeológus,archaeologist
+historiador,masculine,historiadores,történész,historian
+curador de museo,masculine,curadores de museo,múzeumi kurátor,museum curator
+conservador de arte,masculine,conservadores de arte,műtárgy restaurátor,art conservator
+guía turístico,masculine,guías turísticos,idegenvezető,tour guide
+bibliotecario,masculine,bibliotecarios,könyvtáros,librarian
+archivista,masculine,archivistas,levéltáros,archivist
+investigador,masculine,investigadores,kutató,researcher
+profesor,masculine,profesores,tanár,professor
+educador,masculine,educadores,oktató,educator
+pedagogo,masculine,pedagogos,nevelő,pedagogue
+consejero escolar,masculine,consejeros escolares,iskolai tanácsadó,school counselor
+director de escuela,masculine,directores de escuela,iskolaigazgató,school principal
+coordinador educativo,masculine,coordinadores educativos,oktatási koordinátor,education coordinator
+especialista en educación,masculine,especialistas en educación,oktatási szakértő,education specialist
+asesor académico,masculine,asesores académicos,akadémiai tanácsadó,academic advisor
+orientador vocacional,masculine,orientadores vocacionales,pályaválasztási tanácsadó,career counselor
+mentor,masculine,mentores,mentor,mentor
+tutor,masculine,tutores,magántanár,tutor
+aprendiz,masculine,aprendices,tanuló,apprentice
+pasante,masculine,pasantes,gyakornok,intern
+estudiante,masculine,estudiantes,diák,student
+alumno,masculine,alumnos,diák,student
+escolar,masculine,escolares,iskolás,schoolchild
+universitario,masculine,universitarios,egyetemi hallgató,university student
+licenciado,masculine,licenciados,diplomás,graduate
+doctorado,masculine,doctorados,doktor,PhD
+candidato,masculine,candidatos,jelölt,candidate
+aspirante,masculine,aspirantes,pályázó,aspirant
+competidor,masculine,competidores,versenyző,competitor
+rival,masculine,rivales,rivális,rival
+campeón,masculine,campeones,bajnok,champion
+subcampeón,masculine,subcampeones,második helyezett,runner-up
+medallista,masculine,medallistas,érmes,medalist
+atleta,masculine,atletas,atléta,athlete
+deportista,masculine,deportistas,sportoló,sportsman
+futbolista,masculine,futbolistas,labdarúgó,football player
+baloncestista,masculine,baloncestistas,kosárlabdázó,basketball player
+nadador,masculine,nadadores,úszó,swimmer
+ciclista,masculine,ciclistas,kerékpáros,cyclist
+maratonista,masculine,maratonistas,maratoni futó,marathon runner
+boxeador,masculine,boxeadores,boxoló,boxer
+luchador,masculine,luchadores,birkózó,wrestler
+gimnasta,masculine,gimnastas,torna,tornász,gymnast
+judoca,masculine,judocas,cselgáncsozó,judoka
+esgrimista,masculine,esgrimistas,vívó,fencer
+levantador de pesas,masculine,levantadores de pesas,súlyemelő,weightlifter
+saltador,masculine,saltadores,ugró,jumper
+corredor,masculine,corredores,futó,runner
+patinador,masculine,patinadores,korcsolyázó,skater
+esquiador,masculine,esquiadores,síző,skier
+surfista,masculine,surfistas,szörfös,surfer
+remero,masculine,remeros,evezős,rower
+piragüista,masculine,piragüistas,kajakos,canoeist
+automovilista,masculine,automovilistas,autóversenyző,racing driver
+motociclista,masculine,motociclistas,motoros,motorcyclist
+jinete,masculine,jinetes,lovas,equestrian
+arquero,masculine,arqueros,íjász,archer
+tirador,masculine,tiradores,lövész,shooter
+pescador,masculine,pescadores,horgász,fisherman
+cazador,masculine,cazadores,vadász,hunter
+explorador,masculine,exploradores,felfedező,explorer
+aventurero,masculine,aventureros,kalandor,adventurer
+viajero,masculine,viajeros,utazó,traveler
+turista,masculine,turistas,turista,tourist
+campista,masculine,campistas,kempingező,camper
+excursionista,masculine,excursionistas,kiránduló,hiker
+montañista,masculine,montañistas,hegymászó,mountaineer
+espeleólogo,masculine,espeleólogos,barlangász,speleologist
+buzo,masculine,buzos,búvár,diver
+paracaidista,masculine,paracaidistas,ejtőernyős,paratrooper
+piloto de carreras,masculine,pilotos de carreras,versenyző,race car driver
+navegante,masculine,navegantes,hajós,navigator
+astrónomo,masculine,astrónomos,csillagász,astronomer
+inventor,masculine,inventores,feltaláló,inventor
+científico,masculine,científicos,tudós,scientist
+técnico,masculine,técnicos,technikus,technician
+ingeniero,masculine,ingenieros,mérnök,engineer
+programador,masculine,programadores,programozó,programmer
+desarrollador,masculine,desarrolladores,fejlesztő,developer
+analista,masculine,analistas,elemző,analyst
+administrador de sistemas,masculine,administradores de sistemas,rendszergazda,system administrator
+hacker,masculine,hackers,hacker,hacker
+ciberseguridad,masculine,ciberseguridades,kiberbiztonsági szakértő,cybersecurity expert
+redactor,masculine,redactores,szerkesztő,editor
+bloguero,masculine,blogueros,blogger,blogger
+vlogger,masculine,vloggers,vlogger,vlogger
+youtuber,masculine,youtubers,youtuber,youtuber
+influencer,masculine,influencers,közösségi média influenszer,influencer
+streamer,masculine,streamers,streamelő,streamer
+comentarista,masculine,comentaristas,kommentátor,commentator
+locutor,masculine,locutores,bemondó,announcer
+presentador,masculine,presentadores,műsorvezető,host
+productor,masculine,productores,producer,producer
+director de televisión,masculine,directores de televisión,televíziós rendező,TV director
+guionista,masculine,guionistas,forgatókönyvíró,screenwriter
+ilustrador,masculine,ilustradores,illusztrátor,illustrator
+diseñador gráfico,masculine,diseñadores gráficos,grafikus tervező,graphic designer
+artista digital,masculine,artistas digitales,digitális művész,digital artist
+animador 3D,masculine,animadores 3D,3D animátor,3D animator
+modelador 3D,masculine,modeladores 3D,3D modellező,3D modeler
+desarrollador de videojuegos,masculine,desarrolladores de videojuegos,játékfejlesztő,video game developer
+probador de videojuegos,masculine,probadores de videojuegos,játék tesztelő,video game tester
+escritor de videojuegos,masculine,escritores de videojuegos,játékíró,video game writer
+guionista de cómics,masculine,guionistas de cómics,képregényíró,comic book writer
+dibujante de cómics,masculine,dibujantes de cómics,képregényrajzoló,comic book artist
+coleccionista,masculine,coleccionistas,gyűjtő,collector
+arqueólogo,masculine,arqueólogos,archeológus,archaeologist
+historiador,masculine,historiadores,történész,historian
+curador de museo,masculine,curadores de museo,múzeumi kurátor,museum curator
+conservador de arte,masculine,conservadores de arte,műtárgy restaurátor,art conservator
+guía turístico,masculine,guías turísticos,idegenvezető,tour guide
+bibliotecario,masculine,bibliotecarios,könyvtáros,librarian
+archivista,masculine,archivistas,levéltáros,archivist
+investigador,masculine,investigadores,kutató,researcher
+profesor,masculine,profesores,tanár,professor
+educador,masculine,educadores,oktató,educator
+pedagogo,masculine,pedagogos,nevelő,pedagogue
+consejero escolar,masculine,consejeros escolares,iskolai tanácsadó,school counselor
+director de escuela,masculine,directores de escuela,iskolaigazgató,school principal
+coordinador educativo,masculine,coordinadores educativos,oktatási koordinátor,education coordinator
+especialista en educación,masculine,especialistas en educación,oktatási szakértő,education specialist
+asesor académico,masculine,asesores académicos,akadémiai tanácsadó,academic advisor
+orientador vocacional,masculine,orientadores vocacionales,pályaválasztási tanácsadó,career counselor
+mentor,masculine,mentores,mentor,mentor
+tutor,masculine,tutores,magántanár,tutor
+aprendiz,masculine,aprendices,tanuló,apprentice
+pasante,masculine,pasantes,gyakornok,intern
+estudiante,masculine,estudiantes,diák,student
+alumno,masculine,alumnos,diák,student
+escolar,masculine,escolares,iskolás,schoolchild
+universitario,masculine,universitarios,egyetemi hallgató,university student
+licenciado,masculine,licenciados,diplomás,graduate
+doctorado,masculine,doctorados,doktor,PhD
+candidato,masculine,candidatos,jelölt,candidate
+aspirante,masculine,aspirantes,pályázó,aspirant
+competidor,masculine,competidores,versenyző,competitor
+rival,masculine,rivales,rivális,rival
+campeón,masculine,campeones,bajnok,champion
+subcampeón,masculine,subcampeones,második helyezett,runner-up
+medallista,masculine,medallistas,érmes,medalist
+atleta,masculine,atletas,atléta,athlete
+deportista,masculine,deportistas,sportoló,sportsman
+futbolista,masculine,futbolistas,labdarúgó,football player
+baloncestista,masculine,baloncestistas,kosárlabdázó,basketball player
+nadador,masculine,nadadores,úszó,swimmer
+ciclista,masculine,ciclistas,kerékpáros,cyclist
+maratonista,masculine,maratonistas,maratoni futó,marathon runner
+boxeador,masculine,boxeadores,boxoló,boxer
+luchador,masculine,luchadores,birkózó,wrestler
+gimnasta,masculine,gimnastas,torna,tornász,gymnast
+judoca,masculine,judocas,cselgáncsozó,judoka
+esgrimista,masculine,esgrimistas,vívó,fencer
+levantador de pesas,masculine,levantadores de pesas,súlyemelő,weightlifter
+saltador,masculine,saltadores,ugró,jumper
+corredor,masculine,corredores,futó,runner
+patinador,masculine,patinadores,korcsolyázó,skater
+esquiador,masculine,esquiadores,síző,skier
+surfista,masculine,surfistas,szörfös,surfer
+remero,masculine,remeros,evezős,rower
+piragüista,masculine,piragüistas,kajakos,canoeist
+automovilista,masculine,automovilistas,autóversenyző,racing driver
+motociclista,masculine,motociclistas,motoros,motorcyclist
+jinete,masculine,jinetes,lovas,equestrian
+arquero,masculine,arqueros,íjász,archer
+tirador,masculine,tiradores,lövész,shooter
+pescador,masculine,pescadores,horgász,fisherman
+cazador,masculine,cazadores,vadász,hunter
+explorador,masculine,exploradores,felfedező,explorer
+aventurero,masculine,aventureros,kalandor,adventurer
+viajero,masculine,viajeros,utazó,traveler
+turista,masculine,turistas,turista,tourist
+campista,masculine,campistas,kempingező,camper
+excursionista,masculine,excursionistas,kiránduló,hiker
+montañista,masculine,montañistas,hegymászó,mountaineer
+espeleólogo,masculine,espeleólogos,barlangász,speleologist
+buzo,masculine,buzos,búvár,diver
+paracaidista,masculine,paracaidistas,ejtőernyős,paratrooper
+piloto de carreras,masculine,pilotos de carreras,versenyző,race car driver
+navegante,masculine,navegantes,hajós,navigator
+astrónomo,masculine,astrónomos,csillagász,astronomer
+inventor,masculine,inventores,feltaláló,inventor
+científico,masculine,científicos,tudós,scientist
+técnico,masculine,técnicos,technikus,technician
+ingeniero,masculine,ingenieros,mérnök,engineer
+programador,masculine,programadores,programozó,programmer
+desarrollador,masculine,desarrolladores,fejlesztő,developer
+analista,masculine,analistas,elemző,analyst
+administrador de sistemas,masculine,administradores de sistemas,rendszergazda,system administrator
+hacker,masculine,hackers,hacker,hacker
+ciberseguridad,masculine,ciberseguridades,kiberbiztonsági szakértő,cybersecurity expert
+redactor,masculine,redactores,szerkesztő,editor
+bloguero,masculine,blogueros,blogger,blogger
+vlogger,masculine,vloggers,vlogger,vlogger
+youtuber,masculine,youtubers,youtuber,youtuber
+influencer,masculine,influencers,közösségi média influenszer,influencer
+streamer,masculine,streamers,streamelő,streamer
+comentarista,masculine,comentaristas,kommentátor,commentator
+locutor,masculine,locutores,bemondó,announcer
+presentador,masculine,presentadores,műsorvezető,host
+productor,masculine,productores,producer,producer
+director de televisión,masculine,directores de televisión,televíziós rendező,TV director
+guionista,masculine,guionistas,forgatókönyvíró,screenwriter
+ilustrador,masculine,ilustradores,illusztrátor,illustrator

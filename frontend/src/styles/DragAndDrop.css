@@ -1,0 +1,47 @@
+/* Drag and Drop Container */
+.drag-and-drop-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin: 40px auto;
+  padding: 30px;
+  max-width: 900px;
+  background: linear-gradient(145deg, #f5f5f5, #ffffff);
+  border-radius: 15px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+.drag-and-drop-container:hover {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+/* Draggable Word Boxes */
+.draggable-word {
+  background-color: #ffffff;
+  padding: 16px 28px;
+  border-radius: 10px;
+  cursor: grab;
+  user-select: none;
+  transition: all 0.3s ease;
+  border: 2px solid #eaeaea;
+  font-size: 18px;
+  font-weight: 600;
+  color: #444;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+}
+
+.draggable-word:hover {
+  background-color: #f5f5f5;
+  border-color: #0056b3;
+  transform: translateY(-4px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+.draggable-word:active {
+  cursor: grabbing;
+  transform: scale(0.97);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}

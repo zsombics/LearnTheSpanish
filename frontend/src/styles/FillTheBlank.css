@@ -1,0 +1,128 @@
+/* Add this CSS to your stylesheet or in a CSS file */
+.question-card {
+    background: linear-gradient(145deg, #f0f0f0, #ffffff);
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    padding: 24px;
+    max-width: 600px;
+    margin: 30px auto;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .question-card:hover {
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+  }
+  
+  .question-text {
+    font-size: 1.75em;
+    color: #444;
+    margin-bottom: 24px;
+    font-weight: 600;
+  }
+  
+  .answer-input {
+    position: relative;
+  }
+  
+  .answer-input input {
+    width: 100%;
+    padding: 14px 18px;
+    border: 2px solid #e0e0e0;
+    border-radius: 10px;
+    font-size: 1.1em;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .answer-input input:focus {
+    border-color: #0056b3;
+    box-shadow: 0 0 8px rgba(0, 86, 179, 0.5);
+    outline: none;
+  }
+  
+  .feedback {
+    margin-top: 24px;
+    font-size: 1.1em;
+  }
+  
+  .correct-feedback {
+    color: #155724;
+    background-color: #d4edda;
+    border: 1px solid #c3e6cb;
+    padding: 10px;
+    border-radius: 8px;
+  }
+  
+  .incorrect-feedback {
+    color: #721c24;
+    background-color: #f8d7da;
+    border: 1px solid #f5c6cb;
+    padding: 10px;
+    border-radius: 8px;
+  }
+  
+  .correct-answer {
+    font-weight: bold;
+    color: #444;
+  }
+  
+  .question-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, #0056b3, #00c6ff);
+    border-radius: 15px 15px 0 0;
+  }
+  /* Add this to your Levels.css or a relevant CSS file */
+.highlighted-feedback .correct-char {
+  color: green;
+}
+
+.highlighted-feedback .incorrect-char {
+  color: red;
+  text-decoration: underline;
+}
+/* Feedback container styling */
+.feedback {
+  margin-top: 20px;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  position: relative;
+}
+
+/* Highlighted feedback text styling */
+.highlighted-feedback {
+  font-size: 1.2em;
+  line-height: 1.6;
+}
+
+.highlighted-feedback .correct-char {
+  color: green;
+  font-weight: bold;
+}
+
+.highlighted-feedback .incorrect-char {
+  color: red;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+/* Percentage display styling */
+.percentage-correct {
+  font-size: 1.1em;
+  color: #555;
+  margin-top: 10px;
+}
+
+/* Correct answer display styling */
+.correct-answer-display {
+  font-size: 1em;
+  color: #333;
+  margin-top: 10px;
+}

@@ -1,0 +1,501 @@
+task_type,sentence,correct,explanation
+Főnévi igenév,Me gusta nadar.,Igaz,'Nadar' főnévi igenévként helyes.
+Tárgyeset használat,Veo a mi hermano.,Igaz,'A' tárgyesetben helyesen van használva.
+Melléknévi egyeztetés,La manzana es roja.,Igaz,"A 'manzana' nőnemű, a 'roja' helyesen egyezik."
+Melléknévi egyeztetés,La manzana es roja.,Igaz,"A 'manzana' nőnemű, a 'roja' helyesen egyezik."
+Főnévi igenév,Me gusta nadar.,Igaz,'Nadar' főnévi igenévként helyes.
+Igeidő használat,Mañana yo iré al mercado.,Igaz,"A 'iré' jövő idő, ami megfelelő."
+Tárgyeset használat,Veo a mi hermano.,Igaz,'A' tárgyesetben helyesen van használva.
+Helytelen egyeztetés,Las niño es alto.,Helytelen,"'Niño' hímnemű, 'las' helytelen."
+Melléknévi egyeztetés,La manzana es roja.,Igaz,"A 'manzana' nőnemű, a 'roja' helyesen egyezik."
+Tárgyeset használat,Veo a mi hermano.,Igaz,'A' tárgyesetben helyesen van használva.
+Birtokos névmás,Su casa es grande.,Igaz,'Su' helyes birtokos névmás itt.
+Főnévi igenév,Me gusta nadar.,Igaz,'Nadar' főnévi igenévként helyes.
+Igeidő használat,Mañana yo iré al mercado.,Igaz,"A 'iré' jövő idő, ami megfelelő."
+Határozott névelő,El sol es brillante.,Igaz,"A 'sol' hímnemű, a 'el' helyesen használt."
+Felszólító mód,¡Ven aquí ahora!,Igaz,'Ven' helyes felszólító alak.
+Birtokos névmás,Su casa es grande.,Igaz,'Su' helyes birtokos névmás itt.
+Helytelen egyeztetés,Las niño es alto.,Helytelen,"'Niño' hímnemű, 'las' helytelen."
+Elöljárószó,Estoy en la casa.,Igaz,'En' megfelelő helyhatározó elöljárószó.
+Melléknévi egyeztetés,La manzana es roja.,Igaz,"A 'manzana' nőnemű, a 'roja' helyesen egyezik."
+Főnévi igenév,Me gusta nadar.,Igaz,'Nadar' főnévi igenévként helyes.
+Elöljárószó,Estoy en la casa.,Igaz,'En' megfelelő helyhatározó elöljárószó.
+Felszólító mód,¡Ven aquí ahora!,Igaz,'Ven' helyes felszólító alak.
+Melléknévi egyeztetés,La manzana es roja.,Igaz,"A 'manzana' nőnemű, a 'roja' helyesen egyezik."
+Tárgyeset használat,Veo a mi hermano.,Igaz,'A' tárgyesetben helyesen van használva.
+Igeidő használat,Mañana yo iré al mercado.,Igaz,"A 'iré' jövő idő, ami megfelelő."
+Helytelen egyeztetés,Las niño es alto.,Helytelen,"'Niño' hímnemű, 'las' helytelen."
+Határozott névelő,El sol es brillante.,Igaz,"A 'sol' hímnemű, a 'el' helyesen használt."
+Tárgyeset használat,Veo a mi hermano.,Igaz,'A' tárgyesetben helyesen van használva.
+Melléknévi egyeztetés,La manzana es roja.,Igaz,"A 'manzana' nőnemű, a 'roja' helyesen egyezik."
+Helytelen egyeztetés,Las niño es alto.,Helytelen,"'Niño' hímnemű, 'las' helytelen."
+Igeidő használat,Mañana yo iré al mercado.,Igaz,"A 'iré' jövő idő, ami megfelelő."
+Helytelen egyeztetés,Las niño es alto.,Helytelen,"'Niño' hímnemű, 'las' helytelen."
+Elöljárószó,Estoy en la casa.,Igaz,'En' megfelelő helyhatározó elöljárószó.
+Igeidő használat,Mañana yo iré al mercado.,Igaz,"A 'iré' jövő idő, ami megfelelő."
+Igeidő használat,Mañana yo iré al mercado.,Igaz,"A 'iré' jövő idő, ami megfelelő."
+Elöljárószó,Estoy en la casa.,Igaz,'En' megfelelő helyhatározó elöljárószó.
+Határozott névelő,El sol es brillante.,Igaz,"A 'sol' hímnemű, a 'el' helyesen használt."
+Birtokos névmás,Su casa es grande.,Igaz,'Su' helyes birtokos névmás itt.
+Helytelen egyeztetés,Las niño es alto.,Helytelen,"'Niño' hímnemű, 'las' helytelen."
+Főnévi igenév,Me gusta nadar.,Igaz,'Nadar' főnévi igenévként helyes.
+Főnévi igenév,Me gusta nadar.,Igaz,'Nadar' főnévi igenévként helyes.
+Elöljárószó,Estoy en la casa.,Igaz,'En' megfelelő helyhatározó elöljárószó.
+Határozott névelő,El sol es brillante.,Igaz,"A 'sol' hímnemű, a 'el' helyesen használt."
+Melléknévi egyeztetés,La manzana es roja.,Igaz,"A 'manzana' nőnemű, a 'roja' helyesen egyezik."
+Igeidő használat,Mañana yo iré al mercado.,Igaz,"A 'iré' jövő idő, ami megfelelő."
+Főnévi igenév,Me gusta nadar.,Igaz,'Nadar' főnévi igenévként helyes.
+Melléknévi egyeztetés,La manzana es roja.,Igaz,"A 'manzana' nőnemű, a 'roja' helyesen egyezik."
+Kötőmód használata,Quiero que vengas pronto.,Igaz,'Vengas' kötőmód megfelelő használata.
+Melléknévi egyeztetés,La manzana es roja.,Igaz,"A 'manzana' nőnemű, a 'roja' helyesen egyezik."
+Igeidő használat,Mañana yo iré al mercado.,Igaz,"A 'iré' jövő idő, ami megfelelő."
+Határozott névelő,El sol es brillante.,Igaz,"A 'sol' hímnemű, a 'el' helyesen használt."
+Birtokos névmás,Su casa es grande.,Igaz,'Su' helyes birtokos névmás itt.
+Helytelen egyeztetés,Las niño es alto.,Helytelen,"'Niño' hímnemű, 'las' helytelen."
+Birtokos névmás,Su casa es grande.,Igaz,'Su' helyes birtokos névmás itt.
+Helytelen egyeztetés,Las niño es alto.,Helytelen,"'Niño' hímnemű, 'las' helytelen."
+Igeidő használat,Mañana yo iré al mercado.,Igaz,"A 'iré' jövő idő, ami megfelelő."
+Birtokos névmás,Su casa es grande.,Igaz,'Su' helyes birtokos névmás itt.
+Felszólító mód,¡Ven aquí ahora!,Igaz,'Ven' helyes felszólító alak.
+Igeidő használat,Mañana yo iré al mercado.,Igaz,"A 'iré' jövő idő, ami megfelelő."
+Kötőmód használata,Quiero que vengas pronto.,Igaz,'Vengas' kötőmód megfelelő használata.
+Kötőmód használata,Quiero que vengas pronto.,Igaz,'Vengas' kötőmód megfelelő használata.
+Felszólító mód,¡Ven aquí ahora!,Igaz,'Ven' helyes felszólító alak.
+Kötőmód használata,Quiero que vengas pronto.,Igaz,'Vengas' kötőmód megfelelő használata.
+Helytelen egyeztetés,Las niño es alto.,Helytelen,"'Niño' hímnemű, 'las' helytelen."
+Melléknévi egyeztetés,La manzana es roja.,Igaz,"A 'manzana' nőnemű, a 'roja' helyesen egyezik."
+Felszólító mód,¡Ven aquí ahora!,Igaz,'Ven' helyes felszólító alak.
+Melléknévi egyeztetés,La manzana es roja.,Igaz,"A 'manzana' nőnemű, a 'roja' helyesen egyezik."
+Igeidő használat,Mañana yo iré al mercado.,Igaz,"A 'iré' jövő idő, ami megfelelő."
+Melléknévi egyeztetés,La manzana es roja.,Igaz,"A 'manzana' nőnemű, a 'roja' helyesen egyezik."
+Igeidő használat,Mañana yo iré al mercado.,Igaz,"A 'iré' jövő idő, ami megfelelő."
+Felszólító mód,¡Ven aquí ahora!,Igaz,'Ven' helyes felszólító alak.
+Tárgyeset használat,Veo a mi hermano.,Igaz,'A' tárgyesetben helyesen van használva.
+Tárgyeset használat,Veo a mi hermano.,Igaz,'A' tárgyesetben helyesen van használva.
+Főnévi igenév,Me gusta nadar.,Igaz,'Nadar' főnévi igenévként helyes.
+Helytelen egyeztetés,Las niño es alto.,Helytelen,"'Niño' hímnemű, 'las' helytelen."
+Birtokos névmás,Su casa es grande.,Igaz,'Su' helyes birtokos névmás itt.
+Kötőmód használata,Quiero que vengas pronto.,Igaz,'Vengas' kötőmód megfelelő használata.
+Helytelen egyeztetés,Las niño es alto.,Helytelen,"'Niño' hímnemű, 'las' helytelen."
+Elöljárószó,Estoy en la casa.,Igaz,'En' megfelelő helyhatározó elöljárószó.
+Kötőmód használata,Quiero que vengas pronto.,Igaz,'Vengas' kötőmód megfelelő használata.
+Helytelen egyeztetés,Las niño es alto.,Helytelen,"'Niño' hímnemű, 'las' helytelen."
+Igeidő használat,Mañana yo iré al mercado.,Igaz,"A 'iré' jövő idő, ami megfelelő."
+Melléknévi egyeztetés,La manzana es roja.,Igaz,"A 'manzana' nőnemű, a 'roja' helyesen egyezik."
+Igeidő használat,Mañana yo iré al mercado.,Igaz,"A 'iré' jövő idő, ami megfelelő."
+Főnévi igenév,Me gusta nadar.,Igaz,'Nadar' főnévi igenévként helyes.
+Felszólító mód,¡Ven aquí ahora!,Igaz,'Ven' helyes felszólító alak.
+Birtokos névmás,Su casa es grande.,Igaz,'Su' helyes birtokos névmás itt.
+Elöljárószó,Estoy en la casa.,Igaz,'En' megfelelő helyhatározó elöljárószó.
+Melléknévi egyeztetés,La manzana es roja.,Igaz,"A 'manzana' nőnemű, a 'roja' helyesen egyezik."
+Birtokos névmás,Su casa es grande.,Igaz,'Su' helyes birtokos névmás itt.
+Határozott névelő,El sol es brillante.,Igaz,"A 'sol' hímnemű, a 'el' helyesen használt."
+Igeidő használat,Mañana yo iré al mercado.,Igaz,"A 'iré' jövő idő, ami megfelelő."
+Felszólító mód,¡Ven aquí ahora!,Igaz,'Ven' helyes felszólító alak.
+Kötőmód használata,Quiero que vengas pronto.,Igaz,'Vengas' kötőmód megfelelő használata.
+Melléknévi egyeztetés,La manzana es roja.,Igaz,"A 'manzana' nőnemű, a 'roja' helyesen egyezik."
+Elöljárószó,Estoy en la casa.,Igaz,'En' megfelelő helyhatározó elöljárószó.
+Elöljárószó,Estoy en la casa.,Igaz,'En' megfelelő helyhatározó elöljárószó.
+Határozott névelő,El sol es brillante.,Igaz,"A 'sol' hímnemű, a 'el' helyesen használt."
+Elöljárószó,Estoy en la casa.,Igaz,'En' megfelelő helyhatározó elöljárószó.
+Elöljárószó,Estoy en la casa.,Igaz,'En' megfelelő helyhatározó elöljárószó.
+Melléknévi egyeztetés,La manzana es roja.,Igaz,"A 'manzana' nőnemű, a 'roja' helyesen egyezik."
+Melléknévi egyeztetés,La manzana es roja.,Igaz,"A 'manzana' nőnemű, a 'roja' helyesen egyezik."
+Birtokos névmás,Su casa es grande.,Igaz,'Su' helyes birtokos névmás itt.
+Melléknévi egyeztetés,La manzana es roja.,Igaz,"A 'manzana' nőnemű, a 'roja' helyesen egyezik."
+Határozott névelő,El sol es brillante.,Igaz,"A 'sol' hímnemű, a 'el' helyesen használt."
+Igeidő használat,Mañana yo iré al mercado.,Igaz,"A 'iré' jövő idő, ami megfelelő."
+Igeidő használat,Mañana yo iré al mercado.,Igaz,"A 'iré' jövő idő, ami megfelelő."
+Birtokos névmás,Su casa es grande.,Igaz,'Su' helyes birtokos névmás itt.
+Tárgyeset használat,Veo a mi hermano.,Igaz,'A' tárgyesetben helyesen van használva.
+Kötőmód használata,Quiero que vengas pronto.,Igaz,'Vengas' kötőmód megfelelő használata.
+Tárgyeset használat,Veo a mi hermano.,Igaz,'A' tárgyesetben helyesen van használva.
+Tárgyeset használat,Veo a mi hermano.,Igaz,'A' tárgyesetben helyesen van használva.
+Igeidő használat,Mañana yo iré al mercado.,Igaz,"A 'iré' jövő idő, ami megfelelő."
+Kötőmód használata,Quiero que vengas pronto.,Igaz,'Vengas' kötőmód megfelelő használata.
+Helytelen egyeztetés,Las niño es alto.,Helytelen,"'Niño' hímnemű, 'las' helytelen."
+Főnévi igenév,Me gusta nadar.,Igaz,'Nadar' főnévi igenévként helyes.
+Tárgyeset használat,Veo a mi hermano.,Igaz,'A' tárgyesetben helyesen van használva.
+Igeidő használat,Mañana yo iré al mercado.,Igaz,"A 'iré' jövő idő, ami megfelelő."
+Határozott névelő,El sol es brillante.,Igaz,"A 'sol' hímnemű, a 'el' helyesen használt."
+Felszólító mód,¡Ven aquí ahora!,Igaz,'Ven' helyes felszólító alak.
+Kötőmód használata,Quiero que vengas pronto.,Igaz,'Vengas' kötőmód megfelelő használata.
+Főnévi igenév,Me gusta nadar.,Igaz,'Nadar' főnévi igenévként helyes.
+Helytelen egyeztetés,Las niño es alto.,Helytelen,"'Niño' hímnemű, 'las' helytelen."
+Határozott névelő,El sol es brillante.,Igaz,"A 'sol' hímnemű, a 'el' helyesen használt."
+Igeidő használat,Mañana yo iré al mercado.,Igaz,"A 'iré' jövő idő, ami megfelelő."
+Főnévi igenév,Me gusta nadar.,Igaz,'Nadar' főnévi igenévként helyes.
+Felszólító mód,¡Ven aquí ahora!,Igaz,'Ven' helyes felszólító alak.
+Melléknévi egyeztetés,La manzana es roja.,Igaz,"A 'manzana' nőnemű, a 'roja' helyesen egyezik."
+Főnévi igenév,Me gusta nadar.,Igaz,'Nadar' főnévi igenévként helyes.
+Főnévi igenév,Me gusta nadar.,Igaz,'Nadar' főnévi igenévként helyes.
+Elöljárószó,Estoy en la casa.,Igaz,'En' megfelelő helyhatározó elöljárószó.
+Helytelen egyeztetés,Las niño es alto.,Helytelen,"'Niño' hímnemű, 'las' helytelen."
+Birtokos névmás,Su casa es grande.,Igaz,'Su' helyes birtokos névmás itt.
+Melléknévi egyeztetés,La manzana es roja.,Igaz,"A 'manzana' nőnemű, a 'roja' helyesen egyezik."
+Felszólító mód,¡Ven aquí ahora!,Igaz,'Ven' helyes felszólító alak.
+Melléknévi egyeztetés,La manzana es roja.,Igaz,"A 'manzana' nőnemű, a 'roja' helyesen egyezik."
+Igeidő használat,Mañana yo iré al mercado.,Igaz,"A 'iré' jövő idő, ami megfelelő."
+Birtokos névmás,Su casa es grande.,Igaz,'Su' helyes birtokos névmás itt.
+Felszólító mód,¡Ven aquí ahora!,Igaz,'Ven' helyes felszólító alak.
+Elöljárószó,Estoy en la casa.,Igaz,'En' megfelelő helyhatározó elöljárószó.
+Elöljárószó,Estoy en la casa.,Igaz,'En' megfelelő helyhatározó elöljárószó.
+Helytelen egyeztetés,Las niño es alto.,Helytelen,"'Niño' hímnemű, 'las' helytelen."
+Birtokos névmás,Su casa es grande.,Igaz,'Su' helyes birtokos névmás itt.
+Birtokos névmás,Su casa es grande.,Igaz,'Su' helyes birtokos névmás itt.
+Főnévi igenév,Me gusta nadar.,Igaz,'Nadar' főnévi igenévként helyes.
+Helytelen egyeztetés,Las niño es alto.,Helytelen,"'Niño' hímnemű, 'las' helytelen."
+Birtokos névmás,Su casa es grande.,Igaz,'Su' helyes birtokos névmás itt.
+Főnévi igenév,Me gusta nadar.,Igaz,'Nadar' főnévi igenévként helyes.
+Felszólító mód,¡Ven aquí ahora!,Igaz,'Ven' helyes felszólító alak.
+Elöljárószó,Estoy en la casa.,Igaz,'En' megfelelő helyhatározó elöljárószó.
+Határozott névelő,El sol es brillante.,Igaz,"A 'sol' hímnemű, a 'el' helyesen használt."
+Igeidő használat,Mañana yo iré al mercado.,Igaz,"A 'iré' jövő idő, ami megfelelő."
+Határozott névelő,El sol es brillante.,Igaz,"A 'sol' hímnemű, a 'el' helyesen használt."
+Felszólító mód,¡Ven aquí ahora!,Igaz,'Ven' helyes felszólító alak.
+Helytelen egyeztetés,Las niño es alto.,Helytelen,"'Niño' hímnemű, 'las' helytelen."
+Birtokos névmás,Su casa es grande.,Igaz,'Su' helyes birtokos névmás itt.
+Kötőmód használata,Quiero que vengas pronto.,Igaz,'Vengas' kötőmód megfelelő használata.
+Határozott névelő,El sol es brillante.,Igaz,"A 'sol' hímnemű, a 'el' helyesen használt."
+Helytelen egyeztetés,Las niño es alto.,Helytelen,"'Niño' hímnemű, 'las' helytelen."
+Főnévi igenév,Me gusta nadar.,Igaz,'Nadar' főnévi igenévként helyes.
+Kötőmód használata,Quiero que vengas pronto.,Igaz,'Vengas' kötőmód megfelelő használata.
+Tárgyeset használat,Veo a mi hermano.,Igaz,'A' tárgyesetben helyesen van használva.
+Birtokos névmás,Su casa es grande.,Igaz,'Su' helyes birtokos névmás itt.
+Elöljárószó,Estoy en la casa.,Igaz,'En' megfelelő helyhatározó elöljárószó.
+Elöljárószó,Estoy en la casa.,Igaz,'En' megfelelő helyhatározó elöljárószó.
+Felszólító mód,¡Ven aquí ahora!,Igaz,'Ven' helyes felszólító alak.
+Elöljárószó,Estoy en la casa.,Igaz,'En' megfelelő helyhatározó elöljárószó.
+Melléknévi egyeztetés,La manzana es roja.,Igaz,"A 'manzana' nőnemű, a 'roja' helyesen egyezik."
+Melléknévi egyeztetés,La manzana es roja.,Igaz,"A 'manzana' nőnemű, a 'roja' helyesen egyezik."
+Birtokos névmás,Su casa es grande.,Igaz,'Su' helyes birtokos névmás itt.
+Felszólító mód,¡Ven aquí ahora!,Igaz,'Ven' helyes felszólító alak.
+Kötőmód használata,Quiero que vengas pronto.,Igaz,'Vengas' kötőmód megfelelő használata.
+Határozott névelő,El sol es brillante.,Igaz,"A 'sol' hímnemű, a 'el' helyesen használt."
+Helytelen egyeztetés,Las niño es alto.,Helytelen,"'Niño' hímnemű, 'las' helytelen."
+Melléknévi egyeztetés,La manzana es roja.,Igaz,"A 'manzana' nőnemű, a 'roja' helyesen egyezik."
+Határozott névelő,El sol es brillante.,Igaz,"A 'sol' hímnemű, a 'el' helyesen használt."
+Határozott névelő,El sol es brillante.,Igaz,"A 'sol' hímnemű, a 'el' helyesen használt."
+Kötőmód használata,Quiero que vengas pronto.,Igaz,'Vengas' kötőmód megfelelő használata.
+Tárgyeset használat,Veo a mi hermano.,Igaz,'A' tárgyesetben helyesen van használva.
+Birtokos névmás,Su casa es grande.,Igaz,'Su' helyes birtokos névmás itt.
+Igeidő használat,Mañana yo iré al mercado.,Igaz,"A 'iré' jövő idő, ami megfelelő."
+Birtokos névmás,Su casa es grande.,Igaz,'Su' helyes birtokos névmás itt.
+Helytelen egyeztetés,Las niño es alto.,Helytelen,"'Niño' hímnemű, 'las' helytelen."
+Kötőmód használata,Quiero que vengas pronto.,Igaz,'Vengas' kötőmód megfelelő használata.
+Főnévi igenév,Me gusta nadar.,Igaz,'Nadar' főnévi igenévként helyes.
+Főnévi igenév,Me gusta nadar.,Igaz,'Nadar' főnévi igenévként helyes.
+Helytelen egyeztetés,Las niño es alto.,Helytelen,"'Niño' hímnemű, 'las' helytelen."
+Helytelen egyeztetés,Las niño es alto.,Helytelen,"'Niño' hímnemű, 'las' helytelen."
+Elöljárószó,Estoy en la casa.,Igaz,'En' megfelelő helyhatározó elöljárószó.
+Felszólító mód,¡Ven aquí ahora!,Igaz,'Ven' helyes felszólító alak.
+Melléknévi egyeztetés,La manzana es roja.,Igaz,"A 'manzana' nőnemű, a 'roja' helyesen egyezik."
+Felszólító mód,¡Ven aquí ahora!,Igaz,'Ven' helyes felszólító alak.
+Helytelen egyeztetés,Las niño es alto.,Helytelen,"'Niño' hímnemű, 'las' helytelen."
+Melléknévi egyeztetés,La manzana es roja.,Igaz,"A 'manzana' nőnemű, a 'roja' helyesen egyezik."
+Kötőmód használata,Quiero que vengas pronto.,Igaz,'Vengas' kötőmód megfelelő használata.
+Birtokos névmás,Su casa es grande.,Igaz,'Su' helyes birtokos névmás itt.
+Tárgyeset használat,Veo a mi hermano.,Igaz,'A' tárgyesetben helyesen van használva.
+Melléknévi egyeztetés,La manzana es roja.,Igaz,"A 'manzana' nőnemű, a 'roja' helyesen egyezik."
+Igeidő használat,Mañana yo iré al mercado.,Igaz,"A 'iré' jövő idő, ami megfelelő."
+Igeidő használat,Mañana yo iré al mercado.,Igaz,"A 'iré' jövő idő, ami megfelelő."
+Felszólító mód,¡Ven aquí ahora!,Igaz,'Ven' helyes felszólító alak.
+Melléknévi egyeztetés,La manzana es roja.,Igaz,"A 'manzana' nőnemű, a 'roja' helyesen egyezik."
+Elöljárószó,Estoy en la casa.,Igaz,'En' megfelelő helyhatározó elöljárószó.
+Főnévi igenév,Me gusta nadar.,Igaz,'Nadar' főnévi igenévként helyes.
+Felszólító mód,¡Ven aquí ahora!,Igaz,'Ven' helyes felszólító alak.
+Helytelen egyeztetés,Las niño es alto.,Helytelen,"'Niño' hímnemű, 'las' helytelen."
+Helytelen egyeztetés,Las niño es alto.,Helytelen,"'Niño' hímnemű, 'las' helytelen."
+Kötőmód használata,Quiero que vengas pronto.,Igaz,'Vengas' kötőmód megfelelő használata.
+Határozott névelő,El sol es brillante.,Igaz,"A 'sol' hímnemű, a 'el' helyesen használt."
+Felszólító mód,¡Ven aquí ahora!,Igaz,'Ven' helyes felszólító alak.
+Helytelen egyeztetés,Las niño es alto.,Helytelen,"'Niño' hímnemű, 'las' helytelen."
+Elöljárószó,Estoy en la casa.,Igaz,'En' megfelelő helyhatározó elöljárószó.
+Felszólító mód,¡Ven aquí ahora!,Igaz,'Ven' helyes felszólító alak.
+Birtokos névmás,Su casa es grande.,Igaz,'Su' helyes birtokos névmás itt.
+Helytelen egyeztetés,Las niño es alto.,Helytelen,"'Niño' hímnemű, 'las' helytelen."
+Melléknévi egyeztetés,La manzana es roja.,Igaz,"A 'manzana' nőnemű, a 'roja' helyesen egyezik."
+Helytelen egyeztetés,Las niño es alto.,Helytelen,"'Niño' hímnemű, 'las' helytelen."
+Birtokos névmás,Su casa es grande.,Igaz,'Su' helyes birtokos névmás itt.
+Elöljárószó,Estoy en la casa.,Igaz,'En' megfelelő helyhatározó elöljárószó.
+Elöljárószó,Estoy en la casa.,Igaz,'En' megfelelő helyhatározó elöljárószó.
+Tárgyeset használat,Veo a mi hermano.,Igaz,'A' tárgyesetben helyesen van használva.
+Tárgyeset használat,Veo a mi hermano.,Igaz,'A' tárgyesetben helyesen van használva.
+Felszólító mód,¡Ven aquí ahora!,Igaz,'Ven' helyes felszólító alak.
+Birtokos névmás,Su casa es grande.,Igaz,'Su' helyes birtokos névmás itt.
+Birtokos névmás,Su casa es grande.,Igaz,'Su' helyes birtokos névmás itt.
+Főnévi igenév,Me gusta nadar.,Igaz,'Nadar' főnévi igenévként helyes.
+Igeidő használat,Mañana yo iré al mercado.,Igaz,"A 'iré' jövő idő, ami megfelelő."
+Melléknévi egyeztetés,La manzana es roja.,Igaz,"A 'manzana' nőnemű, a 'roja' helyesen egyezik."
+Tárgyeset használat,Veo a mi hermano.,Igaz,'A' tárgyesetben helyesen van használva.
+Igeidő használat,Mañana yo iré al mercado.,Igaz,"A 'iré' jövő idő, ami megfelelő."
+Kötőmód használata,Quiero que vengas pronto.,Igaz,'Vengas' kötőmód megfelelő használata.
+Kötőmód használata,Quiero que vengas pronto.,Igaz,'Vengas' kötőmód megfelelő használata.
+Birtokos névmás,Su casa es grande.,Igaz,'Su' helyes birtokos névmás itt.
+Helytelen egyeztetés,Las niño es alto.,Helytelen,"'Niño' hímnemű, 'las' helytelen."
+Tárgyeset használat,Veo a mi hermano.,Igaz,'A' tárgyesetben helyesen van használva.
+Elöljárószó,Estoy en la casa.,Igaz,'En' megfelelő helyhatározó elöljárószó.
+Határozott névelő,El sol es brillante.,Igaz,"A 'sol' hímnemű, a 'el' helyesen használt."
+Helytelen egyeztetés,Las niño es alto.,Helytelen,"'Niño' hímnemű, 'las' helytelen."
+Határozott névelő,El sol es brillante.,Igaz,"A 'sol' hímnemű, a 'el' helyesen használt."
+Főnévi igenév,Me gusta nadar.,Igaz,'Nadar' főnévi igenévként helyes.
+Elöljárószó,Estoy en la casa.,Igaz,'En' megfelelő helyhatározó elöljárószó.
+Melléknévi egyeztetés,La manzana es roja.,Igaz,"A 'manzana' nőnemű, a 'roja' helyesen egyezik."
+Elöljárószó,Estoy en la casa.,Igaz,'En' megfelelő helyhatározó elöljárószó.
+Tárgyeset használat,Veo a mi hermano.,Igaz,'A' tárgyesetben helyesen van használva.
+Főnévi igenév,Me gusta nadar.,Igaz,'Nadar' főnévi igenévként helyes.
+Főnévi igenév,Me gusta nadar.,Igaz,'Nadar' főnévi igenévként helyes.
+Kötőmód használata,Quiero que vengas pronto.,Igaz,'Vengas' kötőmód megfelelő használata.
+Kötőmód használata,Quiero que vengas pronto.,Igaz,'Vengas' kötőmód megfelelő használata.
+Birtokos névmás,Su casa es grande.,Igaz,'Su' helyes birtokos névmás itt.
+Felszólító mód,¡Ven aquí ahora!,Igaz,'Ven' helyes felszólító alak.
+Kötőmód használata,Quiero que vengas pronto.,Igaz,'Vengas' kötőmód megfelelő használata.
+Kötőmód használata,Quiero que vengas pronto.,Igaz,'Vengas' kötőmód megfelelő használata.
+Tárgyeset használat,Veo a mi hermano.,Igaz,'A' tárgyesetben helyesen van használva.
+Igeidő használat,Mañana yo iré al mercado.,Igaz,"A 'iré' jövő idő, ami megfelelő."
+Kötőmód használata,Quiero que vengas pronto.,Igaz,'Vengas' kötőmód megfelelő használata.
+Igeidő használat,Mañana yo iré al mercado.,Igaz,"A 'iré' jövő idő, ami megfelelő."
+Helytelen egyeztetés,Las niño es alto.,Helytelen,"'Niño' hímnemű, 'las' helytelen."
+Helytelen egyeztetés,Las niño es alto.,Helytelen,"'Niño' hímnemű, 'las' helytelen."
+Igeidő használat,Mañana yo iré al mercado.,Igaz,"A 'iré' jövő idő, ami megfelelő."
+Helytelen egyeztetés,Las niño es alto.,Helytelen,"'Niño' hímnemű, 'las' helytelen."
+Melléknévi egyeztetés,La manzana es roja.,Igaz,"A 'manzana' nőnemű, a 'roja' helyesen egyezik."
+Kötőmód használata,Quiero que vengas pronto.,Igaz,'Vengas' kötőmód megfelelő használata.
+Felszólító mód,¡Ven aquí ahora!,Igaz,'Ven' helyes felszólító alak.
+Igeidő használat,Mañana yo iré al mercado.,Igaz,"A 'iré' jövő idő, ami megfelelő."
+Határozott névelő,El sol es brillante.,Igaz,"A 'sol' hímnemű, a 'el' helyesen használt."
+Határozott névelő,El sol es brillante.,Igaz,"A 'sol' hímnemű, a 'el' helyesen használt."
+Birtokos névmás,Su casa es grande.,Igaz,'Su' helyes birtokos névmás itt.
+Kötőmód használata,Quiero que vengas pronto.,Igaz,'Vengas' kötőmód megfelelő használata.
+Felszólító mód,¡Ven aquí ahora!,Igaz,'Ven' helyes felszólító alak.
+Helytelen egyeztetés,Las niño es alto.,Helytelen,"'Niño' hímnemű, 'las' helytelen."
+Főnévi igenév,Me gusta nadar.,Igaz,'Nadar' főnévi igenévként helyes.
+Elöljárószó,Estoy en la casa.,Igaz,'En' megfelelő helyhatározó elöljárószó.
+Birtokos névmás,Su casa es grande.,Igaz,'Su' helyes birtokos névmás itt.
+Tárgyeset használat,Veo a mi hermano.,Igaz,'A' tárgyesetben helyesen van használva.
+Melléknévi egyeztetés,La manzana es roja.,Igaz,"A 'manzana' nőnemű, a 'roja' helyesen egyezik."
+Helytelen egyeztetés,Las niño es alto.,Helytelen,"'Niño' hímnemű, 'las' helytelen."
+Tárgyeset használat,Veo a mi hermano.,Igaz,'A' tárgyesetben helyesen van használva.
+Főnévi igenév,Me gusta nadar.,Igaz,'Nadar' főnévi igenévként helyes.
+Helytelen egyeztetés,Las niño es alto.,Helytelen,"'Niño' hímnemű, 'las' helytelen."
+Igeidő használat,Mañana yo iré al mercado.,Igaz,"A 'iré' jövő idő, ami megfelelő."
+Melléknévi egyeztetés,La manzana es roja.,Igaz,"A 'manzana' nőnemű, a 'roja' helyesen egyezik."
+Tárgyeset használat,Veo a mi hermano.,Igaz,'A' tárgyesetben helyesen van használva.
+Felszólító mód,¡Ven aquí ahora!,Igaz,'Ven' helyes felszólító alak.
+Elöljárószó,Estoy en la casa.,Igaz,'En' megfelelő helyhatározó elöljárószó.
+Birtokos névmás,Su casa es grande.,Igaz,'Su' helyes birtokos névmás itt.
+Határozott névelő,El sol es brillante.,Igaz,"A 'sol' hímnemű, a 'el' helyesen használt."
+Főnévi igenév,Me gusta nadar.,Igaz,'Nadar' főnévi igenévként helyes.
+Helytelen egyeztetés,Las niño es alto.,Helytelen,"'Niño' hímnemű, 'las' helytelen."
+Kötőmód használata,Quiero que vengas pronto.,Igaz,'Vengas' kötőmód megfelelő használata.
+Felszólító mód,¡Ven aquí ahora!,Igaz,'Ven' helyes felszólító alak.
+Határozott névelő,El sol es brillante.,Igaz,"A 'sol' hímnemű, a 'el' helyesen használt."
+Melléknévi egyeztetés,La manzana es roja.,Igaz,"A 'manzana' nőnemű, a 'roja' helyesen egyezik."
+Helytelen egyeztetés,Las niño es alto.,Helytelen,"'Niño' hímnemű, 'las' helytelen."
+Felszólító mód,¡Ven aquí ahora!,Igaz,'Ven' helyes felszólító alak.
+Határozott névelő,El sol es brillante.,Igaz,"A 'sol' hímnemű, a 'el' helyesen használt."
+Melléknévi egyeztetés,La manzana es roja.,Igaz,"A 'manzana' nőnemű, a 'roja' helyesen egyezik."
+Elöljárószó,Estoy en la casa.,Igaz,'En' megfelelő helyhatározó elöljárószó.
+Igeidő használat,Mañana yo iré al mercado.,Igaz,"A 'iré' jövő idő, ami megfelelő."
+Tárgyeset használat,Veo a mi hermano.,Igaz,'A' tárgyesetben helyesen van használva.
+Melléknévi egyeztetés,La manzana es roja.,Igaz,"A 'manzana' nőnemű, a 'roja' helyesen egyezik."
+Elöljárószó,Estoy en la casa.,Igaz,'En' megfelelő helyhatározó elöljárószó.
+Melléknévi egyeztetés,La manzana es roja.,Igaz,"A 'manzana' nőnemű, a 'roja' helyesen egyezik."
+Tárgyeset használat,Veo a mi hermano.,Igaz,'A' tárgyesetben helyesen van használva.
+Helytelen egyeztetés,Las niño es alto.,Helytelen,"'Niño' hímnemű, 'las' helytelen."
+Igeidő használat,Mañana yo iré al mercado.,Igaz,"A 'iré' jövő idő, ami megfelelő."
+Főnévi igenév,Me gusta nadar.,Igaz,'Nadar' főnévi igenévként helyes.
+Határozott névelő,El sol es brillante.,Igaz,"A 'sol' hímnemű, a 'el' helyesen használt."
+Helytelen egyeztetés,Las niño es alto.,Helytelen,"'Niño' hímnemű, 'las' helytelen."
+Helytelen egyeztetés,Las niño es alto.,Helytelen,"'Niño' hímnemű, 'las' helytelen."
+Kötőmód használata,Quiero que vengas pronto.,Igaz,'Vengas' kötőmód megfelelő használata.
+Határozott névelő,El sol es brillante.,Igaz,"A 'sol' hímnemű, a 'el' helyesen használt."
+Helytelen egyeztetés,Las niño es alto.,Helytelen,"'Niño' hímnemű, 'las' helytelen."
+Tárgyeset használat,Veo a mi hermano.,Igaz,'A' tárgyesetben helyesen van használva.
+Igeidő használat,Mañana yo iré al mercado.,Igaz,"A 'iré' jövő idő, ami megfelelő."
+Főnévi igenév,Me gusta nadar.,Igaz,'Nadar' főnévi igenévként helyes.
+Főnévi igenév,Me gusta nadar.,Igaz,'Nadar' főnévi igenévként helyes.
+Tárgyeset használat,Veo a mi hermano.,Igaz,'A' tárgyesetben helyesen van használva.
+Birtokos névmás,Su casa es grande.,Igaz,'Su' helyes birtokos névmás itt.
+Elöljárószó,Estoy en la casa.,Igaz,'En' megfelelő helyhatározó elöljárószó.
+Birtokos névmás,Su casa es grande.,Igaz,'Su' helyes birtokos névmás itt.
+Tárgyeset használat,Veo a mi hermano.,Igaz,'A' tárgyesetben helyesen van használva.
+Helytelen egyeztetés,Las niño es alto.,Helytelen,"'Niño' hímnemű, 'las' helytelen."
+Helytelen egyeztetés,Las niño es alto.,Helytelen,"'Niño' hímnemű, 'las' helytelen."
+Tárgyeset használat,Veo a mi hermano.,Igaz,'A' tárgyesetben helyesen van használva.
+Határozott névelő,El sol es brillante.,Igaz,"A 'sol' hímnemű, a 'el' helyesen használt."
+Felszólító mód,¡Ven aquí ahora!,Igaz,'Ven' helyes felszólító alak.
+Kötőmód használata,Quiero que vengas pronto.,Igaz,'Vengas' kötőmód megfelelő használata.
+Birtokos névmás,Su casa es grande.,Igaz,'Su' helyes birtokos névmás itt.
+Helytelen egyeztetés,Las niño es alto.,Helytelen,"'Niño' hímnemű, 'las' helytelen."
+Felszólító mód,¡Ven aquí ahora!,Igaz,'Ven' helyes felszólító alak.
+Igeidő használat,Mañana yo iré al mercado.,Igaz,"A 'iré' jövő idő, ami megfelelő."
+Felszólító mód,¡Ven aquí ahora!,Igaz,'Ven' helyes felszólító alak.
+Elöljárószó,Estoy en la casa.,Igaz,'En' megfelelő helyhatározó elöljárószó.
+Birtokos névmás,Su casa es grande.,Igaz,'Su' helyes birtokos névmás itt.
+Határozott névelő,El sol es brillante.,Igaz,"A 'sol' hímnemű, a 'el' helyesen használt."
+Melléknévi egyeztetés,La manzana es roja.,Igaz,"A 'manzana' nőnemű, a 'roja' helyesen egyezik."
+Helytelen egyeztetés,Las niño es alto.,Helytelen,"'Niño' hímnemű, 'las' helytelen."
+Határozott névelő,El sol es brillante.,Igaz,"A 'sol' hímnemű, a 'el' helyesen használt."
+Határozott névelő,El sol es brillante.,Igaz,"A 'sol' hímnemű, a 'el' helyesen használt."
+Elöljárószó,Estoy en la casa.,Igaz,'En' megfelelő helyhatározó elöljárószó.
+Kötőmód használata,Quiero que vengas pronto.,Igaz,'Vengas' kötőmód megfelelő használata.
+Főnévi igenév,Me gusta nadar.,Igaz,'Nadar' főnévi igenévként helyes.
+Felszólító mód,¡Ven aquí ahora!,Igaz,'Ven' helyes felszólító alak.
+Melléknévi egyeztetés,La manzana es roja.,Igaz,"A 'manzana' nőnemű, a 'roja' helyesen egyezik."
+Melléknévi egyeztetés,La manzana es roja.,Igaz,"A 'manzana' nőnemű, a 'roja' helyesen egyezik."
+Határozott névelő,El sol es brillante.,Igaz,"A 'sol' hímnemű, a 'el' helyesen használt."
+Kötőmód használata,Quiero que vengas pronto.,Igaz,'Vengas' kötőmód megfelelő használata.
+Helytelen egyeztetés,Las niño es alto.,Helytelen,"'Niño' hímnemű, 'las' helytelen."
+Helytelen egyeztetés,Las niño es alto.,Helytelen,"'Niño' hímnemű, 'las' helytelen."
+Tárgyeset használat,Veo a mi hermano.,Igaz,'A' tárgyesetben helyesen van használva.
+Elöljárószó,Estoy en la casa.,Igaz,'En' megfelelő helyhatározó elöljárószó.
+Kötőmód használata,Quiero que vengas pronto.,Igaz,'Vengas' kötőmód megfelelő használata.
+Helytelen egyeztetés,Las niño es alto.,Helytelen,"'Niño' hímnemű, 'las' helytelen."
+Felszólító mód,¡Ven aquí ahora!,Igaz,'Ven' helyes felszólító alak.
+Birtokos névmás,Su casa es grande.,Igaz,'Su' helyes birtokos névmás itt.
+Felszólító mód,¡Ven aquí ahora!,Igaz,'Ven' helyes felszólító alak.
+Felszólító mód,¡Ven aquí ahora!,Igaz,'Ven' helyes felszólító alak.
+Tárgyeset használat,Veo a mi hermano.,Igaz,'A' tárgyesetben helyesen van használva.
+Felszólító mód,¡Ven aquí ahora!,Igaz,'Ven' helyes felszólító alak.
+Felszólító mód,¡Ven aquí ahora!,Igaz,'Ven' helyes felszólító alak.
+Főnévi igenév,Me gusta nadar.,Igaz,'Nadar' főnévi igenévként helyes.
+Igeidő használat,Mañana yo iré al mercado.,Igaz,"A 'iré' jövő idő, ami megfelelő."
+Helytelen egyeztetés,Las niño es alto.,Helytelen,"'Niño' hímnemű, 'las' helytelen."
+Felszólító mód,¡Ven aquí ahora!,Igaz,'Ven' helyes felszólító alak.
+Birtokos névmás,Su casa es grande.,Igaz,'Su' helyes birtokos névmás itt.
+Felszólító mód,¡Ven aquí ahora!,Igaz,'Ven' helyes felszólító alak.
+Felszólító mód,¡Ven aquí ahora!,Igaz,'Ven' helyes felszólító alak.
+Igeidő használat,Mañana yo iré al mercado.,Igaz,"A 'iré' jövő idő, ami megfelelő."
+Igeidő használat,Mañana yo iré al mercado.,Igaz,"A 'iré' jövő idő, ami megfelelő."
+Helytelen egyeztetés,Las niño es alto.,Helytelen,"'Niño' hímnemű, 'las' helytelen."
+Elöljárószó,Estoy en la casa.,Igaz,'En' megfelelő helyhatározó elöljárószó.
+Kötőmód használata,Quiero que vengas pronto.,Igaz,'Vengas' kötőmód megfelelő használata.
+Felszólító mód,¡Ven aquí ahora!,Igaz,'Ven' helyes felszólító alak.
+Birtokos névmás,Su casa es grande.,Igaz,'Su' helyes birtokos névmás itt.
+Kötőmód használata,Quiero que vengas pronto.,Igaz,'Vengas' kötőmód megfelelő használata.
+Tárgyeset használat,Veo a mi hermano.,Igaz,'A' tárgyesetben helyesen van használva.
+Elöljárószó,Estoy en la casa.,Igaz,'En' megfelelő helyhatározó elöljárószó.
+Kötőmód használata,Quiero que vengas pronto.,Igaz,'Vengas' kötőmód megfelelő használata.
+Birtokos névmás,Su casa es grande.,Igaz,'Su' helyes birtokos névmás itt.
+Főnévi igenév,Me gusta nadar.,Igaz,'Nadar' főnévi igenévként helyes.
+Elöljárószó,Estoy en la casa.,Igaz,'En' megfelelő helyhatározó elöljárószó.
+Elöljárószó,Estoy en la casa.,Igaz,'En' megfelelő helyhatározó elöljárószó.
+Kötőmód használata,Quiero que vengas pronto.,Igaz,'Vengas' kötőmód megfelelő használata.
+Felszólító mód,¡Ven aquí ahora!,Igaz,'Ven' helyes felszólító alak.
+Kötőmód használata,Quiero que vengas pronto.,Igaz,'Vengas' kötőmód megfelelő használata.
+Határozott névelő,El sol es brillante.,Igaz,"A 'sol' hímnemű, a 'el' helyesen használt."
+Melléknévi egyeztetés,La manzana es roja.,Igaz,"A 'manzana' nőnemű, a 'roja' helyesen egyezik."
+Kötőmód használata,Quiero que vengas pronto.,Igaz,'Vengas' kötőmód megfelelő használata.
+Helytelen egyeztetés,Las niño es alto.,Helytelen,"'Niño' hímnemű, 'las' helytelen."
+Tárgyeset használat,Veo a mi hermano.,Igaz,'A' tárgyesetben helyesen van használva.
+Főnévi igenév,Me gusta nadar.,Igaz,'Nadar' főnévi igenévként helyes.
+Birtokos névmás,Su casa es grande.,Igaz,'Su' helyes birtokos névmás itt.
+Igeidő használat,Mañana yo iré al mercado.,Igaz,"A 'iré' jövő idő, ami megfelelő."
+Melléknévi egyeztetés,La manzana es roja.,Igaz,"A 'manzana' nőnemű, a 'roja' helyesen egyezik."
+Helytelen egyeztetés,Las niño es alto.,Helytelen,"'Niño' hímnemű, 'las' helytelen."
+Határozott névelő,El sol es brillante.,Igaz,"A 'sol' hímnemű, a 'el' helyesen használt."
+Határozott névelő,El sol es brillante.,Igaz,"A 'sol' hímnemű, a 'el' helyesen használt."
+Felszólító mód,¡Ven aquí ahora!,Igaz,'Ven' helyes felszólító alak.
+Felszólító mód,¡Ven aquí ahora!,Igaz,'Ven' helyes felszólító alak.
+Határozott névelő,El sol es brillante.,Igaz,"A 'sol' hímnemű, a 'el' helyesen használt."
+Felszólító mód,¡Ven aquí ahora!,Igaz,'Ven' helyes felszólító alak.
+Melléknévi egyeztetés,La manzana es roja.,Igaz,"A 'manzana' nőnemű, a 'roja' helyesen egyezik."
+Elöljárószó,Estoy en la casa.,Igaz,'En' megfelelő helyhatározó elöljárószó.
+Tárgyeset használat,Veo a mi hermano.,Igaz,'A' tárgyesetben helyesen van használva.
+Melléknévi egyeztetés,La manzana es roja.,Igaz,"A 'manzana' nőnemű, a 'roja' helyesen egyezik."
+Felszólító mód,¡Ven aquí ahora!,Igaz,'Ven' helyes felszólító alak.
+Birtokos névmás,Su casa es grande.,Igaz,'Su' helyes birtokos névmás itt.
+Kötőmód használata,Quiero que vengas pronto.,Igaz,'Vengas' kötőmód megfelelő használata.
+Elöljárószó,Estoy en la casa.,Igaz,'En' megfelelő helyhatározó elöljárószó.
+Helytelen egyeztetés,Las niño es alto.,Helytelen,"'Niño' hímnemű, 'las' helytelen."
+Elöljárószó,Estoy en la casa.,Igaz,'En' megfelelő helyhatározó elöljárószó.
+Helytelen egyeztetés,Las niño es alto.,Helytelen,"'Niño' hímnemű, 'las' helytelen."
+Felszólító mód,¡Ven aquí ahora!,Igaz,'Ven' helyes felszólító alak.
+Helytelen egyeztetés,Las niño es alto.,Helytelen,"'Niño' hímnemű, 'las' helytelen."
+Kötőmód használata,Quiero que vengas pronto.,Igaz,'Vengas' kötőmód megfelelő használata.
+Felszólító mód,¡Ven aquí ahora!,Igaz,'Ven' helyes felszólító alak.
+Igeidő használat,Mañana yo iré al mercado.,Igaz,"A 'iré' jövő idő, ami megfelelő."
+Tárgyeset használat,Veo a mi hermano.,Igaz,'A' tárgyesetben helyesen van használva.
+Birtokos névmás,Su casa es grande.,Igaz,'Su' helyes birtokos névmás itt.
+Elöljárószó,Estoy en la casa.,Igaz,'En' megfelelő helyhatározó elöljárószó.
+Határozott névelő,El sol es brillante.,Igaz,"A 'sol' hímnemű, a 'el' helyesen használt."
+Helytelen egyeztetés,Las niño es alto.,Helytelen,"'Niño' hímnemű, 'las' helytelen."
+Főnévi igenév,Me gusta nadar.,Igaz,'Nadar' főnévi igenévként helyes.
+Határozott névelő,El sol es brillante.,Igaz,"A 'sol' hímnemű, a 'el' helyesen használt."
+Kötőmód használata,Quiero que vengas pronto.,Igaz,'Vengas' kötőmód megfelelő használata.
+Kötőmód használata,Quiero que vengas pronto.,Igaz,'Vengas' kötőmód megfelelő használata.
+Melléknévi egyeztetés,La manzana es roja.,Igaz,"A 'manzana' nőnemű, a 'roja' helyesen egyezik."
+Kötőmód használata,Quiero que vengas pronto.,Igaz,'Vengas' kötőmód megfelelő használata.
+Kötőmód használata,Quiero que vengas pronto.,Igaz,'Vengas' kötőmód megfelelő használata.
+Birtokos névmás,Su casa es grande.,Igaz,'Su' helyes birtokos névmás itt.
+Igeidő használat,Mañana yo iré al mercado.,Igaz,"A 'iré' jövő idő, ami megfelelő."
+Tárgyeset használat,Veo a mi hermano.,Igaz,'A' tárgyesetben helyesen van használva.
+Kötőmód használata,Quiero que vengas pronto.,Igaz,'Vengas' kötőmód megfelelő használata.
+Határozott névelő,El sol es brillante.,Igaz,"A 'sol' hímnemű, a 'el' helyesen használt."
+Igeidő használat,Mañana yo iré al mercado.,Igaz,"A 'iré' jövő idő, ami megfelelő."
+Határozott névelő,El sol es brillante.,Igaz,"A 'sol' hímnemű, a 'el' helyesen használt."
+Kötőmód használata,Quiero que vengas pronto.,Igaz,'Vengas' kötőmód megfelelő használata.
+Tárgyeset használat,Veo a mi hermano.,Igaz,'A' tárgyesetben helyesen van használva.
+Főnévi igenév,Me gusta nadar.,Igaz,'Nadar' főnévi igenévként helyes.
+Kötőmód használata,Quiero que vengas pronto.,Igaz,'Vengas' kötőmód megfelelő használata.
+Igeidő használat,Mañana yo iré al mercado.,Igaz,"A 'iré' jövő idő, ami megfelelő."
+Tárgyeset használat,Veo a mi hermano.,Igaz,'A' tárgyesetben helyesen van használva.
+Melléknévi egyeztetés,La manzana es roja.,Igaz,"A 'manzana' nőnemű, a 'roja' helyesen egyezik."
+Felszólító mód,¡Ven aquí ahora!,Igaz,'Ven' helyes felszólító alak.
+Birtokos névmás,Su casa es grande.,Igaz,'Su' helyes birtokos névmás itt.
+Birtokos névmás,Su casa es grande.,Igaz,'Su' helyes birtokos névmás itt.
+Főnévi igenév,Me gusta nadar.,Igaz,'Nadar' főnévi igenévként helyes.
+Elöljárószó,Estoy en la casa.,Igaz,'En' megfelelő helyhatározó elöljárószó.
+Melléknévi egyeztetés,La manzana es roja.,Igaz,"A 'manzana' nőnemű, a 'roja' helyesen egyezik."
+Főnévi igenév,Me gusta nadar.,Igaz,'Nadar' főnévi igenévként helyes.
+Főnévi igenév,Me gusta nadar.,Igaz,'Nadar' főnévi igenévként helyes.
+Felszólító mód,¡Ven aquí ahora!,Igaz,'Ven' helyes felszólító alak.
+Elöljárószó,Estoy en la casa.,Igaz,'En' megfelelő helyhatározó elöljárószó.
+Elöljárószó,Estoy en la casa.,Igaz,'En' megfelelő helyhatározó elöljárószó.
+Határozott névelő,El sol es brillante.,Igaz,"A 'sol' hímnemű, a 'el' helyesen használt."
+Kötőmód használata,Quiero que vengas pronto.,Igaz,'Vengas' kötőmód megfelelő használata.
+Igeidő használat,Mañana yo iré al mercado.,Igaz,"A 'iré' jövő idő, ami megfelelő."
+Birtokos névmás,Su casa es grande.,Igaz,'Su' helyes birtokos névmás itt.
+Elöljárószó,Estoy en la casa.,Igaz,'En' megfelelő helyhatározó elöljárószó.
+Határozott névelő,El sol es brillante.,Igaz,"A 'sol' hímnemű, a 'el' helyesen használt."
+Tárgyeset használat,Veo a mi hermano.,Igaz,'A' tárgyesetben helyesen van használva.
+Elöljárószó,Estoy en la casa.,Igaz,'En' megfelelő helyhatározó elöljárószó.
+Melléknévi egyeztetés,La manzana es roja.,Igaz,"A 'manzana' nőnemű, a 'roja' helyesen egyezik."
+Helytelen egyeztetés,Las niño es alto.,Helytelen,"'Niño' hímnemű, 'las' helytelen."
+Birtokos névmás,Su casa es grande.,Igaz,'Su' helyes birtokos névmás itt.
+Felszólító mód,¡Ven aquí ahora!,Igaz,'Ven' helyes felszólító alak.
+Igeidő használat,Mañana yo iré al mercado.,Igaz,"A 'iré' jövő idő, ami megfelelő."
+Helytelen egyeztetés,Las niño es alto.,Helytelen,"'Niño' hímnemű, 'las' helytelen."
+Határozott névelő,El sol es brillante.,Igaz,"A 'sol' hímnemű, a 'el' helyesen használt."
+Főnévi igenév,Me gusta nadar.,Igaz,'Nadar' főnévi igenévként helyes.
+Határozott névelő,El sol es brillante.,Igaz,"A 'sol' hímnemű, a 'el' helyesen használt."
+Kötőmód használata,Quiero que vengas pronto.,Igaz,'Vengas' kötőmód megfelelő használata.
+Melléknévi egyeztetés,La manzana es roja.,Igaz,"A 'manzana' nőnemű, a 'roja' helyesen egyezik."
+Helytelen egyeztetés,Las niño es alto.,Helytelen,"'Niño' hímnemű, 'las' helytelen."
+Tárgyeset használat,Veo a mi hermano.,Igaz,'A' tárgyesetben helyesen van használva.
+Helytelen egyeztetés,Las niño es alto.,Helytelen,"'Niño' hímnemű, 'las' helytelen."
+Főnévi igenév,Me gusta nadar.,Igaz,'Nadar' főnévi igenévként helyes.
+Elöljárószó,Estoy en la casa.,Igaz,'En' megfelelő helyhatározó elöljárószó.
+Főnévi igenév,Me gusta nadar.,Igaz,'Nadar' főnévi igenévként helyes.
+Melléknévi egyeztetés,La manzana es roja.,Igaz,"A 'manzana' nőnemű, a 'roja' helyesen egyezik."
+Felszólító mód,¡Ven aquí ahora!,Igaz,'Ven' helyes felszólító alak.
+Felszólító mód,¡Ven aquí ahora!,Igaz,'Ven' helyes felszólító alak.
+Elöljárószó,Estoy en la casa.,Igaz,'En' megfelelő helyhatározó elöljárószó.
+Elöljárószó,Estoy en la casa.,Igaz,'En' megfelelő helyhatározó elöljárószó.
+Birtokos névmás,Su casa es grande.,Igaz,'Su' helyes birtokos névmás itt.
+Birtokos névmás,Su casa es grande.,Igaz,'Su' helyes birtokos névmás itt.
+Kötőmód használata,Quiero que vengas pronto.,Igaz,'Vengas' kötőmód megfelelő használata.
+Elöljárószó,Estoy en la casa.,Igaz,'En' megfelelő helyhatározó elöljárószó.
+Melléknévi egyeztetés,La manzana es roja.,Igaz,"A 'manzana' nőnemű, a 'roja' helyesen egyezik."
+Helytelen egyeztetés,Las niño es alto.,Helytelen,"'Niño' hímnemű, 'las' helytelen."
+Melléknévi egyeztetés,La manzana es roja.,Igaz,"A 'manzana' nőnemű, a 'roja' helyesen egyezik."
+Melléknévi egyeztetés,La manzana es roja.,Igaz,"A 'manzana' nőnemű, a 'roja' helyesen egyezik."
+Főnévi igenév,Me gusta nadar.,Igaz,'Nadar' főnévi igenévként helyes.
+Melléknévi egyeztetés,La manzana es roja.,Igaz,"A 'manzana' nőnemű, a 'roja' helyesen egyezik."
+Tárgyeset használat,Veo a mi hermano.,Igaz,'A' tárgyesetben helyesen van használva.
+Birtokos névmás,Su casa es grande.,Igaz,'Su' helyes birtokos névmás itt.
+Főnévi igenév,Me gusta nadar.,Igaz,'Nadar' főnévi igenévként helyes.
+Birtokos névmás,Su casa es grande.,Igaz,'Su' helyes birtokos névmás itt.
+Igeidő használat,Mañana yo iré al mercado.,Igaz,"A 'iré' jövő idő, ami megfelelő."
+Főnévi igenév,Me gusta nadar.,Igaz,'Nadar' főnévi igenévként helyes.
