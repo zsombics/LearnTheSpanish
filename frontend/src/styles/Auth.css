@@ -1,35 +1,39 @@
-/* Globális reset */
+/* Global Reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* A kétoszlopos konténer a login/regisztráció oldalhoz */
+/* Two-column container for login/registration page */
 .auth-container {
-  font-family: Arial, sans-serif;
+  font-family: 'Josefin Sans', sans-serif;
   background: url('https://images.unsplash.com/photo-1543783207-ec64e4d95325?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8c3BhaW58ZW58MHx8MHx8fDA%3D') no-repeat center center/cover;
   background-size: cover;
   color: #fff;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  /* módosítva: két elem legyen a széleken */
   min-height: 92vh;
   padding: 20px;
   width: 100%;
 }
 
-/* Bal oldali szöveges rész */
+/* Left text section */
 .auth-text {
   flex: 1;
   max-width: 500px;
   padding: 20px;
   background-color: rgba(18, 4, 4, 0.5);
-  /* Félig átlátszó háttér */
-  backdrop-filter: blur(1px);
-  border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.auth-text:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
 }
 
 .auth-text h1 {
@@ -45,51 +49,62 @@
   margin-bottom: 20px;
 }
 
-/* Jobb oldali űrlap doboz */
+/* Right form box */
 .auth-form {
   flex: 1;
   max-width: 400px;
   min-height: 50vh;
   background-color: rgba(255, 255, 255, 0.95);
   padding: 30px;
-  border-radius: 10px;
+  border-radius: 15px;
   color: #333;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* űrlap címe */
+.auth-form:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+}
+
+/* Form title */
 .auth-form h2 {
   text-align: center;
   margin-bottom: 20px;
   color: #ff7200;
 }
 
-/* Az űrlap elemei – oszlop elrendezés, egyforma távolságokkal */
+/* Form elements – column layout with even spacing */
 .auth-form form {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  /* vagy használhatod a gap: 15px; ha pontosan 15px távolságot szeretnél */
   min-height: 30vh;
 }
 
-
-/* Input mezők */
+/* Input fields */
 .auth-form input {
-  padding: 10px;
+  padding: 12px;
   font-size: 1rem;
   border: 1px solid #ff7200;
-  border-radius: 5px;
+  border-radius: 8px;
   outline: none;
+  transition: border-color 0.3s ease;
 }
 
-/* Gomb */
+.auth-form input:focus {
+  border-color: #e64a19;
+  box-shadow: 0 0 8px rgba(230, 74, 25, 0.5);
+}
+
+/* Button */
 .auth-form button {
-  padding: 10px;
+  padding: 12px;
   font-size: 1.1rem;
   background-color: #ff7200;
   color: #fff;
   border: none;
-  border-radius: 5px;
+  border-radius: 8px;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
@@ -98,7 +113,7 @@
   background-color: #e64a19;
 }
 
-/* Link stílus az űrlap alatt */
+/* Link style below the form */
 .auth-link {
   text-align: center;
   margin-top: 15px;
@@ -110,7 +125,7 @@
   color: #ff7200;
 }
 
-/* Reszponzív módosítások */
+/* Responsive adjustments */
 @media (max-width: 768px) {
   .auth-container {
     flex-direction: column;

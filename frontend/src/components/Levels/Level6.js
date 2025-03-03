@@ -5,58 +5,62 @@ const Level6 = () => {
     const [inputValue, setInputValue] = useState('');
     const [translatedText, setTranslatedText] = useState('');
     const [error, setError] = useState('');
-  
+
     const handleInputChange = (event) => {
-      setInputValue(event.target.value);
-      setError('');
+        setInputValue(event.target.value);
+        setError(''); // Reset error on new input
     };
-  
+
     const handleTranslate = async () => {
-      if (!inputValue.trim()) {
-        setError('Kérlek írj be egy szót!');
-        return;
-      }
-  
-      try {
-        const response = await fetch("http://localhost:5000/api/translate", { // Use your backend endpoint
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({ text: inputValue }),
-        });
-        const data = await response.json();
-        if (data.translations && data.translations.length > 0) {
-          setTranslatedText(data.translations[0].text);
-        } else {
-          setError('Nem sikerült lefordítani a szót.');
+        if (!inputValue.trim()) {
+            setError('Kérlek írj be egy szót!');
+            return;
         }
-      } catch (err) {
-        console.error(err);
-        setError('Hálózati hiba történt.');
-      }
+
+        try {
+            const response = await fetch("http://localhost:5000/api/translate", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify({ text: inputValue }),
+            });
+            const data = await response.json();
+            if (data.translations && data.translations.length > 0) {
+                setTranslatedText(data.translations[0].text);
+            } else {
+                setError('Nem sikerült lefordítani a szót.');
+            }
+        } catch (err) {
+            console.error(err);
+            setError('Hálózati hiba történt.');
+        }
     };
-  
+
     return (
-      <div className="translation-container">
-        <input
-          type="text"
-          value={inputValue}
-          onChange={handleInputChange}
-          placeholder="Írj be egy magyar szót"
-          className="translation-input"
-        />
-        <button onClick={handleTranslate} className="translate-btn">
-          Lefordít
-        </button>
-        {translatedText && (
-          <div className="translation-result">
-            <strong>Fordítás:</strong> {translatedText}
-          </div>
-        )}
-        {error && <div className="translation-error">{error}</div>}
-      </div>
+        <div className="translation-container">
+            <h2 className="translation-header">DeepL Integrált AI Fordító</h2>
+            <p className="translation-description">
+                Írj be egy magyar szót, és a DeepL AI technológiával lefordítjuk spanyolra.
+            </p>
+            <input
+                type="text"
+                value={inputValue}
+                onChange={handleInputChange}
+                placeholder="Írj be egy magyar szót"
+                className="translation-input"
+            />
+            <button onClick={handleTranslate} className="translate-btn">
+                Lefordít
+            </button>
+            {translatedText && (
+                <div className="translation-result">
+                    <strong>Fordítás:</strong> {translatedText}
+                </div>
+            )}
+            {error && <div className="translation-error">{error}</div>}
+        </div>
     );
-  };
-  
-  export default Level6;
+};
+
+export default Level6;

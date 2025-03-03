@@ -1,174 +1,214 @@
+/* Import Google Fonts */
 @import url('https://fonts.googleapis.com/css?family=Allura|Josefin+Sans');
 
-
-p{
-	margin-bottom: 15px;
-	font-size: 14px;
-	line-height: 20px;
-	color: #a9a9a9;
+/* General Styles */
+body {
+  background-color: #f8f9fa;
+  color: #2c3e50;
+  font-family: 'Josefin Sans', sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
-h1.title{
-	margin-bottom: 20px;
-	color: #444444;
-	font-family: 'Allura', cursive;
-	text-transform: uppercase;
-	font-size: 38px;
-	word-spacing: 25px;
-	letter-spacing: 5px;
+p {
+  margin-bottom: 15px;
+  font-size: 16px;
+  line-height: 24px;
+  color: #6c757d;
 }
 
-.btn a{
-	display: block;
-	width: 180px;
-	height: 35px;
-	border: 2px solid #fb8b22;
-	line-height: 35px;
-	margin: 25px auto 0;
-	color: #f18221;
-	text-align: center;
+h1.title {
+  margin-bottom: 20px;
+  color: #3498db;
+  font-family: 'Allura', cursive;
+  text-transform: uppercase;
+  font-size: 38px;
+  word-spacing: 25px;
+  letter-spacing: 5px;
 }
 
-
-.main_container{
-	position: relative;
+.btn a {
+  display: block;
+  width: 200px;
+  height: 40px;
+  border: 2px solid #3498db;
+  line-height: 40px;
+  margin: 25px auto 0;
+  color: #3498db;
+  text-align: center;
+  border-radius: 20px;
+  transition: all 0.3s ease;
 }
 
+.btn a:hover {
+  background-color: #3498db;
+  color: white;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 18px rgba(52, 152, 219, 0.3);
+}
+
+.main_container {
+  position: relative;
+}
 
 /* Banner Image */
-.banner_image{
-	background: url("https://i.imgur.com/AS8APz9.jpg") no-repeat top center;
-	background-size: cover;
-	width: 100%;
-	min-height: 92vh;
-	display: flex;
-	justify-content: center;
-	align-items: center;
+.banner_image {
+  background: url("https://images.pexels.com/photos/1431822/pexels-photo-1431822.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2") no-repeat top center;
+  background-size: cover;
+  width: 100%;
+  min-height: 92vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.banner_content{
-	text-align: center;
-	color: #fff;
+.banner_content {
+  text-align: center;
+  color: #fff;
 }
 
-.banner_content h1{
-	text-transform: uppercase;
-	line-height: 38px;
-	margin-bottom: 15px;
+.banner_content h1 {
+  text-transform: uppercase;
+  line-height: 48px;
+  margin-bottom: 15px;
 }
 
-.banner_content h1 span{
-	color: #f18221;
+.banner_content h1 span {
+  color: #f18221;
 }
 
 /* About us */
 .about,
 .services,
 .contactus,
-.ourteam{
-	padding: 5% 10%;
-	text-align: center;
+.ourteam {
+  padding: 5% 10%;
+  text-align: center;
 }
 
 /* Services */
-.services{
-	background: #f5f5f5;
+.services {
+  background: #f5f5f5;
 }
 
-.diff_services{
-	display: flex;
-	margin-top: 35px;
-	justify-content: space-between;
+.diff_services {
+  display: flex;
+  margin-top: 35px;
+  justify-content: space-between;
 }
 
-.diff_service_item{
-	width: 30%;
-  background-color: #efebeb;
+.diff_service_item {
+  width: 30%;
+  background-color: #ffffff;
   padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.diff_service_item img{
-	width: 100%;
-  height: 300px; /* Rögzített magasság a képeknek */
-  object-fit: cover; /* Kép arányainak megtartása */
-  border-radius: 8px; /* Kerekített sarkok a képeknek */
-	margin-bottom: 25px;
+.diff_service_item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
 }
 
-.diff_service_item h3{
-	color: #f18221;;
-	margin-bottom: 15px;
+.diff_service_item img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 25px;
+}
+
+.diff_service_item h3 {
+  color: #3498db;
+  margin-bottom: 15px;
 }
 
 /* Contact Us */
-.form_input{
-	margin-bottom: 15px;
+.form_input {
+  margin-bottom: 15px;
 }
 
-.form_input input[type="text"]{
-	width: 250px;
-	padding: 12px 20px;
-	border: 1px solid #ccc;
+.form_input input[type="text"] {
+  width: 250px;
+  padding: 12px 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
 }
 
-.form_input textarea{
-	width: 250px;
-	padding: 12px 20px;
-	height: 80px;
-	resize: none;
-	border: 1px solid #ccc;
+.form_input textarea {
+  width: 250px;
+  padding: 12px 20px;
+  height: 80px;
+  resize: none;
+  border: 1px solid #ccc;
+  border-radius: 8px;
 }
 
-/* Our Team*/
-.ourteam{
-	background: #f5f5f5;
+/* Our Team */
+.ourteam {
+  background: #f5f5f5;
 }
 
-.ourteam_wrapper .team{
-	display: flex;
-	justify-content: space-between;
+.ourteam_wrapper .team {
+  display: flex;
+  justify-content: space-between;
 }
 
-.ourteam_wrapper .team-1.team{
-	margin-bottom: 25px;
+.ourteam_wrapper .team-1.team {
+  margin-bottom: 25px;
 }
 
-.ourteam_wrapper .team_member{
-	width: 30%;
-	height: auto;
-	cursor: pointer;
-	overflow: hidden;
+.ourteam_wrapper .team_member {
+  width: 30%;
+  height: auto;
+  cursor: pointer;
+  overflow: hidden;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.ourteam_wrapper .team_member img{
-	width: 100%;
-	display: block;
-	height: auto;
-	transition: all 0.5s ease;
+.ourteam_wrapper .team_member:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
 }
 
-.ourteam_wrapper .team_member:hover img{
-	transform: scale(1.1);
+.ourteam_wrapper .team_member img {
+  width: 100%;
+  display: block;
+  height: auto;
+  transition: all 0.5s ease;
+  border-radius: 10px;
 }
 
-
-
-/* arrow */
-.arrow{
-	position: fixed;
-	bottom: 25px;
-	right: 25px;
-	width: 40px;
-	height: 40px;
-	line-height: 50px;
-	text-align: center;
-	cursor: pointer;
-	background: #f18221;;
-	border-radius: 50%;
+.ourteam_wrapper .team_member:hover img {
+  transform: scale(1.1);
 }
 
-.arrow img{
-	width: 20px;
-	height: 20px;
-	z-index: 1;
+/* Arrow */
+.arrow {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  width: 45px;
+  height: 45px;
+  line-height: 50px;
+  text-align: center;
+  cursor: pointer;
+  background: #3498db;
+  border-radius: 50%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.arrow:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+}
+
+.arrow img {
+  width: 25px;
+  height: 25px;
+  z-index: 1;
 }

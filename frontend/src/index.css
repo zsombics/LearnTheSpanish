@@ -1,72 +1,83 @@
-/* frontend/src/index.css */
+/* Global Reset */
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
-  background-color: #f4f4f4;
+  font-family: 'Josefin Sans', sans-serif;
+  background-color: #f8f9fa;
+  color: #333;
 }
-/* Globális beállítások: a html és body 100% magas legyen */
+
+/* Ensure the html and body are 100% height */
 html, body {
   margin: 0;
   padding: 0;
   height: 100%;
 }
 
-/* A body legyen egy oszlopirányú flex konténer */
+/* Body as a column flex container */
 body {
   display: flex;
   flex-direction: column;
 }
-/* A navigációs sáv (Navbar) */
+
+/* Navigation Bar */
 .navbar {
-  display: flex;               /* Flexbox használata */
-  align-items: center;         /* Függőleges középre igazítás */
-  justify-content: space-between;  /* A bal és jobb oldal elválasztása */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   background-color: #ff7043;
   color: #fff;
   flex-shrink: 0;
   padding: 1rem;
   min-height: 8vh;
-}
-.main-content {
-  flex: 1;             /* A maradék terület kitöltése */
-  overflow-y: auto;    /* Ha a tartalom hosszabb, akkor görgethető legyen */
-  background-color: #f4f4f4; /* (opcionális) háttérszín a tartalom területéhez */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-/* A fehér tartalmi doboz */
+.main-content {
+  flex: 1;
+  overflow-y: auto;
+  background-color: #f8f9fa;
+}
+
+/* Main Content Box */
 .content-box {
   width: 98%;
   height: 96%;
   background-color: #fff;
   padding: 2rem;
-  border-radius: 10px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-  overflow: auto; /* Ha a tartalom hosszabb, görgethető marad */
-}
-/* A Navbar cím (h1) */
-.navbar h1 {
-  margin: 0;                   /* Távolság eltávolítása */
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  overflow: auto;
 }
 
-/* A navigációs menü (ul) */
+/* Navbar Title */
+.navbar h1 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+/* Navigation Menu */
 .navbar ul {
-  display: flex;               /* Flexbox a menüpontokhoz */
-  list-style: none;            /* Lista stílus eltávolítása */
+  display: flex;
+  list-style: none;
   margin: 0;
   padding: 0;
 }
 
-/* Egyes menüpontok (li) */
+/* Menu Items */
 .navbar li {
-  margin-left: 1rem;         /* Bal oldali margó, hogy ne tapadjanak össze */
+  margin-left: 1rem;
 }
 
-/* Linkek stílusa */
+/* Links Style */
 .navbar a {
   color: #fff;
   text-decoration: none;
+  transition: color 0.3s ease;
 }
 
+.navbar a:hover {
+  color: #ffc107;
+}
 
 .navbar button {
   background: none;
@@ -74,29 +85,47 @@ body {
   color: #fff;
   cursor: pointer;
   font-size: 1rem;
+  transition: color 0.3s ease;
 }
 
+.navbar button:hover {
+  color: #ffc107;
+}
 
+/* Container */
 .container {
-  width: 90vw; /* 90% a viewport szélességéből */
-  height: 90vh; /* 90% a viewport magasságából */
-  box-sizing: border-box; /* Biztosítja, hogy a padding ne növelje a doboz méretét */
+  width: 90vw;
+  height: 90vh;
+  box-sizing: border-box;
 }
 
+/* Page Sections */
 .home, .login, .register, .profile, .quiz {
   background-color: #fff;
   padding: 2rem;
   margin: 2rem auto;
   max-width: 500px;
-  border-radius: 5px;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
+/* Input Fields */
 input[type="text"], input[type="email"], input[type="password"] {
   width: 100%;
-  padding: 0.5rem;
+  padding: 0.7rem;
   margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  transition: border-color 0.3s ease;
 }
 
+input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focus {
+  border-color: #ff7043;
+  box-shadow: 0 0 8px rgba(255, 112, 67, 0.5);
+  outline: none;
+}
+
+/* Buttons */
 button {
   padding: 0.7rem;
   background-color: #ff7043;
@@ -105,12 +134,15 @@ button {
   cursor: pointer;
   width: 100%;
   font-size: 1rem;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
 }
 
 button:hover {
   background-color: #e64a19;
 }
 
+/* Footer */
 footer {
   text-align: center;
   padding: 1rem;
@@ -120,6 +152,7 @@ footer {
   bottom: 0;
 }
 
+/* Quiz Section */
 .quiz h2 {
   font-size: 24px;
   margin-bottom: 20px;
@@ -134,7 +167,7 @@ footer {
   padding: 10px;
   width: calc(100% - 20px);
   margin-bottom: 10px;
-  border-radius: 5px;
+  border-radius: 8px;
   border: 1px solid #ccc;
 }
 
