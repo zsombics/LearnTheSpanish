@@ -6,6 +6,7 @@ import Level3 from './Levels/Level3';
 import Level4 from './Levels/Level4';
 import Level5 from './Levels/Level5';
 import Level6 from './Levels/Level6';
+import Level7 from './Levels/Level7';
 // Ha további szintek komponenseit is importálni szeretnéd, azt itt teheted meg
 // import Level2 from './Levels/Level2';
 // import Level3 from './Levels/Level3';
@@ -37,6 +38,8 @@ function MainQuizSite() {
         return <Level5 />;
       case  6:
         return <Level6 />;
+      case 7:
+        return <Level7 />;
       // case 3:
       //   return <Level3 />;
       // ...
