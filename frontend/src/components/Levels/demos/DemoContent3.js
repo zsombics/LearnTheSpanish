@@ -20,14 +20,14 @@ function DemoContent3({ testType }) {
                                             <div className="table-cell header-cell">SINGULAR</div>
                                             <div className="table-cell header-cell">PLURAL</div>
                                         </div>
-                                        
+
                                         {/* MASCULINE SOR */}
                                         <div className="table-row">
                                             <div className="table-cell">MASCULINE</div>
                                             <div className="table-cell">el</div>
                                             <div className="table-cell">los</div>
                                         </div>
-                                        
+
                                         {/* FEMININE SOR */}
                                         <div className="table-row">
                                             <div className="table-cell">FEMININE</div>
@@ -36,15 +36,15 @@ function DemoContent3({ testType }) {
                                         </div>
                                     </div>
                                 </div>
-                                
+
                                 {/* SZABÁLYBLOKK */}
                                 <div className="rule-block">
                                     <h3>Szabályok</h3>
                                     <ul>
                                         <li>A névelő mindig egyezzen a főnévvel</li>
-                                        <li>Példák: 
-                                            <br/>- "el libro" (hímnem, egyes)
-                                            <br/>- "las casas" (nőnem, többes)
+                                        <li>Példák:
+                                            <br />- "el libro" (hímnem, egyes)
+                                            <br />- "las casas" (nőnem, többes)
                                         </li>
                                     </ul>
                                 </div>

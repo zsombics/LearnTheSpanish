@@ -3,7 +3,6 @@ import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import '../../styles/Levels.css';
 
-// CSV parser: A CSV fájl soronként a következő oszlopokat tartalmazza: spanish, gender, spanishPlural, hungarian, english
 function parseNounsCSV(data) {
   const lines = data.trim().split("\n");
   return lines.map(line => {
@@ -15,29 +14,22 @@ function parseNounsCSV(data) {
 function NounQuiz() {
   const navigate = useNavigate();
 
-  // Teszt beállítás: hány kérdés, teszt típusa, stb.
   const [numQuestions, setNumQuestions] = useState(5);
-  // Teszt típusa: "tobbes-szam" (többes szám képzése), "nevelok" (a névelők), "magyar-spanyol" (a főnevek neme)
   const [testType, setTestType] = useState("tobbes-szam");
   const [testStarted, setTestStarted] = useState(false);
-  // Bemutató állapot: amikor a teszt elindul, először a lecke bemutatása látszik
   const [showDemo, setShowDemo] = useState(true);
 
-  // Teszt futtatásához szükséges állapotok
   const [allNouns, setAllNouns] = useState([]);
   const [questions, setQuestions] = useState([]);
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
-  // A válasz beírásához használt állapot
   const [typedAnswer, setTypedAnswer] = useState("");
   const [showFeedback, setShowFeedback] = useState(false);
   const [score, setScore] = useState(0);
   const [userAnswers, setUserAnswers] = useState({});
 
-  // Teszt eredmény állapota
   const [testFinished, setTestFinished] = useState(false);
   const [result, setResult] = useState(null);
 
-  // CSV fájl betöltése a teszt indításakor
   useEffect(() => {
     if (testStarted) {
       fetch('/nouns.csv')
@@ -51,7 +43,6 @@ function NounQuiz() {
     }
   }, [testStarted]);
 
-  // Kérdések generálása a teszt típusától függően
   const generateQuestions = (nouns) => {
     const selectedQuestions = [];
     for (let i = 0; i < numQuestions; i++) {
@@ -61,18 +52,12 @@ function NounQuiz() {
       let correctAnswer = "";
 
       if (testType === "tobbes-szam") {
-        // Többes szám képzése:
-        // A kérdés megjeleníti a spanyol főnevet, illetve a magyar és angol fordítást segédként
         questionText = `Add meg a következő főnév többes számú alakját: ${nounItem.spanish} | ${nounItem.hungarian} | ${nounItem.english}`;
         correctAnswer = nounItem.spanishPlural;
       } else if (testType === "nevelok") {
-        // A névelők:
-        // A kérdés megjeleníti a spanyol főnevet, illetve a magyar és angol fordítást
         questionText = `Add meg a megfelelő határozott névelőt a következő főnévhez: ${nounItem.spanish} | ${nounItem.hungarian} | ${nounItem.english}`;
         correctAnswer = nounItem.gender === "masculine" ? "el" : "la";
       } else if (testType === "magyar-spanyol") {
-        // A főnevek neme:
-        // A kérdés megjeleníti a spanyol főnevet, illetve a magyar és angol fordítást
         questionText = `Add meg a következő főnév nemét: ${nounItem.spanish} | ${nounItem.hungarian} | ${nounItem.english}`;
         correctAnswer = nounItem.gender;
       }
@@ -85,32 +70,25 @@ function NounQuiz() {
     setQuestions(selectedQuestions);
   };
 
-  // Teszt indítása
   const startTest = () => {
     setTestStarted(true);
-    // Amikor a teszt elindul, először a bemutató jelenjen meg
     setShowDemo(true);
   };
 
-  // A bemutató oldal elrejtése, amikor a felhasználó "Kezdés" gombra kattint
   const startQuiz = () => {
     setShowDemo(false);
   };
 
-  // Válasz beírásának kezelése
   const handleAnswerChange = (e) => {
     setTypedAnswer(e.target.value);
   };
 
-  // "Következő" gomb kezelése
   const handleNextQuestion = () => {
     if (typedAnswer.trim() === "") {
       alert("Kérlek, írd be a válaszodat!");
       return;
     }
-    // Tároljuk a felhasználó válaszát
     setUserAnswers(prev => ({ ...prev, [currentQuestionIndex]: typedAnswer }));
-    // Ellenőrizzük a válasz helyességét kis-/nagybetű érzéketlen módon
     if (typedAnswer.trim().toLowerCase() === questions[currentQuestionIndex].correctAnswer.toLowerCase()) {
       setScore(prev => prev + 1);
     }
@@ -126,7 +104,6 @@ function NounQuiz() {
     }, 3000);
   };
 
-  // Teszt befejezése: eredmény elküldése és megjelenítése
   const finishTest = () => {
     const levelCalculated = score / questions.length >= 0.75 ? "Haladó"
       : score / questions.length >= 0.5 ? "Középhaladó" : "Kezdő";
@@ -150,7 +127,6 @@ function NounQuiz() {
       });
   };
 
-  // Új teszt indítása
   const restartTest = () => {
     setTestStarted(false);
     setAllNouns([]);
@@ -164,12 +140,10 @@ function NounQuiz() {
     setResult(null);
   };
 
-  // Visszalépés a /kviz végpontra
   const goToKviz = () => {
     window.open("/kviz", "_self");
   };
 
-  // Ha a teszt még nem indult el: test setup oldal
   if (!testStarted) {
     return (
       <div className="test-setup">
@@ -373,5 +347,4 @@ function NounQuiz() {
     </div>
   );
 }
-
 export default NounQuiz;

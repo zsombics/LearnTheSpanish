@@ -2,9 +2,9 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import '../../styles/Levels.css';
-import DemoContent2 from './demos/DemoContent2';
-import FillInTheBlankV2 from './quizTypes/FillTheBlankV2';
-import DemoContent3 from './demos/DemoContent3';
+import DemoContent2 from './demos/DemoContent2'; // Import DemoContent2
+import FillInTheBlankV2 from './quizTypes/FillTheBlankV2'; // Import FillInTheBlankV2
+import DemoContent3 from './demos/DemoContent3'; // Import DemoContent3
 
 function Level7() {
     const [testStarted, setTestStarted] = useState(false);
@@ -51,7 +51,7 @@ function Level7() {
                     fileToFetch = '/hatarozatlan-nevelok.csv';
                     break;
                 case "yo-tengo-yo-quiero":
-                    fileToFetch = '/yo-tengo-yo-quiero.csv';
+                    fileToFetch = '/hatarozo-nevelok.csv';
                     break;
                 case "a-hay-hasznalata":
                     fileToFetch = '/a-hay-hasznalata.csv';
@@ -63,7 +63,7 @@ function Level7() {
                     fileToFetch = '/osszegzo-1.csv';
                     break;
                 default:
-                    fileToFetch = '/hatarozo-nevelok2.csv';
+                    fileToFetch = '/hatarozo-neveloknem.csv';
             }
 
             fetch(fileToFetch)
@@ -83,8 +83,6 @@ function Level7() {
         }
     }, [testStarted, direction]);
 
-    // NEW: CSV parser for matching tasks
-    // Assumes CSV format: Spanish, English, Hungarian
     function parseMatchingAdjectivesCSV(data) {
         const lines = data.trim().split("\n");
         return lines.map(line => {
@@ -92,15 +90,6 @@ function Level7() {
             return { spanish, english, hungarian };
         });
     }
-
-    const staticOptions = [
-        { value: "hatarozo-nevelok", label: "Határozó névelők · Család" },
-        { value: "hatarozatlan-nevelok", label: "Határozatlan névelők · A ház körül" },
-        { value: "yo-tengo-yo-quiero", label: "Yo tengo és yo quiero · Állatok" },
-        { value: "a-hay-hasznalata", label: "A \"hay\" használata · Az osztályterem" },
-        { value: "alanyi-nevmasok", label: "Alanyi névmások · Gyakori -ar igék · Szabályos -ar igék · A hét napjai" },
-        { value: "osszegzo-1", label: "Összegző 1 · Leckék 1–5" }
-    ];
 
     const handleAnswerChange = (e) => {
         setTypedAnswer(e.target.value);
@@ -165,16 +154,12 @@ function Level7() {
                 <div className="setup-group">
                     <label>Teszt iránya:</label>
                     <select value={direction} onChange={(e) => setDirection(e.target.value)}>
-                        {staticOptions.map((option, index) => (
-                            <option key={index} value={option.value}>
-                                {option.label}
-                            </option>
-                        ))}
-                        {dynamicOptions.map((option, index) => (
-                            <option key={index + staticOptions.length} value={option.spanish}>
-                                {option.hungarian}
-                            </option>
-                        ))}
+                        <option value="hatarozo-nevelok">Határozó névelők · Család</option>
+                        <option value="hatarozatlan-nevelok">Határozatlan névelők · A ház körül</option>
+                        <option value="yo-tengo-yo-quiero">Yo tengo és yo quiero · Állatok</option>
+                        <option value="a-hay-hasznalata">A "hay" használata · Az osztályterem</option>
+                        <option value="alanyi-nevmasok">Alanyi névmások · Gyakori -ar igék · Szabályos -ar igék · A hét napjai</option>
+                        <option value="osszegzo-1">Összegző 1 · Leckék 1–5</option>
                     </select>
                 </div>
                 <button className="start-test-btn" onClick={startTest}>Teszt indítása</button>
@@ -202,7 +187,7 @@ function Level7() {
         return (
             <div>
                 <DemoContent3 testType={direction} />
-                <button className="result-btn" onClick={() => setShowDemo3(false)}>
+                <button className="start-test-btn" onClick={() => setShowDemo3(false)}>
                     Tovább
                 </button>
             </div>
