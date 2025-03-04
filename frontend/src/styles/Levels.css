@@ -548,3 +548,22 @@ body {
 .flag-hu {
   background-image: url('https://flagicons.lipis.dev/flags/4x3/hu.svg');
 }
+/* Oszlopok szélessége */
+.table-cell {
+  min-width: 100px;
+  padding: 8px;
+}
+
+/* Fejléc stílusa */
+.header-cell {
+  background: #4CAF50;
+  color: white;
+  font-weight: bold;
+}
+
+/* Szegélyek hozzáadása */
+.table-container {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  overflow: hidden;
+}

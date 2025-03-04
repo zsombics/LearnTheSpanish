@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
-import '../styles/MainQuizSite.css';
-import Level1 from './Levels/Level1';
-import Level2 from './Levels/Level2';
-import Level3 from './Levels/Level3';
-import Level4 from './Levels/Level4';
-import Level5 from './Levels/Level5';
-import Level6 from './Levels/Level6';
-import Level7 from './Levels/Level7';
+import '../../styles/MainQuizSite.css';
+import Level1 from '../../components/Levels/Level1';
+import Level2 from '../../components/Levels/Level2';
+import Level3 from '../../components/Levels/Level3';
+import Level4 from '../../components/Levels/Level4';
+import Level5 from '../../components/Levels/Level5';
+import Level6 from '../../components/Levels/Level6';
+import Level7 from '../../components/Levels/Level7';
 // Ha további szintek komponenseit is importálni szeretnéd, azt itt teheted meg
 // import Level2 from './Levels/Level2';
 // import Level3 from './Levels/Level3';

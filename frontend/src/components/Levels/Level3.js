@@ -9,7 +9,7 @@ import FillInTheBlankQuiz from './quizTypes/FillTheBlankV2';
 import MatchingQuiz from './quizTypes/MatchingQuiz';
 import DragAndDropQuiz from './quizTypes/DragAndDropQuiz';
 import TrueFalseQuiz from './quizTypes/TrueFalseQuiz';
-import DemoContent from './DemoContent';
+import DemoContent from './demos/DemoContent';
 
 // CSV parser for the general adjective tasks (for fill‑in‑the‑blank, comparison, etc.)
 // Assumes CSV format: adjective, masculinePlural, english

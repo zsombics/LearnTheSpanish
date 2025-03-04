@@ -3,13 +3,13 @@ import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import axios from 'axios';
 
-import Navbar from './components/Navbar';
-import Home from './components/Home';
-import Login from './components/Login';
-import Register from './components/Register';
-import Profile from './components/Profile';
-import Quiz from './components/Quiz';
+import Home from './components/mainComponents/Home';
+import Login from './components/mainComponents/Login';
+import Register from './components/mainComponents/Register';
+import Profile from './components/mainComponents/Profile';
+import Quiz from './components/mainComponents/Quiz';
 import UserContext from './UserContext';
+import Navbar from './components/mainComponents/Navbar';
 
 function App() {
   const [user, setUser] = useState(null);

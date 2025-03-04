@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import '../.././styles/Levels.css';
-import DemoContent2 from './DemoContent2';
+import DemoContent2 from './demos/DemoContent2';
 import '../../styles/FillTheBlank.css';
 import FillInTheBlankQuiz from './quizTypes/FillTheBlankV2'
 function parseCSV(data) {

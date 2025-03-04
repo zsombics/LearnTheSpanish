@@ -1,8 +1,8 @@
 import React, { useState, useContext } from 'react';
 import axios from 'axios';
 import { useNavigate, Link } from 'react-router-dom';
-import UserContext from '../UserContext';
-import '../styles/Auth.css';
+import UserContext from '../../UserContext';
+import '../../styles/Auth.css';
 
 function Login() {
   const [email, setEmail] = useState('');

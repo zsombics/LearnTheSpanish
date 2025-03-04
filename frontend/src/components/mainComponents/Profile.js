@@ -1,6 +1,6 @@
 // frontend/src/components/Profile.js
 import React, { useContext } from 'react';
-import UserContext from '../UserContext';
+import UserContext from '../../UserContext';
 
 function Profile() {
   const { user } = useContext(UserContext);

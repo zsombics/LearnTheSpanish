@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useContext } from 'react';
 import axios from 'axios';
-import UserContext from '../UserContext';
+import UserContext from '../../UserContext';
 import Questions from './Questions'; // Az űrlap, ahol a felhasználó kitölti a kérdőívet
 import MainQuizSite from './MainQuizSite';   // Az eredmény megjelenítése, ha már kitöltött
 
