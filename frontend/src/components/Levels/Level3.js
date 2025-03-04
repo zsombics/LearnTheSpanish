@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
-import 'D:/LearnTheSpanish/frontend/src/styles/Levels.css';
+import '../../styles/Levels.css';
 
 // Import test type components
 import MultipleChoiceQuiz from './quizTypes/MultipleChoiceQuiz';

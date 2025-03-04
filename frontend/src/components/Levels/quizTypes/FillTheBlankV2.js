@@ -1,6 +1,6 @@
 // src/components/Levels/quizTypes/FillInTheBlankV2.js
 import React from 'react';
-import 'D:/LearnTheSpanish/frontend/src/styles/FillTheBlank.css';
+import '../../../styles/FillTheBlank.css';
 
 function highlightDifferences(userInput, correctAnswer) {
   const userChars = userInput.split('');

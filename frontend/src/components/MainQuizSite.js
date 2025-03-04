@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import 'D:/LearnTheSpanish/frontend/src/styles/MainQuizSite.css';
+import '../styles/MainQuizSite.css';
 import Level1 from './Levels/Level1';
 import Level2 from './Levels/Level2';
 import Level3 from './Levels/Level3';

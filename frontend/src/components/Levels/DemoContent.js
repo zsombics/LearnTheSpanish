@@ -1,5 +1,5 @@
 import React from 'react';
-import 'D:/LearnTheSpanish/frontend/src/styles/Levels.css';
+import '../../styles/Levels.css';
 
 function DemoContent({ testType, startQuiz }) {
   const renderDemoContent = () => {

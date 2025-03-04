@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import 'D:/LearnTheSpanish/frontend/src/styles/translate.css';
+import '../../styles/translate.css';
 
 const Level6 = () => {
     const [inputValue, setInputValue] = useState('');

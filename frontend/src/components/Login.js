@@ -2,7 +2,7 @@ import React, { useState, useContext } from 'react';
 import axios from 'axios';
 import { useNavigate, Link } from 'react-router-dom';
 import UserContext from '../UserContext';
-import 'D:/LearnTheSpanish/frontend/src/styles/Auth.css';
+import '../styles/Auth.css';
 
 function Login() {
   const [email, setEmail] = useState('');

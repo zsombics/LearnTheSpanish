@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
-import 'D:/LearnTheSpanish/frontend/src/styles/Levels.css';
+import '../.././styles/Levels.css';
 import DemoContent2 from './DemoContent2';
-import FillInTheBlankQuiz from './quizTypes/FillTheBlankV2';
-
+import '../../styles/FillTheBlank.css';
+import FillInTheBlankQuiz from './quizTypes/FillTheBlankV2'
 function parseCSV(data) {
     const lines = data.trim().split("\n");
     return lines.map(line => {

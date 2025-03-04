@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
-import 'D:/LearnTheSpanish/frontend/src/styles/Levels.css';
+import '../../styles/Levels.css';
 
 // CSV parser: A CSV fájl soronként a következő oszlopokat tartalmazza: spanish, gender, spanishPlural, hungarian, english
 function parseNounsCSV(data) {

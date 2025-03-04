@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import 'D:/LearnTheSpanish/frontend/src/styles/Levels.css';
-import 'D:/LearnTheSpanish/frontend/src/styles/DemoContent2.css';
+import '../../styles/Levels.css';
+import '../../styles/DemoContent2.css';
 
 const Card = ({ spanish, english, hungarian }) => {
   const handleSpeakSpanish = () => {

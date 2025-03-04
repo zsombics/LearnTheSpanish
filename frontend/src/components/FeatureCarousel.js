@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import 'D:/LearnTheSpanish/frontend/src/styles/FeatureCarousel.css';
+import '../../styles/FeatureCarousel.css';
 
 function FeatureCarousel({ pages, interval = 10000 }) {
   const [currentIndex, setCurrentIndex] = useState(0);

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import 'D:/LearnTheSpanish/frontend/src/styles/DemoContent2.css';
+import '../../styles/DemoContent2.css';
 
 const Card = ({ spanish, english, hungarian }) => {
 

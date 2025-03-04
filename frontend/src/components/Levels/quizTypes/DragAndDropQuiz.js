@@ -1,7 +1,7 @@
 // src/components/Levels/quizTypes/DragAndDropQuiz.js
 import React, { useState, useEffect } from 'react';
-import 'D:/LearnTheSpanish/frontend/src/styles/DragAndDrop.css';
-import 'D:/LearnTheSpanish/frontend/src/styles/FillTheBlank.css';
+import '../../../styles/DragAndDrop.css';
+import '../../../styles/FillTheBlank.css';
 
 function DragAndDropQuiz({ currentQuestion, typedAnswer, handleAnswerChange, showFeedback }) {
   const [words, setWords] = useState([]);

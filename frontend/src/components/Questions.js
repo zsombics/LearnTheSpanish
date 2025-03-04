@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
-import 'D:/LearnTheSpanish/frontend/src/styles/Questions.css';
-import 'D:/LearnTheSpanish/frontend/src/styles/boxed-check.min.css';
+import '../styles/Questions.css';
+import '../styles/boxed-check.min.css';
 
 const questions = [
   {

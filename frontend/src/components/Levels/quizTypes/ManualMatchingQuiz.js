@@ -1,6 +1,6 @@
 // src/components/Levels/quizTypes/ManualMatchingQuiz.js
 import React from 'react';
-import 'D:/LearnTheSpanish/frontend/src/styles/Levels.css';
+import '../../../styles/Levels.css';
 
 function ManualMatchingQuiz({ currentQuestion, typedAnswer, handleAnswerChange, showFeedback }) {
   return (
