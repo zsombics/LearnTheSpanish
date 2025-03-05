@@ -42,46 +42,60 @@ function Level7() {
 
     useEffect(() => {
         if (testStarted) {
-            let fileToFetch;
+          let demoFileToFetch, quizFileToFetch;
+      
+          if (direction === "yo-tengo-yo-quiero") {
+            demoFileToFetch = '/level7/yo-tengo-yo-quiero1.csv';
+            quizFileToFetch = '/level7/yo-tengo-yo-quiero2.csv';
+          } else {
             switch (direction) {
-                case "hatarozo-nevelok":
-                    fileToFetch = '/hatarozo-nevelok.csv';
-                    break;
-                case "hatarozatlan-nevelok":
-                    fileToFetch = '/hatarozatlan-nevelok.csv';
-                    break;
-                case "yo-tengo-yo-quiero":
-                    fileToFetch = '/hatarozo-nevelok.csv';
-                    break;
-                case "a-hay-hasznalata":
-                    fileToFetch = '/a-hay-hasznalata.csv';
-                    break;
-                case "alanyi-nevmasok":
-                    fileToFetch = '/alanyi-nevmasok.csv';
-                    break;
-                case "osszegzo-1":
-                    fileToFetch = '/osszegzo-1.csv';
-                    break;
-                default:
-                    fileToFetch = '/hatarozo-neveloknem.csv';
+              case "hatarozo-nevelok":
+                demoFileToFetch = quizFileToFetch = '/level7/hatarozo-nevelok.csv';
+                break;
+              case "hatarozatlan-nevelok":
+                demoFileToFetch = quizFileToFetch = '/level7/hatarozatlan-nevelok.csv';
+                break;
+              case "a-hay-hasznalata":
+                demoFileToFetch = '/level7/a-hay-hasznalata1.csv';
+                quizFileToFetch = '/level7/a-hay-hasznalata2.csv';
+                break;
+              case "alanyi-nevmasok":
+                demoFileToFetch = '/level7/alanyi-nevmasok1.csv';
+                quizFileToFetch = '/level7/alanyi-nevmasok2.csv';
+                break;
+              case "osszegzo-1":
+                demoFileToFetch = quizFileToFetch = '/level7/osszegzo-1.csv';
+                break;
+              default:
+                demoFileToFetch = quizFileToFetch = '/level7/hatarozo-neveloknem.csv';
             }
-
-            fetch(fileToFetch)
-                .then(response => response.text())
-                .then(text => {
-                    const parsedOptions = parseMatchingAdjectivesCSV(text);
-                    setDynamicOptions(parsedOptions);
-                    const shuffledQuestions = parsedOptions
-                        .map(item => ({
-                            question: `Írja be a megfelelő választ: ${item.english} / ${item.hungarian}`,
-                            correctAnswer: item.spanish
-                        }))
-                        .sort(() => Math.random() - 0.5);
-                    setQuestions(shuffledQuestions);
-                })
-                .catch(err => console.error("CSV loading error:", err));
+          }
+          
+          fetch(demoFileToFetch)
+            .then(response => response.text())
+            .then(text => {
+              const parsedOptions = parseMatchingAdjectivesCSV(text);
+              setDynamicOptions(parsedOptions);
+            })
+            .catch(err => console.error("CSV loading error (demo):", err));
+      
+          // Fetch the quiz file for FillInTheBlankV2 (questions)
+          fetch(quizFileToFetch)
+            .then(response => response.text())
+            .then(text => {
+              const parsedOptions = parseMatchingAdjectivesCSV(text);
+              const shuffledQuestions = parsedOptions
+                .map(item => ({
+                  question: `Írja be a megfelelő választ: ${item.english} / ${item.hungarian}`,
+                  correctAnswer: item.spanish
+                }))
+                .sort(() => Math.random() - 0.5);
+              setQuestions(shuffledQuestions);
+            })
+            .catch(err => console.error("CSV loading error (quiz):", err));
         }
-    }, [testStarted, direction]);
+      }, [testStarted, direction]);
+      
 
     function parseMatchingAdjectivesCSV(data) {
         const lines = data.trim().split("\n");
@@ -157,7 +171,7 @@ function Level7() {
                         <option value="hatarozatlan-nevelok">Határozatlan névelők · A ház körül</option>
                         <option value="yo-tengo-yo-quiero">Yo tengo és yo quiero · Állatok</option>
                         <option value="a-hay-hasznalata">A "hay" használata · Az osztályterem</option>
-                        <option value="alanyi-nevmasok">Alanyi névmások · Gyakori -ar igék · Szabályos -ar igék · A hét napjai</option>
+                        <option value="alanyi-nevmasok">Alanyi névmások · Gyakori -ar igék · Szabályos -ar igék</option>
                         <option value="osszegzo-1">Összegző 1 · Leckék 1–5</option>
                     </select>
                 </div>

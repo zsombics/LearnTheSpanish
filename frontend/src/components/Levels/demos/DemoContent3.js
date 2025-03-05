@@ -7,12 +7,11 @@ function DemoContent3({ testType }) {
             case "hatarozo-nevelok":
                 return (
                     <div className="demo-section">
-                        <h2>Többszörös választásos teszt</h2>
+                        <h2>Nézd át alaposan a szabályokat</h2>
                         <div className="demo-card">
-                            <p>Válaszd ki a helyes névelőt a főnév szerinti nemhez és számhoz!</p>
                             <div className="example-grid">
                                 <div className="example-column">
-                                    <h3>Példa táblázat</h3>
+                                    <h3>Határozó névelők</h3>
                                     <div className="table-container">
                                         <div className="table-row header-row">
                                             <div className="table-cell"></div>
@@ -31,8 +30,6 @@ function DemoContent3({ testType }) {
                                         </div>
                                     </div>
                                 </div>
-
-                                {/* Jobb oldali blokk: szabályok és példák */}
                                 <div className="rule-block">
                                     <h3>Szabályok</h3>
                                     <ul>
@@ -54,98 +51,221 @@ function DemoContent3({ testType }) {
             case "hatarozatlan-nevelok":
                 return (
                     <div className="demo-section">
-                        <h2>Többszörös választásos teszt</h2>
+                        <h2>Nézd át alaposan a szabályokat</h2>
                         <div className="demo-card">
-                            <p>Válaszd ki a helyes melléknév alakot a megadott lehetőségek közül!</p>
                             <div className="example-grid">
                                 <div className="example-column">
-                                    <h3>Példa feladat</h3>
+                                    <h3>Határozatlan névelők</h3>
                                     <div className="table-container">
                                         <div className="table-row header-row">
-                                            <div className="table-cell header-cell">SINGULAR</div>
-                                            <div className="table-cell header-cell">PLURAL</div>
+                                            <div className="table-cell"></div>
+                                            <div className="table-cell header-cell">Masculine</div>
+                                            <div className="table-cell header-cell">Feminine</div>
                                         </div>
                                         <div className="table-row">
-                                            <div className="table-cell">MASCULINE</div>
-                                            <div className="table-cell">el</div>
-                                            <div className="table-cell">los</div>
+                                            <div className="table-cell header-cell">Singular</div>
+                                            <div className="table-cell">Un</div>
+                                            <div className="table-cell">Unos</div>
                                         </div>
                                         <div className="table-row">
-                                            <div className="table-cell">FEMININE</div>
-                                            <div className="table-cell">la</div>
-                                            <div className="table-cell">las</div>
+                                            <div className="table-cell header-cell">Plural</div>
+                                            <div className="table-cell">Una</div>
+                                            <div className="table-cell">Unas</div>
                                         </div>
                                     </div>
-                                    <p className="demo-hint">⚠️ Figyelj a főnév nemére és számára!</p>
                                 </div>
                                 <div className="rule-block">
                                     <h3>Szabályok</h3>
                                     <ul>
-                                        <li>A melléknév mindig egyezzen a főnévvel nemben és számban</li>
-                                        <li>Nőnemű végződések: -a, -as, -es</li>
-                                        <li>Semleges végződések: -e, -ista</li>
+                                        <li>
+                                            A határozatlan névelők a főnév neméhez és számához igazodnak:
+                                            <br />
+                                            - <strong>Un</strong>: hímnemű főnév, egyes szám
+                                            <br />
+                                            - <strong>Una</strong>: nőnemű főnév, egyes szám
+                                            <br />
+                                            - <strong>Unos</strong>: hímnemű főnév, többes szám
+                                            <br />
+                                            - <strong>Unas</strong>: nőnemű főnév, többes szám
+                                        </li>
+                                        <li>
+                                            A határozatlan névelőt általában olyan dolgok esetén használjuk, amelyek újak, nem korábban meghatározottak.
+                                        </li>
+                                        <li>
+                                            Ha konkrétan ismert, már említett vagy meghatározott főnévre utalunk, akkor nem határozatlan, hanem határozott névelőt használunk.
+                                        </li>
+                                        <li>
+                                            Gyakran a névelő melléke kiegészítő jelző (melléknév), amely pontosítja a főnév minőségét, pl.: <em>un buen libro</em>.
+                                        </li>
+                                    </ul>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                );
+            case "yo-tengo-yo-quiero":
+                return (
+                    <div className="demo-section">
+                        <h2>Nézd át alaposan a szabályokat</h2>
+                        <div className="demo-card">
+                            <div className="example-grid">
+                                <div className="example-column">
+                                    <h3>Példák</h3>
+                                    <div className="table-container">
+                                        <div className="table-row">
+                                            <div className="table-cell">Yo tengo</div>
+                                            <div className="table-cell">I have / Nekem van</div>
+                                        </div>
+                                        <div className="table-row">
+                                            <div className="table-cell">Yo no tengo</div>
+                                            <div className="table-cell">I don’t have / Nekem nincs</div>
+                                        </div>
+                                        <div className="table-row">
+                                            <div className="table-cell">Yo quiero</div>
+                                            <div className="table-cell">I want / Szeretnék</div>
+                                        </div>
+                                        <div className="table-row">
+                                            <div className="table-cell">Yo no quiero</div>
+                                            <div className="table-cell">I don’t want / Nem szeretnék</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="rule-block">
+                                    <h3>Szabályok</h3>
+                                    <ul>
+                                        <li>
+                                            A “tener” ige kifejezi a birtoklást, míg a “querer” ige a vágyat jelöli.
+                                        </li>
+                                        <li>
+                                            A negatív mondatokban a “no” tag használata kötelező.
+                                        </li>
+                                        <li>
+                                            Győződj meg róla, hogy az ige megfelelően egyezik a személyes névmással.
+                                        </li>
+                                        <li>
+                                            A fordítások során figyelj a kontextusra, mert néha az egyik ige többféleképpen is fordítható.
+                                        </li>
                                     </ul>
                                 </div>
                             </div>
                         </div>
                     </div>
                 );
-            case "yo-tengo-yo-quiero":
-                return (
-                    <div className="demo-section">
-                        <h2>Párosító feladat</h2>
-                        <div className="demo-card">
-                            <p>Párosítsd a mellékneveket a megfelelő magyar jelentésekkel!</p>
-                            <div className="matching-grid">
-                                <div className="matching-pair">
-                                    <span className="adjective">dócil</span>
-                                    <span className="separator">→</span>
-                                    <span className="form">engedékeny</span>
-                                </div>
-                                <div className="matching-pair">
-                                    <span className="adjective">dogmatikus</span>
-                                    <span className="separator">→</span>
-                                    <span className="form">kedvelt</span>
-                                </div>
-                            </div>
-                            <p className="demo-hint">⚠️ Válassz a megfelelő magyar jelentések közül</p>
-                        </div>
-                    </div>
-                );
             case "a-hay-hasznalata":
                 return (
                     <div className="demo-section">
-                        <h2>Átrendezős feladat</h2>
+                        <h2>Nézd át alaposan a szabályokat</h2>
                         <div className="demo-card">
-                            <p>Helyezd sorrendbe a szavakat helyes mondat kialakításához!</p>
-                            <div className="drag-demo">
-                                <div className="word-box">es</div>
-                                <div className="word-box">casa</div>
-                                <div className="word-box">La</div>
-                                <div className="word-box">bonita</div>
+                            <div className="example-grid">
+                                <div className="example-column">
+                                    <h3>A "hay" használata</h3>
+                                    <div className="table-container">
+                                        <div className="table-row">
+                                            <div className="table-cell">Hay</div>
+                                            <div className="table-cell">There is / There are / Van / Vannak</div>
+                                        </div>
+                                        <div className="table-row">
+                                            <div className="table-cell">No hay</div>
+                                            <div className="table-cell">There isn’t / There aren’t / Nincs / Nincsenek</div>
+                                        </div>
+                                        <div className="table-row">
+                                            <div className="table-cell">¿Hay?</div>
+                                            <div className="table-cell">Is there? / Are there? / Van? / Vannak?</div>
+                                        </div>
+                                        <div className="table-row">
+                                            <div className="table-cell">¿No hay?</div>
+                                            <div className="table-cell">Isn’t there? / Aren’t there? / Nincs? / Nincsenek?</div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div className="rule-block">
+                                    <h3>Szabályok</h3>
+                                    <ul>
+                                        <li>
+                                            A "hay" kifejezi a létezést, függetlenül a főnév számától.
+                                        </li>
+                                        <li>
+                                            A "no hay" a létezés tagadását fejezi ki, jelezve, hogy valami nem található.
+                                        </li>
+                                        <li>
+                                            A kérdő formák, "¿Hay?" és "¿No hay?" a létezés megkérdezésére vagy a hiány megerősítésére szolgálnak.
+                                        </li>
+                                        <li>
+                                            Az impersonal "haber" igét csak harmadik személyben használjuk, így mindig a "hay" formát alkalmazzuk.
+                                        </li>
+                                    </ul>
+                                </div>
                             </div>
-                            <p className="correct-order">La casa es bonita</p>
-                            <p className="demo-hint">⚠️ A melléknév általában a főnév UTÁN áll</p>
                         </div>
                     </div>
                 );
+
             case "alanyi-nevmasok":
                 return (
                     <div className="demo-section">
-                        <h2>Helyes/Helytelen feladat</h2>
-                        <div className="demo-card">
-                            <p>Döntsd el, helyes-e a melléknév használata!</p>
-                            <div className="tf-example">
-                                <p className="demo-question">"El chico es inteligentes"</p>
-                                <div className="tf-options">
-                                    <button className="btn btn-danger">Hamis</button>
-                                    <button className="btn btn-success">Helyes</button>
-                                </div>
-                                <p className="demo-hint">⚠️ Egyes számú főnév → -e végződés</p>
+                      <h2>Nézd át alaposan a szabályokat</h2>
+                      <div className="demo-card">
+                        <div className="example-grid">
+                          <div className="example-column">
+                            <h3>Conjugation of Regular -ar Verbs: hablar</h3>
+                            <div className="table-container">
+                              <div className="table-row">
+                                <div className="table-cell">yo</div>
+                                <div className="table-cell">hablo</div>
+                                <div className="table-cell">nosotros/nosotras</div>
+                                <div className="table-cell">hablamos</div>
+                              </div>
+                              <div className="table-row">
+                                <div className="table-cell">tú</div>
+                                <div className="table-cell">hablas</div>
+                                <div className="table-cell">vosotros/vosotras</div>
+                                <div className="table-cell">habláis</div>
+                              </div>
+                              <div className="table-row">
+                                <div className="table-cell">él</div>
+                                <div className="table-cell">habla</div>
+                                <div className="table-cell">ellos</div>
+                                <div className="table-cell">hablan</div>
+                              </div>
+                              <div className="table-row">
+                                <div className="table-cell">ella</div>
+                                <div className="table-cell">habla</div>
+                                <div className="table-cell">ellas</div>
+                                <div className="table-cell">hablan</div>
+                              </div>
+                              <div className="table-row">
+                                <div className="table-cell">usted</div>
+                                <div className="table-cell">habla</div>
+                                <div className="table-cell">ustedes</div>
+                                <div className="table-cell">hablan</div>
+                              </div>
                             </div>
+                          </div>
+                          <div className="rule-block">
+                            <h3>Szabályok</h3>
+                            <ul>
+                              <li>
+                                A szabályos -ar igék esetében az ige végéről levágjuk az -ar részt, és a megfelelő személyragot tesszük a gyökérhez.
+                              </li>
+                              <li>
+                                Egyes szám: <strong>yo</strong> → -o, <strong>tú</strong> → -as, <strong>él/ella/usted</strong> → -a.
+                              </li>
+                              <li>
+                                Többes szám: <strong>nosotros/nosotras</strong> → -amos, <strong>vosotros/vosotras</strong> → -áis, <strong>ellos/ellas/ustedes</strong> → -an.
+                              </li>
+                              <li>
+                                A spanyolban a személyes névmások gyakran elhagyhatók, ha az igealak egyértelművé teszi az alanyt.
+                              </li>
+                            </ul>
+                          </div>
                         </div>
+                      </div>
                     </div>
-                );
+                  );
+                  
             case "osszegzo-1":
                 return (
                     <div className="demo-section">
