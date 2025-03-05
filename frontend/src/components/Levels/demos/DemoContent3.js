@@ -1,5 +1,5 @@
 import React from 'react';
-import '../../../styles/Levels.css';
+import '../../../styles/DemoContent3.css';
 
 function DemoContent3({ testType }) {
     const renderDemoContent = () => {
@@ -14,43 +14,42 @@ function DemoContent3({ testType }) {
                                 <div className="example-column">
                                     <h3>Példa táblázat</h3>
                                     <div className="table-container">
-                                        {/* JAVÍTOTT FEJLÉC */}
                                         <div className="table-row header-row">
-                                            <div className="table-cell header-cell">NEM</div>
-                                            <div className="table-cell header-cell">SINGULAR</div>
-                                            <div className="table-cell header-cell">PLURAL</div>
+                                            <div className="table-cell"></div>
+                                            <div className="table-cell header-cell">Masculine</div>
+                                            <div className="table-cell header-cell">Feminine</div>
                                         </div>
-
-                                        {/* MASCULINE SOR */}
                                         <div className="table-row">
-                                            <div className="table-cell">MASCULINE</div>
-                                            <div className="table-cell">el</div>
-                                            <div className="table-cell">los</div>
+                                            <div className="table-cell header-cell">Singular</div>
+                                            <div className="table-cell">El</div>
+                                            <div className="table-cell">La</div>
                                         </div>
-
-                                        {/* FEMININE SOR */}
                                         <div className="table-row">
-                                            <div className="table-cell">FEMININE</div>
-                                            <div className="table-cell">la</div>
-                                            <div className="table-cell">las</div>
+                                            <div className="table-cell header-cell">Plural</div>
+                                            <div className="table-cell">Los</div>
+                                            <div className="table-cell">Las</div>
                                         </div>
                                     </div>
                                 </div>
 
-                                {/* SZABÁLYBLOKK */}
+                                {/* Jobb oldali blokk: szabályok és példák */}
                                 <div className="rule-block">
                                     <h3>Szabályok</h3>
                                     <ul>
-                                        <li>A névelő mindig egyezzen a főnévvel</li>
-                                        <li>Példák:
-                                            <br />- "el libro" (hímnem, egyes)
-                                            <br />- "las casas" (nőnem, többes)
+                                        <li>A névelő mindig egyezzen a főnév nemével és számával.</li>
+                                        <li>
+                                            Példák:
+                                            <br />
+                                            - "El libro" (hímnem, egyes)
+                                            <br />
+                                            - "Las casas" (nőnem, többes)
                                         </li>
                                     </ul>
                                 </div>
                             </div>
                         </div>
                     </div>
+
                 );
             case "hatarozatlan-nevelok":
                 return (

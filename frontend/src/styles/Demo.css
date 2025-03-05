@@ -1,140 +1,210 @@
+/* Overall container styling */
 .test-demo {
-    padding: 20px;
-    max-width: 800px;
-    margin: 0 auto;
-    text-align: center;
-  }
-  
-  .demo-section {
-    margin-bottom: 40px;
-  }
-  
-  .demo-card {
-    background-color: #f9f9f9;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    padding: 20px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  }
-  
-  .example-grid {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .example-column {
-    flex: 1;
-  }
-  
-  .rule-block {
-    flex: 1;
-    text-align: left;
-  }
-  
-  .demo-question {
-    font-weight: bold;
-    margin-bottom: 10px;
-  }
-  
-  .options, .tf-options {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    margin-bottom: 20px;
-  }
-  
-  .btn {
-    padding: 10px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  
-  .btn-outline-primary {
-    background-color: #fff;
-    border: 1px solid #007bff;
-    color: #007bff;
-  }
-  
-  .btn-success {
-    background-color: #28a745;
-    color: #fff;
-  }
-  
-  .btn-danger {
-    background-color: #dc3545;
-    color: #fff;
-  }
-  
-  .answer-input input {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    text-align: center;
-  }
-  
-  .matching-grid {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-  }
-  
-  .matching-pair {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .separator {
-    margin: 0 10px;
-  }
-  
-  .drag-demo {
-    display: flex;
-    gap: 10px;
-    justify-content: center;
-    margin-bottom: 20px;
-  }
-  
-  .word-box {
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    background-color: #f1f1f1;
-  }
-  
-  .correct-order {
-    font-weight: bold;
-    margin-bottom: 20px;
-  }
-  
-  .demo-hint {
-    color: #888;
-    font-size: 0.9em;
-  }
-  
-  .general-rules {
-    text-align: left;
-    margin-top: 20px;
-  }
-  
-  .demo-navigation {
-    margin-top: 30px;
-  }
-  
-  .start-demo-btn {
-    padding: 15px 30px;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 1.2em;
-  }
-  
-  .arrow-icon {
-    margin-left: 10px;
-  }
-  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background-color: #f4f4f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  margin: 20px auto;
+  text-align: center;
+}
+
+.test-demo h1 {
+  font-size: 28px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Demo content styling */
+.demo-content {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.demo-section {
+  margin-bottom: 20px;
+}
+
+.demo-section h2 {
+  font-size: 24px;
+  color: #444;
+  margin-bottom: 10px;
+}
+
+.demo-card {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.demo-card p {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+.example-grid {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.example-column, .rule-block {
+  flex: 1;
+}
+
+.example-column h3, .rule-block h3 {
+  font-size: 20px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.demo-question {
+  font-size: 18px;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.options, .tf-options {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+.options button, .tf-options button {
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.answer-input input {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.demo-hint {
+  font-size: 14px;
+  color: #999;
+  margin-top: 10px;
+}
+
+.rule-block ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+.rule-block ul li {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 5px;
+}
+
+.matching-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.matching-pair {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: #f9f9f9;
+  border-radius: 5px;
+}
+
+.matching-pair .adjective, .matching-pair .form {
+  font-size: 18px;
+  color: #333;
+}
+
+.matching-pair .separator {
+  font-size: 20px;
+  color: #aaa;
+}
+
+.drag-demo {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+.word-box {
+  padding: 10px 20px;
+  background-color: #e0e0e0;
+  border-radius: 5px;
+  font-size: 18px;
+  color: #333;
+  cursor: grab;
+}
+
+.correct-order {
+  font-size: 18px;
+  color: #4caf50;
+  margin-bottom: 10px;
+}
+
+.general-rules {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.general-rules h3 {
+  font-size: 22px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.general-rules ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+.general-rules ul li {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 5px;
+}
+
+/* Navigation button */
+.demo-navigation {
+  margin-top: 20px;
+}
+
+.start-demo-btn {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 14px 28px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.start-demo-btn:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+.arrow-icon {
+  margin-left: 8px;
+  font-size: 20px;
+}

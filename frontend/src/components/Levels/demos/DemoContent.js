@@ -1,5 +1,5 @@
 import React from 'react';
-import '../../../styles/Levels.css';
+import '../../../styles/Demo.css';
 
 function DemoContent({ testType, startQuiz }) {
   const renderDemoContent = () => {

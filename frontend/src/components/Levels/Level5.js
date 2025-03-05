@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import '../../styles/Levels.css';
-import '../../styles/DemoContent2.css';
+import '../../styles/DemoContent3.css';
 
 const Card = ({ spanish, english, hungarian }) => {
   const handleSpeakSpanish = () => {
@@ -70,7 +70,7 @@ const DemoContent2 = ({ testType, stopQuiz, items }) => {
   }
 
   return (
-    <div className="demo-content">
+    <div className="demo-content2">
       <h1 className="demo-contenth1">Tanuld meg használni a betűket</h1>
       <Card
         spanish={items[currentIndex].letter}

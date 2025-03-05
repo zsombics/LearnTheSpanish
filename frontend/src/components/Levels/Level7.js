@@ -2,19 +2,19 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import '../../styles/Levels.css';
-import DemoContent2 from './demos/DemoContent2'; // Import DemoContent2
-import FillInTheBlankV2 from './quizTypes/FillTheBlankV2'; // Import FillInTheBlankV2
-import DemoContent3 from './demos/DemoContent3'; // Import DemoContent3
+import DemoContent2 from './demos/DemoContent2';
+import FillInTheBlankV2 from './quizTypes/FillTheBlankV2';
+import DemoContent3 from './demos/DemoContent3';
 
 function Level7() {
     const [testStarted, setTestStarted] = useState(false);
-    const [direction, setDirection] = useState('');
+    const [direction, setDirection] = useState('hatarozo-nevelok');
     const [questions, setQuestions] = useState([]);
     const [testFinished, setTestFinished] = useState(false);
     const [result, setResult] = useState(null);
     const [dynamicOptions, setDynamicOptions] = useState([]);
     const [showDemo, setShowDemo] = useState(true);
-    const [showDemo3, setShowDemo3] = useState(true); // Track if DemoContent3 is shown
+    const [showDemo3, setShowDemo3] = useState(true);
     const [typedAnswer, setTypedAnswer] = useState("");
     const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
     const [score, setScore] = useState(0);
@@ -25,7 +25,7 @@ function Level7() {
     const startTest = () => {
         setTestStarted(true);
         setShowDemo(true);
-        setShowDemo3(true); // Show DemoContent3 first
+        setShowDemo3(true);
     };
     const restartTest = () => {
         setTestStarted(false);
@@ -76,7 +76,7 @@ function Level7() {
                             question: `Írja be a megfelelő választ: ${item.english} / ${item.hungarian}`,
                             correctAnswer: item.spanish
                         }))
-                        .sort(() => Math.random() - 0.5); // Randomize questions
+                        .sort(() => Math.random() - 0.5);
                     setQuestions(shuffledQuestions);
                 })
                 .catch(err => console.error("CSV loading error:", err));
@@ -119,7 +119,6 @@ function Level7() {
     };
 
     const finishTest = () => {
-        // Save the last answer before finishing the test
         setUserAnswers(prev => ({ ...prev, [currentQuestionIndex]: typedAnswer.trim() }));
 
         const levelCalculated = score / questions.length >= 0.75 ? "Haladó"
@@ -224,5 +223,4 @@ function Level7() {
         </div>
     );
 }
-
 export default Level7;

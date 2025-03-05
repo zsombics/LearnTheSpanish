@@ -84,7 +84,7 @@ const DemoContent2 = ({ testType, startQuiz, items }) => {
     }
 
     return (
-        <div className="demo-content">
+        <div className="demo-content2">
             <h1 className="demo-contenth1">Tanuld meg először a kifejezéseket</h1>
             <Card
                 spanish={items[currentIndex].spanish}
