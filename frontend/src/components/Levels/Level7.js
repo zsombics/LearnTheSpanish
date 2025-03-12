@@ -6,7 +6,7 @@ import DemoContent2 from './demos/DemoContent2';
 import FillInTheBlankV2 from './quizTypes/FillTheBlankV2';
 import DemoContent3 from './demos/DemoContent3';
 
-function Level7() {
+function Level7 () {
     const [testStarted, setTestStarted] = useState(false);
     const [direction, setDirection] = useState('hatarozo-nevelok');
     const [questions, setQuestions] = useState([]);

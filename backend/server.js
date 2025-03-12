@@ -32,8 +32,8 @@ app.post('/api/translate', async (req, res) => {
     // Készítünk egy URL-encoded paraméterláncot
     const params = new URLSearchParams();
     params.append('text', text);
-    params.append('target_lang', 'ES'); // Célnyelv: spanyol
-    params.append('source_lang', 'HU'); // Forrásnyelv: magyar
+    params.append('target_lang', 'HU');
+    params.append('source_lang', 'Es');
 
     // Küldjük a kérést URL-encoded adatokkal
     const response = await fetch("https://api-free.deepl.com/v2/translate", {

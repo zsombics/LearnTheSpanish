@@ -91,37 +91,19 @@ const Level8 = () => {
   const [translatedText, setTranslatedText] = useState('');
   const [error, setError] = useState('');
 
+  // Egyszerű CSV parser: sorokra bontás, majd cellákra osztás
   const parseCSV = (text) => {
     const rows = text.split('\n').map(row => row.split(',').map(cell => cell.trim()));
     return rows;
   };
 
-  useEffect(() => {
-    fetch('level8/proba.csv')
-      .then(response => response.text())
-      .then(text => {
-        const rows = parseCSV(text);
-        if (rows && rows.length > 0) {
-          setVerbRow(rows[0]);
-          handleTranslate(rows[0][6]); // Translate the verb
-        }
-      })
-      .catch(err => console.error('Hiba a CSV beolvasásánál:', err));
-  }, []);
-
-  const handleTranslate = async (inputValue) => {
-    if (!inputValue.trim()) {
-      setError('Kérlek írj be egy szót!');
-      return;
-    }
-
+  // Automatikus fordítás az API segítségével
+  const translateVerb = async (textToTranslate) => {
     try {
       const response = await fetch("http://localhost:5000/api/translate", {
         method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ text: inputValue }),
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ text: textToTranslate }),
       });
       const data = await response.json();
       if (data.translations && data.translations.length > 0) {
@@ -135,14 +117,33 @@ const Level8 = () => {
     }
   };
 
+  useEffect(() => {
+    // A CSV fájl a level8 mappában található
+    fetch('level8/proba.csv')
+      .then(response => response.text())
+      .then(text => {
+        const rows = parseCSV(text);
+        if (rows && rows.length > 0) {
+          setVerbRow(rows[0]);
+          // Az infinitív (ige) a 7. oszlopban található (index: 6)
+          if (rows[0].length > 6) {
+            translateVerb(rows[0][6]);
+          }
+        }
+      })
+      .catch(err => console.error('Hiba a CSV beolvasásánál:', err));
+  }, []);
+
   return (
     <div>
       <h1>Level 8</h1>
       <p>Welcome to Level 8!</p>
       {verbRow ? (
         <div>
-          <h2>Ige: {verbRow[6]}</h2>
-          {translatedText && <p>Fordítás: {translatedText}</p>}
+          <h2>
+            Ige: {verbRow[6]} 
+            {translatedText && <span> — Fordítás: {translatedText}</span>}
+          </h2>
           {error && <p style={{ color: 'red' }}>{error}</p>}
           {tenses.map((tense, tIndex) => (
             <div key={tIndex} style={{ marginBottom: '1rem' }}>
