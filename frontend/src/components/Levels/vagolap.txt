@@ -1,0 +1,40 @@
+    <div>
+      <h1>Level 8</h1>
+      <p>Welcome to Level 8!</p>
+      {verbRow ? (
+        <div>
+          <h2>
+            Ige: {verbRow[6]} 
+            {translatedText && <span> — Fordítás: {translatedText}</span>}
+          </h2>
+          {error && <p style={{ color: 'red' }}>{error}</p>}
+          {tenses.map((tense, tIndex) => (
+            <div key={tIndex} style={{ marginBottom: '1rem' }}>
+              <h3>{tense.label}</h3>
+              {tense.persons ? (
+                <table border="1" cellPadding="4">
+                  <thead>
+                    <tr>
+                      <th>Személy</th>
+                      <th>Ragozás</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {tense.indices.map((colIndex, index) => (
+                      <tr key={index}>
+                        <td>{tense.persons[index]}</td>
+                        <td>{verbRow[colIndex] || '-'}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              ) : (
+                <p>{verbRow[tense.indices[0]] || '-'}</p>
+              )}
+            </div>
+          ))}
+        </div>
+      ) : (
+        <p>CSV fájl beolvasása folyamatban…</p>
+      )}
+    </div>

@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from 'react';
+import '../../styles/Levels.css';
+import VerbQuiz from '../Levels/quizTypes/VerbQuiz';
 
 const tenses = [
   { label: "Infinitivo", indices: [6] },
@@ -87,92 +89,96 @@ const tenses = [
 ];
 
 const Level8 = () => {
-  const [verbRow, setVerbRow] = useState(null);
-  const [translatedText, setTranslatedText] = useState('');
+  const [allRows, setAllRows] = useState([]);
+  const [selectedVerbIndex, setSelectedVerbIndex] = useState("random");
+  const [selectedTenseIndex, setSelectedTenseIndex] = useState("random");
+
+  const [activeVerbRow, setActiveVerbRow] = useState(null);
+  const [activeTense, setActiveTense] = useState(null);
+
   const [error, setError] = useState('');
 
-  // Egyszerű CSV parser: sorokra bontás, majd cellákra osztás
   const parseCSV = (text) => {
-    const rows = text.split('\n').map(row => row.split(',').map(cell => cell.trim()));
-    return rows;
-  };
-
-  // Automatikus fordítás az API segítségével
-  const translateVerb = async (textToTranslate) => {
-    try {
-      const response = await fetch("http://localhost:5000/api/translate", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ text: textToTranslate }),
-      });
-      const data = await response.json();
-      if (data.translations && data.translations.length > 0) {
-        setTranslatedText(data.translations[0].text);
-      } else {
-        setError('Nem sikerült lefordítani a szót.');
-      }
-    } catch (err) {
-      console.error(err);
-      setError('Hálózati hiba történt.');
-    }
+    return text.split('\n').map(row => row.split(',').map(cell => cell.trim()));
   };
 
   useEffect(() => {
-    // A CSV fájl a level8 mappában található
     fetch('level8/proba.csv')
       .then(response => response.text())
       .then(text => {
         const rows = parseCSV(text);
         if (rows && rows.length > 0) {
-          setVerbRow(rows[0]);
-          // Az infinitív (ige) a 7. oszlopban található (index: 6)
-          if (rows[0].length > 6) {
-            translateVerb(rows[0][6]);
-          }
+          setAllRows(rows);
         }
       })
       .catch(err => console.error('Hiba a CSV beolvasásánál:', err));
   }, []);
 
+  const handleVerbChange = (e) => {
+    setSelectedVerbIndex(e.target.value);
+  };
+
+  const handleTenseChange = (e) => {
+    setSelectedTenseIndex(e.target.value);
+  };
+
+  const applySelections = () => {
+    let verbRow;
+    if (selectedVerbIndex === "random") {
+      const randomIndex = Math.floor(Math.random() * allRows.length);
+      verbRow = allRows[randomIndex];
+    } else {
+      verbRow = allRows[selectedVerbIndex];
+    }
+    setActiveVerbRow(verbRow);
+
+    let tense;
+    if (selectedTenseIndex === "random") {
+      const randomIndex = Math.floor(Math.random() * tenses.length);
+      tense = tenses[randomIndex];
+    } else {
+      tense = tenses[selectedTenseIndex];
+    }
+    setActiveTense(tense);
+    console.log("Selected verb row:", verbRow);
+    console.log("Selected tense:", tense);
+  };
+
   return (
-    <div>
-      <h1>Level 8</h1>
-      <p>Welcome to Level 8!</p>
-      {verbRow ? (
-        <div>
-          <h2>
-            Ige: {verbRow[6]} 
-            {translatedText && <span> — Fordítás: {translatedText}</span>}
-          </h2>
-          {error && <p style={{ color: 'red' }}>{error}</p>}
-          {tenses.map((tense, tIndex) => (
-            <div key={tIndex} style={{ marginBottom: '1rem' }}>
-              <h3>{tense.label}</h3>
-              {tense.persons ? (
-                <table border="1" cellPadding="4">
-                  <thead>
-                    <tr>
-                      <th>Személy</th>
-                      <th>Ragozás</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {tense.indices.map((colIndex, index) => (
-                      <tr key={index}>
-                        <td>{tense.persons[index]}</td>
-                        <td>{verbRow[colIndex] || '-'}</td>
-                      </tr>
-                    ))}
-                  </tbody>
-                </table>
-              ) : (
-                <p>{verbRow[tense.indices[0]] || '-'}</p>
-              )}
-            </div>
-          ))}
-        </div>
+    <div className="level8-container">
+      {activeVerbRow && activeTense ? (
+        <VerbQuiz activeVerbRow={activeVerbRow} activeTense={activeTense} />
       ) : (
-        <p>CSV fájl beolvasása folyamatban…</p>
+        <div className="test-setup">
+          <h1>Level 8 – Igeragozás</h1>
+          <div className="setup-group">
+            <label>
+              Válassz igét:
+              <select value={selectedVerbIndex} onChange={handleVerbChange}>
+                <option value="random">Random</option>
+                {allRows.map((row, index) =>
+                  row[6] && <option key={index} value={index}>{row[6]}</option>
+                )}
+              </select>
+            </label>
+          </div>
+          <div className="setup-group">
+            <label>
+              Válassz igeidőt:
+              <select value={selectedTenseIndex} onChange={handleTenseChange}>
+                <option value="random">Random</option>
+                {tenses.map((tense, index) => (
+                  <option key={index} value={index}>{tense.label}</option>
+                ))}
+              </select>
+            </label>
+          </div>
+          <div className="setup-group">
+            <button className="start-test-btn" onClick={applySelections}>
+              Alkalmaz
+            </button>
+          </div>
+        </div>
       )}
     </div>
   );
