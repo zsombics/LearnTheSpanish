@@ -1,4 +1,3 @@
-// backend/routes/auth.js
 const express = require('express');
 const router = express.Router();
 const { check, validationResult } = require('express-validator');
@@ -6,7 +5,6 @@ const { check, validationResult } = require('express-validator');
 const authController = require('../controllers/authController');
 const authMiddleware = require('../middleware/auth');
 
-// Regisztráció
 router.post(
   '/register',
   [
@@ -23,7 +21,6 @@ router.post(
   }
 );
 
-// Bejelentkezés
 router.post(
   '/login',
   [
@@ -39,10 +36,8 @@ router.post(
   }
 );
 
-// Kijelentkezés
 router.get('/logout', authController.logout);
 
-// Felhasználói profil
 router.get('/profile', authMiddleware, authController.getUserProfile);
 
 module.exports = router;

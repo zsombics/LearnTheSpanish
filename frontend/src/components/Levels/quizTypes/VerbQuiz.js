@@ -22,15 +22,15 @@ function highlightDifferences(userInput, correctAnswer) {
   return { highlightedText: result, percentageCorrect };
 }
 
-const VerbQuiz = ({ activeVerbRow, activeTense }) => {
-  const [userAnswers, setUserAnswers] = useState([]);
+const VerbQuiz = ({ activeVerbRow, activeTense, userAnswers, setUserAnswers, finishTest }) => {
   const [showFeedback, setShowFeedback] = useState(false);
+  const [showCheckButton, setCheckButton] = useState(true);
 
   useEffect(() => {
     if (activeTense && activeTense.persons) {
       setUserAnswers(Array(activeTense.persons.length).fill(''));
     }
-  }, [activeTense]);
+  }, [activeTense, setUserAnswers]);
 
   if (!activeVerbRow || !activeTense) {
     return (
@@ -51,6 +51,7 @@ const VerbQuiz = ({ activeVerbRow, activeTense }) => {
 
   const checkAnswers = () => {
     setShowFeedback(true);
+    setCheckButton(false);
   };
 
   return (
@@ -73,6 +74,7 @@ const VerbQuiz = ({ activeVerbRow, activeTense }) => {
                     onChange={(e) => handleInputChange(index, e.target.value)}
                     placeholder="Írd be a ragozást..."
                     className="input-field"
+                    disabled={!showCheckButton}
                   />
                 </div>
                 {showFeedback && (
@@ -100,7 +102,9 @@ const VerbQuiz = ({ activeVerbRow, activeTense }) => {
           })}
         </div>
         <div className="quiz-navigation">
-          <button className="check-btn" onClick={checkAnswers}>Ellenőriz</button>
+          {showCheckButton && (
+            <button className="check-btn" onClick={checkAnswers}>Ellenőriz</button>)}
+          <button className="check-btn" onClick={finishTest}>Befejezés</button>
         </div>
       </div>
     </div>

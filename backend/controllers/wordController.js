@@ -1,7 +1,5 @@
-// backend/controllers/wordController.js
 const WordPair = require('../models/WordPair');
 
-// Szó párok lekérdezése
 exports.getWordPairs = async (req, res) => {
   try {
     const wordPairs = await WordPair.find();
@@ -12,7 +10,6 @@ exports.getWordPairs = async (req, res) => {
   }
 };
 
-// Szó párok feltöltése (opcionális, admin funkció)
 exports.addWordPair = async (req, res) => {
   const { spanish, hungarian } = req.body;
 

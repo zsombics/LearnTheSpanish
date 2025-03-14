@@ -3,6 +3,7 @@
     "dotenv": "^16.4.7"
   },
   "dependencies": {
+    "@langchain/google-genai": "^0.1.11",
     "bcryptjs": "^3.0.2",
     "cookie-parser": "^1.4.7",
     "cors": "^2.8.5",

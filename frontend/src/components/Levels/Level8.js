@@ -1,6 +1,8 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
+import axios from 'axios';
 import '../../styles/Levels.css';
-import VerbQuiz from '../Levels/quizTypes/VerbQuiz';
+import VerbQuiz from './quizTypes/VerbQuiz';
 
 const tenses = [
   { label: "Infinitivo", indices: [6] },
@@ -92,11 +94,12 @@ const Level8 = () => {
   const [allRows, setAllRows] = useState([]);
   const [selectedVerbIndex, setSelectedVerbIndex] = useState("random");
   const [selectedTenseIndex, setSelectedTenseIndex] = useState("random");
-
   const [activeVerbRow, setActiveVerbRow] = useState(null);
   const [activeTense, setActiveTense] = useState(null);
-
-  const [error, setError] = useState('');
+  const [testFinished, setTestFinished] = useState(false);
+  const [result, setResult] = useState(null);
+  const [userAnswers, setUserAnswers] = useState([]);
+  const navigate = useNavigate();
 
   const parseCSV = (text) => {
     return text.split('\n').map(row => row.split(',').map(cell => cell.trim()));
@@ -111,7 +114,7 @@ const Level8 = () => {
           setAllRows(rows);
         }
       })
-      .catch(err => console.error('Hiba a CSV beolvasásánál:', err));
+      .catch(err => console.error('Error reading CSV:', err));
   }, []);
 
   const handleVerbChange = (e) => {
@@ -140,14 +143,79 @@ const Level8 = () => {
       tense = tenses[selectedTenseIndex];
     }
     setActiveTense(tense);
+
+    const initialAnswers = Array.from({ length: tense.indices.length }, () => "");
+    setUserAnswers(initialAnswers);
     console.log("Selected verb row:", verbRow);
     console.log("Selected tense:", tense);
   };
 
+  const finishTest = () => {
+    const completeAnswers = Array.from({ length: activeTense.indices.length }, (_, i) => userAnswers[i] || "");
+    const correctAnswers = activeTense.indices.map(index => activeVerbRow[index] || "");
+    const score = completeAnswers.reduce((acc, answer, index) => 
+      acc + (answer.trim() === correctAnswers[index].trim() ? 1 : 0), 0
+    );
+
+    const levelCalculated = score / correctAnswers.length >= 0.75 ? "Haladó"
+      : score / correctAnswers.length >= 0.5 ? "Középhaladó" : "Kezdő";
+
+    const payload = {
+      answers: completeAnswers,
+      level: levelCalculated,
+      totalQuestions: correctAnswers.length,
+      correctAnswers: score,
+      ratio: score / correctAnswers.length,
+      quizCompleted: true
+    };
+
+    axios.post('/api/eredmenyek/submit', payload)
+      .then(() => {
+        setResult({ score, total: correctAnswers.length, level: levelCalculated });
+        setTestFinished(true);
+      })
+      .catch(err => {
+        console.error("Error saving quiz:", err);
+        alert("Hiba történt a quiz mentésekor!");
+      });
+  };
+
+  const restartTest = () => {
+    setTestFinished(false);
+    setResult(null);
+    setActiveVerbRow(null);
+    setActiveTense(null);
+    setSelectedVerbIndex("random");
+    setSelectedTenseIndex("random");
+    setUserAnswers([]);
+  };
+
+  const goToKviz = () => window.open("/kviz", "_self");
+
+  if (testFinished && result) {
+    return (
+      <div className="test-results">
+        <h1>Eredmény</h1>
+        <p>{result.score} helyes válasz a {result.total} kérdésből.</p>
+        <p>Szint: {result.level}</p>
+        <div className="results-navigation">
+          <button className="result-btn" onClick={restartTest}>Új teszt</button>
+          <button className="result-btn secondary" onClick={goToKviz}>Vissza a Kvízhez</button>
+        </div>
+      </div>
+    );
+  }
+
   return (
     <div className="level8-container">
       {activeVerbRow && activeTense ? (
-        <VerbQuiz activeVerbRow={activeVerbRow} activeTense={activeTense} />
+        <VerbQuiz
+          activeVerbRow={activeVerbRow}
+          activeTense={activeTense}
+          userAnswers={userAnswers}
+          setUserAnswers={setUserAnswers}
+          finishTest={finishTest}
+        />
       ) : (
         <div className="test-setup">
           <h1>Level 8 – Igeragozás</h1>

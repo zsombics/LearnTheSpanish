@@ -1,4 +1,3 @@
-// backend/models/WordPair.js
 const mongoose = require('mongoose');
 
 const WordPairSchema = new mongoose.Schema({

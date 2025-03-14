@@ -1,10 +1,8 @@
-// backend/routes/quiz.js (vagy a megfelelő útvonal, pl. /api/eredmenyek/submit)
 const express = require('express');
 const router = express.Router();
 const QuizEredmenyek = require('../models/QuizEredmenyek');
 const authMiddleware = require('../middleware/auth');
 
-// POST /api/eredmenyek/submit - Elmenti/frissíti a felhasználó quiz eredményét
 router.post('/submit', authMiddleware, async (req, res) => {
   try {
     const { answers, level, totalQuestions, correctAnswers, ratio, quizCompleted } = req.body;
