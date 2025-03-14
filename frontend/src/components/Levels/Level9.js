@@ -183,7 +183,7 @@ const Level9 = () => {
     const filteredRows = selectedLevel === "all" ? allRows : allRows.filter(row => row[4] === selectedLevel);
     return (
       <div className="test-setup">
-        <h1>Level 9 – Igeragozás gyakorlat</h1>
+        <h1>Level 9 – Igeragozás gyakorlatok</h1>
         <div className="setup-group">
           <label>Hány kérdés legyen:</label>
           <select value={numQuestions} onChange={handleNumQuestionsChange}>
