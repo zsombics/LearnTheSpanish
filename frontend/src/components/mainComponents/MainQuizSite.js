@@ -8,27 +8,21 @@ import Level5 from '../../components/Levels/Level5';
 import Level6 from '../../components/Levels/Level6';
 import Level7 from '../../components/Levels/Level7';
 import Level8 from '../../components/Levels/Level8';
-// Ha további szintek komponenseit is importálni szeretnéd, azt itt teheted meg
-// import Level2 from './Levels/Level2';
-// import Level3 from './Levels/Level3';
-// stb.
+import Level9 from '../../components/Levels/Level9';
 
 function MainQuizSite() {
   const [selectedLevel, setSelectedLevel] = useState(null);
 
-  // 9 szint, 1-től 9-ig
   const levels = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 
   const handleLevelSelect = (level) => {
     setSelectedLevel(level);
   };
 
-  // Ha egy szint ki van választva, azt megjelenítjük
   if (selectedLevel !== null) {
     switch (selectedLevel) {
       case 1:
         return <Level1 />;
-      // Ha később importálod a többi szint komponenst, azt itt így adhatod meg:
       case 2:
         return <Level2 />;
       case 3:
@@ -43,9 +37,8 @@ function MainQuizSite() {
         return <Level7 />;
       case 8:
         return <Level8 />;
-      // case 3:
-      //   return <Level3 />;
-      // ...
+      case 9:
+        return <Level9 />;
       default:
         return (
           <div className="level-not-implemented">
@@ -55,7 +48,6 @@ function MainQuizSite() {
     }
   }
 
-  // Ha még nincs kiválasztva szint, akkor megjelenítjük a szintválasztó oldalt
   return (
     <div className="main-quiz-site">
       <div className="auth-text">
