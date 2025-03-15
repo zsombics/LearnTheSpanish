@@ -1,7 +1,7 @@
 import React from 'react';
 import '../../../styles/DemoContent3.css';
 
-function DemoContent3({ testType }) {
+function DemoContent3({ testType, startQuiz2 }) {
     const renderDemoContent = () => {
         switch (testType) {
             case "hatarozo-nevelok":
@@ -206,66 +206,66 @@ function DemoContent3({ testType }) {
             case "alanyi-nevmasok":
                 return (
                     <div className="demo-section">
-                      <h2>Nézd át alaposan a szabályokat</h2>
-                      <div className="demo-card">
-                        <div className="example-grid">
-                          <div className="example-column">
-                            <h3>Conjugation of Regular -ar Verbs: hablar</h3>
-                            <div className="table-container">
-                              <div className="table-row">
-                                <div className="table-cell">yo</div>
-                                <div className="table-cell">hablo</div>
-                                <div className="table-cell">nosotros/nosotras</div>
-                                <div className="table-cell">hablamos</div>
-                              </div>
-                              <div className="table-row">
-                                <div className="table-cell">tú</div>
-                                <div className="table-cell">hablas</div>
-                                <div className="table-cell">vosotros/vosotras</div>
-                                <div className="table-cell">habláis</div>
-                              </div>
-                              <div className="table-row">
-                                <div className="table-cell">él</div>
-                                <div className="table-cell">habla</div>
-                                <div className="table-cell">ellos</div>
-                                <div className="table-cell">hablan</div>
-                              </div>
-                              <div className="table-row">
-                                <div className="table-cell">ella</div>
-                                <div className="table-cell">habla</div>
-                                <div className="table-cell">ellas</div>
-                                <div className="table-cell">hablan</div>
-                              </div>
-                              <div className="table-row">
-                                <div className="table-cell">usted</div>
-                                <div className="table-cell">habla</div>
-                                <div className="table-cell">ustedes</div>
-                                <div className="table-cell">hablan</div>
-                              </div>
+                        <h2>Nézd át alaposan a szabályokat</h2>
+                        <div className="demo-card">
+                            <div className="example-grid">
+                                <div className="example-column">
+                                    <h3>Conjugation of Regular -ar Verbs: hablar</h3>
+                                    <div className="table-container">
+                                        <div className="table-row">
+                                            <div className="table-cell">yo</div>
+                                            <div className="table-cell">hablo</div>
+                                            <div className="table-cell">nosotros/nosotras</div>
+                                            <div className="table-cell">hablamos</div>
+                                        </div>
+                                        <div className="table-row">
+                                            <div className="table-cell">tú</div>
+                                            <div className="table-cell">hablas</div>
+                                            <div className="table-cell">vosotros/vosotras</div>
+                                            <div className="table-cell">habláis</div>
+                                        </div>
+                                        <div className="table-row">
+                                            <div className="table-cell">él</div>
+                                            <div className="table-cell">habla</div>
+                                            <div className="table-cell">ellos</div>
+                                            <div className="table-cell">hablan</div>
+                                        </div>
+                                        <div className="table-row">
+                                            <div className="table-cell">ella</div>
+                                            <div className="table-cell">habla</div>
+                                            <div className="table-cell">ellas</div>
+                                            <div className="table-cell">hablan</div>
+                                        </div>
+                                        <div className="table-row">
+                                            <div className="table-cell">usted</div>
+                                            <div className="table-cell">habla</div>
+                                            <div className="table-cell">ustedes</div>
+                                            <div className="table-cell">hablan</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="rule-block">
+                                    <h3>Szabályok</h3>
+                                    <ul>
+                                        <li>
+                                            A szabályos -ar igék esetében az ige végéről levágjuk az -ar részt, és a megfelelő személyragot tesszük a gyökérhez.
+                                        </li>
+                                        <li>
+                                            Egyes szám: <strong>yo</strong> → -o, <strong>tú</strong> → -as, <strong>él/ella/usted</strong> → -a.
+                                        </li>
+                                        <li>
+                                            Többes szám: <strong>nosotros/nosotras</strong> → -amos, <strong>vosotros/vosotras</strong> → -áis, <strong>ellos/ellas/ustedes</strong> → -an.
+                                        </li>
+                                        <li>
+                                            A spanyolban a személyes névmások gyakran elhagyhatók, ha az igealak egyértelművé teszi az alanyt.
+                                        </li>
+                                    </ul>
+                                </div>
                             </div>
-                          </div>
-                          <div className="rule-block">
-                            <h3>Szabályok</h3>
-                            <ul>
-                              <li>
-                                A szabályos -ar igék esetében az ige végéről levágjuk az -ar részt, és a megfelelő személyragot tesszük a gyökérhez.
-                              </li>
-                              <li>
-                                Egyes szám: <strong>yo</strong> → -o, <strong>tú</strong> → -as, <strong>él/ella/usted</strong> → -a.
-                              </li>
-                              <li>
-                                Többes szám: <strong>nosotros/nosotras</strong> → -amos, <strong>vosotros/vosotras</strong> → -áis, <strong>ellos/ellas/ustedes</strong> → -an.
-                              </li>
-                              <li>
-                                A spanyolban a személyes névmások gyakran elhagyhatók, ha az igealak egyértelművé teszi az alanyt.
-                              </li>
-                            </ul>
-                          </div>
                         </div>
-                      </div>
                     </div>
-                  );
-                  
+                );
+
             case "osszegzo-1":
                 return (
                     <div className="demo-section">
@@ -328,6 +328,9 @@ function DemoContent3({ testType }) {
             <div className="demo-content">
                 {renderDemoContent()}
             </div>
+            <button className="start-test-btn" onClick={startQuiz2}>
+                Tovább
+            </button>
         </div>
     );
 }

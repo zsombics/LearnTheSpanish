@@ -6,7 +6,7 @@ import DemoContent2 from './demos/DemoContent2';
 import FillInTheBlankV2 from './quizTypes/FillTheBlankV2';
 import DemoContent3 from './demos/DemoContent3';
 
-function Level7 () {
+function Level7() {
     const [testStarted, setTestStarted] = useState(false);
     const [direction, setDirection] = useState('hatarozo-nevelok');
     const [questions, setQuestions] = useState([]);
@@ -42,60 +42,60 @@ function Level7 () {
 
     useEffect(() => {
         if (testStarted) {
-          let demoFileToFetch, quizFileToFetch;
-      
-          if (direction === "yo-tengo-yo-quiero") {
-            demoFileToFetch = '/level7/yo-tengo-yo-quiero1.csv';
-            quizFileToFetch = '/level7/yo-tengo-yo-quiero2.csv';
-          } else {
-            switch (direction) {
-              case "hatarozo-nevelok":
-                demoFileToFetch = quizFileToFetch = '/level7/hatarozo-nevelok.csv';
-                break;
-              case "hatarozatlan-nevelok":
-                demoFileToFetch = quizFileToFetch = '/level7/hatarozatlan-nevelok.csv';
-                break;
-              case "a-hay-hasznalata":
-                demoFileToFetch = '/level7/a-hay-hasznalata1.csv';
-                quizFileToFetch = '/level7/a-hay-hasznalata2.csv';
-                break;
-              case "alanyi-nevmasok":
-                demoFileToFetch = '/level7/alanyi-nevmasok1.csv';
-                quizFileToFetch = '/level7/alanyi-nevmasok2.csv';
-                break;
-              case "osszegzo-1":
-                demoFileToFetch = quizFileToFetch = '/level7/osszegzo-1.csv';
-                break;
-              default:
-                demoFileToFetch = quizFileToFetch = '/level7/hatarozo-neveloknem.csv';
+            let demoFileToFetch, quizFileToFetch;
+
+            if (direction === "yo-tengo-yo-quiero") {
+                demoFileToFetch = '/level7/yo-tengo-yo-quiero1.csv';
+                quizFileToFetch = '/level7/yo-tengo-yo-quiero2.csv';
+            } else {
+                switch (direction) {
+                    case "hatarozo-nevelok":
+                        demoFileToFetch = quizFileToFetch = '/level7/hatarozo-nevelok.csv';
+                        break;
+                    case "hatarozatlan-nevelok":
+                        demoFileToFetch = quizFileToFetch = '/level7/hatarozatlan-nevelok.csv';
+                        break;
+                    case "a-hay-hasznalata":
+                        demoFileToFetch = '/level7/a-hay-hasznalata1.csv';
+                        quizFileToFetch = '/level7/a-hay-hasznalata2.csv';
+                        break;
+                    case "alanyi-nevmasok":
+                        demoFileToFetch = '/level7/alanyi-nevmasok1.csv';
+                        quizFileToFetch = '/level7/alanyi-nevmasok2.csv';
+                        break;
+                    case "osszegzo-1":
+                        demoFileToFetch = quizFileToFetch = '/level7/osszegzo-1.csv';
+                        break;
+                    default:
+                        demoFileToFetch = quizFileToFetch = '/level7/hatarozo-neveloknem.csv';
+                }
             }
-          }
-          
-          fetch(demoFileToFetch)
-            .then(response => response.text())
-            .then(text => {
-              const parsedOptions = parseMatchingAdjectivesCSV(text);
-              setDynamicOptions(parsedOptions);
-            })
-            .catch(err => console.error("CSV loading error (demo):", err));
-      
-          // Fetch the quiz file for FillInTheBlankV2 (questions)
-          fetch(quizFileToFetch)
-            .then(response => response.text())
-            .then(text => {
-              const parsedOptions = parseMatchingAdjectivesCSV(text);
-              const shuffledQuestions = parsedOptions
-                .map(item => ({
-                  question: `Írja be a megfelelő választ: ${item.english} / ${item.hungarian}`,
-                  correctAnswer: item.spanish
-                }))
-                .sort(() => Math.random() - 0.5);
-              setQuestions(shuffledQuestions);
-            })
-            .catch(err => console.error("CSV loading error (quiz):", err));
+
+            fetch(demoFileToFetch)
+                .then(response => response.text())
+                .then(text => {
+                    const parsedOptions = parseMatchingAdjectivesCSV(text);
+                    setDynamicOptions(parsedOptions);
+                })
+                .catch(err => console.error("CSV loading error (demo):", err));
+
+            // Fetch the quiz file for FillInTheBlankV2 (questions)
+            fetch(quizFileToFetch)
+                .then(response => response.text())
+                .then(text => {
+                    const parsedOptions = parseMatchingAdjectivesCSV(text);
+                    const shuffledQuestions = parsedOptions
+                        .map(item => ({
+                            question: `Írja be a megfelelő választ: ${item.english} / ${item.hungarian}`,
+                            correctAnswer: item.spanish
+                        }))
+                        .sort(() => Math.random() - 0.5);
+                    setQuestions(shuffledQuestions);
+                })
+                .catch(err => console.error("CSV loading error (quiz):", err));
         }
-      }, [testStarted, direction]);
-      
+    }, [testStarted, direction]);
+
 
     function parseMatchingAdjectivesCSV(data) {
         const lines = data.trim().split("\n");
@@ -160,6 +160,10 @@ function Level7 () {
         setShowDemo(false);
     };
 
+    const startQuiz2 = () => {
+        setShowDemo3(false)
+    };
+
     if (!testStarted) {
         return (
             <div className="test-setup">
@@ -199,10 +203,7 @@ function Level7 () {
     if (showDemo && showDemo3) {
         return (
             <div>
-                <DemoContent3 testType={direction} />
-                <button className="start-test-btn" onClick={() => setShowDemo3(false)}>
-                    Tovább
-                </button>
+                <DemoContent3 testType={direction} startQuiz2={startQuiz2} />
             </div>
         );
     }
