@@ -22,8 +22,10 @@ function highlightDifferences(userInput, correctAnswer) {
   return { highlightedText: result, percentageCorrect };
 }
 
-const VerbQuiz2 = ({ activeVerbRow, activeTense, userAnswers, setUserAnswers, finishTest }) => {
+const VerbQuiz2 = ({ activeVerbRow, activeTense, userAnswers, setUserAnswers, handleNextQuestion, questionsLength }) => {
   const [showFeedback, setShowFeedback] = useState(false);
+  const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
+  const [showCheckButton, setCheckButton] = useState(true);
 
   useEffect(() => {
     if (activeTense && activeTense.indices) {
@@ -56,6 +58,19 @@ const VerbQuiz2 = ({ activeVerbRow, activeTense, userAnswers, setUserAnswers, fi
 
   const checkAnswers = () => {
     setShowFeedback(true);
+    setCheckButton(false);
+  };
+
+  const handleNext = () => {
+    if (currentQuestionIndex < questionsLength - 1) {
+      setCurrentQuestionIndex(currentQuestionIndex + 1);
+      setCheckButton(true);
+      setShowFeedback(false);
+      handleNextQuestion();
+    } else {
+      setCurrentQuestionIndex(0);
+      handleNextQuestion();
+    }
   };
 
   return (
@@ -78,6 +93,7 @@ const VerbQuiz2 = ({ activeVerbRow, activeTense, userAnswers, setUserAnswers, fi
                     onChange={(e) => handleInputChange(index, e.target.value)}
                     placeholder="Írd be a ragozást..."
                     className="input-field"
+                    disabled={!showCheckButton}
                   />
                 </div>
                 {showFeedback && (
@@ -105,8 +121,18 @@ const VerbQuiz2 = ({ activeVerbRow, activeTense, userAnswers, setUserAnswers, fi
           })}
         </div>
         <div className="quiz-navigation">
-          <button className="check-btn" onClick={checkAnswers}>Ellenőriz</button>
-          <button className="check-btn" onClick={finishTest}>Befejezés</button>
+          {showCheckButton && (
+            <button className="check-btn" onClick={checkAnswers}>Ellenőriz</button>
+          )}
+          {currentQuestionIndex < questionsLength - 1 ? (
+            <button className="check-btn" onClick={handleNext}>
+              Következő
+            </button>
+          ) : (
+            <button className="check-btn" onClick={handleNext}>
+              Befejezés
+            </button>
+          )}
         </div>
       </div>
     </div>
