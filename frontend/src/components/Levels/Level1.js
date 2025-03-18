@@ -3,13 +3,16 @@ import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import '../../styles/Levels.css';
 
-function parseCSV(data) {
+export function parseCSV(data) {
+    if (!data.trim()) {
+      return [];
+    }
     const lines = data.trim().split("\n");
     return lines.map(line => {
-        const [english, spanish, hungarian] = line.split(",").map(item => item.trim());
-        return { english, spanish, hungarian };
+      const [english, spanish, hungarian] = line.split(",").map(item => item.trim());
+      return { english, spanish, hungarian };
     });
-}
+  }  
 
 function Level1() {
     const navigate = useNavigate();
