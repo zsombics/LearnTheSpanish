@@ -15,7 +15,6 @@ function App() {
   const [user, setUser] = useState(null);
 
   useEffect(() => {
-    // Felhasználói adatok lekérdezése
     axios.get('/api/auth/profile')
       .then((res) => {
         setUser(res.data);
@@ -28,9 +27,7 @@ function App() {
   return (
     <UserContext.Provider value={{ user, setUser }}>
     <Router>
-      {/* Navbar – fix 60px magas */}
       <Navbar />
-      {/* Fő tartalom, ami kitölti a maradék helyet */}
       <div className="main-content">
           <Routes>
             <Route path="/" element={<Home />} />

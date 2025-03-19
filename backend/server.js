@@ -18,6 +18,7 @@ app.use('/api/words', require('./routes/words'));
 app.use('/api/quiz', require('./routes/quiz'));
 app.use('/api/eredmenyek', require('./routes/eredmenyek'));
 
+
 app.post('/api/translate', async (req, res) => {
   const { text } = req.body;
   if (!text) {
