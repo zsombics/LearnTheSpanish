@@ -15,6 +15,7 @@ const UserSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
+  avatar: { type: String, default: '' },
   // Egyéb felhasználói adatok (pl. eredmények)
   results: [{
     score: Number,

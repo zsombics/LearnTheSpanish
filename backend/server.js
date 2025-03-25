@@ -17,6 +17,7 @@ app.use('/api/auth', require('./routes/auth'));
 app.use('/api/words', require('./routes/words'));
 app.use('/api/quiz', require('./routes/quiz'));
 app.use('/api/eredmenyek', require('./routes/eredmenyek'));
+app.use('/api/user', require('./routes/user'));
 
 
 app.post('/api/translate', async (req, res) => {
