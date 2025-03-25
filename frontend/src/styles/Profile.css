@@ -125,10 +125,9 @@
 
 .chart-container,
 .activity-calendar {
-  background-color: #ffffff;
-  border-radius: 10px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  padding: 20px;
+  position: relative;
+  padding: 15px;
+  margin-bottom: 20px;
 }
 
 .chart-wrapper {
@@ -248,3 +247,52 @@
   text-align: center;
   color: #777;
 }
+
+.calendar-wrapper {
+  width: 85%;
+  display: inline-block;
+}
+
+.year-selector {
+  display: inline-block;
+  vertical-align: top;
+  width: 15%;
+  padding-left: 10px;
+}
+
+.year-selector button {
+  display: block;
+  width: 100%;
+  margin: 0 0 10px 0;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background: #f8f9fa;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.year-selector button.active {
+  background: #007bff;
+  color: white;
+  border-color: #007bff;
+}
+
+.react-calendar-heatmap {
+  height: 100px;
+}
+
+.react-calendar-heatmap-month-label {
+  font-size: 9px;
+  fill: #767676;
+}
+
+.react-calendar-heatmap .color-empty {
+  fill: #ebedf0;
+}
+
+.react-calendar-heatmap .color-scale-0 { fill: #ebedf0; }
+.react-calendar-heatmap .color-scale-1 { fill: #c6e48b; }
+.react-calendar-heatmap .color-scale-2 { fill: #7bc96f; }
+.react-calendar-heatmap .color-scale-3 { fill: #239a3b; }
+.react-calendar-heatmap .color-scale-4 { fill: #196127; }

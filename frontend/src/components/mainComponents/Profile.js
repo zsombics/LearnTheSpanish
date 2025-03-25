@@ -13,10 +13,11 @@ import {
   ArcElement,
 } from 'chart.js';
 import CalendarHeatmap from 'react-calendar-heatmap';
+import ReactTooltip from 'react-tooltip';
 import 'react-calendar-heatmap/dist/styles.css';
 import axios from 'axios';
 import UserContext from '../../UserContext';
-import '../../styles/Profile.css';
+import '../../styles/Profile.css'; // Itt legyenek a szükséges CSS stílusok
 
 ChartJS.register(
   CategoryScale,
@@ -51,6 +52,9 @@ function Profile() {
   const [error, setError] = useState(null);
   const [avatar, setAvatar] = useState(avatarOptions[0]);
   const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const [selectedYear, setSelectedYear] = useState(new Date().getFullYear());
+  const years = Array.from({length: 4}, (_, i) => selectedYear - i).reverse();
 
   useEffect(() => {
     if (user?.avatar) {
@@ -139,7 +143,7 @@ function Profile() {
     datasets: [
       {
         label: 'Helyes válaszok aránya (%)',
-        data: quizResults.map(result => (result.correctAnswers / result.totalQuestions * 100).toFixed(1)),
+        data: quizResults.map(result => ((result.correctAnswers / result.totalQuestions) * 100).toFixed(1)),
         borderColor: 'rgba(75, 192, 192, 1)',
         fill: false,
         tension: 0.1
@@ -186,14 +190,15 @@ function Profile() {
       }
     }
   };
-
   function shiftDate(date, numDays) {
     const newDate = new Date(date);
     newDate.setDate(newDate.getDate() + numDays);
     return newDate;
   }
 
-  const heatmapValues = quizResults.map(result => ({
+  const heatmapValues = quizResults
+  .filter(result => new Date(result.createdAt).getFullYear() === selectedYear)
+  .map(result => ({
     date: new Date(result.createdAt),
     count: result.correctAnswers / result.totalQuestions,
   }));
@@ -246,24 +251,6 @@ function Profile() {
               </ul>
             </div>
           )}
-          <div className="activity-calendar">
-            <h3>Tevékenység naptár</h3>
-            <CalendarHeatmap
-              startDate={shiftDate(new Date(), -90)}
-              endDate={new Date()}
-              values={heatmapValues}
-              classForValue={(value) => {
-                if (!value) return 'color-empty';
-                const intensity = Math.min(4, Math.floor(value.count * 5));
-                return `color-scale-${intensity}`;
-              }}
-              tooltipDataAttrs={(value) => ({
-                'data-tip': value.date
-                  ? `${value.date.toISOString().slice(0, 10)}: ${Math.round(value.count * 100)}%`
-                  : 'Nincs adat'
-              })}
-            />
-          </div>
         </div>
 
         <div className="statistics-section">
@@ -280,6 +267,47 @@ function Profile() {
                 <div className="chart-wrapper">
                   <Doughnut data={doughnutData} options={chartOptions} />
                 </div>
+                <div className="activity-calendar">
+                  <h3>Tevékenység naptár</h3>
+
+                  <div className="calendar-wrapper">
+                    <CalendarHeatmap
+                      startDate={new Date(`${selectedYear}-01-01`)}
+                      endDate={new Date(`${selectedYear}-12-31`)}
+                      values={heatmapValues}
+                      classForValue={(value) => {
+                        if (!value || !value.count) return 'color-empty';
+                        const count = Math.floor(value.count * 100);
+                        return count > 20 ? 'color-scale-4' :
+                          count > 15 ? 'color-scale-3' :
+                            count > 10 ? 'color-scale-2' :
+                              count > 5 ? 'color-scale-1' : 'color-scale-0';
+                      }}
+                      tooltipDataAttrs={value => ({
+                        'data-tip': value.date ?
+                          `${value.date.toISOString().slice(0, 10)}: ${Math.round(value.count * 100)}%` : ''
+                      })}
+                      showWeekdayLabels={true}
+                      weekdayLabels={['', 'H', '', 'Sze', '', 'P', '']}
+                      monthLabels={['Jan', 'Feb', 'Már', 'Ápr', 'Máj', 'Jún', 'Júl', 'Aug', 'Szep', 'Okt', 'Nov', 'Dec']}
+                      horizontal={true}
+                      gutterSize={2}
+                    />
+                    <ReactTooltip />
+                  </div>
+
+                  <div className="year-selector">
+                    {years.map(year => (
+                      <button
+                        key={year}
+                        onClick={() => setSelectedYear(year)}
+                        className={selectedYear === year ? 'active' : ''}
+                      >
+                        {year}
+                      </button>
+                    ))}
+                  </div>
+                </div>
               </div>
             </>
           ) : (
@@ -290,7 +318,7 @@ function Profile() {
           )}
         </div>
       </div>
-
+      
       {isModalOpen && (
         <div className="avatar-modal">
           <div className="modal-content">
