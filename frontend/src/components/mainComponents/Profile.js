@@ -17,7 +17,8 @@ import ReactTooltip from 'react-tooltip';
 import 'react-calendar-heatmap/dist/styles.css';
 import axios from 'axios';
 import UserContext from '../../UserContext';
-import '../../styles/Profile.css'; // Itt legyenek a szükséges CSS stílusok
+import '../../styles/Profile.css';
+import '../../styles/Carousel.css';
 
 ChartJS.register(
   CategoryScale,
@@ -52,9 +53,12 @@ function Profile() {
   const [error, setError] = useState(null);
   const [avatar, setAvatar] = useState(avatarOptions[0]);
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [currentChartIndex, setCurrentChartIndex] = useState(0);
+  const [timeView, setTimeView] = useState('daily');
 
-  const [selectedYear, setSelectedYear] = useState(new Date().getFullYear());
-  const years = Array.from({length: 4}, (_, i) => selectedYear - i).reverse();
+  const [currentYear] = useState(new Date().getFullYear());
+  const [selectedYear, setSelectedYear] = useState(currentYear);
+  const years = Array.from({ length: 4 }, (_, i) => currentYear - i).reverse();
 
   useEffect(() => {
     if (user?.avatar) {
@@ -95,6 +99,58 @@ function Profile() {
     return <div className="not-logged-in">Kérjük, jelentkezz be a profilod megtekintéséhez.</div>;
   }
 
+  const aggregateDataByTimeView = () => {
+    const groupedData = {};
+
+    quizResults.forEach(result => {
+      const date = new Date(result.createdAt);
+      let key;
+
+      switch (timeView) {
+        case 'weekly':
+          key = `Week ${Math.ceil(date.getDate() / 7)}, ${date.getFullYear()}`;
+          break;
+        case 'monthly':
+          key = `${date.toLocaleString('hu-HU', { month: 'long' })} ${date.getFullYear()}`;
+          break;
+        case '6months':
+          key = `Félév ${Math.floor(date.getMonth() / 6 + 1)}, ${date.getFullYear()}`;
+          break;
+        case 'yearly':
+          key = date.getFullYear().toString();
+          break;
+        case 'all':
+          key = 'Összes';
+          break;
+        default:
+          key = date.toLocaleDateString('hu-HU');
+      }
+
+      if (!groupedData[key]) {
+        groupedData[key] = {
+          totalCorrect: 0,
+          totalQuestions: 0
+        };
+      }
+
+      groupedData[key].totalCorrect += result.correctAnswers;
+      groupedData[key].totalQuestions += result.totalQuestions;
+    });
+
+    return Object.keys(groupedData).map(key => ({
+      label: key,
+      percentage: (groupedData[key].totalCorrect / groupedData[key].totalQuestions * 100).toFixed(1)
+    }));
+  };
+
+  const goPrev = () => {
+    setCurrentChartIndex(prev => Math.max(prev - 1, 0));
+  };
+
+  const goNext = () => {
+    setCurrentChartIndex(prev => Math.min(prev + 1, 2));
+  };
+
   const selectAvatar = async (selectedAvatar) => {
     try {
       const response = await axios.put(
@@ -116,17 +172,11 @@ function Profile() {
   };
 
   const chartData = {
-    labels: quizResults.map(result =>
-      new Date(result.createdAt).toLocaleDateString('hu-HU', {
-        year: 'numeric',
-        month: '2-digit',
-        day: '2-digit'
-      })
-    ),
+    labels: aggregateDataByTimeView().map(item => item.label),
     datasets: [
       {
-        label: 'Helyes válaszok száma',
-        data: quizResults.map(result => result.correctAnswers),
+        label: 'Helyes válaszok aránya (%)',
+        data: aggregateDataByTimeView().map(item => item.percentage),
         backgroundColor: 'rgba(75, 192, 192, 0.6)',
       },
     ],
@@ -186,22 +236,45 @@ function Profile() {
     },
     scales: {
       y: {
-        beginAtZero: true
+        beginAtZero: true,
+        ticks: {
+          callback: function(value) {
+            return value + '%';
+          }
+        }
       }
     }
   };
-  function shiftDate(date, numDays) {
-    const newDate = new Date(date);
-    newDate.setDate(newDate.getDate() + numDays);
-    return newDate;
-  }
+  
+  const modifiedChartOptions = {
+    ...chartOptions,
+    scales: {
+      ...chartOptions.scales,
+      x: {
+        reverse: true,
+        ticks: {
+          autoSkip: true,
+          maxRotation: 45,
+          minRotation: 45
+        }
+      },
+      y: {
+        ...chartOptions.scales.y,
+        ticks: {
+          callback: function(value) {
+            return value + '%';
+          }
+        }
+      }
+    }
+  };
 
   const heatmapValues = quizResults
-  .filter(result => new Date(result.createdAt).getFullYear() === selectedYear)
-  .map(result => ({
-    date: new Date(result.createdAt),
-    count: result.correctAnswers / result.totalQuestions,
-  }));
+    .filter(result => new Date(result.createdAt).getFullYear() === selectedYear)
+    .map(result => ({
+      date: new Date(result.createdAt),
+      count: result.correctAnswers / result.totalQuestions,
+    }));
 
   const openModal = () => setIsModalOpen(true);
   const closeModal = () => setIsModalOpen(false);
@@ -236,8 +309,7 @@ function Profile() {
 
           {quizResults.length > 0 && (
             <div className="quiz-results-summary">
-              <h3>Legutóbbi eredmények</h3>
-              <ul className="results-list">
+              <h3 style={{ marginBottom: '5px' }}>Legutóbbi eredmények</h3>              <ul className="results-list">
                 {quizResults.slice(0, 5).map((result) => (
                   <li key={result._id} className="result-item">
                     <span className="result-date">
@@ -258,19 +330,68 @@ function Profile() {
             <>
               <div className="chart-container">
                 <h3>Teljesítmény statisztikák</h3>
-                <div className="chart-wrapper">
-                  <Bar data={chartData} options={chartOptions} />
+                <div className="charts-carousel">
+                  <button
+                    className="carousel-arrow left"
+                    onClick={goPrev}
+                    disabled={currentChartIndex === 0}
+                  >
+                    <svg viewBox="0 0 24 24" fill="none">
+                      <path d="M15 18L9 12L15 6" strokeLinecap="round" strokeLinejoin="round" />
+                    </svg>
+                  </button>
+
+                  <div className="charts-container">
+                    <div className="charts-slider" style={{ transform: `translateX(-${currentChartIndex * 100}%)` }}>
+                      <div className="chart-wrapper">
+                        <Bar data={chartData} options={modifiedChartOptions} />
+                        <select
+                            className="view-selector"
+                            value={timeView}
+                            onChange={(e) => setTimeView(e.target.value)}
+                          >
+                            <option value="daily">Napi nézet</option>
+                            <option value="weekly">Heti nézet</option>
+                            <option value="monthly">Havi nézet</option>
+                            <option value="6months">Féléves nézet</option>
+                            <option value="yearly">Éves nézet</option>
+                            <option value="all">Teljes időszak</option>
+                          </select>
+                      </div>
+                      <div className="chart-wrapper">
+                        <Line data={lineChartData} options={chartOptions} />
+                      </div>
+                      <div className="chart-wrapper">
+                        <Doughnut data={doughnutData} options={chartOptions} />
+                      </div>
+                    </div>
+                  </div>
+
+                  <button
+                    className="carousel-arrow right"
+                    onClick={goNext}
+                    disabled={currentChartIndex === 2}
+                  >
+                    <svg viewBox="0 0 24 24" fill="none">
+                      <path d="M9 18L15 12L9 6" strokeLinecap="round" strokeLinejoin="round" />
+                    </svg>
+                  </button>
+
+                  <div className="carousel-indicators">
+                    {[0, 1, 2].map((index) => (
+                      <div
+                        key={index}
+                        className={`carousel-indicator ${currentChartIndex === index ? 'active' : ''}`}
+                        onClick={() => setCurrentChartIndex(index)}
+                      />
+                    ))}
+                  </div>
                 </div>
-                <div className="chart-wrapper">
-                  <Line data={lineChartData} options={chartOptions} />
-                </div>
-                <div className="chart-wrapper">
-                  <Doughnut data={doughnutData} options={chartOptions} />
-                </div>
+
                 <div className="activity-calendar">
                   <h3>Tevékenység naptár</h3>
 
-                  <div className="calendar-wrapper">
+                  <div className="calendar-fullwidth">
                     <CalendarHeatmap
                       startDate={new Date(`${selectedYear}-01-01`)}
                       endDate={new Date(`${selectedYear}-12-31`)}
@@ -318,7 +439,7 @@ function Profile() {
           )}
         </div>
       </div>
-      
+
       {isModalOpen && (
         <div className="avatar-modal">
           <div className="modal-content">
