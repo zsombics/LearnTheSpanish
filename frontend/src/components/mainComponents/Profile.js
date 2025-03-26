@@ -1,5 +1,6 @@
 import React, { useContext, useState, useEffect } from 'react';
 import { Bar, Line, Doughnut } from 'react-chartjs-2';
+import ChartDataLabels from 'chartjs-plugin-datalabels';
 import {
   Chart as ChartJS,
   CategoryScale,
@@ -29,7 +30,8 @@ ChartJS.register(
   ArcElement,
   Title,
   Tooltip,
-  Legend
+  Legend,
+  ChartDataLabels
 );
 
 const avatarOptions = [
@@ -55,10 +57,7 @@ function Profile() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [currentChartIndex, setCurrentChartIndex] = useState(0);
   const [timeView, setTimeView] = useState('daily');
-
-  const [currentYear] = useState(new Date().getFullYear());
-  const [selectedYear, setSelectedYear] = useState(currentYear);
-  const years = Array.from({ length: 4 }, (_, i) => currentYear - i).reverse();
+  const [selectedYear, setSelectedYear] = useState(new Date().getFullYear());
 
   useEffect(() => {
     if (user?.avatar) {
@@ -127,10 +126,7 @@ function Profile() {
       }
 
       if (!groupedData[key]) {
-        groupedData[key] = {
-          totalCorrect: 0,
-          totalQuestions: 0
-        };
+        groupedData[key] = { totalCorrect: 0, totalQuestions: 0 };
       }
 
       groupedData[key].totalCorrect += result.correctAnswers;
@@ -171,6 +167,30 @@ function Profile() {
     }
   };
 
+  const totalQuizzes = quizResults.length;
+  const totalQuestions = quizResults.reduce((sum, result) => sum + result.totalQuestions, 0);
+  const totalCorrect = quizResults.reduce((sum, result) => sum + result.correctAnswers, 0);
+  const overallPercentage = totalQuestions > 0
+    ? ((totalCorrect / totalQuestions) * 100).toFixed(1)
+    : 0;
+
+  const calculateCumulativeData = () => {
+    let cumulativeCorrect = 0;
+    let cumulativeTotal = 0;
+    const sortedResults = [...quizResults].sort((a, b) =>
+      new Date(a.createdAt) - new Date(b.createdAt)
+    );
+
+    return sortedResults.map(result => {
+      cumulativeCorrect += result.correctAnswers;
+      cumulativeTotal += result.totalQuestions;
+      return {
+        date: new Date(result.createdAt),
+        percentage: ((cumulativeCorrect / cumulativeTotal) * 100).toFixed(1)
+      };
+    });
+  };
+
   const chartData = {
     labels: aggregateDataByTimeView().map(item => item.label),
     datasets: [
@@ -182,9 +202,9 @@ function Profile() {
     ],
   };
 
-  const lineChartData = {
-    labels: quizResults.map(result =>
-      new Date(result.createdAt).toLocaleDateString('hu-HU', {
+  const cumulativeLineChartData = {
+    labels: calculateCumulativeData().map(item =>
+      item.date.toLocaleDateString('hu-HU', {
         year: 'numeric',
         month: '2-digit',
         day: '2-digit'
@@ -192,14 +212,15 @@ function Profile() {
     ),
     datasets: [
       {
-        label: 'Helyes válaszok aránya (%)',
-        data: quizResults.map(result => ((result.correctAnswers / result.totalQuestions) * 100).toFixed(1)),
+        label: 'Összesített pontosság (%)',
+        data: calculateCumulativeData().map(item => item.percentage),
         borderColor: 'rgba(75, 192, 192, 1)',
         fill: false,
         tension: 0.1
       },
     ],
   };
+
 
   const doughnutData = {
     labels: ['Helyes válaszok', 'Helytelen válaszok'],
@@ -210,10 +231,79 @@ function Profile() {
           quizResults.reduce((sum, result) => sum + (result.totalQuestions - result.correctAnswers), 0),
         ],
         backgroundColor: ['rgba(75, 192, 192, 0.6)', 'rgba(255, 99, 132, 0.6)'],
-        hoverOffset: 4
+        hoverOffset: 4,
       },
     ],
   };
+
+  const doughnutOptions = {
+    responsive: true,
+    plugins: {
+      legend: {
+        display: true,
+        position: 'top',
+        labels: {
+          font: {
+            size: 14,
+          },
+        },
+      },
+      tooltip: {
+        callbacks: {
+          label: function (tooltipItem) {
+            const total = tooltipItem.dataset.data.reduce((acc, val) => acc + val, 0);
+            const currentValue = tooltipItem.raw;
+            const percentage = ((currentValue / total) * 100).toFixed(1);
+            return `${tooltipItem.label}: ${percentage}%`;
+          },
+        },
+      },
+      datalabels: {
+        color: '#fff',
+        font: {
+          weight: 'bold',
+        },
+        formatter: function (value, context) {
+          const total = context.dataset.data.reduce((acc, val) => acc + val, 0);
+          const percentage = ((value / total) * 100).toFixed(1);
+          return `${percentage}%`;
+        },
+      },
+      doughnutCenterText: {
+        content: function (tooltipItem) {
+          return `Elvégzett tesztek: ${quizResults.length}`;
+        },
+        font: {
+          size: 13,
+          weight: 'bold',
+        },
+      },
+    },
+    elements: {
+      arc: {
+        borderWidth: 0,
+      },
+    },
+  };
+
+  const CenterTextPlugin = {
+    id: 'doughnutCenterText',
+    afterDraw: (chart) => {
+      const { ctx, chartArea: { top, right, left, bottom, width, height } } = chart;
+      ctx.save();
+      const x = (left + right) / 2;
+      const y = (top + bottom) / 2;
+      const fontSize = doughnutOptions.plugins.doughnutCenterText.font.size;
+      const fontStyle = doughnutOptions.plugins.doughnutCenterText.font.weight;
+      ctx.font = `${fontStyle} ${fontSize}px sans-serif`;
+      ctx.textAlign = 'center';
+      ctx.textBaseline = 'middle';
+      const text = doughnutOptions.plugins.doughnutCenterText.content(chart);
+      ctx.fillText(text, x, y);
+      ctx.restore();
+    },
+  };
+
 
   const chartOptions = {
     responsive: true,
@@ -238,14 +328,14 @@ function Profile() {
       y: {
         beginAtZero: true,
         ticks: {
-          callback: function(value) {
+          callback: function (value) {
             return value + '%';
           }
         }
       }
     }
   };
-  
+
   const modifiedChartOptions = {
     ...chartOptions,
     scales: {
@@ -261,7 +351,30 @@ function Profile() {
       y: {
         ...chartOptions.scales.y,
         ticks: {
-          callback: function(value) {
+          callback: function (value) {
+            return value + '%';
+          }
+        }
+      }
+    }
+  };
+
+  const lineChartOptions = {
+    ...chartOptions,
+    scales: {
+      ...chartOptions.scales,
+      x: {
+        reverse: false,
+        ticks: {
+          autoSkip: true,
+          maxRotation: 45,
+          minRotation: 45
+        }
+      },
+      y: {
+        ...chartOptions.scales.y,
+        ticks: {
+          callback: function (value) {
             return value + '%';
           }
         }
@@ -307,9 +420,26 @@ function Profile() {
             <p className="user-email">{user.email}</p>
           </div>
 
+          <div className="all-time-stats">
+            <h3>Összesített statisztika</h3>
+            <div className="stat-item">
+              <span className="stat-label">Teljes pontosság:</span>
+              <span className="stat-value">{overallPercentage}%</span>
+            </div>
+            <div className="stat-item">
+              <span className="stat-label">Kitöltött kvízek:</span>
+              <span className="stat-value">{totalQuizzes}</span>
+            </div>
+            <div className="stat-item">
+              <span className="stat-label">Megválaszolt kérdések:</span>
+              <span className="stat-value">{totalCorrect}/{totalQuestions}</span>
+            </div>
+          </div>
+
           {quizResults.length > 0 && (
             <div className="quiz-results-summary">
-              <h3 style={{ marginBottom: '5px' }}>Legutóbbi eredmények</h3>              <ul className="results-list">
+              <h3 style={{ marginBottom: '5px' }}>Legutóbbi eredmények</h3>
+              <ul className="results-list">
                 {quizResults.slice(0, 5).map((result) => (
                   <li key={result._id} className="result-item">
                     <span className="result-date">
@@ -346,23 +476,23 @@ function Profile() {
                       <div className="chart-wrapper">
                         <Bar data={chartData} options={modifiedChartOptions} />
                         <select
-                            className="view-selector"
-                            value={timeView}
-                            onChange={(e) => setTimeView(e.target.value)}
-                          >
-                            <option value="daily">Napi nézet</option>
-                            <option value="weekly">Heti nézet</option>
-                            <option value="monthly">Havi nézet</option>
-                            <option value="6months">Féléves nézet</option>
-                            <option value="yearly">Éves nézet</option>
-                            <option value="all">Teljes időszak</option>
-                          </select>
+                          className="view-selector"
+                          value={timeView}
+                          onChange={(e) => setTimeView(e.target.value)}
+                        >
+                          <option value="daily">Napi nézet</option>
+                          <option value="weekly">Heti nézet</option>
+                          <option value="monthly">Havi nézet</option>
+                          <option value="6months">Féléves nézet</option>
+                          <option value="yearly">Éves nézet</option>
+                          <option value="all">Teljes időszak</option>
+                        </select>
                       </div>
                       <div className="chart-wrapper">
-                        <Line data={lineChartData} options={chartOptions} />
+                        <Line data={cumulativeLineChartData} options={lineChartOptions} />
                       </div>
                       <div className="chart-wrapper">
-                        <Doughnut data={doughnutData} options={chartOptions} />
+                        <Doughnut data={doughnutData} options={doughnutOptions} plugins={[CenterTextPlugin]} />
                       </div>
                     </div>
                   </div>
@@ -418,7 +548,7 @@ function Profile() {
                   </div>
 
                   <div className="year-selector">
-                    {years.map(year => (
+                    {Array.from({ length: 4 }, (_, i) => new Date().getFullYear() - i).reverse().map(year => (
                       <button
                         key={year}
                         onClick={() => setSelectedYear(year)}
