@@ -10,6 +10,7 @@ import Profile from './components/mainComponents/Profile';
 import Quiz from './components/mainComponents/Quiz';
 import UserContext from './UserContext';
 import Navbar from './components/mainComponents/Navbar';
+import ResetPassword from './components/mainComponents/ResetPassword';
 
 function App() {
   const [user, setUser] = useState(null);
@@ -35,7 +36,8 @@ function App() {
             <Route path="/regisztracio" element={<Register />} />
             <Route path="/profil" element={<Profile />} />
             <Route path="/kviz" element={<Quiz/>} />
-            </Routes>
+            <Route path="/reset-password/:token" element={<ResetPassword />} />
+          </Routes>
       </div>
     </Router>
     </UserContext.Provider>

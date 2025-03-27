@@ -58,6 +58,17 @@ function Profile() {
   const [currentChartIndex, setCurrentChartIndex] = useState(0);
   const [timeView, setTimeView] = useState('daily');
   const [selectedYear, setSelectedYear] = useState(new Date().getFullYear());
+  const [notification, setNotification] = useState(null);
+  const [isPasswordModalOpen, setIsPasswordModalOpen] = useState(false);
+  const [passwordData, setPasswordData] = useState({
+    currentPassword: '',
+    newPassword: '',
+    confirmPassword: ''
+  });
+  const [passwordError, setPasswordError] = useState('');
+  const [isForgotPasswordModalOpen, setIsForgotPasswordModalOpen] = useState(false);
+  const [forgotPasswordEmail, setForgotPasswordEmail] = useState('');
+  const [forgotPasswordMessage, setForgotPasswordMessage] = useState('');
 
   useEffect(() => {
     if (user?.avatar) {
@@ -304,7 +315,6 @@ function Profile() {
     },
   };
 
-
   const chartOptions = {
     responsive: true,
     plugins: {
@@ -392,6 +402,57 @@ function Profile() {
   const openModal = () => setIsModalOpen(true);
   const closeModal = () => setIsModalOpen(false);
 
+  const handlePasswordChange = async (e) => {
+    e.preventDefault();
+    setPasswordError('');
+    
+    if (passwordData.newPassword !== passwordData.confirmPassword) {
+      setPasswordError('Az új jelszavak nem egyeznek!');
+      return;
+    }
+
+    try {
+      const response = await axios.post(
+        '/api/auth/change-password',
+        {
+          currentPassword: passwordData.currentPassword,
+          newPassword: passwordData.newPassword
+        },
+        { withCredentials: true }
+      );
+
+      if (response.data.success) {
+        setNotification('Jelszó sikeresen módosítva!');
+        setIsPasswordModalOpen(false);
+        setPasswordData({
+          currentPassword: '',
+          newPassword: '',
+          confirmPassword: ''
+        });
+      }
+    } catch (error) {
+      setPasswordError(error.response?.data?.message || 'Hiba történt a jelszó módosítása során.');
+    }
+  };
+
+  const handleForgotPassword = async (e) => {
+    e.preventDefault();
+    try {
+      const response = await axios.post('/api/auth/request-password-reset', {
+        email: forgotPasswordEmail
+      });
+
+      if (response.data.success) {
+        setForgotPasswordMessage('Email elküldve! Kérjük ellenőrizd a postaládád.');
+        setTimeout(() => {
+          setForgotPasswordMessage('');
+        }, 5000);
+      }
+    } catch (error) {
+      setForgotPasswordMessage('Hiba történt az email küldése során.');
+    }
+  };
+
   return (
     <div className="profile-container">
       <div className="profile-header">
@@ -451,6 +512,18 @@ function Profile() {
                   </li>
                 ))}
               </ul>
+            </div>
+          )}
+          <button
+            className="change-password-button"
+            onClick={() => setIsPasswordModalOpen(true)}
+          >
+            Jelszóváltoztatás
+          </button>
+
+          {notification && (
+            <div className="notification">
+              {notification}
             </div>
           )}
         </div>
@@ -592,6 +665,91 @@ function Profile() {
               ))}
             </div>
             <button className="close-button" onClick={closeModal}>Kilépés</button>
+          </div>
+        </div>
+      )}
+
+      {isPasswordModalOpen && (
+        <div className="avatar-modal">
+          <div className="modal-content">
+            <button className="modal-close" onClick={() => setIsPasswordModalOpen(false)}>×</button>
+            <div className="modal-header">
+              <h3>Jelszó módosítása</h3>
+            </div>
+            <form onSubmit={handlePasswordChange} className="password-form">
+              <div className="form-group">
+                <label htmlFor="currentPassword">Jelenlegi jelszó:</label>
+                <input
+                  type="password"
+                  id="currentPassword"
+                  value={passwordData.currentPassword}
+                  onChange={(e) => setPasswordData({...passwordData, currentPassword: e.target.value})}
+                  required
+                />
+              </div>
+              <div className="form-group">
+                <label htmlFor="newPassword">Új jelszó:</label>
+                <input
+                  type="password"
+                  id="newPassword"
+                  value={passwordData.newPassword}
+                  onChange={(e) => setPasswordData({...passwordData, newPassword: e.target.value})}
+                  required
+                />
+              </div>
+              <div className="form-group">
+                <label htmlFor="confirmPassword">Új jelszó megerősítése:</label>
+                <input
+                  type="password"
+                  id="confirmPassword"
+                  value={passwordData.confirmPassword}
+                  onChange={(e) => setPasswordData({...passwordData, confirmPassword: e.target.value})}
+                  required
+                />
+              </div>
+              {passwordError && <div className="error-message">{passwordError}</div>}
+              <div className="button-container">
+                <button type="submit" className="submit-button">Módosítás</button>
+              </div>
+              <span className="forgot-password-text">
+                Elfelejtetted a jelszavad? <span className="forgot-password-link" onClick={() => {
+                  setIsPasswordModalOpen(false);
+                  setIsForgotPasswordModalOpen(true);
+                }}>Kattints ide</span>
+              </span>
+            </form>
+          </div>
+        </div>
+      )}
+
+      {isForgotPasswordModalOpen && (
+        <div className="avatar-modal">
+          <div className="modal-content">
+            <button className="modal-close" onClick={() => setIsForgotPasswordModalOpen(false)}>×</button>
+            <div className="modal-header">
+              <h3>Elfelejtett jelszó</h3>
+            </div>
+            <p>Add meg az email címed, és küldünk egy linket a jelszó visszaállításához.</p>
+            <form onSubmit={handleForgotPassword} className="password-form">
+              <div className="form-group">
+                <label htmlFor="forgotPasswordEmail">Email cím:</label>
+                <input
+                  type="email"
+                  id="forgotPasswordEmail"
+                  value={forgotPasswordEmail}
+                  onChange={(e) => setForgotPasswordEmail(e.target.value)}
+                  required
+                />
+              </div>
+              {forgotPasswordMessage && (
+                <p className={`message ${forgotPasswordMessage.includes('Hiba') ? 'error' : 'success'}`}>
+                  {forgotPasswordMessage}
+                </p>
+              )}
+              <div className="button-container">
+                <button type="submit" className="submit-button">Küldés</button>
+              </div>
+            </form>
           </div>
         </div>
       )}

@@ -4,6 +4,8 @@ const connectDB = require('./config/db');
 const cors = require('cors');
 const cookieParser = require('cookie-parser');
 const path = require('path');
+const nodemailer = require('nodemailer');
+const crypto = require('crypto');
 
 const app = express();
 
@@ -13,12 +15,25 @@ app.use(express.json());
 app.use(cookieParser());
 app.use(cors({ origin: true, credentials: true }));
 
+// Email küldő konfiguráció
+const transporter = nodemailer.createTransport({
+  service: 'Gmail',
+  auth: {
+    user: process.env.EMAIL_USER,
+    pass: process.env.EMAIL_PASS
+  }
+});
+
+// Jelszó visszaállítási oldal
+app.get('/reset-password/:token', (req, res) => {
+  res.sendFile(path.join(__dirname, '../frontend/build/index.html'));
+});
+
 app.use('/api/auth', require('./routes/auth'));
 app.use('/api/words', require('./routes/words'));
 app.use('/api/quiz', require('./routes/quiz'));
 app.use('/api/eredmenyek', require('./routes/eredmenyek'));
 app.use('/api/user', require('./routes/user'));
-
 
 app.post('/api/translate', async (req, res) => {
   const { text } = req.body;

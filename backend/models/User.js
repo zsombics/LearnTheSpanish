@@ -15,7 +15,9 @@ const UserSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  avatar: { type: String, default: '' },
+  avatar: { type: String, default: null },
+  resetPasswordToken: String,
+  resetPasswordExpire: Date,
   // Egyéb felhasználói adatok (pl. eredmények)
   results: [{
     score: Number,
@@ -28,6 +30,8 @@ const UserSchema = new mongoose.Schema({
     type: Date,
     default: Date.now,
   },
+}, {
+  timestamps: true
 });
 
 module.exports = mongoose.model('User', UserSchema);
