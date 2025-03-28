@@ -49,12 +49,20 @@ const avatarOptions = [
   'https://api.dicebear.com/7.x/avataaars/svg?seed=Stella'
 ];
 
-function Profile() {
-  const { user, setUser, isLoading } = useContext(UserContext);
-  const [quizResults, setQuizResults] = useState([]);
+const Profile = () => {
+  const [user, setUser] = useState(null);
+  const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const [leaderboardData, setLeaderboardData] = useState([]);
+  const [showLeaderboard, setShowLeaderboard] = useState(false);
+  const [leaderboardLoading, setLeaderboardLoading] = useState(false);
+  const [leaderboardError, setLeaderboardError] = useState(null);
+  const [quizResults, setQuizResults] = useState([]);
   const [avatar, setAvatar] = useState(avatarOptions[0]);
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isRanksModalOpen, setIsRanksModalOpen] = useState(false);
+  const [isLeaderboardModalOpen, setIsLeaderboardModalOpen] = useState(false);
+  const [leaderboardType, setLeaderboardType] = useState('accuracy');
   const [currentChartIndex, setCurrentChartIndex] = useState(0);
   const [timeView, setTimeView] = useState('daily');
   const [selectedYear, setSelectedYear] = useState(new Date().getFullYear());
@@ -69,6 +77,24 @@ function Profile() {
   const [isForgotPasswordModalOpen, setIsForgotPasswordModalOpen] = useState(false);
   const [forgotPasswordEmail, setForgotPasswordEmail] = useState('');
   const [forgotPasswordMessage, setForgotPasswordMessage] = useState('');
+
+  useEffect(() => {
+    const fetchUserData = async () => {
+      try {
+        const response = await axios.get('/api/auth/profile', { withCredentials: true });
+        if (response.data.user) {
+          setUser(response.data.user);
+          setLoading(false);
+        }
+      } catch (err) {
+        console.error('Hiba a felhasználói adatok betöltésekor:', err);
+        setError('Hiba történt a profil betöltése során');
+        setLoading(false);
+      }
+    };
+
+    fetchUserData();
+  }, []);
 
   useEffect(() => {
     if (user?.avatar) {
@@ -101,7 +127,22 @@ function Profile() {
     }
   }, [user]);
 
-  if (isLoading) {
+  useEffect(() => {
+    const fetchLeaderboard = async () => {
+      try {
+        const response = await axios.get('/api/auth/leaderboard');
+        setLeaderboardData(response.data);
+      } catch (err) {
+        console.error('Hiba a ranglista lekérdezésénél:', err);
+      }
+    };
+
+    if (user) {
+      fetchLeaderboard();
+    }
+  }, [user]);
+
+  if (loading) {
     return <div className="loading">Betöltés...</div>;
   }
 
@@ -453,6 +494,50 @@ function Profile() {
     }
   };
 
+  const getPerformanceLevelSymbol = (level) => {
+    const symbols = {
+      'Bronz': '🥉',
+      'Ezüst': '🥈',
+      'Arany': '🥇',
+      'Platina': '🔷',
+      'Gyémánt': '💎'
+    };
+    return symbols[level] || '🥉';
+  };
+
+  const getUserRank = (type) => {
+    if (!user || !leaderboardData.length) return null;
+    
+    const sortedData = [...leaderboardData].sort((a, b) => {
+      if (type === 'accuracy') {
+        return b.totalAccuracy - a.totalAccuracy;
+      } else {
+        return b.totalQuizzes - a.totalQuizzes;
+      }
+    });
+
+    const userIndex = sortedData.findIndex(u => u._id === user._id);
+    return userIndex + 1;
+  };
+
+  const ranksData = {
+    performanceLevels: [
+      { level: 'Bronz', symbol: '🥉', range: '0% - 20%' },
+      { level: 'Ezüst', symbol: '🥈', range: '21% - 40%' },
+      { level: 'Arany', symbol: '🥇', range: '41% - 60%' },
+      { level: 'Platina', symbol: '🔷', range: '61% - 80%' },
+      { level: 'Gyémánt', symbol: '💎', range: '81% - 100%' }
+    ],
+    accountLevels: [
+      { level: 1, name: 'Kezdő', range: '0 - 50' },
+      { level: 2, name: 'Gyakorló', range: '51 - 100' },
+      { level: 3, name: 'Középfokú', range: '101 - 500' },
+      { level: 4, name: 'Haladó', range: '501 - 1000' },
+      { level: 5, name: 'Mester', range: '1001 - 5000' },
+      { level: 6, name: 'Legenda', range: '5000+' }
+    ]
+  };
+
   return (
     <div className="profile-container">
       <div className="profile-header">
@@ -479,21 +564,36 @@ function Profile() {
           <div className="user-info">
             <h2 className="user-name">{user.name}</h2>
             <p className="user-email">{user.email}</p>
+            <div className="user-levels">
+              <div 
+                className="level-badge performance" 
+                data-level={user.performanceLevel}
+                onClick={() => setIsRanksModalOpen(true)}
+              >
+                <span className="level-symbol">{getPerformanceLevelSymbol(user.performanceLevel)}</span>
+              </div>
+              <div 
+                className="level-badge account" 
+                onClick={() => setIsRanksModalOpen(true)}
+              >
+                <span className="level-name">{user.accountLevelName}</span>
+              </div>
+            </div>
           </div>
 
           <div className="all-time-stats">
             <h3>Összesített statisztika</h3>
             <div className="stat-item">
               <span className="stat-label">Teljes pontosság:</span>
-              <span className="stat-value">{overallPercentage}%</span>
+              <span className="stat-value" style={{fontSize: "1em"}}>{overallPercentage}%</span>
             </div>
             <div className="stat-item">
               <span className="stat-label">Kitöltött kvízek:</span>
-              <span className="stat-value">{totalQuizzes}</span>
+              <span className="stat-value" style={{fontSize: "1em"}}>{totalQuizzes}</span>
             </div>
             <div className="stat-item">
               <span className="stat-label">Megválaszolt kérdések:</span>
-              <span className="stat-value">{totalCorrect}/{totalQuestions}</span>
+              <span className="stat-value" style={{fontSize: "1em"}}>{totalCorrect}/{totalQuestions}</span>
             </div>
           </div>
 
@@ -528,7 +628,7 @@ function Profile() {
           )}
         </div>
 
-        <div className="statistics-section">
+        <div className="profile-main">
           {quizResults.length > 0 ? (
             <>
               <div className="chart-container">
@@ -630,6 +730,27 @@ function Profile() {
                         {year}
                       </button>
                     ))}
+                  </div>
+                </div>
+              </div>
+
+              <div className="stats-boxes">
+                <div className="stat-box" onClick={() => setIsLeaderboardModalOpen(true)}>
+                  <div className="stat-box-content">
+                    <h3>Teljes pontosság</h3>
+                    <div className="stat-value">{user.totalAccuracy.toFixed(1)}%</div>
+                    <div className="stat-rank">
+                      {getUserRank('accuracy')}. hely a ranglistán
+                    </div>
+                  </div>
+                </div>
+                <div className="stat-box" onClick={() => setIsLeaderboardModalOpen(true)}>
+                  <div className="stat-box-content">
+                    <h3>Kitöltött kvízek</h3>
+                    <div className="stat-value">{user.totalQuizzes}</div>
+                    <div className="stat-rank">
+                      {getUserRank('quizzes')}. hely a ranglistán
+                    </div>
                   </div>
                 </div>
               </div>
@@ -753,8 +874,125 @@ function Profile() {
           </div>
         </div>
       )}
+
+      {isRanksModalOpen && (
+        <div className="ranks-modal">
+          <div className="modal-content">
+            <button className="modal-close" onClick={() => setIsRanksModalOpen(false)}>×</button>
+            <div className="modal-header">
+              <h3>Rangok és feltételek</h3>
+            </div>
+            <div className="ranks-tables">
+              <div className="ranks-section">
+                <h4>Teljesítmény Szintek</h4>
+                <table className="ranks-table">
+                  <thead>
+                    <tr>
+                      <th>Szint</th>
+                      <th>Szimbólum</th>
+                      <th>Százalék</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {ranksData.performanceLevels.map((level) => (
+                      <tr key={level.level}>
+                        <td>{level.level}</td>
+                        <td>{level.symbol}</td>
+                        <td>{level.range}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+              <div className="ranks-section">
+                <h4>Account Szintek</h4>
+                <table className="ranks-table">
+                  <thead>
+                    <tr>
+                      <th>Szint</th>
+                      <th>Megnevezés</th>
+                      <th>Kérdőívek</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {ranksData.accountLevels.map((level) => (
+                      <tr key={level.level}>
+                        <td>{level.level}</td>
+                        <td>{level.name}</td>
+                        <td>{level.range}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {isLeaderboardModalOpen && (
+        <div className="leaderboard-modal">
+          <div className="modal-content">
+            <button className="modal-close" onClick={() => setIsLeaderboardModalOpen(false)}>×</button>
+            <div className="modal-header">
+              <h3>Ranglista</h3>
+              <div className="leaderboard-type-selector">
+                <button 
+                  className={`type-button ${leaderboardType === 'accuracy' ? 'active' : ''}`}
+                  onClick={() => setLeaderboardType('accuracy')}
+                >
+                  Pontosság
+                </button>
+                <button 
+                  className={`type-button ${leaderboardType === 'quizzes' ? 'active' : ''}`}
+                  onClick={() => setLeaderboardType('quizzes')}
+                >
+                  Kitöltött tesztek
+                </button>
+              </div>
+            </div>
+            <div className="leaderboard-list">
+              {[...leaderboardData]
+                .sort((a, b) => {
+                  if (leaderboardType === 'accuracy') {
+                    return b.totalAccuracy - a.totalAccuracy;
+                  } else {
+                    return b.totalQuizzes - a.totalQuizzes;
+                  }
+                })
+                .map((userData, index) => (
+                  <div 
+                    key={userData._id} 
+                    className={`leaderboard-item ${userData._id === user._id ? 'current-user' : ''}`}
+                  >
+                    <span className="rank-number">{index + 1}.</span>
+                    <div className="user-info-container">
+                      <img 
+                        src={userData.avatar || `https://api.dicebear.com/7.x/avataaars/svg?seed=${userData.name}`} 
+                        alt={`${userData.name} avatárja`} 
+                        className="leaderboard-avatar"
+                        onError={(e) => {
+                          e.target.onerror = null;
+                          e.target.src = `https://api.dicebear.com/7.x/avataaars/svg?seed=${userData.name}`;
+                        }}
+                      />
+                      <span className="user-name">{userData.name}</span>
+                    </div>
+                    <span className="user-level">{getPerformanceLevelSymbol(userData.performanceLevel)}</span>
+                    <span className="user-accuracy">
+                      {leaderboardType === 'accuracy' 
+                        ? `${userData.totalAccuracy.toFixed(1)}%`
+                        : `${userData.totalQuizzes} db`
+                      }
+                    </span>
+                  </div>
+                ))}
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
-}
+};
 
 export default Profile;

@@ -173,4 +173,6 @@ router.post(
   }
 );
 
+router.get('/leaderboard', authMiddleware, authController.getLeaderboard);
+
 module.exports = router;

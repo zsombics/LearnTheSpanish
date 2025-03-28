@@ -1,6 +1,7 @@
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const User = require('../models/User');
+const QuizEredmenyek = require('../models/QuizEredmenyek');
 
 exports.register = async (req, res) => {
   const { name, email, password } = req.body;
@@ -75,12 +76,106 @@ exports.logout = (req, res) => {
   res.json({ msg: 'Sikeres kijelentkezés' });
 };
 
+exports.updateUserLevels = async (userId) => {
+  try {
+    const user = await User.findById(userId);
+    if (!user) return;
+
+    const allResults = await QuizEredmenyek.find({ user: userId });
+    
+    if (allResults.length > 0) {
+      const totalCorrect = allResults.reduce((sum, result) => sum + result.correctAnswers, 0);
+      const totalQuestions = allResults.reduce((sum, result) => sum + result.totalQuestions, 0);
+      const percentage = (totalCorrect / totalQuestions) * 100;
+
+      let performanceLevel = 'Bronz';
+      if (percentage >= 81) performanceLevel = 'Gyémánt';
+      else if (percentage >= 61) performanceLevel = 'Platina';
+      else if (percentage >= 41) performanceLevel = 'Arany';
+      else if (percentage >= 21) performanceLevel = 'Ezüst';
+
+      user.performanceLevel = performanceLevel;
+    }
+
+    const totalQuizzes = allResults.length;
+    
+    let accountLevel = 1;
+    let accountLevelName = 'Kezdő';
+    
+    if (totalQuizzes >= 5000) {
+      accountLevel = 6;
+      accountLevelName = 'Legenda';
+    } else if (totalQuizzes >= 1001) {
+      accountLevel = 5;
+      accountLevelName = 'Mester';
+    } else if (totalQuizzes >= 501) {
+      accountLevel = 4;
+      accountLevelName = 'Haladó';
+    } else if (totalQuizzes >= 101) {
+      accountLevel = 3;
+      accountLevelName = 'Középfokú';
+    } else if (totalQuizzes >= 51) {
+      accountLevel = 2;
+      accountLevelName = 'Gyakorló';
+    }
+
+    user.accountLevel = accountLevel;
+    user.accountLevelName = accountLevelName;
+
+    await user.save();
+  } catch (err) {
+    console.error('Hiba a rangok frissítésekor:', err);
+  }
+};
+
+exports.updateUserStats = async (userId) => {
+  try {
+    const user = await User.findById(userId);
+    if (!user) return;
+
+    const allResults = await QuizEredmenyek.find({ user: userId });
+    
+    if (allResults.length > 0) {
+      const totalCorrect = allResults.reduce((sum, result) => sum + result.correctAnswers, 0);
+      const totalQuestions = allResults.reduce((sum, result) => sum + result.totalQuestions, 0);
+      const totalAccuracy = (totalCorrect / totalQuestions) * 100;
+
+      user.totalAccuracy = totalAccuracy;
+      user.totalQuizzes = allResults.length;
+    }
+
+    await user.save();
+  } catch (err) {
+    console.error('Hiba a statisztikák frissítésekor:', err);
+  }
+};
+
+exports.getLeaderboard = async (req, res) => {
+  try {
+    const users = await User.find()
+      .select('name totalAccuracy totalQuizzes performanceLevel avatar')
+      .sort({ totalAccuracy: -1 });
+    res.json(users);
+  } catch (error) {
+    res.status(500).json({ message: 'Hiba a ranglista lekérdezésénél' });
+  }
+};
+
 exports.getUserProfile = async (req, res) => {
   try {
     const user = await User.findById(req.user.id).select('-password');
-    res.json(user);
-  } catch (err) {
-    console.error(err.message);
-    res.status(500).send('Szerver hiba');
+    if (!user) {
+      return res.status(404).json({ message: 'Felhasználó nem található' });
+    }
+
+    await exports.updateUserStats(req.user.id);
+    await exports.updateUserLevels(req.user.id);
+
+    const updatedUser = await User.findById(req.user.id).select('-password');
+    
+    res.json({ user: updatedUser });
+  } catch (error) {
+    console.error('Hiba a profil lekérdezésénél:', error);
+    res.status(500).json({ message: 'Szerver hiba történt' });
   }
 };

@@ -66,15 +66,25 @@ function Level1() {
     const handleOptionSelect = (option) => setSelectedOption(option);
 
     const handleNextQuestion = () => {
-        if (selectedOption === null) return alert("Kérlek, válassz egy lehetőséget!");
+        if (selectedOption === null) {
+            alert("Kérlek, válassz egy lehetőséget!");
+            return;
+        }
+
         setUserAnswers(prev => ({ ...prev, [currentQuestionIndex]: selectedOption }));
-        if (selectedOption === questions[currentQuestionIndex].correctAnswer) setScore(prev => prev + 1);
+        if (selectedOption === questions[currentQuestionIndex].correctAnswer) {
+            setScore(prev => prev + 1);
+        }
         setShowFeedback(true);
+
         setTimeout(() => {
             setShowFeedback(false);
             setSelectedOption(null);
-            if (currentQuestionIndex === questions.length - 1) finishTest();
-            else setCurrentQuestionIndex(prev => prev + 1);
+            if (currentQuestionIndex === questions.length - 1) {
+                finishTest();
+            } else {
+                setCurrentQuestionIndex(prev => prev + 1);
+            }
         }, 3000);
     };
 
@@ -82,13 +92,24 @@ function Level1() {
         const levelCalculated = score / questions.length >= 0.75 ? "Haladó"
             : score / questions.length >= 0.5 ? "Középhaladó"
                 : "Kezdő";
-        const payload = { answers: userAnswers, level: levelCalculated, totalQuestions: questions.length, correctAnswers: score, ratio: score / questions.length, quizCompleted: true };
+        const payload = {
+            answers: userAnswers,
+            level: levelCalculated,
+            totalQuestions: questions.length,
+            correctAnswers: score,
+            ratio: score / questions.length,
+            quizCompleted: true
+        };
+
         axios.post('/api/eredmenyek/submit', payload)
             .then(() => {
                 setResult({ score, total: questions.length, level: levelCalculated });
                 setTestFinished(true);
             })
-            .catch(err => console.error("Hiba a quiz mentésekor:", err));
+            .catch(err => {
+                console.error("Hiba a quiz mentésekor:", err);
+                alert("Hiba történt a quiz mentésekor!");
+            });
     };
 
     const restartTest = () => {
@@ -174,7 +195,9 @@ function Level1() {
                 )}
             </div>
             <div className="quiz-navigation">
-                {currentQuestionIndex < questions.length - 1 ? <button className="nav-btn" onClick={handleNextQuestion}>Következő</button> : <button className="nav-btn" onClick={handleNextQuestion}>Befejezés</button>}
+                <button className="nav-btn" onClick={handleNextQuestion}>
+                    {currentQuestionIndex === questions.length - 1 ? "Befejezés" : "Következő"}
+                </button>
             </div>
         </div>
     );

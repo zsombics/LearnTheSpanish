@@ -18,7 +18,29 @@ const UserSchema = new mongoose.Schema({
   avatar: { type: String, default: null },
   resetPasswordToken: String,
   resetPasswordExpire: Date,
-  // Egyéb felhasználói adatok (pl. eredmények)
+  performanceLevel: {
+    type: String,
+    enum: ['Bronz', 'Ezüst', 'Arany', 'Platina', 'Gyémánt'],
+    default: 'Bronz'
+  },
+  accountLevel: {
+    type: Number,
+    enum: [1, 2, 3, 4, 5, 6],
+    default: 1
+  },
+  accountLevelName: {
+    type: String,
+    enum: ['Kezdő', 'Gyakorló', 'Középfokú', 'Haladó', 'Mester', 'Legenda'],
+    default: 'Kezdő'
+  },
+  totalAccuracy: {
+    type: Number,
+    default: 0
+  },
+  totalQuizzes: {
+    type: Number,
+    default: 0
+  },
   results: [{
     score: Number,
     date: {

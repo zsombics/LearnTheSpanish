@@ -1,4 +1,3 @@
-// routes/user.js
 const express = require('express');
 const router = express.Router();
 const User = require('../models/User');
@@ -10,12 +9,10 @@ router.put('/avatar', authMiddleware, async (req, res) => {
     return res.status(400).json({ error: 'No avatar provided' });
   }
   try {
-    // Find the logged-in user using the id provided by the auth middleware
     const user = await User.findById(req.user.id);
     if (!user) {
       return res.status(404).json({ error: 'User not found' });
     }
-    // Update the avatar field
     user.avatar = avatar;
     await user.save();
     res.status(200).json({ message: 'Avatar updated successfully', user });
