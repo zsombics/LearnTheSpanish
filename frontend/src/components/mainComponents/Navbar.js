@@ -32,6 +32,9 @@ function Navbar() {
               <button> <Link to="/kviz">Kvíz</Link> </button>
             </li>
             <li>
+              <button><Link to="/community">Közösség</Link></button>
+            </li>
+            <li>
               <button onClick={handleLogout}><Link to="/">Kijelentkezés</Link></button>
             </li>
           </>

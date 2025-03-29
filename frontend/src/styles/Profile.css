@@ -800,14 +800,13 @@
   border-radius: 15px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
   width: 50%;
-  height: 50vh;
-  overflow-y: auto;
+  height: 70vh;
   position: relative;
 }
 
 .leaderboard-list {
   margin-top: 20px;
-  max-height: calc(50vh - 150px);
+  max-height: calc(70vh - 150px);
   overflow-y: auto;
 }
 

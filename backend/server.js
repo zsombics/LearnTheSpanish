@@ -11,9 +11,16 @@ const app = express();
 
 connectDB();
 
-app.use(express.json());
+app.use(cors({
+  origin: 'http://localhost:3000',
+  credentials: true
+}));
+
+// Nagy fájl méret kezelése
+app.use(express.json({ limit: '50mb' }));
+app.use(express.urlencoded({ limit: '50mb', extended: true }));
+
 app.use(cookieParser());
-app.use(cors({ origin: true, credentials: true }));
 
 // Email küldő konfiguráció
 const transporter = nodemailer.createTransport({
@@ -34,6 +41,7 @@ app.use('/api/words', require('./routes/words'));
 app.use('/api/quiz', require('./routes/quiz'));
 app.use('/api/eredmenyek', require('./routes/eredmenyek'));
 app.use('/api/user', require('./routes/user'));
+app.use('/api/posts', require('./routes/posts'));
 
 app.post('/api/translate', async (req, res) => {
   const { text } = req.body;

@@ -11,6 +11,7 @@ import Quiz from './components/mainComponents/Quiz';
 import UserContext from './UserContext';
 import Navbar from './components/mainComponents/Navbar';
 import ResetPassword from './components/mainComponents/ResetPassword';
+import Community from './components/mainComponents/Community';
 
 function App() {
   const [user, setUser] = useState(null);
@@ -37,6 +38,7 @@ function App() {
             <Route path="/profil" element={<Profile />} />
             <Route path="/kviz" element={<Quiz/>} />
             <Route path="/reset-password/:token" element={<ResetPassword />} />
+            <Route path="/community" element={<Community />} />
           </Routes>
       </div>
     </Router>
