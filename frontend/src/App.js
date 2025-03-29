@@ -12,6 +12,7 @@ import UserContext from './UserContext';
 import Navbar from './components/mainComponents/Navbar';
 import ResetPassword from './components/mainComponents/ResetPassword';
 import Community from './components/mainComponents/Community';
+import MapGame from './components/mainComponents/MapGame';
 
 function App() {
   const [user, setUser] = useState(null);
@@ -39,6 +40,7 @@ function App() {
             <Route path="/kviz" element={<Quiz/>} />
             <Route path="/reset-password/:token" element={<ResetPassword />} />
             <Route path="/community" element={<Community />} />
+            <Route path="/terkep" element={<MapGame />} />
           </Routes>
       </div>
     </Router>
