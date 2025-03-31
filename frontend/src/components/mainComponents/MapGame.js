@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import './MapGame.css';
+import '../../styles/MapGame.css';
 
 const cities = [
   { id: 1, name: 'Barcelona', x: 919, y: 274 },
