@@ -4,15 +4,15 @@ import '../../styles/MapGame.css';
 import IntroScreen from './IntroScreen';
 
 const cities = [
-    { id: 1, name: 'Barcelona', x: 919, y: 274 },
-    { id: 2, name: 'Valencia', x: 770, y: 452 },
-    { id: 3, name: 'Sevilla', x: 456, y: 612 },
-    { id: 4, name: 'Bilbao', x: 622, y: 144 },
-    { id: 5, name: 'Zaragoza', x: 741, y: 275 },
-    { id: 6, name: 'Málaga', x: 508, y: 668 },
-    { id: 7, name: 'Granada', x: 584, y: 638 },
-    { id: 8, name: 'Palma', x: 945, y: 444 },
-    { id: 9, name: 'Madrid', x: 594, y: 413 }
+    { id: 1, name: 'Barcelona', x: 906, y: 243 },
+    { id: 2, name: 'Valencia', x: 747, y: 421 },
+    { id: 3, name: 'Sevilla', x: 445, y: 578 },
+    { id: 4, name: 'Bilbao', x: 609, y: 113 },
+    { id: 5, name: 'Zaragoza', x: 728, y: 244 },
+    { id: 6, name: 'Málaga', x: 496, y: 635 },
+    { id: 7, name: 'Granada', x: 571, y: 607 },
+    { id: 8, name: 'Palma', x: 932, y: 413 },
+    { id: 9, name: 'Madrid', x: 581, y: 382 }
 ];
 
 const MapGame = () => {
@@ -33,23 +33,43 @@ const MapGame = () => {
             {showIntro ? (
                 <IntroScreen onStartGame={handleStartGame} />
             ) : (
-                <div className="map-container">
-                    <div className="spain-map" style={{ backgroundImage: 'url(/images/Spanyolorszag.png)' }}>
-                        {cities.map((city) => (
-                            <motion.div
-                                key={city.id}
-                                className={`city ${currentCity?.id === city.id ? 'active' : ''}`}
-                                initial={{ scale: 0 }}
-                                animate={{ scale: 1 }}
-                                style={{ left: `${city.x}px`, top: `${city.y}px` }}
-                                onClick={() => handleCityClick(city)}
-                            >
-                                <div className="city-name">{city.name}</div>
-                            </motion.div>
-                        ))}
+                <div className="map-section">
+                    <h1>Leo Kalandja Spanyolországban</h1>
+                    <div className="map-wrapper">
+                        <div className="map-container">
+                            <div className="spain-map" style={{ backgroundImage: 'url(/images/Spanyolorszag.png)' }}>
+                                {cities.map((city) => (
+                                    <motion.div
+                                        key={city.id}
+                                        className="city"
+                                        initial={{ scale: 0, opacity: 0 }}
+                                        animate={{ scale: 1, opacity: 1 }}
+                                        transition={{ delay: 0.5, duration: 0.3 }}
+                                        style={{ left: `${city.x}px`, top: `${city.y}px` }}
+                                        onClick={() => handleCityClick(city)}
+                                        whileHover={{ scale: 1.5 }}
+                                    >
+                                        <div className="city-pin"></div>
+                                        <div className="city-name">{city.name}</div>
+                                    </motion.div>
+                                ))}
+                                {currentCity && (
+                                    <motion.div
+                                        className="character"
+                                        initial={{ scale: 0, opacity: 0 }}
+                                        animate={{ scale: 1, opacity: 1 }}
+                                        transition={{ duration: 0.3 }}
+                                        style={{ left: `${currentCity.x}px`, top: `${currentCity.y}px` }}
+                                    >
+                                        <div className="character-name">{currentCity.name}</div>
+                                    </motion.div>
+                                )}
+                            </div>
+                        </div>
                     </div>
                     <div className="game-info">
-                        <h2>Jelenlegi város: {currentCity ? currentCity.name : 'Válassz egy várost!'}</h2>
+                        <h2>{currentCity ? `Aktuális helyszín: ${currentCity.name}` : 'Indulj el egy városba!'}</h2>
+                        {!currentCity && <p>Kattints egy városra a térképen a kezdéshez.</p>}
                     </div>
                 </div>
             )}

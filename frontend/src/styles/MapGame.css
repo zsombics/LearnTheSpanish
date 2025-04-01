@@ -1,157 +1,209 @@
+@import url('https://fonts.googleapis.com/css2?family=IM+Fell+English+SC&family=Roboto:wght@400;700&display=swap');
+
+:root {
+    --font-title: 'IM Fell English SC', serif;
+    --font-body: 'Roboto', sans-serif;
+    --color-background: #f4eadd;
+    --color-map-border: #a0522d;
+    --color-pin-base: #d9534f;
+    --color-pin-active: #ffcc00;
+    --color-text-dark: #4a3f35;
+    --color-text-light: #fdf5e6;
+    --color-info-bg: rgba(160, 82, 45, 0.85);
+}
+
+body {
+    margin: 0;
+    font-family: var(--font-body);
+    background-color: var(--color-background);
+}
+
 .map-game-container {
-  padding: 0;
-  max-width: 100%;
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background-color: #f0f8ff;
+    min-height: 100vh;
+    padding: 30px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    background: var(--color-background) url('../../public/images/subtle-parchment-texture.png') repeat;
+}
+
+.map-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.map-section h1 {
+    font-family: var(--font-title);
+    color: var(--color-text-dark);
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    margin-bottom: 30px;
+    text-align: center;
+    text-shadow: 1px 1px 2px rgba(211, 192, 165, 0.7);
+}
+
+.map-wrapper {
+    padding: 15px;
+    background-color: var(--color-map-border);
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4), inset 0 0 10px rgba(0,0,0,0.3);
+    margin-bottom: 30px;
+    position: relative;
 }
 
 .map-container {
-  position: relative;
-  width: 1270px;
-  height: 805px;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+    position: relative;
+    width: 1270px;
+    height: 805px;
+    overflow: hidden;
+    border: 3px solid #d4c0a1;
+    border-radius: 5px;
 }
 
 .spain-map {
-  position: relative;
-  width: 1270px;
-  height: 805px;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  opacity: 1;
-}
-
-/* Térkép háttér módosítása */
-.spain-map::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.3) 100%);
-  pointer-events: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .city {
-  position: absolute;
-  width: 12px;
-  height: 12px;
-  background-color: #ff6b6b;
-  border-radius: 50%;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transform: translate(-50%, -50%);
-  transition: all 0.3s ease;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-  border: 2px solid #fff;
+    position: absolute;
+    width: 24px;
+    height: 32px;
+    cursor: pointer;
+    transform: translate(-50%, -100%);
+    transition: transform 0.2s ease-out;
+    display: flex;
+    justify-content: center;
+    filter: drop-shadow(2px 3px 3px rgba(0, 0, 0, 0.3));
 }
 
-.city.active {
-  width: 20px;
-  height: 20px;
-  background-color: #ff0000;
-  box-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
-  animation: pulse 1.5s infinite;
+.city-pin {
+    width: 100%;
+    height: 100%;
+    background-color: var(--color-pin-base);
+    border-radius: 50% 50% 50% 0;
+    transform: rotate(-45deg);
+    position: relative;
+    border: 2px solid var(--color-text-light);
 }
 
-@keyframes pulse {
-  0% {
-    box-shadow: 0 0 0 0 rgba(255, 0, 0, 0.4);
-  }
-  70% {
-    box-shadow: 0 0 0 10px rgba(255, 0, 0, 0);
-  }
-  100% {
-    box-shadow: 0 0 0 0 rgba(255, 0, 0, 0);
-  }
+.city-pin::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: var(--color-text-light);
+    top: 5px;
+    left: 5px;
+    transform: rotate(45deg);
+}
+
+.city:hover {
+    transform: translate(-50%, -100%) scale(1.1);
+    z-index: 50;
+}
+
+.city.active .city-pin {
+    background-color: var(--color-pin-active);
+    border-color: var(--color-text-dark);
+    animation: pulse-pin 1.5s infinite ease-in-out;
+}
+
+.city.active .city-pin::after {
+    background-color: var(--color-text-dark);
+}
+
+@keyframes pulse-pin {
+    0%, 100% { transform: rotate(-45deg) scale(1); }
+    50% { transform: rotate(-45deg) scale(1.15); }
 }
 
 .city-name {
-  position: absolute;
-  top: -20px;
-  left: 50%;
-  transform: translateX(-50%);
-  white-space: nowrap;
-  font-size: 0.8rem;
-  color: #333;
-  font-weight: bold;
-  text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8);
-  background-color: rgba(255, 255, 255, 0.8);
-  padding: 2px 6px;
-  border-radius: 4px;
-  opacity: 0;
-  transition: opacity 0.3s ease;
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    font-size: 0.85rem;
+    color: var(--color-text-light);
+    font-weight: bold;
+    background-color: var(--color-text-dark);
+    padding: 4px 8px;
+    border-radius: 4px;
+    opacity: 0;
+    transition: opacity 0.3s 0.1s ease, transform 0.3s ease;
+    pointer-events: none;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.2);
 }
 
 .city:hover .city-name {
-  opacity: 1;
-}
-
-.character {
-  position: absolute;
-  width: 20px;
-  height: 20px;
-  font-size: 16px;
-  transform: translate(-50%, -50%);
-  z-index: 100;
-  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
-}
-
-.road {
-  pointer-events: none;
-  stroke-dasharray: 5,5;
-  animation: dash 20s linear infinite;
-}
-
-@keyframes dash {
-  to {
-    stroke-dashoffset: 1000;
-  }
+    opacity: 1;
+    transform: translate(-50%, 5px);
 }
 
 .game-info {
-  position: absolute;
-  bottom: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-  text-align: center;
-  padding: 1rem;
-  background-color: rgba(255, 255, 255, 0.9);
-  border-radius: 10px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  z-index: 100;
+    width: 80%;
+    max-width: 600px;
+    text-align: center;
+    padding: 15px 25px;
+    background-color: var(--color-info-bg);
+    color: var(--color-text-light);
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    z-index: 100;
+    backdrop-filter: blur(3px);
 }
 
 .game-info h2 {
-  color: #333;
-  margin-bottom: 0.5rem;
-  font-size: 1.2rem;
+    font-family: var(--font-title);
+    margin: 0 0 8px 0;
+    font-size: 1.5rem;
+    letter-spacing: 1px;
 }
 
 .game-info p {
-  color: #666;
-  font-style: italic;
-  font-size: 1rem;
-  margin: 0;
+    margin: 0;
+    font-size: 1rem;
+    opacity: 0.9;
 }
 
-.map-game-container h1 {
-  text-align: center;
-  color: #333;
-  margin-bottom: 2rem;
-  font-size: 2.5rem;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
-} 
+@media (max-width: 1400px) {
+    .map-wrapper {
+    }
+    .map-section h1 {
+        font-size: clamp(1.8rem, 4vw, 3rem);
+    }
+    .game-info {
+        width: 90%;
+    }
+}
+
+@media (max-width: 768px) {
+    .map-section h1 {
+        font-size: clamp(1.5rem, 5vw, 2.5rem);
+        margin-bottom: 20px;
+    }
+    .map-wrapper {
+        padding: 10px;
+    }
+    .game-info {
+        padding: 10px 15px;
+    }
+     .game-info h2 {
+        font-size: 1.2rem;
+     }
+     .game-info p {
+        font-size: 0.9rem;
+     }
+}
