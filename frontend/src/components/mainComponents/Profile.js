@@ -1,38 +1,23 @@
-import React, { useContext, useState, useEffect } from 'react';
-import { Bar, Line, Doughnut } from 'react-chartjs-2';
-import ChartDataLabels from 'chartjs-plugin-datalabels';
-import {
-  Chart as ChartJS,
-  CategoryScale,
-  LinearScale,
-  BarElement,
-  Title,
-  Tooltip,
-  Legend,
-  PointElement,
-  LineElement,
-  ArcElement,
-} from 'chart.js';
-import CalendarHeatmap from 'react-calendar-heatmap';
-import ReactTooltip from 'react-tooltip';
-import 'react-calendar-heatmap/dist/styles.css';
+import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import UserContext from '../../UserContext';
 import '../../styles/Profile.css';
 import '../../styles/Carousel.css';
 
-ChartJS.register(
-  CategoryScale,
-  LinearScale,
-  BarElement,
-  PointElement,
-  LineElement,
-  ArcElement,
-  Title,
-  Tooltip,
-  Legend,
-  ChartDataLabels
-);
+// Import components
+import AvatarSection from './Profile/components/AvatarSection';
+import UserInfo from './Profile/components/UserInfo';
+import AllTimeStats from './Profile/components/AllTimeStats';
+import QuizResultsSummary from './Profile/components/QuizResultsSummary';
+import ChartSection from './Profile/components/ChartSection';
+import ActivityCalendar from './Profile/components/ActivityCalendar';
+import StatsBoxes from './Profile/components/StatsBoxes';
+
+// Import modals
+import AvatarModal from './Profile/components/modals/AvatarModal';
+import PasswordModal from './Profile/components/modals/PasswordModal';
+import ForgotPasswordModal from './Profile/components/modals/ForgotPasswordModal';
+import RanksModal from './Profile/components/modals/RanksModal';
+import LeaderboardModal from './Profile/components/modals/LeaderboardModal';
 
 const avatarOptions = [
   'https://api.dicebear.com/7.x/avataaars/svg?seed=Bella',
@@ -54,9 +39,6 @@ const Profile = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [leaderboardData, setLeaderboardData] = useState([]);
-  const [showLeaderboard, setShowLeaderboard] = useState(false);
-  const [leaderboardLoading, setLeaderboardLoading] = useState(false);
-  const [leaderboardError, setLeaderboardError] = useState(null);
   const [quizResults, setQuizResults] = useState([]);
   const [avatar, setAvatar] = useState(avatarOptions[0]);
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -272,7 +254,6 @@ const Profile = () => {
       },
     ],
   };
-
 
   const doughnutData = {
     labels: ['Helyes válaszok', 'Helytelen válaszok'],
@@ -546,74 +527,19 @@ const Profile = () => {
 
       <div className="profile-content">
         <div className="profile-sidebar">
-          <div className="avatar-section">
-            <img
-              src={avatar}
-              alt="Felhasználó avatárja"
-              className="avatar-image"
-              onClick={openModal}
-            />
-            <button
-              className="avatar-change-button"
-              onClick={openModal}
-            >
-              Avatar változtatása
-            </button>
-          </div>
-
-          <div className="user-info">
-            <h2 className="user-name">{user.name}</h2>
-            <p className="user-email">{user.email}</p>
-            <div className="user-levels">
-              <div 
-                className="level-badge performance" 
-                data-level={user.performanceLevel}
-                onClick={() => setIsRanksModalOpen(true)}
-              >
-                <span className="level-symbol">{getPerformanceLevelSymbol(user.performanceLevel)}</span>
-              </div>
-              <div 
-                className="level-badge account" 
-                onClick={() => setIsRanksModalOpen(true)}
-              >
-                <span className="level-name">{user.accountLevelName}</span>
-              </div>
-            </div>
-          </div>
-
-          <div className="all-time-stats">
-            <h3>Összesített statisztika</h3>
-            <div className="stat-item">
-              <span className="stat-label">Teljes pontosság:</span>
-              <span className="stat-value" style={{fontSize: "1em"}}>{overallPercentage}%</span>
-            </div>
-            <div className="stat-item">
-              <span className="stat-label">Kitöltött kvízek:</span>
-              <span className="stat-value" style={{fontSize: "1em"}}>{totalQuizzes}</span>
-            </div>
-            <div className="stat-item">
-              <span className="stat-label">Megválaszolt kérdések:</span>
-              <span className="stat-value" style={{fontSize: "1em"}}>{totalCorrect}/{totalQuestions}</span>
-            </div>
-          </div>
-
-          {quizResults.length > 0 && (
-            <div className="quiz-results-summary">
-              <h3 style={{ marginBottom: '5px' }}>Legutóbbi eredmények</h3>
-              <ul className="results-list">
-                {quizResults.slice(0, 9).map((result) => (
-                  <li key={result._id} className="result-item">
-                    <span className="result-date">
-                      {new Date(result.createdAt).toLocaleDateString('hu-HU')}
-                    </span>
-                    <span className="result-score">
-                      {result.correctAnswers}/{result.totalQuestions}
-                    </span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          )}
+          <AvatarSection avatar={avatar} openModal={openModal} />
+          <UserInfo 
+            user={user} 
+            getPerformanceLevelSymbol={getPerformanceLevelSymbol} 
+            setIsRanksModalOpen={setIsRanksModalOpen} 
+          />
+          <AllTimeStats 
+            overallPercentage={overallPercentage}
+            totalQuizzes={totalQuizzes}
+            totalCorrect={totalCorrect}
+            totalQuestions={totalQuestions}
+          />
+          <QuizResultsSummary quizResults={quizResults} />
           <button
             className="change-password-button"
             onClick={() => setIsPasswordModalOpen(true)}
@@ -631,129 +557,33 @@ const Profile = () => {
         <div className="profile-main">
           {quizResults.length > 0 ? (
             <>
-              <div className="chart-container">
-                <h3>Teljesítmény statisztikák</h3>
-                <div className="charts-carousel">
-                  <button
-                    className="carousel-arrow left"
-                    onClick={goPrev}
-                    disabled={currentChartIndex === 0}
-                  >
-                    <svg viewBox="0 0 24 24" fill="none">
-                      <path d="M15 18L9 12L15 6" strokeLinecap="round" strokeLinejoin="round" />
-                    </svg>
-                  </button>
+              <ChartSection 
+                chartData={chartData}
+                cumulativeLineChartData={cumulativeLineChartData}
+                doughnutData={doughnutData}
+                currentChartIndex={currentChartIndex}
+                goPrev={goPrev}
+                goNext={goNext}
+                timeView={timeView}
+                setTimeView={setTimeView}
+                chartOptions={chartOptions}
+                modifiedChartOptions={modifiedChartOptions}
+                lineChartOptions={lineChartOptions}
+                doughnutOptions={doughnutOptions}
+                CenterTextPlugin={CenterTextPlugin}
+              />
 
-                  <div className="charts-container">
-                    <div className="charts-slider" style={{ transform: `translateX(-${currentChartIndex * 100}%)` }}>
-                      <div className="chart-wrapper">
-                        <Bar data={chartData} options={modifiedChartOptions} />
-                        <select
-                          className="view-selector"
-                          value={timeView}
-                          onChange={(e) => setTimeView(e.target.value)}
-                        >
-                          <option value="daily">Napi nézet</option>
-                          <option value="weekly">Heti nézet</option>
-                          <option value="monthly">Havi nézet</option>
-                          <option value="6months">Féléves nézet</option>
-                          <option value="yearly">Éves nézet</option>
-                          <option value="all">Teljes időszak</option>
-                        </select>
-                      </div>
-                      <div className="chart-wrapper">
-                        <Line data={cumulativeLineChartData} options={lineChartOptions} />
-                      </div>
-                      <div className="chart-wrapper">
-                        <Doughnut data={doughnutData} options={doughnutOptions} plugins={[CenterTextPlugin]} />
-                      </div>
-                    </div>
-                  </div>
+              <ActivityCalendar 
+                selectedYear={selectedYear}
+                setSelectedYear={setSelectedYear}
+                heatmapValues={heatmapValues}
+              />
 
-                  <button
-                    className="carousel-arrow right"
-                    onClick={goNext}
-                    disabled={currentChartIndex === 2}
-                  >
-                    <svg viewBox="0 0 24 24" fill="none">
-                      <path d="M9 18L15 12L9 6" strokeLinecap="round" strokeLinejoin="round" />
-                    </svg>
-                  </button>
-
-                  <div className="carousel-indicators">
-                    {[0, 1, 2].map((index) => (
-                      <div
-                        key={index}
-                        className={`carousel-indicator ${currentChartIndex === index ? 'active' : ''}`}
-                        onClick={() => setCurrentChartIndex(index)}
-                      />
-                    ))}
-                  </div>
-                </div>
-
-                <div className="activity-calendar">
-                  <h3>Tevékenység naptár</h3>
-
-                  <div className="calendar-fullwidth">
-                    <CalendarHeatmap
-                      startDate={new Date(`${selectedYear}-01-01`)}
-                      endDate={new Date(`${selectedYear}-12-31`)}
-                      values={heatmapValues}
-                      classForValue={(value) => {
-                        if (!value || !value.count) return 'color-empty';
-                        const count = Math.floor(value.count * 100);
-                        return count > 20 ? 'color-scale-4' :
-                          count > 15 ? 'color-scale-3' :
-                            count > 10 ? 'color-scale-2' :
-                              count > 5 ? 'color-scale-1' : 'color-scale-0';
-                      }}
-                      tooltipDataAttrs={value => ({
-                        'data-tip': value.date ?
-                          `${value.date.toISOString().slice(0, 10)}: ${Math.round(value.count * 100)}%` : ''
-                      })}
-                      showWeekdayLabels={true}
-                      weekdayLabels={['', 'H', '', 'Sze', '', 'P', '']}
-                      monthLabels={['Jan', 'Feb', 'Már', 'Ápr', 'Máj', 'Jún', 'Júl', 'Aug', 'Szep', 'Okt', 'Nov', 'Dec']}
-                      horizontal={true}
-                      gutterSize={2}
-                    />
-                    <ReactTooltip />
-                  </div>
-
-                  <div className="year-selector">
-                    {Array.from({ length: 4 }, (_, i) => new Date().getFullYear() - i).reverse().map(year => (
-                      <button
-                        key={year}
-                        onClick={() => setSelectedYear(year)}
-                        className={selectedYear === year ? 'active' : ''}
-                      >
-                        {year}
-                      </button>
-                    ))}
-                  </div>
-                </div>
-              </div>
-
-              <div className="stats-boxes">
-                <div className="stat-box" onClick={() => setIsLeaderboardModalOpen(true)}>
-                  <div className="stat-box-content">
-                    <h3>Teljes pontosság</h3>
-                    <div className="stat-value">{user.totalAccuracy.toFixed(1)}%</div>
-                    <div className="stat-rank">
-                      {getUserRank('accuracy')}. hely a ranglistán
-                    </div>
-                  </div>
-                </div>
-                <div className="stat-box" onClick={() => setIsLeaderboardModalOpen(true)}>
-                  <div className="stat-box-content">
-                    <h3>Kitöltött kvízek</h3>
-                    <div className="stat-value">{user.totalQuizzes}</div>
-                    <div className="stat-rank">
-                      {getUserRank('quizzes')}. hely a ranglistán
-                    </div>
-                  </div>
-                </div>
-              </div>
+              <StatsBoxes 
+                user={user}
+                getUserRank={getUserRank}
+                setIsLeaderboardModalOpen={setIsLeaderboardModalOpen}
+              />
             </>
           ) : (
             <div className="no-results">
@@ -764,235 +594,50 @@ const Profile = () => {
         </div>
       </div>
 
-      {isModalOpen && (
-        <div className="avatar-modal">
-          <div className="modal-content">
-            <div className="modal-header">
-              <h3>Válassz új avatárt</h3>
-            </div>
-            <div className="avatar-grid">
-              {avatarOptions.map((option, index) => (
-                <div
-                  key={index}
-                  className={`avatar-option ${avatar === option ? 'selected' : ''}`}
-                  onClick={() => selectAvatar(option)}
-                >
-                  <img
-                    src={option}
-                    alt={`Avatar ${index + 1}`}
-                    className="avatar-thumbnail"
-                  />
-                </div>
-              ))}
-            </div>
-            <button className="close-button" onClick={closeModal}>Kilépés</button>
-          </div>
-        </div>
-      )}
+      <AvatarModal 
+        isOpen={isModalOpen}
+        closeModal={closeModal}
+        avatarOptions={avatarOptions}
+        avatar={avatar}
+        selectAvatar={selectAvatar}
+      />
 
-      {isPasswordModalOpen && (
-        <div className="avatar-modal">
-          <div className="modal-content">
-            <button className="modal-close" onClick={() => setIsPasswordModalOpen(false)}>×</button>
-            <div className="modal-header">
-              <h3>Jelszó módosítása</h3>
-            </div>
-            <form onSubmit={handlePasswordChange} className="password-form">
-              <div className="form-group">
-                <label htmlFor="currentPassword">Jelenlegi jelszó:</label>
-                <input
-                  type="password"
-                  id="currentPassword"
-                  value={passwordData.currentPassword}
-                  onChange={(e) => setPasswordData({...passwordData, currentPassword: e.target.value})}
-                  required
-                />
-              </div>
-              <div className="form-group">
-                <label htmlFor="newPassword">Új jelszó:</label>
-                <input
-                  type="password"
-                  id="newPassword"
-                  value={passwordData.newPassword}
-                  onChange={(e) => setPasswordData({...passwordData, newPassword: e.target.value})}
-                  required
-                />
-              </div>
-              <div className="form-group">
-                <label htmlFor="confirmPassword">Új jelszó megerősítése:</label>
-                <input
-                  type="password"
-                  id="confirmPassword"
-                  value={passwordData.confirmPassword}
-                  onChange={(e) => setPasswordData({...passwordData, confirmPassword: e.target.value})}
-                  required
-                />
-              </div>
-              {passwordError && <div className="error-message">{passwordError}</div>}
-              <div className="button-container">
-                <button type="submit" className="submit-button">Módosítás</button>
-              </div>
-              <span className="forgot-password-text">
-                Elfelejtetted a jelszavad? <span className="forgot-password-link" onClick={() => {
-                  setIsPasswordModalOpen(false);
-                  setIsForgotPasswordModalOpen(true);
-                }}>Kattints ide</span>
-              </span>
-            </form>
-          </div>
-        </div>
-      )}
+      <PasswordModal 
+        isOpen={isPasswordModalOpen}
+        closeModal={() => setIsPasswordModalOpen(false)}
+        passwordData={passwordData}
+        setPasswordData={setPasswordData}
+        handlePasswordChange={handlePasswordChange}
+        passwordError={passwordError}
+        setIsForgotPasswordModalOpen={setIsForgotPasswordModalOpen}
+      />
 
-      {isForgotPasswordModalOpen && (
-        <div className="avatar-modal">
-          <div className="modal-content">
-            <button className="modal-close" onClick={() => setIsForgotPasswordModalOpen(false)}>×</button>
-            <div className="modal-header">
-              <h3>Elfelejtett jelszó</h3>
-            </div>
-            <p>Add meg az email címed, és küldünk egy linket a jelszó visszaállításához.</p>
-            <form onSubmit={handleForgotPassword} className="password-form">
-              <div className="form-group">
-                <label htmlFor="forgotPasswordEmail">Email cím:</label>
-                <input
-                  type="email"
-                  id="forgotPasswordEmail"
-                  value={forgotPasswordEmail}
-                  onChange={(e) => setForgotPasswordEmail(e.target.value)}
-                  required
-                />
-              </div>
-              {forgotPasswordMessage && (
-                <p className={`message ${forgotPasswordMessage.includes('Hiba') ? 'error' : 'success'}`}>
-                  {forgotPasswordMessage}
-                </p>
-              )}
-              <div className="button-container">
-                <button type="submit" className="submit-button">Küldés</button>
-              </div>
-            </form>
-          </div>
-        </div>
-      )}
+      <ForgotPasswordModal 
+        isOpen={isForgotPasswordModalOpen}
+        closeModal={() => setIsForgotPasswordModalOpen(false)}
+        forgotPasswordEmail={forgotPasswordEmail}
+        setForgotPasswordEmail={setForgotPasswordEmail}
+        handleForgotPassword={handleForgotPassword}
+        forgotPasswordMessage={forgotPasswordMessage}
+      />
 
-      {isRanksModalOpen && (
-        <div className="ranks-modal">
-          <div className="modal-content">
-            <button className="modal-close" onClick={() => setIsRanksModalOpen(false)}>×</button>
-            <div className="modal-header">
-              <h3>Rangok és feltételek</h3>
-            </div>
-            <div className="ranks-tables">
-              <div className="ranks-section">
-                <h4>Teljesítmény Szintek</h4>
-                <table className="ranks-table">
-                  <thead>
-                    <tr>
-                      <th>Szint</th>
-                      <th>Szimbólum</th>
-                      <th>Százalék</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {ranksData.performanceLevels.map((level) => (
-                      <tr key={level.level}>
-                        <td>{level.level}</td>
-                        <td>{level.symbol}</td>
-                        <td>{level.range}</td>
-                      </tr>
-                    ))}
-                  </tbody>
-                </table>
-              </div>
-              <div className="ranks-section">
-                <h4>Account Szintek</h4>
-                <table className="ranks-table">
-                  <thead>
-                    <tr>
-                      <th>Szint</th>
-                      <th>Megnevezés</th>
-                      <th>Kérdőívek</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {ranksData.accountLevels.map((level) => (
-                      <tr key={level.level}>
-                        <td>{level.level}</td>
-                        <td>{level.name}</td>
-                        <td>{level.range}</td>
-                      </tr>
-                    ))}
-                  </tbody>
-                </table>
-              </div>
-            </div>
-          </div>
-        </div>
-      )}
+      <RanksModal 
+        isOpen={isRanksModalOpen}
+        closeModal={() => setIsRanksModalOpen(false)}
+        ranksData={ranksData}
+      />
 
-      {isLeaderboardModalOpen && (
-        <div className="leaderboard-modal">
-          <div className="modal-content">
-            <button className="modal-close" onClick={() => setIsLeaderboardModalOpen(false)}>×</button>
-            <div className="modal-header">
-              <h3>Ranglista</h3>
-              <div className="leaderboard-type-selector">
-                <button 
-                  className={`type-button ${leaderboardType === 'accuracy' ? 'active' : ''}`}
-                  onClick={() => setLeaderboardType('accuracy')}
-                >
-                  Pontosság
-                </button>
-                <button 
-                  className={`type-button ${leaderboardType === 'quizzes' ? 'active' : ''}`}
-                  onClick={() => setLeaderboardType('quizzes')}
-                >
-                  Kitöltött tesztek
-                </button>
-              </div>
-            </div>
-            <div className="leaderboard-list">
-              {[...leaderboardData]
-                .sort((a, b) => {
-                  if (leaderboardType === 'accuracy') {
-                    return b.totalAccuracy - a.totalAccuracy;
-                  } else {
-                    return b.totalQuizzes - a.totalQuizzes;
-                  }
-                })
-                .map((userData, index) => (
-                  <div 
-                    key={userData._id} 
-                    className={`leaderboard-item ${userData._id === user._id ? 'current-user' : ''}`}
-                  >
-                    <span className="rank-number">{index + 1}.</span>
-                    <div className="user-info-container">
-                      <img 
-                        src={userData.avatar || `https://api.dicebear.com/7.x/avataaars/svg?seed=${userData.name}`} 
-                        alt={`${userData.name} avatárja`} 
-                        className="leaderboard-avatar"
-                        onError={(e) => {
-                          e.target.onerror = null;
-                          e.target.src = `https://api.dicebear.com/7.x/avataaars/svg?seed=${userData.name}`;
-                        }}
-                      />
-                      <span className="user-name">{userData.name}</span>
-                    </div>
-                    <span className="user-level">{getPerformanceLevelSymbol(userData.performanceLevel)}</span>
-                    <span className="user-accuracy">
-                      {leaderboardType === 'accuracy' 
-                        ? `${userData.totalAccuracy.toFixed(1)}%`
-                        : `${userData.totalQuizzes} db`
-                      }
-                    </span>
-                  </div>
-                ))}
-            </div>
-          </div>
-        </div>
-      )}
+      <LeaderboardModal 
+        isOpen={isLeaderboardModalOpen}
+        closeModal={() => setIsLeaderboardModalOpen(false)}
+        leaderboardData={leaderboardData}
+        leaderboardType={leaderboardType}
+        setLeaderboardType={setLeaderboardType}
+        user={user}
+        getPerformanceLevelSymbol={getPerformanceLevelSymbol}
+      />
     </div>
   );
 };
 
-export default Profile;
+export default Profile; 

@@ -1,5 +1,6 @@
 import React from 'react';
 
+const AvatarModal = ({ isOpen, closeModal, avatarOptions, avatar, selectAvatar }) => {
   if (!isOpen) return null;
 
   return (

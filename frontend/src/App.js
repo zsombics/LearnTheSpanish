@@ -1,6 +1,5 @@
-// frontend/src/App.js
 import React, { useState, useEffect } from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
 import axios from 'axios';
 
 import Home from './components/mainComponents/Home';
@@ -13,6 +12,36 @@ import Navbar from './components/mainComponents/Navbar';
 import ResetPassword from './components/mainComponents/ResetPassword';
 import Community from './components/mainComponents/Community';
 import MapGame from './components/mainComponents/MapGame';
+
+const ProtectedRoute = ({ children }) => {
+  const [user, setUser] = useState(null);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const checkAuth = async () => {
+      try {
+        const response = await axios.get('/api/auth/profile');
+        setUser(response.data);
+      } catch (error) {
+        setUser(null);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    checkAuth();
+  }, []);
+
+  if (loading) {
+    return <div className="loading">Betöltés...</div>;
+  }
+
+  if (!user) {
+    return <Navigate to="/" />;
+  }
+
+  return children;
+};
 
 function App() {
   const [user, setUser] = useState(null);
@@ -29,21 +58,51 @@ function App() {
 
   return (
     <UserContext.Provider value={{ user, setUser }}>
-    <Router>
-      <Navbar />
-      <div className="main-content">
+      <Router>
+        <Navbar />
+        <div className="main-content">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/bejelentkezes" element={<Login />} />
             <Route path="/regisztracio" element={<Register />} />
-            <Route path="/profil" element={<Profile />} />
-            <Route path="/kviz" element={<Quiz/>} />
             <Route path="/reset-password/:token" element={<ResetPassword />} />
-            <Route path="/community" element={<Community />} />
-            <Route path="/terkep" element={<MapGame />} />
+            
+            {/* Védett útvonalak */}
+            <Route 
+              path="/profil" 
+              element={
+                <ProtectedRoute>
+                  <Profile />
+                </ProtectedRoute>
+              } 
+            />
+            <Route 
+              path="/kviz" 
+              element={
+                <ProtectedRoute>
+                  <Quiz />
+                </ProtectedRoute>
+              } 
+            />
+            <Route 
+              path="/community" 
+              element={
+                <ProtectedRoute>
+                  <Community />
+                </ProtectedRoute>
+              } 
+            />
+            <Route 
+              path="/terkep" 
+              element={
+                <ProtectedRoute>
+                  <MapGame />
+                </ProtectedRoute>
+              } 
+            />
           </Routes>
-      </div>
-    </Router>
+        </div>
+      </Router>
     </UserContext.Provider>
   );
 }
