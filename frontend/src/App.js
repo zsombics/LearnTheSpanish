@@ -12,6 +12,14 @@ import Navbar from './components/mainComponents/Navbar';
 import ResetPassword from './components/mainComponents/ResetPassword';
 import Community from './components/mainComponents/Community';
 import MapGame from './components/mainComponents/MapGame';
+import Level1 from './components/mainComponents/MapGame/CityLevels/Level1';
+// import Level2 from './components/mainComponents/MapGame/CityLevels/Level2';
+// import Level3 from './components/mainComponents/MapGame/CityLevels/Level3';
+// import Level4 from './components/mainComponents/MapGame/CityLevels/Level4';
+// import Level5 from './components/mainComponents/MapGame/CityLevels/Level5';
+// import Level6 from './components/mainComponents/MapGame/CityLevels/Level6';
+// import Level7 from './components/mainComponents/MapGame/CityLevels/Level7';
+// import Level8 from './components/mainComponents/MapGame/CityLevels/Level8';
 
 const ProtectedRoute = ({ children }) => {
   const [user, setUser] = useState(null);
@@ -100,6 +108,73 @@ function App() {
                 </ProtectedRoute>
               } 
             />
+           
+            <Route 
+              path="/city-levels/level1" 
+              element={
+                <ProtectedRoute>
+                  <Level1 />
+                </ProtectedRoute>
+              } 
+            />
+             {/* Városi szintek útvonalai 
+            <Route 
+              path="/city-levels/level2" 
+              element={
+                <ProtectedRoute>
+                  <Level2 />
+                </ProtectedRoute>
+              } 
+            />
+            <Route 
+              path="/city-levels/level3" 
+              element={
+                <ProtectedRoute>
+                  <Level3 />
+                </ProtectedRoute>
+              } 
+            />
+            <Route 
+              path="/city-levels/level4" 
+              element={
+                <ProtectedRoute>
+                  <Level4 />
+                </ProtectedRoute>
+              } 
+            />
+            <Route 
+              path="/city-levels/level5" 
+              element={
+                <ProtectedRoute>
+                  <Level5 />
+                </ProtectedRoute>
+              } 
+            />
+            <Route 
+              path="/city-levels/level6" 
+              element={
+                <ProtectedRoute>
+                  <Level6 />
+                </ProtectedRoute>
+              } 
+            />
+            <Route 
+              path="/city-levels/level7" 
+              element={
+                <ProtectedRoute>
+                  <Level7 />
+                </ProtectedRoute>
+              } 
+            />
+            <Route 
+              path="/city-levels/level8" 
+              element={
+                <ProtectedRoute>
+                  <Level8 />
+                </ProtectedRoute>
+              } 
+            />
+            */}
           </Routes>
         </div>
       </Router>

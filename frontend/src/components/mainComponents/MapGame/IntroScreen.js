@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import '../../styles/IntroScreen.css';
+import '../../../styles/IntroScreen.css';
 
 const storyPart1 = `Leo, egy kíváncsi és kalandvágyó fiatal, a nagyszülei padlásán kutatva egy poros, bőrkötéses naplóra bukkan. A naplót rég elhunyt dédapja, Mateo írta, aki fiatalkorában vándorolt ki Spanyolországból. A megsárgult lapok tele vannak spanyolországi emlékekkel, rajzokkal, és egy sejtelmes utalással egy "családi kincsre" (un tesoro familiar), ami Madridban várja, hogy valaki a családból újra felfedezze. \n\nAzonban Mateo nem adta könnyen a titkot. A napló utolsó bejegyzése egy rejtvényes üzenet: "A kincs kulcsa Spanyolország lelkében rejlik, annak nyolc ékkövén át vezet az út. Minden város őriz egy szót, egy szikrát a múltból. Csak ha megérted a hangjukat, nyílik meg az út Madrid szívébe."\n\nLeo szíve hevesebben kezd verni. Ez több mint egy régi napló, ez egy küldetés! Elhatározza, hogy követi dédapja nyomait, bejárja Spanyolországot, megtanulja a nyelvet, és megfejti a rejtélyt. Tudja, hogy nem lesz könnyű, de a kalandvágy és a családi örökség iránti tisztelet hajtja.`;
 const storyPart2 = `Leónak sorban kell meglátogatnia a nyolc várost Madrid előtt. Minden városban fel kell keresnie egy "őrzőt" - egy híres művészt, aki a dédapja által ráhagyományozott feladat szerint próbára teszi Leo spanyol tudását. Csak ha Leo <strong>10 egymást követő tesztet hibátlanul (100%-ra)</strong> teljesít az adott város nyelvi fókuszára épülve, akkor kapja meg az őrzőtől a titkos jelszót (contraseña), ami egy lépéssel közelebb viszi a madridi kincshez.`;
@@ -19,11 +19,10 @@ const IntroScreen = ({ onStartGame }) => {
         }, 600);
     };
 
-    // Ez a funkció hívja meg a MapGame-től kapott propot
     const handleFinalStart = () => {
-        console.log("Start button clicked in IntroScreen"); // Debug log
-        if (isTurning) return; // Prevent click during animation
-        onStartGame(); // Meghívja a handleStartGame-et a MapGame-ben
+        console.log("Start button clicked in IntroScreen");
+        if (isTurning) return;
+        onStartGame();
     };
 
     return (

@@ -10,6 +10,7 @@ function Navbar() {
     axios.get('/api/auth/logout')
       .then(() => {
         setUser(null);
+        localStorage.removeItem('hasSeenIntro');
       })
       .catch((err) => {
         console.error(err.response.data);

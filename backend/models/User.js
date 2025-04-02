@@ -41,6 +41,30 @@ const UserSchema = new mongoose.Schema({
     type: Number,
     default: 0
   },
+  gameProgress: [{
+    cityId: {
+      type: Number,
+      required: true,
+      min: 1,
+      max: 8
+    },
+    level: {
+      type: String,
+      required: true
+    },
+    recentResults: {
+      type: [Boolean],
+      default: []
+    },
+    consecutiveCorrect: {
+      type: Number,
+      default: 0
+    },
+    passwordRevealed: {
+      type: Boolean,
+      default: false
+    }
+  }],
   results: [{
     score: Number,
     date: {

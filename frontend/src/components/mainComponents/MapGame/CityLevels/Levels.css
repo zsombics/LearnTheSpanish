@@ -1,0 +1,272 @@
+.level-container {
+    padding: 30px;
+    max-width: 800px;
+    margin: 40px auto;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+  }
+  
+  /* Setup képernyő */
+  .test-setup h1 {
+    text-align: center;
+    color: var(--color-map-border, #a0522d);
+    font-family: var(--font-title, 'IM Fell English SC', serif);
+    margin-bottom: 30px;
+  }
+  .setup-group {
+    margin-bottom: 20px;
+  }
+  .setup-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #555;
+  }
+  .setup-group select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+  }
+  .setup-actions {
+      margin-top: 30px;
+      display: flex;
+      justify-content: space-between;
+      gap: 15px;
+  }
+  
+  .start-test-btn, .back-btn {
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+  }
+  .start-test-btn {
+    background-color: var(--color-pin-base, #d9534f);
+    color: white;
+  }
+  .start-test-btn:hover:not(:disabled) {
+    background-color: #c9302c;
+    transform: translateY(-1px);
+  }
+  .start-test-btn:disabled {
+      background-color: #ccc;
+      cursor: not-allowed;
+  }
+  
+  .back-btn {
+      background-color: #6c757d;
+      color: white;
+  }
+  .back-btn:hover {
+      background-color: #5a6268;
+      transform: translateY(-1px);
+  }
+  
+  
+  /* Teszt oldal */
+  .test-page {
+      position: relative;
+  }
+  .quiz-header {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 20px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid #eee;
+      font-size: 0.9rem;
+      color: #777;
+  }
+  
+  .question-card {
+    background-color: #f9f9f9;
+    padding: 25px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    border: 1px solid #eee;
+  }
+  .question-instruction {
+      font-size: 0.9rem;
+      color: #666;
+      margin-bottom: 15px;
+  }
+  .question-text {
+    font-size: 1.5rem;
+    margin-bottom: 25px;
+    color: var(--color-text-dark, #4a3f35);
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  .options-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Reszponzív rács */
+    gap: 15px;
+    margin-bottom: 20px;
+  }
+  
+  .option-button {
+    padding: 15px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    background-color: white;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-size: 1rem;
+    text-align: center;
+  }
+  
+  .option-button:hover:not(:disabled) {
+    border-color: var(--color-pin-active, #ffcc00);
+    background-color: #fffbeb;
+  }
+  
+  .option-button.selected {
+    border-color: var(--color-pin-base, #d9534f);
+    background-color: #fdecea;
+    font-weight: bold;
+  }
+  
+  .option-button.correct {
+    border-color: #28a745;
+    background-color: #d4edda;
+    color: #155724;
+    font-weight: bold;
+    cursor: default;
+  }
+  
+  .option-button.incorrect {
+    border-color: #dc3545;
+    background-color: #f8d7da;
+    color: #721c24;
+    font-weight: bold;
+    cursor: default;
+    text-decoration: line-through; /* Áthúzás */
+  }
+  
+  .option-button.disabled {
+    border-color: #ddd;
+    background-color: #f8f9fa;
+    color: #6c757d;
+    cursor: default;
+    opacity: 0.7;
+  }
+  
+  
+  .feedback {
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: bold;
+  }
+  
+  .feedback-correct {
+    background-color: #d4edda;
+    color: #155724;
+  }
+  
+  .feedback-incorrect {
+    background-color: #f8d7da;
+    color: #721c24;
+  }
+  
+  .quiz-navigation {
+      text-align: center;
+  }
+  
+  .nav-btn.next-btn {
+      padding: 12px 30px;
+      background-color: var(--color-map-border, #a0522d);
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-size: 1rem;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.2s ease;
+  }
+  .nav-btn.next-btn:hover:not(:disabled) {
+      background-color: #814424;
+  }
+  .nav-btn.next-btn:disabled {
+      background-color: #ccc;
+      cursor: not-allowed;
+  }
+  
+  
+  /* Eredmény oldal */
+  .test-results h1 {
+    text-align: center;
+    color: var(--color-map-border, #a0522d);
+    font-family: var(--font-title, 'IM Fell English SC', serif);
+    margin-bottom: 25px;
+  }
+  .score-display {
+      font-size: 1.8rem;
+      text-align: center;
+      margin-bottom: 10px;
+  }
+  .score-value {
+      font-weight: bold;
+      color: var(--color-pin-base, #d9534f);
+  }
+  .test-results p {
+      text-align: center;
+      font-size: 1.1rem;
+      margin-bottom: 20px;
+  }
+  .results-navigation {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .result-btn {
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+  }
+  .result-btn.primary {
+      background-color: var(--color-pin-active, #ffcc00);
+      color: var(--color-text-dark, #4a3f35);
+      border: none;
+  }
+  .result-btn.primary:hover {
+      background-color: #ffdd44;
+      transform: translateY(-1px);
+  }
+  .result-btn.secondary {
+      background-color: #6c757d;
+      color: white;
+      border: none;
+  }
+  .result-btn.secondary:hover {
+      background-color: #5a6268;
+       transform: translateY(-1px);
+  }
+  
+  /* Betöltés és Hiba */
+  .loading, .error-message {
+      text-align: center;
+      padding: 40px;
+      font-size: 1.2rem;
+  }
+  .error-message {
+      color: #dc3545;
+      background-color: #f8d7da;
+      border: 1px solid #f5c6cb;
+      border-radius: 5px;
+  }
+  .error-message button { margin-top: 15px; }

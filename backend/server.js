@@ -42,6 +42,7 @@ app.use('/api/quiz', require('./routes/quiz'));
 app.use('/api/eredmenyek', require('./routes/eredmenyek'));
 app.use('/api/user', require('./routes/user'));
 app.use('/api/posts', require('./routes/posts'));
+app.use('/api/game', require('./routes/gameRoutes'));
 
 app.post('/api/translate', async (req, res) => {
   const { text } = req.body;
