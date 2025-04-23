@@ -239,7 +239,7 @@ function Level1() {
     if (!testStarted) {
         return (
             <div className="level-container test-setup">
-                {error && <div className="error-message">{error}</div>}
+                {error && <div className="error-message setup-error">{error}</div>}
                 <h1>{LEVEL_NAME}: Teszt Beállítások (Barcelona)</h1>
                 <div className="setup-group">
                     <label htmlFor="numQuestions">Hány kérdés legyen?</label>
@@ -258,7 +258,7 @@ function Level1() {
                 </div>
                 <div className="setup-actions">
                     <button className="start-test-btn" onClick={startTest} disabled={isLoading}>
-                        {isLoading ? "Betöltés..." : "Teszt indítása"}
+                        {isLoading ? "Indítás..." : "Teszt indítása"}
                     </button>
                     <button className="back-btn" onClick={goBackToMap}>Vissza a térképre</button>
                 </div>
@@ -266,12 +266,25 @@ function Level1() {
         );
     }
 
-    if (isLoading) return <div className="level-container loading">Szavak és kérdések betöltése...</div>;
+    if (isLoading) {
+        return <div className="level-container loading">Szavak és kérdések betöltése/generálása...</div>;
+    }
 
-    if (questions.length === 0) {
+    if (!isLoading && questions.length === 0 && error) {
         return (
-            <div className="level-container error-message">
-                {error || "Nem sikerült kérdéseket generálni. Lehet, hogy nincs elég szó a forrásfájlban."}
+            <div className="level-container error-container">
+                <h1>Hiba</h1>
+                <p className="error-message">{error}</p>
+                <button className="back-btn" onClick={startNewTestSetup}>Vissza a beállításokhoz</button>
+            </div>
+        );
+    }
+
+    if (!isLoading && questions.length === 0 && !error) {
+        return (
+            <div className="level-container error-container">
+                <h1>Hiba</h1>
+                <p className="error-message">Nem sikerült kérdéseket generálni. Lehet, hogy nincs elég megfelelő adat a forrásfájlban ehhez a teszttípushoz vagy kérdésszámhoz.</p>
                 <button className="back-btn" onClick={startNewTestSetup}>Vissza a beállításokhoz</button>
             </div>
         );
@@ -283,7 +296,7 @@ function Level1() {
                 <h1>Eredmény ({LEVEL_NAME} - Barcelona)</h1>
                 {result.saveError && <p className="error-message">Figyelem: Az eredmény helyben látható, de a mentés a szerverre sikertelen volt!</p>}
                 <p className="score-display">Eredményed: <span className="score-value">{result.score}</span> / {result.total}</p>
-                {result.total > 0 && <p>Pontosság: {((result.score / result.total) * 100).toFixed(0)}%</p>}
+                {result.total > 0 && <p className="accuracy-display">Pontosság: {((result.score / result.total) * 100).toFixed(0)}%</p>}
                 <div className="results-navigation">
                     <button className="result-btn primary" onClick={startNewTestSetup}>Új teszt indítása</button>
                     <button className="result-btn secondary" onClick={goBackToMap}>Vissza a térképre</button>
@@ -294,10 +307,10 @@ function Level1() {
 
     const currentQuestion = questions[currentQuestionIndex];
     if (!currentQuestion) {
-        console.error("Hiba: Nincs aktuális kérdés, pedig a teszt fut!", currentQuestionIndex, questions);
         return (
-            <div className="level-container error-message">
-                Váratlan hiba történt a teszt megjelenítése közben.
+            <div className="level-container error-container">
+                <h1>Hiba</h1>
+                <p className="error-message">Váratlan hiba történt a teszt megjelenítése közben (nincs aktuális kérdés).</p>
                 <button className="back-btn" onClick={startNewTestSetup}>Vissza a beállításokhoz</button>
             </div>
         );
@@ -312,9 +325,10 @@ function Level1() {
             <motion.div
                 key={currentQuestionIndex}
                 className="question-card"
-                initial={{ opacity: 0, x: 50 }}
+                initial={{ opacity: 0, x: 100 }}
                 animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.3 }}
+                exit={{ opacity: 0, x: -100 }}
+                transition={{ duration: 0.4, ease: "easeInOut" }}
             >
                 <p className="question-instruction">Válaszd ki a helyes fordítást:</p>
                 <h2 className="question-text">{currentQuestion.question}</h2>
@@ -351,9 +365,9 @@ function Level1() {
                     {showFeedback && (
                         <motion.div
                             className={`feedback ${selectedOption === currentQuestion.correctAnswer ? 'feedback-correct' : 'feedback-incorrect'}`}
-                            initial={{ opacity: 0, y: 10 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            exit={{ opacity: 0 }}
+                            initial={{ opacity: 0, height: 0 }}
+                            animate={{ opacity: 1, height: 'auto' }}
+                            exit={{ opacity: 0, height: 0 }}
                             transition={{ duration: 0.3 }}
                         >
                             {selectedOption === currentQuestion.correctAnswer

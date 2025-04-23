@@ -1,1 +1,0 @@
-D:\Allamvizsga\Spanish\backend> nodemon server.js  

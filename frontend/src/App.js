@@ -13,9 +13,9 @@ import ResetPassword from './components/mainComponents/ResetPassword';
 import Community from './components/mainComponents/Community';
 import MapGame from './components/mainComponents/MapGame';
 import Level1 from './components/mainComponents/MapGame/CityLevels/Level1';
-// import Level2 from './components/mainComponents/MapGame/CityLevels/Level2';
-// import Level3 from './components/mainComponents/MapGame/CityLevels/Level3';
-// import Level4 from './components/mainComponents/MapGame/CityLevels/Level4';
+import Level2 from './components/mainComponents/MapGame/CityLevels/Level2';
+import Level3 from './components/mainComponents/MapGame/CityLevels/Level3';
+import Level4 from './components/mainComponents/MapGame/CityLevels/Level4';
 // import Level5 from './components/mainComponents/MapGame/CityLevels/Level5';
 // import Level6 from './components/mainComponents/MapGame/CityLevels/Level6';
 // import Level7 from './components/mainComponents/MapGame/CityLevels/Level7';
@@ -117,7 +117,7 @@ function App() {
                 </ProtectedRoute>
               } 
             />
-             {/* Városi szintek útvonalai 
+            
             <Route 
               path="/city-levels/level2" 
               element={
@@ -126,6 +126,7 @@ function App() {
                 </ProtectedRoute>
               } 
             />
+             
             <Route 
               path="/city-levels/level3" 
               element={
@@ -134,6 +135,7 @@ function App() {
                 </ProtectedRoute>
               } 
             />
+            
             <Route 
               path="/city-levels/level4" 
               element={
@@ -142,6 +144,7 @@ function App() {
                 </ProtectedRoute>
               } 
             />
+            {/* Városi szintek útvonalai 
             <Route 
               path="/city-levels/level5" 
               element={
