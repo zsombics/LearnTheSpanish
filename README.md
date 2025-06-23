@@ -1,8 +1,5 @@
 # LearnTheSpanish: Interaktív, Gamifikált Spanyol Nyelvtanuló Platform
 
-![LearnTheSpanish Screenshot (Opcionális: Helyezz ide egy releváns képet az alkalmazásról)](./docs/screenshot.png) 
-<!-- Ha nincs még képed, töröld ezt a sort, vagy cseréld le egy valós képre, ha feltöltöttél egyet a "docs" mappába. -->
-
 ## Projekt áttekintés
 
 A "LearnTheSpanish" egy interaktív, gamifikált webes platform, amelyet spanyol nyelvtanulók számára fejlesztettek ki egyetemi diplomadolgozat részeként. A projekt elsődleges célja, hogy modern webes technológiák és játékosító elemek segítségével támogassa a felhasználókat a spanyol nyelv hatékony elsajátításában, különös tekintettel a motiváció fenntartására és a személyre szabott tanulási élmény biztosítására.
@@ -63,44 +60,46 @@ Nyisd meg a terminált (vagy parancssort), és futtasd a következő parancsokat
 git clone https://github.com/zsombics/LearnTheSpanish.git
 cd LearnTheSpanish
 
-3. Backend beállítása és futtatása
+### 3. Backend beállítása és futtatása
 Lépj be a backend könyvtárba, telepítsd a függőségeket, és hozd létre a .env fájlt.
 cd backend
 npm install
 
 Hozd létre egy nevű fájlt (.env) a backend mappában az alábbi tartalommal. Fontos, hogy a <placeholder> részeket a saját adataiddal helyettesítsd.
-# MongoDB adatbázis kapcsolódási URI
-# Helyi MongoDB esetén: mongodb://localhost:27017/learnthespanish
-# MongoDB Atlas esetén: a saját Atlas connection stringed
+MongoDB adatbázis kapcsolódási URI
+Helyi MongoDB esetén:
+mongodb://localhost:27017/learnthespanish
+MongoDB Atlas esetén:
+a saját Atlas connection stringed
 MONGO_URI=mongodb://localhost:27017/learnthespanish
 
-# Titkos kulcs a JWT tokenek aláírásához (generálj egy erőset!)
+Titkos kulcs a JWT tokenek aláírásához
 JWT_SECRET=generald_egy_komplex_titkos_kulcsot
 
-# DeepL API kulcs (opcionális - csak ha használni szeretnéd a fordítási funkciót)
+DeepL API kulcs
 DEEPL_API_KEY=your_deepl_api_key_here
 
-# Gmail SMTP beállítások a jelszó-visszaállításhoz
-# Figyelem: Az EMAIL_PASS-nak egy Gmail alkalmazás jelszónak kell lennie, nem a fő jelszavad!
-# Lásd: https://support.google.com/accounts/answer/185834?hl=hu
+Gmail SMTP beállítások a jelszó-visszaállításhoz
+Figyelem: Az EMAIL_PASS-nak egy Gmail alkalmazás jelszónak kell lennie, nem a fő jelszavad!
+Lásd: https://support.google.com/accounts/answer/185834?hl=hu
 EMAIL_USER=your_gmail_email@gmail.com
 EMAIL_PASS=your_gmail_app_password
 
-# A frontend alkalmazás URL-je (fejlesztéshez localhost:3000)
+A frontend alkalmazás URL-je (fejlesztéshez localhost:3000)
 FRONTEND_URL=http://localhost:3000
 Use code with caution.
 Env
 Ezután indítsd el a backend szervert:
 nodemon server.js
-# Ha a nodemon nincs telepítve, telepítsd globálisan (npm install -g nodemon)
-# Vagy futtasd simán: node server.js
-Use code with caution.
-Bash
+
+Ha a nodemon nincs telepítve, telepítsd globálisan (npm install -g nodemon)
+Vagy futtasd simán: node server.js
+
 Sikeres indítás esetén a konzolon az alábbi üzeneteket fogod látni:
 MongoDB kapcsolódva!
 Szerver fut a 5000 porton
-Use code with caution.
-4. Frontend beállítása és futtatása
+
+### 4. Frontend beállítása és futtatása
 Nyiss egy új terminál ablakot, navigálj vissza a fő projekt mappába, majd lépj be a frontend könyvtárba.
 cd ../frontend
 npm install
@@ -109,7 +108,8 @@ Végül indítsd el a React fejlesztői szervert:
 npm start
 
 A React alkalmazás automatikusan megnyílik a böngésződben a http://localhost:3000 címen.
-Jövőbeli fejlesztési lehetőségek
+
+### Jövőbeli fejlesztési lehetőségek
 A projekt jelenlegi verziója egy alapvető, de működőképes platformot biztosít. Számos irányba bővíthető és fejleszthető a jövőben:
 Skálázhatóság: A backend horizontalis skálázása Docker konténerek és terheléselosztó (load balancer) segítségével a nagyobb felhasználói terhelés kezelésére.
 Képtárolás optimalizálása: A base64 kódolású képtárolás helyett fájlrendszer alapú vagy felhőalapú (pl. Amazon S3, Firebase Storage) megoldások bevezetése.
@@ -119,7 +119,6 @@ Többnyelvűség: A platform bővítése további nyelvek (pl. francia, román, 
 Oktatási intézmények támogatása: Tanári/Adminisztrátori jogosultságok bevezetése, lehetővé téve saját tananyagok, tesztek létrehozását, tanulócsoportok kezelését és eredmények osztályszintű kiértékelését.
 Mobil alkalmazás: Natív mobil alkalmazás (React Native) vagy Progresszív Web Alkalmazás (PWA) fejlesztése a mobil eszközökön való jobb felhasználói élmény érdekében.
 
-Kapcsolat
 Készítette: Csegezi Zsombor
 <!-- Opcionálisan ide teheted a GitHub profilod vagy LinkedIn profilod linkjét: -->
 GitHub: [zsombics](https://github.com/zsombics)
