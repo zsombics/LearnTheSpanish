@@ -1,0 +1,28 @@
+/* Fő, modern és letisztult design jellemzői */
+body {
+    background-color: #f8f9fa; /* Világos háttér */
+    color: #2c3e50;             /* Sötét szöveg */
+    font-family: 'Segoe UI', system-ui, sans-serif; /* Tiszta sans-serif betűtípus */
+  }
+  
+  .card { /* Példa egy általános konténerre (pl. kvízkártya, profil szekció) */
+    background: white;
+    border-radius: 18px;                /* Lekerekített sarkok */
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.1); /* Finom árnyék */
+  }
+  
+  .btn-primary { /* Példa a fő interaktív gombokra */
+    background: #3498db; /* Fő kék kiemelőszín */
+    color: white;
+    border-radius: 15px;
+    transition: all 0.3s ease; /* Sima átmenet interakciónál */
+  }
+  
+  /* Példa visszajelző színekre */
+  .text-success {
+    color: #2ecc71; /* Zöld a sikerhez */
+  }
+  
+  .text-danger {
+    color: #e74c3c; /* Piros a hibához */
+  }

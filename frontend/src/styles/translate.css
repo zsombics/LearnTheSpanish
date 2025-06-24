@@ -24,6 +24,56 @@
   margin-bottom: 2rem;
 }
 
+/* Direction Selector */
+.direction-selector {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.direction-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.8rem 1.2rem;
+  border: 2px solid #e0e0e0;
+  border-radius: 12px;
+  background: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.direction-btn:hover {
+  border-color: #3498db;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(52, 152, 219, 0.2);
+}
+
+.direction-btn.active {
+  border-color: #3498db;
+  background: #3498db;
+  color: white;
+  box-shadow: 0 4px 12px rgba(52, 152, 219, 0.3);
+}
+
+.direction-btn .flag {
+  font-size: 1.2rem;
+}
+
+.direction-btn .arrow {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.direction-btn .direction-text {
+  font-size: 0.85rem;
+  white-space: nowrap;
+}
+
 /* Translation Input */
 .translation-input {
   width: 100%;
@@ -33,6 +83,9 @@
   font-size: 1.1em;
   margin-bottom: 1rem;
   transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  font-family: inherit;
+  resize: vertical;
+  min-height: 100px;
 }
 
 .translation-input:focus {
@@ -68,9 +121,43 @@
   color: #333;
 }
 
+.translated-text {
+  margin-top: 10px;
+  padding: 15px;
+  background: #f8f9fa;
+  border-radius: 8px;
+  border-left: 4px solid #3498db;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  line-height: 1.5;
+}
+
 /* Translation Error */
 .translation-error {
   margin-top: 20px;
   color: #e74c3c;
   font-size: 1.1em;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .direction-selector {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .direction-btn {
+    width: 100%;
+    max-width: 280px;
+    justify-content: center;
+  }
+  
+  .translation-container {
+    margin: 2rem 1rem;
+    padding: 1.5rem;
+  }
+  
+  .translation-header {
+    font-size: 1.5rem;
+  }
 }

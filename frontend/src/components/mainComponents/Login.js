@@ -85,7 +85,7 @@ function Login() {
         <h1>Üdvözöl a Spanyol Oktató Program!</h1>
         <p>
           Tanulj spanyolul élményszerűen, interaktív kvízekkel és modern tanulási módszerekkel.
-          Jelentkezz be, hogy személyre szabott tanulási élményben lehess részed!
+          Jelentkezz be, hogy személyre szabott tanulási élményben legyen részed!
         </p>
       </div>
       <div className="auth-form">

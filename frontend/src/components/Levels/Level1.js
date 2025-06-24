@@ -31,14 +31,13 @@ function Level1() {
 
     useEffect(() => {
         if (testStarted) {
-            fetch('/palabras3.csv')
-                .then(response => response.text())
-                .then(text => {
-                    const words = parseCSV(text);
+            axios.get('/api/words')
+                .then(response => {
+                    const words = response.data;
                     setAllWords(words);
                     generateQuestions(words);
                 })
-                .catch(err => console.error("CSV betöltési hiba:", err));
+                .catch(err => console.error("Adatbázis betöltési hiba:", err));
         }
     }, [testStarted]);
 

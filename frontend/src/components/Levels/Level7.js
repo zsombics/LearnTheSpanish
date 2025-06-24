@@ -176,7 +176,6 @@ function Level7() {
                         <option value="yo-tengo-yo-quiero">Yo tengo és yo quiero · Állatok</option>
                         <option value="a-hay-hasznalata">A "hay" használata · Az osztályterem</option>
                         <option value="alanyi-nevmasok">Alanyi névmások · Gyakori -ar igék · Szabályos -ar igék</option>
-                        <option value="osszegzo-1">Összegző 1 · Leckék 1–5</option>
                     </select>
                 </div>
                 <button className="start-test-btn" onClick={startTest}>Teszt indítása</button>

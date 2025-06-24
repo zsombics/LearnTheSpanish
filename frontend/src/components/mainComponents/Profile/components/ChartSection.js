@@ -40,7 +40,8 @@ const ChartSection = ({
   modifiedChartOptions,
   lineChartOptions,
   doughnutOptions,
-  CenterTextPlugin
+  CenterTextPlugin,
+  setCurrentChartIndex
 }) => {
   return (
     <div className="chart-container">

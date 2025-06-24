@@ -30,7 +30,6 @@ function parseMultipleChoiceCSV(data) {
      if (parts.length >= 2) {
         return {
           question: parts[0],
-          correctAnswer: parts[1],
           options: parts.slice(1)
         };
     }
@@ -112,26 +111,45 @@ function AdjectiveQuiz() {
           questionGenerator = generateMultipleChoiceQuestions;
           break;
         case "fill-in-the-blank":
-            fileToFetch = '/adjectives.csv';
-            parserFunction = parseAdjectivesCSV;
-            questionGenerator = generateQuestions;
-            break;
+        case "matching":
+        case "comparison":
+        case "comparison2":
+          axios.get('/api/adjectives')
+            .then(response => {
+              const items = response.data;
+              if (items && items.length > 0) {
+                setAllItems(items);
+                switch(testType) {
+                  case "fill-in-the-blank":
+                  case "comparison":
+                  case "comparison2":
+                    generateQuestions(items);
+                    break;
+                  case "matching":
+                    generateMatchingQuestions(items);
+                    break;
+                  default:
+                    console.error("Unknown test type for adjectives:", testType);
+                    alert("Ismeretlen teszt típus!");
+                    restartTest();
+                }
+              } else {
+                console.error("No valid items received from adjectives API");
+                alert("Hiba: Nem sikerült elemeket feldolgozni az adatbázisból.");
+                restartTest();
+              }
+            })
+            .catch(err => {
+              console.error("Database loading error:", err);
+              alert("Hiba történt az adatbázis betöltése közben.");
+              restartTest();
+            });
+          return;
         case "drag-and-drop":
           fileToFetch = '/DragAndDropQuiz.csv';
           parserFunction = parseDragAndDropCSV;
           questionGenerator = generateDragAndDropQuestions;
           break;
-        case "matching":
-          fileToFetch = '/adjectives.csv';
-          parserFunction = parseMatchingAdjectivesCSV;
-          questionGenerator = generateMatchingQuestions;
-          break;
-        case "comparison":
-        case "comparison2":
-             fileToFetch = '/adjectives.csv';
-             parserFunction = parseAdjectivesCSV;
-             questionGenerator = generateQuestions;
-             break;
         default:
           console.error("Unknown test type selected:", testType);
           alert("Ismeretlen teszt típus!");
@@ -139,29 +157,31 @@ function AdjectiveQuiz() {
           return;
       }
 
-      fetch(fileToFetch)
-        .then(response => {
-            if (!response.ok) {
-                throw new Error(`HTTP error! status: ${response.status} fetching ${fileToFetch}`);
+      if (fileToFetch) {
+        fetch(fileToFetch)
+          .then(response => {
+              if (!response.ok) {
+                  throw new Error(`HTTP error! status: ${response.status} fetching ${fileToFetch}`);
+              }
+              return response.text();
+          })
+          .then(text => {
+            const items = parserFunction(text);
+            if (items && items.length > 0) {
+              setAllItems(items);
+              questionGenerator(items);
+            } else {
+              console.error(`No valid items parsed from ${fileToFetch} for test type ${testType}.`);
+              alert(`Hiba: Nem sikerült ${testType === 'drag-and-drop' ? 'mondatokat' : 'elemeket'} feldolgozni a fájlból.`);
+              restartTest();
             }
-            return response.text();
-        })
-        .then(text => {
-          const items = parserFunction(text);
-          if (items && items.length > 0) {
-            setAllItems(items);
-            questionGenerator(items);
-          } else {
-            console.error(`No valid items parsed from ${fileToFetch} for test type ${testType}.`);
-            alert(`Hiba: Nem sikerült ${testType === 'drag-and-drop' ? 'mondatokat' : 'elemeket'} feldolgozni a fájlból.`);
-            restartTest();
-          }
-        })
-        .catch(err => {
-            console.error("CSV loading or parsing error:", err);
-            alert(`Hiba történt a ${fileToFetch} betöltése vagy feldolgozása közben.`);
-            restartTest();
-        });
+          })
+          .catch(err => {
+              console.error("CSV loading or parsing error:", err);
+              alert(`Hiba történt a ${fileToFetch} betöltése vagy feldolgozása közben.`);
+              restartTest();
+          });
+      }
     }
   }, [testStarted, testType, numQuestions, allItems.length]);
 
@@ -173,31 +193,18 @@ function AdjectiveQuiz() {
 
      for (let i = 0; i < actualNumQuestions; i++) {
          const item = shuffledItems[i];
-         if (!item || !item.question || !item.correctAnswer || !item.options) {
+         if (!item || !item.question || !item.options) {
              console.warn("Skipping invalid multiple choice item:", item);
              continue;
          }
-         const correctAnswer = item.correctAnswer;
-         let distractors = item.options.filter(opt => opt !== correctAnswer);
-         let chosenDistractors = [...new Set(distractors)].sort(() => Math.random() - 0.5).slice(0, 3);
-         let otherOptions = items.map(it => it.correctAnswer).filter(opt => opt !== correctAnswer);
-         while(chosenDistractors.length < 3 && otherOptions.length > 0) {
-             const randomDistractor = otherOptions.splice(Math.floor(Math.random() * otherOptions.length), 1)[0];
-             if (!chosenDistractors.includes(randomDistractor) && randomDistractor !== correctAnswer) {
-                 chosenDistractors.push(randomDistractor);
-             }
-         }
-         let finalOptions = [correctAnswer, ...chosenDistractors];
-         finalOptions = [...new Set(finalOptions)];
-         while (finalOptions.length < Math.min(4, 1 + chosenDistractors.length)) {
-             finalOptions.push(`Opció ${finalOptions.length + 1}`);
-         }
-         finalOptions = finalOptions.slice(0, 4);
+         const correctAnswer = item.options[0];
+         let options = [...item.options];
+         options = options.sort(() => Math.random() - 0.5);
 
          selectedQuestions.push({
              question: item.question,
              correctAnswer: correctAnswer,
-             options: finalOptions.sort(() => Math.random() - 0.5)
+             options: options
          });
      }
      if (selectedQuestions.length < actualNumQuestions) {
@@ -205,7 +212,7 @@ function AdjectiveQuiz() {
      }
      if (selectedQuestions.length === 0) {
         console.error("Failed to generate any multiple choice questions.");
-        alert("Hiba: Nem sikerült többválasztós kérdéseket generálni.");
+        alert("Hiba: Nem sikerült többszörös választásos kérdéseket generálni.");
         restartTest();
         return;
      }

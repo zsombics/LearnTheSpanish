@@ -1,6 +1,6 @@
 import React from 'react';
 import CalendarHeatmap from 'react-calendar-heatmap';
-import ReactTooltip from 'react-tooltip';
+import { Tooltip } from 'react-tooltip';
 import 'react-calendar-heatmap/dist/styles.css';
 
 const ActivityCalendar = ({ selectedYear, setSelectedYear, heatmapValues }) => {
@@ -31,7 +31,7 @@ const ActivityCalendar = ({ selectedYear, setSelectedYear, heatmapValues }) => {
           horizontal={true}
           gutterSize={2}
         />
-        <ReactTooltip />
+        <Tooltip />
       </div>
 
       <div className="year-selector">

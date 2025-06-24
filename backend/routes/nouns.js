@@ -1,15 +1,15 @@
 const express = require('express');
 const router = express.Router();
-const Word = require('../models/Word');
+const Noun = require('../models/Noun');
 
-// Összes szó lekérése
+// Összes főnév lekérése
 router.get('/', async (req, res) => {
   try {
-    const words = await Word.find();
-    res.json(words);
+    const nouns = await Noun.find();
+    res.json(nouns);
   } catch (err) {
     res.status(500).json({ message: err.message });
   }
 });
 
-module.exports = router;
+module.exports = router; 

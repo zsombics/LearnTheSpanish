@@ -1,15 +1,15 @@
 const express = require('express');
 const router = express.Router();
-const Word = require('../models/Word');
+const Letter = require('../models/Letter');
 
-// Összes szó lekérése
+// Összes betű lekérése
 router.get('/', async (req, res) => {
   try {
-    const words = await Word.find();
-    res.json(words);
+    const letters = await Letter.find();
+    res.json(letters);
   } catch (err) {
     res.status(500).json({ message: err.message });
   }
 });
 
-module.exports = router;
+module.exports = router; 

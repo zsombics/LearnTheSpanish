@@ -13,7 +13,17 @@ import Level9 from '../../components/Levels/Level9';
 function MainQuizSite() {
   const [selectedLevel, setSelectedLevel] = useState(null);
 
-  const levels = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+  const levels = [
+    { id: 1, name: "Alapvető szókincs" },
+    { id: 2, name: "Főnevek és névelők" },
+    { id: 3, name: "Melléknevek" },
+    { id: 4, name: "Spanyolországba készülés" },
+    { id: 5, name: "Spanyol betűk és kiejtéseik" },
+    { id: 6, name: "Spanyol-Magyar fordítás" },
+    { id: 7, name: "Nyelvi alapok" },
+    { id: 8, name: "Igeragozás" },
+    { id: 9, name: "Igeragozás gyakorlatok" }
+  ];
 
   const handleLevelSelect = (level) => {
     setSelectedLevel(level);
@@ -54,19 +64,19 @@ function MainQuizSite() {
         <h1>Üdvözöl a Spanyol Oktató Program!</h1>
         <p>
           Tanulj spanyolul élményszerűen, interaktív kvízekkel és modern tanulási módszerekkel.
-          Válaszd ki a kezdő szinted!
+          Válaszd ki a témát amiben fejlődni szeretnél!
         </p>
       </div>
       <div className="questions-container">
-        <h1>Válaszd ki a saját szinted</h1>
+        <h1>Válassz a témák közül</h1>
         <div className="levels-container">
           {levels.map((level) => (
             <button
-              key={level}
+              key={level.id}
               className="level-button"
-              onClick={() => handleLevelSelect(level)}
+              onClick={() => handleLevelSelect(level.id)}
             >
-              {level}. szint
+              {level.name}
             </button>
           ))}
         </div>
